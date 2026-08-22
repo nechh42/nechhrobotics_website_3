@@ -691,3 +691,46 @@ robots.txt      : ✅ sitemap'i gösteriyor
 
 ⚠️ `robots.txt` içindeki sitemap adresi `www.nechhrobotics.com` yazıyor —
 alan adı taşınana kadar bu **bilerek** böyle; taşındığında doğru olacak.
+
+---
+
+## 🎉 22 AĞUSTOS — ALAN ADI TAŞINDI, YENİ SİTE ARTIK ASIL SİTE
+
+**https://www.nechhrobotics.com** → yeni site yayında.
+
+### Taşıma neden kolay oldu
+Ölçüm: `nslookup` → `216.198.79.65` (Vercel IP), başlık → `Server: Vercel`.
+Alan adı **zaten Vercel'deydi**, sadece proje değiştirdi.
+👉 **DNS'e, kayıt firmasına, name server'lara hiç dokunulmadı.**
+
+### Yapılandırma
+| Adres | Durum |
+|---|---|
+| `www.nechhrobotics.com` | **Üretim** — ana adres |
+| `nechhrobotics.com` | **308 → www** |
+| `nechhroboticswebsite-3.vercel.app` | Üretim — yedek kontrol adresi (silinmedi) |
+
+`www` bilerek ana adres seçildi: canonical etiketleri ve sitemap zaten
+`www.nechhrobotics.com` üretiyor.
+
+### 🔬 CANLI DOĞRULAMA — www.nechhrobotics.com üzerinden
+```
+Yayındaki site : yeni sürüm (assets/index-DDVNNeZh.js)
+Sayfalar       : /magaza /galeri /sss /basin /kvkk /cozumler /blog → 200
+Köksüz adres   : nechhrobotics.com → 308 → www ✅
+Eski adresler  : /privacy /faq /about /contact /products/pricing
+                 /legal/kvkk /odeme → hepsi 200 (yönlenip açılıyor) ✅
+Medya          : hero.webp, kurumsal video, ürün ZIP → 200
+SEO            : sitemap.xml (89 adres), robots.txt, ads.txt → 200
+```
+
+🟢 **Eski sitenin dizinlenmiş adreslerinin hiçbiri kırılmadı.**
+
+### ⏭️ WEB SİTESİ İŞİ KAPANDI — kalan küçük maddeler
+- [ ] SSS içeriği eski (donanım/açık kaynak soruları) — yenilenmeli
+- [ ] Prerender (SEO tam güvence) — SPA içeriği tarayıcıda çiziliyor
+- [ ] App Store / Play mağaza metinlerindeki UYAP ibaresi — elle düzeltilecek
+- [ ] Google Search Console'a yeni sitemap bildirilecek
+
+⚠️ Eski site deposu (`Nechh_Robotics_Website/`) **silinmedi** — arşiv olarak
+duruyor. Bir süre bekletilip sonra arşive alınabilir.
