@@ -3,6 +3,7 @@ import React, { useEffect, useState, type ReactNode } from "react";
 import { Link, useLocation } from "wouter";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { assets, englishNavItems, navItems, products } from "@/lib/site";
+import { ssrMeta } from "@/lib/ssrMeta";
 
 type PageFrameProps = {
   children: ReactNode;
@@ -117,6 +118,12 @@ export function SiteFooter({ locale = "tr" }: { locale?: "tr" | "en" }) {
 }
 
 export function PageFrame({ children, title, description, locale = "tr" }: PageFrameProps) {
+  // Prerender sırasında (window yokken) başlığı topla; tarayıcıda etkisiz.
+  if (typeof window === "undefined") {
+    ssrMeta.title = title ? `${title} | Nechh Robotics` : "Nechh Robotics | Dikey Yapay Zekâ";
+    ssrMeta.description = description ?? "";
+  }
+
   useEffect(() => {
     document.title = title ? `${title} | Nechh Robotics` : "Nechh Robotics | Dikey Yapay Zekâ";
     document.documentElement.lang = locale;

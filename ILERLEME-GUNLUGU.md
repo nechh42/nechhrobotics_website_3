@@ -734,3 +734,52 @@ SEO            : sitemap.xml (89 adres), robots.txt, ads.txt → 200
 
 ⚠️ Eski site deposu (`Nechh_Robotics_Website/`) **silinmedi** — arşiv olarak
 duruyor. Bir süre bekletilip sonra arşive alınabilir.
+
+---
+
+## ✅ 22 AĞUSTOS — KALAN MADDELER KAPATILDI
+
+### 1 · SSS içeriği yenilendi
+Eski 5 soru (mikrodenetleyici, açık kaynak donanım) **bugünkü işle ilgisizdi**
+— tamamen değiştirildi. Yeni hâli **4 kategori, 13 soru**:
+- **Genel** — ne yapıyoruz, satın alınabilir mi, danışmanlık vs şablon farkı
+- **Ödeme ve Teslimat** — havale, sipariş akışı, **"fiyatlar sabittir, pazarlık yok"**, lisans kapsamı
+- **Uyum ve Sınırlar** — *"CBAM beyanını sizin adınıza veremeyiz"*, sayıların denetlenebilirliği, **devlet sistemine otomatik bağlantı olmadığı**, verinin nerede durduğu
+- **İş Birliği** — yeni sektör talebi, iletişim
+
+🔴 Sınır cümleleri bilerek konuldu: akredite doğrulayıcı olmadığımız ve
+otomatik kurum entegrasyonu bulunmadığı açıkça yazıyor. UYAP olayının
+tekrarlanmaması için.
+
+### 2 · PRERENDER KURULDU — SEO riski kapandı
+Site artık **her rota için gerçek HTML** üretiyor. JavaScript çalışmadan da
+içerik görünüyor.
+
+**Nasıl çalışıyor:**
+| Dosya | İş |
+|---|---|
+| `client/src/lib/ssrMeta.ts` | Render sırasında başlık/açıklamayı toplar |
+| `client/src/entry-server.tsx` | `renderToString` + wouter `<Router ssrPath>` |
+| `scripts/prerender.mjs` | sitemap'teki her yolu render edip `dist/<yol>/index.html` yazar |
+
+`package.json` → `build` artık üç adım: `build:client` → `build:ssr` → `prerender`.
+**Vercel her dağıtımda otomatik çalıştıracak.**
+
+**Ölçüm:** `prerender: 89 sayfa yazıldı, 0 hata`
+Örnek `/magaza/index.html`: doğru `<title>`, doğru `description`,
+doğru `canonical`, **2.066 karakter gerçek metin** (boş `<div id="root">` değil).
+Blog yazılarında makale gövdesinin tamamı basılıyor (kontrol edildi).
+
+⚠️ İki Windows tuzağı yaşandı, ikisi de çözüldü:
+- vite `root: client` olduğu için SSR girişi `src/entry-server.tsx` (göreli) olmalı
+- Node ESM Windows'ta mutlak yolu kabul etmiyor → `pathToFileURL()`
+
+### 3 · Makale "geri" bağlantısı düzeltildi
+`/kaynaklar` → `/blog`. Yönlendirme sıçraması kalktı, etiket de
+"BLOG YAZILARI" oldu.
+
+### 🔬 ÖLÇÜM
+```
+npx tsc --noEmit → 0
+npm run build    → client ✓ · ssr ✓ · prerender 89/89 ✓
+```

@@ -1,36 +1,73 @@
 [
  {
-  "baslik": "Genel Sorular",
+  "baslik": "Genel",
   "sorular": [
    {
-    "soru": "Nechh Robotics nedir?",
-    "cevap": "Nechh Robotics; gömülü elektronik tasarımları, motor kontrol algoritmaları, yazılım otomasyon araçları ve yerel ortam sensör ağları üzerine odaklanmış bağımsız bir geliştirme ve araştırma laboratuvarıdır."
+    "soru": "Nechh Robotics ne yapıyor?",
+    "cevap": "Regülasyona tabi sektörler için dikey yapay zekâ ürünleri geliştiriyoruz. Bugün sağlık (HeliaLoop), hukuk (JuriLoop), karbon uyumu (Eco-Report) ve salon operasyonu (TONSORA) alanlarında çalışan dört ürünümüz var. Genel amaçlı bir araç yapmıyoruz; her ürün tek bir sektörün kendi iş akışına göre kurgulanıyor."
    },
    {
-    "soru": "Projeleriniz ticari mi?",
-    "cevap": "Tasarımlarımızın çoğu deneyseldir veya açık kaynak kodlu/şemalı olarak yayınlanmaktadır. **Emotice Codeburn** gibi araçlarımız açık beta testinde olup, **AEHS Model** gibi donanım sistemlerimiz ise özel laboratuvar tasarımlarıdır."
+    "soru": "Ürünleri satın alabilir miyim, yoksa sadece tanıtım mı?",
+    "cevap": "Satın alınabilir. Mağaza sayfasındaki dijital paketler tek seferlik ücretle alınır ve firmanız adına lisanslanmış olarak e-posta ile teslim edilir. TONSORA ve HeliaLoop mobil uygulamaları mağazalardan indirilir. Eco-Report web üzerinden çalışır."
+   },
+   {
+    "soru": "Danışmanlık ile şablon paketi arasındaki fark ne?",
+    "cevap": "Şablon paketleri kendi ekibinizle kullanacağınız hazır çalışma materyalidir: rehber, kontrol listesi ve düzenlenebilir dosyalar. Danışmanlıkta ise süreci baştan sona biz yürütürüz — belge hazırlığı, başvuru ve takip dahil. İkisini bilerek ayrı tutuyoruz ki ne aldığınız net olsun."
    }
   ]
  },
  {
-  "baslik": "Teknoloji & Açık Kaynak",
+  "baslik": "Ödeme ve Teslimat",
   "sorular": [
    {
-    "soru": "Proje kaynak kodlarına erişebilir miyim?",
-    "cevap": "Evet. Geliştirdiğimiz kütüphaneleri, cihaz yazılımlarını ve mikrodenetleyici konfigürasyonlarını herkese açık GitHub sayfamızda paylaşıyoruz. Güncellemeleri periyodik olarak **Blog** bölümümüzde yayınlamaktayyiz."
+    "soru": "Nasıl ödeme yapıyorum?",
+    "cevap": "Ödemeler yalnızca banka havalesi / EFT ile alınır. Site üzerinden kredi kartı ile ödeme alınmamaktadır ve kart bilgisi hiçbir aşamada toplanmaz veya saklanmaz. Havale bilgileri ilgili paketin kendi sayfasında yazılıdır."
    },
    {
-    "soru": "Hangi mikrodenetleyicileri kullanıyorsunuz?",
-    "cevap": "İşlem gereksinimlerine ve sensör bağlantı limitlerine göre prototiplerimizde ağırlıklı olarak ESP32 serisi, STM32 mikrodenetleyicileri ve Raspberry Pi modüllerini tercih ediyoruz."
+    "soru": "Sipariş verdikten sonra ne oluyor?",
+    "cevap": "Havale açıklamasına paket adını ve firma unvanınızı yazın, dekontu nechhlab.global@gmail.com adresine gönderin. Paket, firmanız adına lisanslanmış olarak aynı gün e-postanıza iletilir; kurumsal faturası birlikte gönderilir."
+   },
+   {
+    "soru": "Fiyatlar pazarlığa açık mı?",
+    "cevap": "Hayır. Fiyatlar sabittir ve her paketin kendi sayfasında açıkça yazılıdır. Kapsam da aynı sayfada tanımlıdır; sonradan sürpriz kalem çıkmaz."
+   },
+   {
+    "soru": "Paketi ekibimle paylaşabilir miyim?",
+    "cevap": "Dijital paketler firmanızın adıyla damgalanır ve firma içi kullanım içindir. Kendi ekibinizle paylaşabilirsiniz; üçüncü taraflara dağıtılamaz veya yeniden satılamaz."
    }
   ]
  },
  {
-  "baslik": "İş Birliği & İletişim",
+  "baslik": "Uyum ve Sınırlar",
   "sorular": [
    {
-    "soru": "Araştırma veya iş birliği teklifini nasıl iletebilirim?",
-    "cevap": "Öğrenci araştırmacılara, donanım meraklılarına ve açık kaynak katkıcılarına kapımız her zaman açıktır. İş birliği taleplerinizi iletişim formumuz üzerinden veya doğrudan nechhlab.global@gmail.com adresine e-posta göndererek iletebilirsiniz."
+    "soru": "CBAM beyanımı sizin adınıza verebilir misiniz?",
+    "cevap": "Hayır. Biz hazırlayan ve süreci hızlandıran tarafız; akredite doğrulayıcı veya resmî onay makamı değiliz. Eco-Report ve CBAM paketleri, beyan öncesi veri hazırlığını denetlenebilir hale getirir. Resmî beyan sorumluluğu her zaman firmanızdadır."
+   },
+   {
+    "soru": "Hesaplamalarınıza nasıl güveneceğim?",
+    "cevap": "Her sayı, kaynağı ve formülüyle birlikte raporda görünür. Emisyon faktörünün nereden geldiği, hangi varsayımın kullanıldığı ve hangi verinin eksik olduğu ayrı ayrı yazılır. Kara kutu değildir; denetçi karşısında satır satır savunulabilir olması esastır."
+   },
+   {
+    "soru": "Devlet sistemlerine otomatik bağlanıyor musunuz?",
+    "cevap": "Hayır. Bakanlık veya kurum sistemlerine otomatik entegrasyon vaat etmiyoruz — bunun için açık bir API bulunmuyor. JuriLoop'ta UYAP ve e-Devlet portallarına hızlı erişim bağlantıları vardır; giriş tamamen kendi e-imzanız veya şifrenizle resmî sitede gerçekleşir, biz aracılık etmeyiz ve kimlik bilgilerinizi görmeyiz."
+   },
+   {
+    "soru": "Verilerim nerede tutuluyor?",
+    "cevap": "Hassas verinin nerede duracağı her üründe ilk tasarım sorusudur. Standart kullanımda veriler bizim altyapımızda barındırılır. Kurum içinde barındırma (self-hosted) kurumsal kurulumlarda ayrıca sunulur. Ayrıntı için gizlilik politikası ve KVKK aydınlatma metnine bakabilirsiniz."
+   }
+  ]
+ },
+ {
+  "baslik": "İş Birliği ve İletişim",
+  "sorular": [
+   {
+    "soru": "Sektörüme özel bir çözüm geliştirir misiniz?",
+    "cevap": "Değerlendiririz. Yeni bir alana girmeden önce kanuni zeminini, gerçek alıcısını ve veri ihtiyacını çıkarıyoruz; sırası gelmeyen işe başlamıyoruz. Ana sayfadaki \"Sıradaki Çalışmalar\" bölümü hangi alanların hazırlıkta olduğunu gösterir."
+   },
+   {
+    "soru": "Sizinle nasıl iletişime geçerim?",
+    "cevap": "İletişim sayfasındaki formu kullanabilir ya da doğrudan nechhlab.global@gmail.com adresine yazabilirsiniz. Sağ alttaki sohbet penceresinden de ulaşabilirsiniz."
    }
   ]
  }
