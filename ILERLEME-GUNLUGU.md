@@ -783,3 +783,44 @@ Blog yazılarında makale gövdesinin tamamı basılıyor (kontrol edildi).
 npx tsc --noEmit → 0
 npm run build    → client ✓ · ssr ✓ · prerender 89/89 ✓
 ```
+
+---
+
+# 🏁 WEB SİTESİ İŞİ KAPANDI — 22 AĞUSTOS 2026
+
+**https://www.nechhrobotics.com** yeni site yayında ve tamamlandı.
+
+## Bugün sıfırdan yapılanlar
+| # | İş |
+|---|---|
+| A | Manus çıktısı temizlendi, sunucu katmanı söküldü, bağımsız hale getirildi |
+| B | Eski siteden **her şey** taşındı: hukuki metinler, SSS, basın, medya, ürün paketleri |
+| C | SEO kurtarma: canonical, 28 kalıcı yönlendirme, 89 adresli sitemap, **prerender** |
+| D | GitHub deposu + Vercel dağıtımı |
+| E | Alan adı taşındı; `.com.tr` ve `.net` de bağlandı |
+
+## Eklenen yeni sayfalar
+`/magaza` + 8 paket detay sayfası · `/galeri` · `/sss` · `/basin` ·
+`/kvkk` `/gizlilik` `/iade` `/sorumluluk` · ana sayfada **kurumsal video**
+ve **Sıradaki Çalışmalar** bölümü
+
+## Düzeltilen yanlış beyanlar
+1. 🔴 **UYAP "uyumlu altyapı/takip"** → *"portallara hızlı erişim"* (4 dosya, 3 dil)
+2. Gizlilik metnindeki *"üçüncü taraf ödeme sağlayıcısı"* → **banka havalesi**
+3. Mağazadaki *"Kartla Satın Al"* düğmeleri ↔ *"kart alınmıyor"* çelişkisi
+4. Tanıtım videosundaki 7 hata → yeni video düzeltilmiş metinle çekildi
+
+## Son ölçüm (canlı)
+```
+20 sayfa · 10 medya/dosya · 8 yönlendirme → hepsi doğru
+prerender: 89/89 sayfa, 0 hata
+Google botunun gördüğü: ana sayfa 5.523 · SSS 4.881 · mağaza 2.253 karakter
+```
+
+## ⏭️ BU PROJEDE KALAN (acil değil)
+- [ ] Google Search Console'a sitemap bildirimi *(Hasan yapacak)*
+- [ ] Marka rengi kararı: brand kit kırmızı (#E60012) ↔ tema mavi (#1155cc)
+- [ ] Eski site klasörü (`Nechh_Robotics_Website/`) bir süre sonra arşive
+
+> 🔒 **Bu defter kapandı.** Yeni site ile ilgili bir iş çıkarsa buraya
+> yazılmaya devam edilir, ama günlük çalışma buradan taşındı.
