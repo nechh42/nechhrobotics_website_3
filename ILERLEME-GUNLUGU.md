@@ -496,3 +496,59 @@ curl: / · /galeri · nechhrobotics-tanitim.mp4 · video-kapak.jpg
 - **Git için düşünmek gerek:** her video sürümü depoda kalıcı yer kaplar.
   Seçenek: videoları depoya koymayıp Vercel'e ayrı yüklemek, ya da Git LFS.
 - 📌 D adımında (repo açılışı) karara bağlanacak — **push etmeden önce.**
+
+---
+
+## 🎥 VİDEO OTOMATİK OYNATMA + 📦 GIT KARARI (22 Ağu)
+
+### ✅ Video otomatik oynuyor ve döngüde
+`client/src/components/KurumsalVideo.tsx` yazıldı.
+- `autoPlay` + `loop` + `muted` + `playsInline`
+- **IntersectionObserver:** video ekrana girince başlar, çıkınca durur —
+  arka planda boşuna oynayıp bant genişliği ve pil harcamaz
+- `prefers-reduced-motion: reduce` seçili kullanıcıda otomatik başlamaz
+- Altında not: *"Ses kapalı başlar — açmak için hoparlöre dokunun."*
+
+⚠️ **Tarayıcı kuralı:** sesli otomatik oynatma Chrome/Safari/Firefox'ta
+engellidir. Sessiz başlatmak zorunlu. *(Hasan: "biliyorum, sıkıntı yok.")*
+
+### 🔴 VİDEO İÇERİĞİ SİTEYLE UYUMSUZ — 7 HATA BULUNDU
+Sunum (`Nechh_Robotics_Tanitim_v2.pptx`) okundu, siteyle karşılaştırıldı.
+
+| # | Sorun | Durum |
+|---|---|---|
+| 1 | **JuriLoop "UYAP & e-Devlet uyumlu"** | 🔴 Kaynak kodda `uyap` geçen **tek dosya yok** — doğrulandı. Asılsız iddia |
+| 2 | "Dört ürün canlı" | HeliaLoop incelemede, canlı değil |
+| 3 | "Veri içeride kalır" koşulsuz | Yalnızca kurumsal kurulumda geçerli |
+| 4 | "Türkiye · 2024" | Şahıs işletmesi Ağu 2026'da kapatıldı |
+| 5 | MDR sayılıyor | Üzerinde çalışma yok → EUDR ile değişti |
+| 6 | Yol haritası siteyle farklı | Site ile birebir aynı hale getirildi |
+| 7 | "2030+ robotik sistemler" | 4 yıllık taahhüt gibi → çıkarıldı |
+
+**Düzeltilmiş metin (TR + EN) hazır:**
+`Nechh_Robotics_Website-YENİLENMİŞ/TANITIM-VIDEO-METNI-DUZELTILMIS.md`
+Hasan yeni videoyu bu metinle çekecek.
+
+### 📦 GIT KARARI — videolar depoda kalıyor
+**Ölçüm:** 157 dosya · 69,8 MB · en büyük dosya 26 MB.
+- GitHub uyarı eşiği 50 MB/dosya, blok 100 MB → **sorun yok**
+- Git LFS **kullanılmayacak**: Vercel'de LFS desteği güvenilmez, ek sürtünme
+- Videoları depo dışında tutmak Vercel dağıtımını bozar (Vercel git'ten yayınlar)
+
+⚠️ **Kalıcı kural:** bir videonun **her yeni sürümü depoya tam boyutuyla
+kalıcı eklenir**. Ara kesitler commit edilmez — yalnızca **son hâli**.
+
+### ✅ İLK COMMIT ATILDI (henüz push edilmedi)
+```
+bef1a17  Nechh Robotics yeni site — ilk sürüm
+branch: main · .git 60 MB
+node_modules ve dist commit'te YOK (doğrulandı)
+```
+
+🔴 **Kurumsal video BİLEREK commit edilmedi:**
+`nechhrobotics-tanitim.mp4` içinde **asılsız UYAP iddiası** var. Yanlış bilgi
+içeren bir video yayınlanmaz. Yeni video çekilince aynı adla konur ve commit
+edilir.
+
+⏸️ **Push için Hasan'ın onayı bekleniyor** —
+`https://github.com/nechh42/Nechh_Robotics_Website-YEN-LENM-.git`
