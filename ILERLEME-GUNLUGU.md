@@ -629,3 +629,65 @@ npm run build    → ✓ 6.54s · 1643 modül
       sitemap riski büyük ölçüde kapattı; **tam güvence için prerender
       (her rotaya gerçek HTML) hâlâ önerilir.** Headless tarayıcı bağımlılığı
       gerektirir — ayrı iş olarak duruyor.
+
+---
+
+## 🚀 22 AĞUSTOS — SİTE CANLIYA ALINDI
+
+**Adres:** https://nechhroboticswebsite-3.vercel.app
+**Proje:** Vercel · `nechh/nechh_robotics_website-3` · dal `main`
+**Depo:** `github.com/nechh42/nechhrobotics_website_3`
+*(GitHub'da yeniden adlandırıldı; eski `Nechh_Robotics_Website-YEN-LENM-` adresi yönleniyor.)*
+
+### 🔴 YAŞANAN ARIZA — `cleanUrls` SPA'yı kırdı
+İlk dağıtımda **ana sayfa 200, diğer tüm sayfalar 404** verdi.
+
+**Teşhis (tahminle değil, ölçümle):**
+1. `/privacy`, `/faq`, `/about` → 308 çalışıyordu ⇒ `vercel.json` **okunuyor**
+2. GitHub'daki `vercel.json` doğruydu, dağıtım "Ready" idi ⇒ **kod sorunu değil**
+3. Karar veren ölçüm: **`/index.html` isteği 308 döndü**
+
+👉 **Sebep:** `cleanUrls: true`, `.html` uzantısını kesip yönlendiriyor.
+SPA rewrite'ının **hedefi** `/index.html` olduğu için hedef çözülemiyor ve
+Vercel `NOT_FOUND` veriyor. Yani ayar kendi kuralımızı sabote ediyordu.
+
+**Çözüm:** `cleanUrls` ve `trailingSlash` kaldırıldı → `124814a` sonrası
+dağıtımda tüm rotalar 200.
+
+⚠️ **Kalıcı kural:** Vercel'de SPA yayınlarken `cleanUrls: true`
+**kullanılmaz** — `rewrites` hedefiyle çakışır.
+
+*(Ayrıca ilk denemede `rewrites` içinde negatif lookahead
+`/((?!medya|urunler|...).*)`  kullanılmıştı; Vercel'in path-to-regexp
+sözdiziminde sessizce eşleşmiyor. Vercel sırası zaten
+redirects → filesystem → rewrites olduğu için statik dosyaları hariç
+tutmaya gerek yok.)*
+
+### 🔬 CANLI ÖLÇÜM — hepsi geçti
+```
+SAYFALAR (20)   : / cozumler hizmetler magaza magaza/:slug ai-fabric blog
+                  galeri hakkimizda iletisim sss basin kvkk gizlilik iade
+                  sorumluluk en en/store en/blog cozumler/tonsora → HEPSİ 200
+
+MEDYA (10)      : hero/cozumler/ai-fabric.webp, amblem, kurumsal video,
+                  tanıtım afişi, ürün ZIP, basın PDF, ads.txt,
+                  canli-destek.js → HEPSİ 200
+
+YÖNLENDİRME (8) : /privacy→/gizlilik  /faq→/sss  /about→/hakkimizda
+                  /contact→/iletisim  /products/pricing→/magaza
+                  /legal/kvkk→/kvkk  /press/*→/basin  /odeme→/magaza
+                  → HEPSİ 308
+
+IBAN            : ✅ üretim paketinde var (Vercel değişkenleri doğru girilmiş)
+sitemap.xml     : ✅ 89 adres
+robots.txt      : ✅ sitemap'i gösteriyor
+```
+
+### ⏭️ KALAN
+- [ ] **Alan adı taşıma** (`nechhrobotics.com` → bu proje) — DNS işi, ayrı adım
+- [ ] SSS içeriği güncellenecek (eski donanım soruları)
+- [ ] Prerender (SEO tam güvence)
+- [ ] Mağaza metinlerinde UYAP ibaresi (App Store / Play — elle)
+
+⚠️ `robots.txt` içindeki sitemap adresi `www.nechhrobotics.com` yazıyor —
+alan adı taşınana kadar bu **bilerek** böyle; taşındığında doğru olacak.
