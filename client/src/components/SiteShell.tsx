@@ -67,8 +67,8 @@ export function SiteHeader({ locale = "tr" }: { locale?: "tr" | "en" }) {
 export function SiteFooter({ locale = "tr" }: { locale?: "tr" | "en" }) {
   const isEnglish = locale === "en";
   const labels = isEnglish
-    ? { intro: "Vertical AI products and a systematic product-development approach for regulated industries.", discover: "Discover", products: "Products", contact: "Contact", solution: "Solutions", services: "Services", about: "About", resources: "Blog", request: "Request a conversation", country: "Türkiye-based vertical AI venture" }
-    : { intro: "Regülasyona tabi sektörler için dikey yapay zekâ ürünleri ve sistematik ürün geliştirme yaklaşımı.", discover: "Keşfedin", products: "Ürünler", contact: "İletişim", solution: "Çözümler", services: "Hizmetler", about: "Hakkımızda", resources: "Blog Yazıları", request: "Görüşme talebi", country: "Türkiye merkezli dikey yapay zekâ girişimi" };
+    ? { intro: "Vertical AI products and a systematic product-development approach for regulated industries.", discover: "Discover", products: "Products", contact: "Contact", solution: "Solutions", services: "Services", about: "About", resources: "Blog", request: "Contact page", country: "Türkiye-based vertical AI venture" }
+    : { intro: "Regülasyona tabi sektörler için dikey yapay zekâ ürünleri ve sistematik ürün geliştirme yaklaşımı.", discover: "Keşfedin", products: "Ürünler", contact: "İletişim", solution: "Çözümler", services: "Hizmetler", about: "Hakkımızda", resources: "Blog Yazıları", request: "İletişim sayfası", country: "Türkiye merkezli dikey yapay zekâ girişimi" };
   const prefix = isEnglish ? "/en" : "";
   return (
     <footer className="site-footer">
@@ -86,6 +86,8 @@ export function SiteFooter({ locale = "tr" }: { locale?: "tr" | "en" }) {
           <Link href={`${prefix}/ai-fabric`}>AI-Fabric</Link>
           <Link href={`${prefix}/hakkimizda`.replace("/en/hakkimizda", "/en/about")}>{labels.about}</Link>
           <Link href={`${prefix}/blog`.replace("/en/blog", "/en/blog")}>{labels.resources}</Link>
+          {!isEnglish && <Link href="/magaza">Mağaza</Link>}
+          {!isEnglish && <Link href="/galeri">Galeri</Link>}
         </div>
         <div className="footer-column">
           <span className="footer-label">{labels.products}</span>
@@ -96,6 +98,14 @@ export function SiteFooter({ locale = "tr" }: { locale?: "tr" | "en" }) {
           <Link href={isEnglish ? "/en/contact" : "/iletisim"}>{labels.request}</Link>
           <a href="https://www.linkedin.com/in/nechh-r-5358a737a" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={13} /></a>
           <a href="mailto:nechhlab.global@gmail.com">E-posta <ArrowUpRight size={13} /></a>
+        </div>
+        <div className="footer-column">
+          <span className="footer-label">{isEnglish ? "Legal" : "Yasal"}</span>
+          <Link href="/kvkk">KVKK</Link>
+          <Link href="/gizlilik">{isEnglish ? "Privacy" : "Gizlilik"}</Link>
+          <Link href="/iade">{isEnglish ? "Refunds" : "İade"}</Link>
+          <Link href="/sorumluluk">{isEnglish ? "Disclaimer" : "Sorumluluk"}</Link>
+          <Link href="/sss">{isEnglish ? "FAQ" : "SSS"}</Link>
         </div>
       </div>
       <div className="footer-bottom">
@@ -113,6 +123,21 @@ export function PageFrame({ children, title, description, locale = "tr" }: PageF
     if (description) {
       const tag = document.querySelector('meta[name="description"]');
       if (tag) tag.setAttribute("content", description);
+    }
+
+    // Canonical HER SAYFA İÇİN kendi adresini gösterir.
+    // 12 Ağu 2026 dersi: kökte sabit "/" canonical bırakmak tüm siteyi
+    // dizinden düşürüyor — bu yüzden burada yola göre üretiliyor.
+    {
+      const adres = `https://www.nechhrobotics.com${window.location.pathname}`.replace(/\/$/, "") || "https://www.nechhrobotics.com";
+      let bag = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+      if (!bag) {
+        bag = document.createElement("link");
+        bag.rel = "canonical";
+        document.head.appendChild(bag);
+      }
+      bag.href = adres;
+      document.documentElement.lang = locale;
     }
   }, [title, description, locale]);
 

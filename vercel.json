@@ -1,0 +1,47 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/privacy", "destination": "/gizlilik", "permanent": true },
+    { "source": "/refund-policy", "destination": "/iade", "permanent": true },
+    { "source": "/risk-disclosure", "destination": "/sorumluluk", "permanent": true },
+    { "source": "/legal/kvkk", "destination": "/kvkk", "permanent": true },
+    { "source": "/legal/refund-policy", "destination": "/iade", "permanent": true },
+    { "source": "/legal/risk-disclosure", "destination": "/sorumluluk", "permanent": true },
+    { "source": "/terms", "destination": "/sorumluluk", "permanent": true },
+    { "source": "/faq", "destination": "/sss", "permanent": true },
+    { "source": "/about", "destination": "/hakkimizda", "permanent": true },
+    { "source": "/contact", "destination": "/iletisim", "permanent": true },
+    { "source": "/destek", "destination": "/iletisim", "permanent": true },
+    { "source": "/tesekkurler", "destination": "/iletisim", "permanent": true },
+    { "source": "/performance", "destination": "/ai-fabric", "permanent": true },
+    { "source": "/portfolio_nechh", "destination": "/ai-fabric", "permanent": true },
+    { "source": "/yarismalar", "destination": "/hakkimizda", "permanent": true },
+    { "source": "/services/:slug*", "destination": "/hizmetler", "permanent": true },
+    { "source": "/press/:slug*", "destination": "/basin", "permanent": true },
+    { "source": "/tonsora/:slug*", "destination": "/cozumler/tonsora", "permanent": true },
+    { "source": "/products/fiyatlandirma", "destination": "/magaza", "permanent": true },
+    { "source": "/products/pricing", "destination": "/magaza", "permanent": true },
+    { "source": "/products/sablon-paketleri", "destination": "/magaza", "permanent": true },
+    { "source": "/products/kaynaklar", "destination": "/blog", "permanent": true },
+    { "source": "/products/cbam-assistant", "destination": "/cozumler/eco-report", "permanent": true },
+    { "source": "/products/tonsora", "destination": "/cozumler/tonsora", "permanent": true },
+    { "source": "/odeme", "destination": "/magaza", "permanent": true },
+    { "source": "/register", "destination": "/iletisim", "permanent": true },
+    { "source": "/kaynaklar", "destination": "/blog", "permanent": true },
+    { "source": "/en/resources", "destination": "/en/blog", "permanent": true }
+  ],
+  "rewrites": [{ "source": "/((?!medya|urunler|basin|assets|ads.txt|robots.txt|sitemap.xml|canli-destek.js).*)", "destination": "/index.html" }],
+  "headers": [
+    {
+      "source": "/medya/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+    }
+  ]
+}

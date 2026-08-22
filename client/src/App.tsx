@@ -16,6 +16,9 @@ import Services, { EnglishServices } from "./pages/Services";
 import Store, { EnglishStore } from "./pages/Store";
 import PaketDetay from "./pages/PaketDetay";
 import Galeri from "./pages/Galeri";
+import SSS from "./pages/SSS";
+import Basin from "./pages/Basin";
+import HukukiSayfa from "./pages/HukukiSayfa";
 import { TurkishArchive, EnglishArchive } from "./pages/BlogArchive";
 import LegacyArticlePage, { EnglishLegacyArticlePage } from "./pages/LegacyArticlePage";
 import { EnglishAbout, EnglishAiFabric, EnglishContact, EnglishHome, EnglishProductDetail, EnglishSolutions } from "./pages/EnglishPages";
@@ -38,6 +41,13 @@ function Router() {
       <Route path="/blog/:slug" component={LegacyArticlePage} />
       <Route path="/blog" component={TurkishArchive} />
       <Route path="/galeri" component={Galeri} />
+      <Route path="/sss" component={SSS} />
+      <Route path="/basin" component={Basin} />
+      <Route path="/faq" component={SSS} />
+      <Route path="/kvkk" component={HukukiSayfa} />
+      <Route path="/gizlilik" component={HukukiSayfa} />
+      <Route path="/iade" component={HukukiSayfa} />
+      <Route path="/sorumluluk" component={HukukiSayfa} />
       <Route path="/en/gallery" component={Galeri} />
       <Route path="/magaza/:slug" component={PaketDetay} />
       <Route path="/magaza" component={Store} />

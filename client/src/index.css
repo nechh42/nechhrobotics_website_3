@@ -442,3 +442,51 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media (max-width: 960px) { .video-serit { grid-template-columns: 1fr; gap: 30px; padding: 72px 32px; } .video-serit-lead p:not(.eyebrow) { max-width: none; } }
 @media (max-width: 640px) { .video-serit { padding: 60px 20px; } .video-serit h2 { font-size: 2.1rem; } }
 .video-ses-notu { padding: 9px 12px; border-top: 1px solid rgba(255,255,255,.18); color: #8f9aac; font-size: 10px; letter-spacing: .02em; }
+
+/* Hukuki metinler ve SSS. */
+.hukuki-hero { padding: 84px clamp(24px, 12vw, 200px) 60px; color: #fff; background: var(--ink); }
+.hukuki-hero .eyebrow { color: var(--lime); }
+.hukuki-hero h1 { margin: 0 0 16px; font-size: clamp(2.3rem, 4.4vw, 4.2rem); line-height: 1.02; }
+.hukuki-ozet { margin: 0; max-width: 640px; color: #b6c0cf; font-size: 15px; line-height: 1.75; }
+.hukuki-govde { display: grid; grid-template-columns: .32fr 1fr; gap: 60px; padding: 78px clamp(24px, 12vw, 200px); background: var(--paper); }
+.hukuki-yan { align-self: start; position: sticky; top: 110px; display: grid; gap: 9px; }
+.hukuki-yan span { color: var(--blue); font-family: "Space Grotesk", sans-serif; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.hukuki-yan i { display: block; width: 34px; height: 1px; background: var(--red); }
+.hukuki-yan a { color: var(--muted-ink); font-size: 13px; }
+.hukuki-yan a:hover { color: var(--blue); }
+.hukuki-icerik { max-width: 760px; }
+.hukuki-icerik h2 { margin: 34px 0 12px; font-size: 24px; line-height: 1.15; }
+.hukuki-icerik h2:first-child { margin-top: 0; }
+.hukuki-icerik h3 { margin: 26px 0 10px; font-size: 18px; }
+.hukuki-icerik p { margin: 0 0 14px; font-size: 15px; line-height: 1.8; }
+.hukuki-icerik ul { margin: 0 0 18px; padding-left: 18px; }
+.hukuki-icerik li { margin-bottom: 7px; font-size: 14px; line-height: 1.72; }
+
+.sss-bolum { padding: 54px clamp(24px, 6vw, 95px); border-bottom: 1px solid var(--line); background: var(--paper); }
+.sss-liste { margin-top: 18px; border-top: 1px solid var(--line); }
+.sss-liste details { border-bottom: 1px solid var(--line); }
+.sss-liste summary { display: flex; align-items: center; justify-content: space-between; padding: 19px 0; cursor: pointer; font-size: 17px; font-weight: 600; list-style: none; }
+.sss-liste summary::-webkit-details-marker { display: none; }
+.sss-liste summary::after { content: "+"; color: var(--blue); font-family: "Space Grotesk", sans-serif; font-size: 21px; }
+.sss-liste details[open] summary::after { content: "−"; }
+.sss-liste summary:hover { color: var(--blue); }
+.sss-liste details p { margin: 0 0 21px; max-width: 720px; color: var(--muted-ink); font-size: 14px; line-height: 1.78; }
+
+@media (max-width: 960px) { .hukuki-govde { grid-template-columns: 1fr; gap: 32px; padding: 64px 32px; } .hukuki-yan { position: static; } }
+@media (max-width: 640px) {
+  .hukuki-hero { padding: 64px 20px 48px; }
+  .hukuki-hero h1 { font-size: 2.3rem; }
+  .hukuki-govde { padding: 54px 20px; }
+  .sss-bolum { padding: 44px 20px; }
+  .sss-liste summary { font-size: 15px; }
+}
+.footer-grid { grid-template-columns: 1.4fr .7fr .7fr .8fr .7fr; }
+@media (max-width: 960px) { .footer-grid { grid-template-columns: 1.3fr .7fr .7fr; } }
+@media (max-width: 640px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+.basin-bulten { display: grid; grid-template-columns: .3fr 1fr; gap: 50px; padding: 66px clamp(24px, 10vw, 170px); border-bottom: 1px solid var(--line); background: var(--paper); }
+.basin-yan { align-self: start; position: sticky; top: 110px; }
+.basin-pdf { display: inline-flex; align-items: center; gap: 8px; padding: 11px 15px; border: 1px solid var(--line); color: var(--blue); font-family: "Space Grotesk", sans-serif; font-size: 12px; font-weight: 700; }
+.basin-pdf:hover { border-color: var(--blue); background: var(--blue-soft); }
+.basin-bulten li { margin-bottom: 7px; font-size: 14px; line-height: 1.72; }
+@media (max-width: 960px) { .basin-bulten { grid-template-columns: 1fr; gap: 22px; padding: 56px 32px; } .basin-yan { position: static; } }
+@media (max-width: 640px) { .basin-bulten { padding: 46px 20px; } }

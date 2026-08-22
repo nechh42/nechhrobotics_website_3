@@ -552,3 +552,80 @@ edilir.
 
 ⏸️ **Push için Hasan'ın onayı bekleniyor** —
 `https://github.com/nechh42/Nechh_Robotics_Website-YEN-LENM-.git`
+
+---
+
+## ✅ ESKİ SİTEDEN KALAN HER ŞEY TAŞINDI (22 Ağu)
+
+> Hasan: *"Eski sitede ne varsa taşıyalım. Biz siteyi statik durumdan
+> kurtarmaya çalışıyoruz, sadece bu."*
+> ⚠️ Claude her adımda onay sormayı bıraktı — kapsam belli, iş yapılıyor.
+
+### 💳 IBAN girildi
+`.env` → `VITE_IBAN_SAHIBI` + `VITE_IBAN_NO`
+`TR62 0006 4000 0014 5100 2493 37` · Hasan Hüseyin Bayrak
+*(`.env` `.gitignore`'da — IBAN depoya yazılmadı, Vercel paneline elle girilecek.)*
+
+### ⚖️ Hukuki metinler — 4 sayfa
+`/kvkk` · `/gizlilik` · `/iade` · `/sorumluluk`
+Eski siteden **126 içerik bloğu** çıkarıldı (KVKK 33, gizlilik 47, iade 23,
+sorumluluk 23). Ortak `HukukiSayfa.tsx` bileşeni; yan sütunda diğer metinlere
+geçiş.
+
+🔧 **Bir çelişki düzeltildi:** gizlilik metni *"ödeme işlemleri üçüncü taraf
+sağlayıcılar aracılığıyla"* diyordu — 18 Ağu'da kart tamamen kaldırılmıştı.
+Yeni hali: *"Ödemeler banka havalesi/EFT ile alınır; kart bilgisi toplanmaz
+ve saklanmaz."*
+
+### ❓ SSS — `/sss`
+3 kategori, 5 soru taşındı.
+⚠️ **İçerik eski:** sorular mikrodenetleyici/açık kaynak donanım üzerine,
+bugünkü işle (CBAM, KVKK, uyum yazılımı) ilgisi yok. **Güncellenmeli** —
+taşındı ama yazılması gereken yeni sorular var.
+
+### 📰 Basın — `/basin`
+2 bülten (HeliaLoop + JuriLoop), 54 blok. PDF sürümleri de indirilebilir.
+
+### 🔗 Alt bilgiye "Yasal" sütunu eklendi
+KVKK · Gizlilik · İade · Sorumluluk · SSS — ayrıca Mağaza ve Galeri bağlantısı.
+
+### 🔴 SEO KURTARMA
+**1 · Canonical rota başına üretiliyor**
+```
+https://www.nechhrobotics.com + window.location.pathname
+```
+⚠️ 12 Ağu dersi uygulandı: kökte sabit `/` canonical **tüm siteyi dizinden
+düşürüyor.** Artık her sayfa kendi adresini gösteriyor. `lang` da yerele göre.
+
+**2 · `vercel.json` — 28 kalıcı (301) yönlendirme**
+Eski sitemap'teki **101 adres** tarandı, kırılacak olanların hepsi eşlendi:
+`/privacy → /gizlilik` · `/refund-policy → /iade` · `/risk-disclosure →
+/sorumluluk` · `/legal/* → ilgili sayfa` · `/faq → /sss` · `/about →
+/hakkimizda` · `/contact → /iletisim` · `/services/* → /hizmetler` ·
+`/press/* → /basin` · `/products/* → ilgili ürün veya mağaza` ·
+`/tonsora/* → /cozumler/tonsora` · `/odeme → /magaza`
+
+Ayrıca SPA fallback rewrite (medya/ürün/PDF dosyaları hariç tutuldu) ve
+medya için 1 yıllık önbellek başlığı.
+
+**3 · Yeni `sitemap.xml` — 89 adres**
+Gerçek rotalardan üretildi: 15 sabit TR + 4 ürün + 8 paket + 8 EN +
+**50 blog yazısı** (38 TR + 12 EN). `robots.txt` sitemap'i gösteriyor.
+
+### 🔬 ÖLÇÜM — 12 adres sunucudan çekildi
+```
+/sss /kvkk /gizlilik /iade /sorumluluk /basin /magaza /galeri
+/sitemap.xml /robots.txt /basin/basin-bulteni-1.pdf
+/urunler/kvkk-sablon-paketi.zip     → HEPSİ 200
+
+npx tsc --noEmit → 0
+npm run build    → ✓ 6.54s · 1643 modül
+```
+
+### ⏭️ YAYIN ÖNCESİ KALAN
+- [ ] Vercel'e `VITE_IBAN_SAHIBI` + `VITE_IBAN_NO` girilecek *(`.env` depoda yok)*
+- [ ] SSS içeriği güncellenecek (eski donanım soruları)
+- [ ] Prerender: SPA'da içerik tarayıcıda çiziliyor. Canonical + yönlendirme +
+      sitemap riski büyük ölçüde kapattı; **tam güvence için prerender
+      (her rotaya gerçek HTML) hâlâ önerilir.** Headless tarayıcı bağımlılığı
+      gerektirir — ayrı iş olarak duruyor.

@@ -1,0 +1,37 @@
+[
+ {
+  "baslik": "Genel Sorular",
+  "sorular": [
+   {
+    "soru": "Nechh Robotics nedir?",
+    "cevap": "Nechh Robotics; gömülü elektronik tasarımları, motor kontrol algoritmaları, yazılım otomasyon araçları ve yerel ortam sensör ağları üzerine odaklanmış bağımsız bir geliştirme ve araştırma laboratuvarıdır."
+   },
+   {
+    "soru": "Projeleriniz ticari mi?",
+    "cevap": "Tasarımlarımızın çoğu deneyseldir veya açık kaynak kodlu/şemalı olarak yayınlanmaktadır. **Emotice Codeburn** gibi araçlarımız açık beta testinde olup, **AEHS Model** gibi donanım sistemlerimiz ise özel laboratuvar tasarımlarıdır."
+   }
+  ]
+ },
+ {
+  "baslik": "Teknoloji & Açık Kaynak",
+  "sorular": [
+   {
+    "soru": "Proje kaynak kodlarına erişebilir miyim?",
+    "cevap": "Evet. Geliştirdiğimiz kütüphaneleri, cihaz yazılımlarını ve mikrodenetleyici konfigürasyonlarını herkese açık GitHub sayfamızda paylaşıyoruz. Güncellemeleri periyodik olarak **Blog** bölümümüzde yayınlamaktayyiz."
+   },
+   {
+    "soru": "Hangi mikrodenetleyicileri kullanıyorsunuz?",
+    "cevap": "İşlem gereksinimlerine ve sensör bağlantı limitlerine göre prototiplerimizde ağırlıklı olarak ESP32 serisi, STM32 mikrodenetleyicileri ve Raspberry Pi modüllerini tercih ediyoruz."
+   }
+  ]
+ },
+ {
+  "baslik": "İş Birliği & İletişim",
+  "sorular": [
+   {
+    "soru": "Araştırma veya iş birliği teklifini nasıl iletebilirim?",
+    "cevap": "Öğrenci araştırmacılara, donanım meraklılarına ve açık kaynak katkıcılarına kapımız her zaman açıktır. İş birliği taleplerinizi iletişim formumuz üzerinden veya doğrudan nechhlab.global@gmail.com adresine e-posta göndererek iletebilirsiniz."
+   }
+  ]
+ }
+]
