@@ -1,530 +1,640 @@
 {
- "kvkk": {
-  "baslik": "KVKK Aydınlatma Metni",
-  "ozet": "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aydınlatma metni.",
-  "bloklar": [
-   {
-    "tip": "li",
-    "metin": "Yasal KVKK & Veri Güvenliği HeliaLoop'ta kişisel sağlık verileriniz 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında işlenmekte ve saklanmaktadır. Son güncelleme: Haziran 2026. ✅ KVKK Uyumlu 🔒 SSL / TLS Şifreleme 🏥 Sağlık Verisi Özel Koruması 🇹🇷 Türkiye Sunucuları (Supabase EU) Veri Sorumlusu Kim İşliyor? Nechh Robotics — HeliaLoop İletişim: nechhlab.global@gmail.com Konu: KVKK & Veri Güvenliği Talepleri HeliaLoop, Nechh Robotics bünyesinde geliştirilen ve işletilen bir SaaS sağlık platformudur. İşlenen Veriler Hangi Veriler Toplanıyor? Hasta Verileri Ad, soyad, e-posta, telefon"
-   },
-   {
-    "tip": "li",
-    "metin": "TC kimlik numarası (opsiyonel, yalnızca doğrulama amacıyla)"
-   },
-   {
-    "tip": "li",
-    "metin": "Doğum tarihi, cinsiyet"
-   },
-   {
-    "tip": "li",
-    "metin": "Sağlık şikayetleri (AI asistan kullanımında)"
-   },
-   {
-    "tip": "li",
-    "metin": "Randevu ve yönlendirme geçmişi"
-   },
-   {
-    "tip": "h3",
-    "metin": "Doktor / Profesyonel Verileri"
-   },
-   {
-    "tip": "li",
-    "metin": "Ad, soyad, e-posta, telefon"
-   },
-   {
-    "tip": "li",
-    "metin": "Diploma ve sertifika bilgileri (onay sürecinde)"
-   },
-   {
-    "tip": "li",
-    "metin": "Klinik adresi, branş bilgileri"
-   },
-   {
-    "tip": "li",
-    "metin": "Randevu ve sevk kayıtları"
-   },
-   {
-    "tip": "li",
-    "metin": "Hasta-doktor eşleştirme ve randevu yönetimi"
-   },
-   {
-    "tip": "li",
-    "metin": "AI destekli sağlık yönlendirme hizmeti"
-   },
-   {
-    "tip": "li",
-    "metin": "Platform güvenliği ve dolandırıcılık önleme"
-   },
-   {
-    "tip": "li",
-    "metin": "Yasal yükümlülükler (KVKK, Sağlık Bakanlığı mevzuatı)"
-   },
-   {
-    "tip": "h3",
-    "metin": "Şifreleme"
-   },
-   {
-    "tip": "p",
-    "metin": "Tüm veriler transit sırasında TLS 1.3 ile, durağan halde AES-256 ile şifrelenmektedir."
-   },
-   {
-    "tip": "h3",
-    "metin": "Altyapı"
-   },
-   {
-    "tip": "p",
-    "metin": "HeliaLoop, Supabase (PostgreSQL) altyapısını kullanmaktadır. Sunucular Avrupa Birliği (Frankfurt) veri merkezindedir. GDPR uyumlu SOC 2 Type II sertifikalı altyapı."
-   },
-   {
-    "tip": "h3",
-    "metin": "Erişim Kontrolü"
-   },
-   {
-    "tip": "p",
-    "metin": "Row Level Security (RLS) politikaları ile her kullanıcı yalnızca kendi verilerine erişebilir. Doktorlar yalnızca onay verdikleri hastanın verilerini görebilir."
-   },
-   {
-    "tip": "h3",
-    "metin": "API Anahtarları"
-   },
-   {
-    "tip": "p",
-    "metin": "Servis anahtarları sunucu tarafında saklanmakta, hiçbir zaman istemci tarafına (tarayıcı/uygulama) gönderilmemektedir."
-   },
-   {
-    "tip": "li",
-    "metin": "Kişisel verilerinizin işlenip işlenmediğini öğrenme hakkı"
-   },
-   {
-    "tip": "li",
-    "metin": "İşlenmişse buna ilişkin bilgi talep etme hakkı"
-   },
-   {
-    "tip": "li",
-    "metin": "Yanlış verilerin düzeltilmesini isteme hakkı"
-   },
-   {
-    "tip": "li",
-    "metin": "Verilerin silinmesini veya yok edilmesini talep etme hakkı"
-   },
-   {
-    "tip": "li",
-    "metin": "İşlenen verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme hakkı"
-   },
-   {
-    "tip": "li",
-    "metin": "Otomatik sistemler üzerinden aleyhe bir sonuç ortaya çıkması durumunda itiraz hakkı"
-   },
-   {
-    "tip": "p",
-    "metin": "Bu haklarınızı kullanmak için nechhlab.global@gmail.com adresine \"KVKK Talebi\" konulu e-posta gönderebilirsiniz. Talepler 30 gün içinde yanıtlanır."
-   },
-   {
-    "tip": "li",
-    "metin": "Aktif hesap verileri: Hesap aktif olduğu sürece"
-   },
-   {
-    "tip": "li",
-    "metin": "Sağlık kayıtları: Hesap silme talebinden itibaren en fazla 3 yıl (yasal yükümlülük)"
-   },
-   {
-    "tip": "li",
-    "metin": "Log kayıtları: 90 gün"
-   },
-   {
-    "tip": "li",
-    "metin": "Ödeme bilgileri: Craftgate güvenli kasasında saklanır, HeliaLoop sunucularında kart bilgisi tutulmaz"
-   }
-  ]
- },
- "gizlilik": {
-  "baslik": "Gizlilik Politikası",
-  "ozet": "Kişisel verilerin toplanması, işlenmesi ve saklanmasına ilişkin politika.",
-  "bloklar": [
-   {
-    "tip": "p",
-    "metin": "Bu Gizlilik Politikası, Nechh Robotics (\"biz\", \"şirket\") ve markalarımız (HeliaLoop, JuriLoop) tarafından kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında hareket ederiz."
-   },
-   {
-    "tip": "h2",
-    "metin": "1. Topladığımız Veriler"
-   },
-   {
-    "tip": "p",
-    "metin": "Platformlarımıza kayıt olduğunuzda veya abonelik satın aldığınızda aşağıdaki verileri toplarız:"
-   },
-   {
-    "tip": "li",
-    "metin": "Hesap Bilgileri: Ad, soyad, e-posta adresi, telefon numarası ve meslek bilgisi (doktor/avukat/hasta/müvekkil)."
-   },
-   {
-    "tip": "li",
-    "metin": "Ödeme Bilgileri: Ödemeler banka havalesi/EFT ile alınır; kart bilgisi toplanmaz ve saklanmaz. Kredi kartı numaralarınız sunucularımızda saklanmaz."
-   },
-   {
-    "tip": "li",
-    "metin": "Kullanım Verileri: Platform içi etkileşimler, yönlendirme kayıtları ve randevu takip bilgileri."
-   },
-   {
-    "tip": "li",
-    "metin": "Teknik Veriler: IP adresi, tarayıcı türü ve cihaz bilgisi (sunucu güvenliği ve performans izleme amacıyla)."
-   },
-   {
-    "tip": "li",
-    "metin": "İletişim Verileri: Bize gönderdiğiniz mesajların içeriği ve e-posta adresiniz."
-   },
-   {
-    "tip": "li",
-    "metin": "Salon Randevu Verileri (TONSORA): Salon işletmecisinin girdiği müşteri adı ve telefon numarası, randevu tarih/saat bilgisi, seçilen hizmet ve personel kaydı. Bu veriler salonun kendi müşteri kayıtlarıdır; Nechh Robotics tarafından pazarlama amacıyla kullanılmaz ve üçüncü taraflara satılmaz."
-   },
-   {
-    "tip": "li",
-    "metin": "Cihaz Bildirim Kaydı: Mobil uygulamalarımızda bildirim izni verirseniz, cihazınıza ait bildirim kimliği (push token) saklanır. Uygulamadan çıkış yaptığınızda bu kayıt silinir."
-   },
-   {
-    "tip": "p",
-    "metin": "Kapsam: Bu politika Nechh Robotics'in tüm ürünlerini kapsar: HeliaLoop, JuriLoop, Nechh Eco-Report ve TONSORA (berber & kuaför randevu uygulaması)."
-   },
-   {
-    "tip": "h2",
-    "metin": "1.a TONSORA — salon uygulamasına özel açıklamalar"
-   },
-   {
-    "tip": "li",
-    "metin": "Veri sorumlusu kimdir? Salon müşterilerinin verilerini uygulamaya salon işletmecisi girer ve bu veriler üzerinde kontrol ondadır. Nechh Robotics veri işleyen sıfatıyla, yalnızca hizmeti sunmak için işler."
-   },
-   {
-    "tip": "li",
-    "metin": "Hatırlatma mesajları: Müşteriye randevu hatırlatması salonun kendi WhatsApp hesabı üzerinden, salonun kendisi tarafından gönderilir. Nechh Robotics müşteri numaralarını mesaj göndermek için kullanmaz, üçüncü bir mesajlaşma servisine aktarmaz."
-   },
-   {
-    "tip": "li",
-    "metin": "Reklam yok: TONSORA uygulamasında reklam gösterilmez ve reklam kimliği toplanmaz."
-   },
-   {
-    "tip": "li",
-    "metin": "Silme: Salon, müşteri kaydını uygulama içinden silebilir. Hesabın tamamen kapatılması ve verilerin silinmesi için aşağıdaki iletişim adresinden talepte bulunulabilir; talepler 30 gün içinde sonuçlandırılır."
-   },
-   {
-    "tip": "h2",
-    "metin": "2. Verilerin İşlenme Amaçları"
-   },
-   {
-    "tip": "p",
-    "metin": "Verilerinizi aşağıdaki amaçlarla işleriz:"
-   },
-   {
-    "tip": "li",
-    "metin": "Hesap oluşturma ve kimlik doğrulama."
-   },
-   {
-    "tip": "li",
-    "metin": "Abonelik yönetimi ve faturalama."
-   },
-   {
-    "tip": "li",
-    "metin": "Hasta/müvekkil yönlendirme süreçlerinin yürütülmesi."
-   },
-   {
-    "tip": "li",
-    "metin": "Teknik destek ve müşteri hizmetleri sağlanması."
-   },
-   {
-    "tip": "li",
-    "metin": "Platform güvenliğinin sağlanması ve kötüye kullanımın önlenmesi."
-   },
-   {
-    "tip": "li",
-    "metin": "Yasal yükümlülüklerin yerine getirilmesi."
-   },
-   {
-    "tip": "h2",
-    "metin": "3. Veri Paylaşımı ve Saklama"
-   },
-   {
-    "tip": "p",
-    "metin": "Kişisel verilerinizi satmaz, kiralamaz veya takas etmeyiz. Verileriniz yalnızca aşağıdaki durumlarda üçüncü taraflarla paylaşılır:"
-   },
-   {
-    "tip": "li",
-    "metin": "Ödeme işlemlerinin gerçekleştirilmesi için güvenli ödeme sağlayıcılarıyla."
-   },
-   {
-    "tip": "li",
-    "metin": "Yasal zorunluluk halinde yetkili makamlarla."
-   },
-   {
-    "tip": "li",
-    "metin": "Altyapı hizmeti sağlayan iş ortaklarıyla (Vercel, Supabase) — yalnızca teknik gereklilik kapsamında."
-   },
-   {
-    "tip": "p",
-    "metin": "Verileriniz hesabınız aktif olduğu sürece ve yasal saklama süreleri boyunca muhafaza edilir."
-   },
-   {
-    "tip": "h2",
-    "metin": "4. Çerezler (Cookies)"
-   },
-   {
-    "tip": "p",
-    "metin": "Web sitemiz temel işlevsellik çerezleri, performans analizi (Google Analytics) ve oturum yönetimi çerezleri kullanır. Davranışsal reklam izleme çerezleri kullanılmamaktadır."
-   },
-   {
-    "tip": "h2",
-    "metin": "5. Haklarınız (KVKK & GDPR)"
-   },
-   {
-    "tip": "p",
-    "metin": "Aşağıdaki haklara sahipsiniz:"
-   },
-   {
-    "tip": "li",
-    "metin": "Kişisel verilerinizin işlenip işlenmediğini öğrenme."
-   },
-   {
-    "tip": "li",
-    "metin": "İşlenen verilere ilişkin bilgi talep etme."
-   },
-   {
-    "tip": "li",
-    "metin": "Verilerin düzeltilmesini veya silinmesini isteme."
-   },
-   {
-    "tip": "li",
-    "metin": "İşlemenin kısıtlanmasını talep etme."
-   },
-   {
-    "tip": "li",
-    "metin": "Veri taşınabilirliği hakkı."
-   },
-   {
-    "tip": "p",
-    "metin": "Bu haklarınızı kullanmak için: nechhlab.global@gmail.com adresine yazabilirsiniz."
-   },
-   {
-    "tip": "h2",
-    "metin": "6. Sağlık ve Hukuk Verilerine İlişkin Özel Tedbirler"
-   },
-   {
-    "tip": "p",
-    "metin": "HeliaLoop ve JuriLoop platformlarında işlenen sağlık ve hukuk verileri özel nitelikli kişisel veri statüsündedir. Bu veriler:"
-   },
-   {
-    "tip": "li",
-    "metin": "Uçtan uca şifreleme ile korunur."
-   },
-   {
-    "tip": "li",
-    "metin": "Yalnızca ilgili profesyoneller (doktor/avukat) tarafından erişilebilir."
-   },
-   {
-    "tip": "li",
-    "metin": "KVKK madde 6 kapsamında açık rıza ile işlenir."
-   },
-   {
-    "tip": "h2",
-    "metin": "7. İletişim"
-   },
-   {
-    "tip": "p",
-    "metin": "Gizlilik politikamız hakkında sorularınız için: nechhlab.global@gmail.com"
-   }
-  ]
- },
- "iade": {
-  "baslik": "İade Politikası",
-  "ozet": "Ücretli hizmetlerde iptal ve iade koşulları.",
-  "bloklar": [
-   {
-    "tip": "p",
-    "metin": "Bu İade Politikası, Nechh Robotics ve markaları (HeliaLoop, JuriLoop) tarafından sunulan ücretli abonelik hizmetlerine ilişkin iade koşullarını açıklar."
-   },
-   {
-    "tip": "h2",
-    "metin": "1. Ücretsiz Deneme Süresi"
-   },
-   {
-    "tip": "p",
-    "metin": "Tüm ücretli planlarımız 10 gün ücretsiz deneme süresi ile başlar. Bu süre zarfında herhangi bir ücret tahsil edilmez. Deneme süresinin sonunda aboneliğinizi iptal etmezseniz, seçtiğiniz plan için ücretlendirme başlar."
-   },
-   {
-    "tip": "h2",
-    "metin": "2. Abonelik İptali"
-   },
-   {
-    "tip": "p",
-    "metin": "Aboneliğinizi dilediğiniz zaman iptal edebilirsiniz:"
-   },
-   {
-    "tip": "li",
-    "metin": "İptal işlemi, mevcut fatura döneminin sonuna kadar geçerli olur."
-   },
-   {
-    "tip": "li",
-    "metin": "İptal sonrası kalan süre boyunca hizmetlerimizi kullanmaya devam edebilirsiniz."
-   },
-   {
-    "tip": "li",
-    "metin": "İptal talebi için: nechhlab.global@gmail.com adresine yazabilirsiniz."
-   },
-   {
-    "tip": "h2",
-    "metin": "3. İade Koşulları"
-   },
-   {
-    "tip": "p",
-    "metin": "Aşağıdaki durumlarda iade talep edebilirsiniz:"
-   },
-   {
-    "tip": "li",
-    "metin": "Teknik arıza: Platformun sürekli erişilemez olması veya temel işlevlerinin çalışmaması durumunda, kullanılamayan süre için orantılı iade yapılır."
-   },
-   {
-    "tip": "li",
-    "metin": "Çift ücretlendirme: Yanlışlıkla mükerrer ödeme alınması halinde fazla ödeme tam olarak iade edilir."
-   },
-   {
-    "tip": "li",
-    "metin": "İlk 7 gün kuralı: Ücretli dönemin başlangıcından itibaren ilk 7 gün içinde yapılan iade talepleri tam olarak karşılanır."
-   },
-   {
-    "tip": "h2",
-    "metin": "4. İade Yapılmayan Durumlar"
-   },
-   {
-    "tip": "li",
-    "metin": "Ücretsiz deneme süresi içinde yapılan iptal işlemleri (zaten ücret alınmamıştır)."
-   },
-   {
-    "tip": "li",
-    "metin": "Fatura döneminin 7. gününden sonra yapılan iptal talepleri."
-   },
-   {
-    "tip": "li",
-    "metin": "Kullanıcı hatası veya üçüncü taraf yazılım uyumsuzluğu kaynaklı sorunlar."
-   },
-   {
-    "tip": "h2",
-    "metin": "5. İade Süreci"
-   },
-   {
-    "tip": "p",
-    "metin": "İade talepleri nechhlab.global@gmail.com adresine gönderilmelidir. Talepler 5 iş günü içinde değerlendirilir ve onaylanan iadeler, ödeme yöntemine bağlı olarak 5-10 iş günü içinde hesabınıza yansır."
-   },
-   {
-    "tip": "h2",
-    "metin": "6. Ücretsiz Kullanıcılar"
-   },
-   {
-    "tip": "p",
-    "metin": "HeliaLoop ve JuriLoop platformlarında hasta ve müvekkil hesapları tamamen ücretsizdir. Ücretsiz hesaplar için herhangi bir ödeme veya iade durumu söz konusu değildir."
-   },
-   {
-    "tip": "h2",
-    "metin": "7. İletişim"
-   },
-   {
-    "tip": "p",
-    "metin": "İade politikamız hakkında sorularınız için: nechhlab.global@gmail.com"
-   }
-  ]
- },
- "sorumluluk": {
-  "baslik": "Sorumluluk Reddi",
-  "ozet": "Hizmetlerin kapsamı ve sınırlarına ilişkin yasal bildirim.",
-  "bloklar": [
-   {
-    "tip": "p",
-    "metin": "Bu sayfa, Nechh Robotics ve markaları (HeliaLoop, JuriLoop) tarafından sunulan hizmetlere ilişkin yasal sorumluluk sınırlarını belirler."
-   },
-   {
-    "tip": "h2",
-    "metin": "1. Tıbbi Sorumluluk Reddi (HeliaLoop)"
-   },
-   {
-    "tip": "p",
-    "metin": "HeliaLoop, doktorlar ve klinisyenler arasında profesyonel yönlendirme ve randevu ağı olarak hizmet verir. Platform:"
-   },
-   {
-    "tip": "li",
-    "metin": "Tıbbi teşhis koymaz, tedavi önermez ve reçete yazmaz."
-   },
-   {
-    "tip": "li",
-    "metin": "AI Karar Desteği özelliği yalnızca bilgi amaçlıdır ve hiçbir koşulda profesyonel tıbbi görüşün yerini almaz."
-   },
-   {
-    "tip": "li",
-    "metin": "Hasta-hekim ilişkisi doğrudan taraflar arasındadır; Nechh Robotics bu ilişkinin tarafı değildir."
-   },
-   {
-    "tip": "li",
-    "metin": "Acil tıbbi durumlarda 112'yi aramanız gerekmektedir."
-   },
-   {
-    "tip": "h2",
-    "metin": "2. Hukuki Sorumluluk Reddi (JuriLoop)"
-   },
-   {
-    "tip": "p",
-    "metin": "JuriLoop, avukatlar arasında dava yönlendirme ve mesleki işbirliği ağı olarak hizmet verir. Platform:"
-   },
-   {
-    "tip": "li",
-    "metin": "Hukuki danışmanlık vermez, dava sonuçları hakkında garanti sunmaz."
-   },
-   {
-    "tip": "li",
-    "metin": "AI Karar Desteği özelliği yalnızca referans amaçlıdır ve avukat görüşünün yerini almaz."
-   },
-   {
-    "tip": "li",
-    "metin": "Avukat-müvekkil ilişkisi doğrudan taraflar arasındadır; Nechh Robotics bu ilişkinin tarafı değildir."
-   },
-   {
-    "tip": "h2",
-    "metin": "3. Yapay Zekâ (AI) Kullanımı"
-   },
-   {
-    "tip": "p",
-    "metin": "Platformlarımızda kullanılan yapay zekâ modelleri:"
-   },
-   {
-    "tip": "li",
-    "metin": "Karar destek aracı olarak tasarlanmıştır, nihai karar verici değildir."
-   },
-   {
-    "tip": "li",
-    "metin": "AI çıktıları her zaman ilgili profesyonel (doktor/avukat) tarafından doğrulanmalıdır."
-   },
-   {
-    "tip": "li",
-    "metin": "AI modellerinin hatalı veya eksik sonuç üretme olasılığı bulunmaktadır."
-   },
-   {
-    "tip": "h2",
-    "metin": "4. Genel Sorumluluk Sınırı"
-   },
-   {
-    "tip": "p",
-    "metin": "Nechh Robotics, platformlarının kullanımından kaynaklanan doğrudan, dolaylı veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamaz. Hizmetlerimiz \"olduğu gibi\" sunulmakta olup, kesintisiz veya hatasız çalışma garantisi verilmemektedir."
-   },
-   {
-    "tip": "h2",
-    "metin": "5. Üçüncü Taraf Bağlantıları"
-   },
-   {
-    "tip": "p",
-    "metin": "Web sitemiz üçüncü taraf web sitelerine bağlantılar içerebilir. Bu sitelerin içeriklerinden veya gizlilik uygulamalarından sorumlu değiliz."
-   },
-   {
-    "tip": "h2",
-    "metin": "6. İletişim"
-   },
-   {
-    "tip": "p",
-    "metin": "Bu disclaimer hakkında sorularınız için: nechhlab.global@gmail.com"
-   }
-  ]
- }
+  "kvkk": {
+    "baslik": "KVKK Aydınlatma Metni",
+    "ozet": "6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında aydınlatma metni.",
+    "bloklar": [
+      {
+        "tip": "li",
+        "metin": "Yasal KVKK & Veri Güvenliği HeliaLoop'ta kişisel sağlık verileriniz 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında işlenmekte ve saklanmaktadır. Son güncelleme: Haziran 2026. ✅ KVKK Uyumlu 🔒 SSL / TLS Şifreleme 🏥 Sağlık Verisi Özel Koruması 🇹🇷 Türkiye Sunucuları (Supabase EU) Veri Sorumlusu Kim İşliyor? Nechh Robotics — HeliaLoop İletişim: nechhlab.global@gmail.com Konu: KVKK & Veri Güvenliği Talepleri HeliaLoop, Nechh Robotics bünyesinde geliştirilen ve işletilen bir SaaS sağlık platformudur. İşlenen Veriler Hangi Veriler Toplanıyor? Hasta Verileri Ad, soyad, e-posta, telefon"
+      },
+      {
+        "tip": "li",
+        "metin": "TC kimlik numarası (opsiyonel, yalnızca doğrulama amacıyla)"
+      },
+      {
+        "tip": "li",
+        "metin": "Doğum tarihi, cinsiyet"
+      },
+      {
+        "tip": "li",
+        "metin": "Sağlık şikayetleri (AI asistan kullanımında)"
+      },
+      {
+        "tip": "li",
+        "metin": "Randevu ve yönlendirme geçmişi"
+      },
+      {
+        "tip": "h3",
+        "metin": "Doktor / Profesyonel Verileri"
+      },
+      {
+        "tip": "li",
+        "metin": "Ad, soyad, e-posta, telefon"
+      },
+      {
+        "tip": "li",
+        "metin": "Diploma ve sertifika bilgileri (onay sürecinde)"
+      },
+      {
+        "tip": "li",
+        "metin": "Klinik adresi, branş bilgileri"
+      },
+      {
+        "tip": "li",
+        "metin": "Randevu ve sevk kayıtları"
+      },
+      {
+        "tip": "li",
+        "metin": "Hasta-doktor eşleştirme ve randevu yönetimi"
+      },
+      {
+        "tip": "li",
+        "metin": "AI destekli sağlık yönlendirme hizmeti"
+      },
+      {
+        "tip": "li",
+        "metin": "Platform güvenliği ve dolandırıcılık önleme"
+      },
+      {
+        "tip": "li",
+        "metin": "Yasal yükümlülükler (KVKK, Sağlık Bakanlığı mevzuatı)"
+      },
+      {
+        "tip": "h3",
+        "metin": "Şifreleme"
+      },
+      {
+        "tip": "p",
+        "metin": "Tüm veriler transit sırasında TLS 1.3 ile, durağan halde AES-256 ile şifrelenmektedir."
+      },
+      {
+        "tip": "h3",
+        "metin": "Altyapı"
+      },
+      {
+        "tip": "p",
+        "metin": "HeliaLoop, Supabase (PostgreSQL) altyapısını kullanmaktadır. Sunucular Avrupa Birliği (Frankfurt) veri merkezindedir. GDPR uyumlu SOC 2 Type II sertifikalı altyapı."
+      },
+      {
+        "tip": "h3",
+        "metin": "Erişim Kontrolü"
+      },
+      {
+        "tip": "p",
+        "metin": "Row Level Security (RLS) politikaları ile her kullanıcı yalnızca kendi verilerine erişebilir. Doktorlar yalnızca onay verdikleri hastanın verilerini görebilir."
+      },
+      {
+        "tip": "h3",
+        "metin": "API Anahtarları"
+      },
+      {
+        "tip": "p",
+        "metin": "Servis anahtarları sunucu tarafında saklanmakta, hiçbir zaman istemci tarafına (tarayıcı/uygulama) gönderilmemektedir."
+      },
+      {
+        "tip": "li",
+        "metin": "Kişisel verilerinizin işlenip işlenmediğini öğrenme hakkı"
+      },
+      {
+        "tip": "li",
+        "metin": "İşlenmişse buna ilişkin bilgi talep etme hakkı"
+      },
+      {
+        "tip": "li",
+        "metin": "Yanlış verilerin düzeltilmesini isteme hakkı"
+      },
+      {
+        "tip": "li",
+        "metin": "Verilerin silinmesini veya yok edilmesini talep etme hakkı"
+      },
+      {
+        "tip": "li",
+        "metin": "İşlenen verilerin aktarıldığı üçüncü kişilere bildirilmesini isteme hakkı"
+      },
+      {
+        "tip": "li",
+        "metin": "Otomatik sistemler üzerinden aleyhe bir sonuç ortaya çıkması durumunda itiraz hakkı"
+      },
+      {
+        "tip": "p",
+        "metin": "Bu haklarınızı kullanmak için nechhlab.global@gmail.com adresine \"KVKK Talebi\" konulu e-posta gönderebilirsiniz. Talepler 30 gün içinde yanıtlanır."
+      },
+      {
+        "tip": "li",
+        "metin": "Aktif hesap verileri: Hesap aktif olduğu sürece"
+      },
+      {
+        "tip": "li",
+        "metin": "Sağlık kayıtları: Hesap silme talebinden itibaren en fazla 3 yıl (yasal yükümlülük)"
+      },
+      {
+        "tip": "li",
+        "metin": "Log kayıtları: 90 gün"
+      },
+      {
+        "tip": "li",
+        "metin": "Ödeme bilgileri: Craftgate güvenli kasasında saklanır, HeliaLoop sunucularında kart bilgisi tutulmaz"
+      }
+    ]
+  },
+  "gizlilik": {
+    "baslik": "Gizlilik Politikası",
+    "ozet": "Kişisel verilerin toplanması, işlenmesi ve saklanmasına ilişkin politika.",
+    "bloklar": [
+      {
+        "tip": "p",
+        "metin": "Bu Gizlilik Politikası, Nechh Robotics (\"biz\", \"şirket\") ve markalarımız (HeliaLoop, JuriLoop) tarafından kişisel verilerinizin nasıl toplandığını, kullanıldığını ve korunduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Genel Veri Koruma Tüzüğü (GDPR) kapsamında hareket ederiz."
+      },
+      {
+        "tip": "h2",
+        "metin": "1. Topladığımız Veriler"
+      },
+      {
+        "tip": "p",
+        "metin": "Platformlarımıza kayıt olduğunuzda veya abonelik satın aldığınızda aşağıdaki verileri toplarız:"
+      },
+      {
+        "tip": "li",
+        "metin": "Hesap Bilgileri: Ad, soyad, e-posta adresi, telefon numarası ve meslek bilgisi (doktor/avukat/hasta/müvekkil)."
+      },
+      {
+        "tip": "li",
+        "metin": "Ödeme Bilgileri: Ödemeler banka havalesi/EFT ile alınır; kart bilgisi toplanmaz ve saklanmaz. Kredi kartı numaralarınız sunucularımızda saklanmaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Kullanım Verileri: Platform içi etkileşimler, yönlendirme kayıtları ve randevu takip bilgileri."
+      },
+      {
+        "tip": "li",
+        "metin": "Teknik Veriler: IP adresi, tarayıcı türü ve cihaz bilgisi (sunucu güvenliği ve performans izleme amacıyla)."
+      },
+      {
+        "tip": "li",
+        "metin": "İletişim Verileri: Bize gönderdiğiniz mesajların içeriği ve e-posta adresiniz."
+      },
+      {
+        "tip": "li",
+        "metin": "Salon Randevu Verileri (TONSORA): Salon işletmecisinin girdiği müşteri adı ve telefon numarası, randevu tarih/saat bilgisi, seçilen hizmet ve personel kaydı. Bu veriler salonun kendi müşteri kayıtlarıdır; Nechh Robotics tarafından pazarlama amacıyla kullanılmaz ve üçüncü taraflara satılmaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Cihaz Bildirim Kaydı: Mobil uygulamalarımızda bildirim izni verirseniz, cihazınıza ait bildirim kimliği (push token) saklanır. Uygulamadan çıkış yaptığınızda bu kayıt silinir."
+      },
+      {
+        "tip": "p",
+        "metin": "Kapsam: Bu politika Nechh Robotics'in tüm ürünlerini kapsar: HeliaLoop, JuriLoop, Nechh Eco-Report ve TONSORA (berber & kuaför randevu uygulaması)."
+      },
+      {
+        "tip": "h2",
+        "metin": "1.a TONSORA — salon uygulamasına özel açıklamalar"
+      },
+      {
+        "tip": "li",
+        "metin": "Veri sorumlusu kimdir? Salon müşterilerinin verilerini uygulamaya salon işletmecisi girer ve bu veriler üzerinde kontrol ondadır. Nechh Robotics veri işleyen sıfatıyla, yalnızca hizmeti sunmak için işler."
+      },
+      {
+        "tip": "li",
+        "metin": "Hatırlatma mesajları: Müşteriye randevu hatırlatması salonun kendi WhatsApp hesabı üzerinden, salonun kendisi tarafından gönderilir. Nechh Robotics müşteri numaralarını mesaj göndermek için kullanmaz, üçüncü bir mesajlaşma servisine aktarmaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Reklam yok: TONSORA uygulamasında reklam gösterilmez ve reklam kimliği toplanmaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Silme: Salon, müşteri kaydını uygulama içinden silebilir. Hesabın tamamen kapatılması ve verilerin silinmesi için aşağıdaki iletişim adresinden talepte bulunulabilir; talepler 30 gün içinde sonuçlandırılır."
+      },
+      {
+        "tip": "h2",
+        "metin": "2. Verilerin İşlenme Amaçları"
+      },
+      {
+        "tip": "p",
+        "metin": "Verilerinizi aşağıdaki amaçlarla işleriz:"
+      },
+      {
+        "tip": "li",
+        "metin": "Hesap oluşturma ve kimlik doğrulama."
+      },
+      {
+        "tip": "li",
+        "metin": "Abonelik yönetimi ve faturalama."
+      },
+      {
+        "tip": "li",
+        "metin": "Hasta/müvekkil yönlendirme süreçlerinin yürütülmesi."
+      },
+      {
+        "tip": "li",
+        "metin": "Teknik destek ve müşteri hizmetleri sağlanması."
+      },
+      {
+        "tip": "li",
+        "metin": "Platform güvenliğinin sağlanması ve kötüye kullanımın önlenmesi."
+      },
+      {
+        "tip": "li",
+        "metin": "Yasal yükümlülüklerin yerine getirilmesi."
+      },
+      {
+        "tip": "h2",
+        "metin": "3. Veri Paylaşımı ve Saklama"
+      },
+      {
+        "tip": "p",
+        "metin": "Kişisel verilerinizi satmaz, kiralamaz veya takas etmeyiz. Verileriniz yalnızca aşağıdaki durumlarda üçüncü taraflarla paylaşılır:"
+      },
+      {
+        "tip": "li",
+        "metin": "Ödeme işlemlerinin gerçekleştirilmesi için güvenli ödeme sağlayıcılarıyla."
+      },
+      {
+        "tip": "li",
+        "metin": "Yasal zorunluluk halinde yetkili makamlarla."
+      },
+      {
+        "tip": "li",
+        "metin": "Altyapı hizmeti sağlayan iş ortaklarıyla (Vercel, Supabase) — yalnızca teknik gereklilik kapsamında."
+      },
+      {
+        "tip": "p",
+        "metin": "Verileriniz hesabınız aktif olduğu sürece ve yasal saklama süreleri boyunca muhafaza edilir."
+      },
+      {
+        "tip": "h2",
+        "metin": "4. Çerezler (Cookies)"
+      },
+      {
+        "tip": "p",
+        "metin": "Web sitemiz temel işlevsellik çerezleri, performans analizi (Google Analytics) ve oturum yönetimi çerezleri kullanır. Davranışsal reklam izleme çerezleri kullanılmamaktadır."
+      },
+      {
+        "tip": "h2",
+        "metin": "5. Haklarınız (KVKK & GDPR)"
+      },
+      {
+        "tip": "p",
+        "metin": "Aşağıdaki haklara sahipsiniz:"
+      },
+      {
+        "tip": "li",
+        "metin": "Kişisel verilerinizin işlenip işlenmediğini öğrenme."
+      },
+      {
+        "tip": "li",
+        "metin": "İşlenen verilere ilişkin bilgi talep etme."
+      },
+      {
+        "tip": "li",
+        "metin": "Verilerin düzeltilmesini veya silinmesini isteme."
+      },
+      {
+        "tip": "li",
+        "metin": "İşlemenin kısıtlanmasını talep etme."
+      },
+      {
+        "tip": "li",
+        "metin": "Veri taşınabilirliği hakkı."
+      },
+      {
+        "tip": "p",
+        "metin": "Bu haklarınızı kullanmak için: nechhlab.global@gmail.com adresine yazabilirsiniz."
+      },
+      {
+        "tip": "h2",
+        "metin": "6. Sağlık ve Hukuk Verilerine İlişkin Özel Tedbirler"
+      },
+      {
+        "tip": "p",
+        "metin": "HeliaLoop ve JuriLoop platformlarında işlenen sağlık ve hukuk verileri özel nitelikli kişisel veri statüsündedir. Bu veriler:"
+      },
+      {
+        "tip": "li",
+        "metin": "Uçtan uca şifreleme ile korunur."
+      },
+      {
+        "tip": "li",
+        "metin": "Yalnızca ilgili profesyoneller (doktor/avukat) tarafından erişilebilir."
+      },
+      {
+        "tip": "li",
+        "metin": "KVKK madde 6 kapsamında açık rıza ile işlenir."
+      },
+      {
+        "tip": "h2",
+        "metin": "7. İletişim"
+      },
+      {
+        "tip": "p",
+        "metin": "Gizlilik politikamız hakkında sorularınız için: nechhlab.global@gmail.com"
+      }
+    ]
+  },
+  "iade": {
+    "baslik": "İade Politikası",
+    "ozet": "Ücretli hizmetlerde iptal ve iade koşulları.",
+    "bloklar": [
+      {
+        "tip": "p",
+        "metin": "Bu İade Politikası, Nechh Robotics ve markaları (HeliaLoop, JuriLoop) tarafından sunulan ücretli abonelik hizmetlerine ilişkin iade koşullarını açıklar."
+      },
+      {
+        "tip": "h2",
+        "metin": "1. Ücretsiz Deneme Süresi"
+      },
+      {
+        "tip": "p",
+        "metin": "Tüm ücretli planlarımız 10 gün ücretsiz deneme süresi ile başlar. Bu süre zarfında herhangi bir ücret tahsil edilmez. Deneme süresinin sonunda aboneliğinizi iptal etmezseniz, seçtiğiniz plan için ücretlendirme başlar."
+      },
+      {
+        "tip": "h2",
+        "metin": "2. Abonelik İptali"
+      },
+      {
+        "tip": "p",
+        "metin": "Aboneliğinizi dilediğiniz zaman iptal edebilirsiniz:"
+      },
+      {
+        "tip": "li",
+        "metin": "İptal işlemi, mevcut fatura döneminin sonuna kadar geçerli olur."
+      },
+      {
+        "tip": "li",
+        "metin": "İptal sonrası kalan süre boyunca hizmetlerimizi kullanmaya devam edebilirsiniz."
+      },
+      {
+        "tip": "li",
+        "metin": "İptal talebi için: nechhlab.global@gmail.com adresine yazabilirsiniz."
+      },
+      {
+        "tip": "h2",
+        "metin": "3. İade Koşulları"
+      },
+      {
+        "tip": "p",
+        "metin": "Aşağıdaki durumlarda iade talep edebilirsiniz:"
+      },
+      {
+        "tip": "li",
+        "metin": "Teknik arıza: Platformun sürekli erişilemez olması veya temel işlevlerinin çalışmaması durumunda, kullanılamayan süre için orantılı iade yapılır."
+      },
+      {
+        "tip": "li",
+        "metin": "Çift ücretlendirme: Yanlışlıkla mükerrer ödeme alınması halinde fazla ödeme tam olarak iade edilir."
+      },
+      {
+        "tip": "li",
+        "metin": "İlk 7 gün kuralı: Ücretli dönemin başlangıcından itibaren ilk 7 gün içinde yapılan iade talepleri tam olarak karşılanır."
+      },
+      {
+        "tip": "h2",
+        "metin": "4. İade Yapılmayan Durumlar"
+      },
+      {
+        "tip": "li",
+        "metin": "Ücretsiz deneme süresi içinde yapılan iptal işlemleri (zaten ücret alınmamıştır)."
+      },
+      {
+        "tip": "li",
+        "metin": "Fatura döneminin 7. gününden sonra yapılan iptal talepleri."
+      },
+      {
+        "tip": "li",
+        "metin": "Kullanıcı hatası veya üçüncü taraf yazılım uyumsuzluğu kaynaklı sorunlar."
+      },
+      {
+        "tip": "h2",
+        "metin": "5. İade Süreci"
+      },
+      {
+        "tip": "p",
+        "metin": "İade talepleri nechhlab.global@gmail.com adresine gönderilmelidir. Talepler 5 iş günü içinde değerlendirilir ve onaylanan iadeler, ödeme yöntemine bağlı olarak 5-10 iş günü içinde hesabınıza yansır."
+      },
+      {
+        "tip": "h2",
+        "metin": "6. Ücretsiz Kullanıcılar"
+      },
+      {
+        "tip": "p",
+        "metin": "HeliaLoop ve JuriLoop platformlarında hasta ve müvekkil hesapları tamamen ücretsizdir. Ücretsiz hesaplar için herhangi bir ödeme veya iade durumu söz konusu değildir."
+      },
+      {
+        "tip": "h2",
+        "metin": "7. İletişim"
+      },
+      {
+        "tip": "p",
+        "metin": "İade politikamız hakkında sorularınız için: nechhlab.global@gmail.com"
+      }
+    ]
+  },
+  "sorumluluk": {
+    "baslik": "Sorumluluk Reddi",
+    "ozet": "Hizmetlerin kapsamı ve sınırlarına ilişkin yasal bildirim.",
+    "bloklar": [
+      {
+        "tip": "p",
+        "metin": "Bu sayfa, Nechh Robotics ve markaları (HeliaLoop, JuriLoop) tarafından sunulan hizmetlere ilişkin yasal sorumluluk sınırlarını belirler."
+      },
+      {
+        "tip": "h2",
+        "metin": "1. Tıbbi Sorumluluk Reddi (HeliaLoop)"
+      },
+      {
+        "tip": "p",
+        "metin": "HeliaLoop, doktorlar ve klinisyenler arasında profesyonel yönlendirme ve randevu ağı olarak hizmet verir. Platform:"
+      },
+      {
+        "tip": "li",
+        "metin": "Tıbbi teşhis koymaz, tedavi önermez ve reçete yazmaz."
+      },
+      {
+        "tip": "li",
+        "metin": "AI Karar Desteği özelliği yalnızca bilgi amaçlıdır ve hiçbir koşulda profesyonel tıbbi görüşün yerini almaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Hasta-hekim ilişkisi doğrudan taraflar arasındadır; Nechh Robotics bu ilişkinin tarafı değildir."
+      },
+      {
+        "tip": "li",
+        "metin": "Acil tıbbi durumlarda 112'yi aramanız gerekmektedir."
+      },
+      {
+        "tip": "h2",
+        "metin": "2. Hukuki Sorumluluk Reddi (JuriLoop)"
+      },
+      {
+        "tip": "p",
+        "metin": "JuriLoop, avukatlar arasında dava yönlendirme ve mesleki işbirliği ağı olarak hizmet verir. Platform:"
+      },
+      {
+        "tip": "li",
+        "metin": "Hukuki danışmanlık vermez, dava sonuçları hakkında garanti sunmaz."
+      },
+      {
+        "tip": "li",
+        "metin": "AI Karar Desteği özelliği yalnızca referans amaçlıdır ve avukat görüşünün yerini almaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Avukat-müvekkil ilişkisi doğrudan taraflar arasındadır; Nechh Robotics bu ilişkinin tarafı değildir."
+      },
+      {
+        "tip": "h2",
+        "metin": "3. Yapay Zekâ (AI) Kullanımı"
+      },
+      {
+        "tip": "p",
+        "metin": "Platformlarımızda kullanılan yapay zekâ modelleri:"
+      },
+      {
+        "tip": "li",
+        "metin": "Karar destek aracı olarak tasarlanmıştır, nihai karar verici değildir."
+      },
+      {
+        "tip": "li",
+        "metin": "AI çıktıları her zaman ilgili profesyonel (doktor/avukat) tarafından doğrulanmalıdır."
+      },
+      {
+        "tip": "li",
+        "metin": "AI modellerinin hatalı veya eksik sonuç üretme olasılığı bulunmaktadır."
+      },
+      {
+        "tip": "h2",
+        "metin": "4. Genel Sorumluluk Sınırı"
+      },
+      {
+        "tip": "p",
+        "metin": "Nechh Robotics, platformlarının kullanımından kaynaklanan doğrudan, dolaylı veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamaz. Hizmetlerimiz \"olduğu gibi\" sunulmakta olup, kesintisiz veya hatasız çalışma garantisi verilmemektedir."
+      },
+      {
+        "tip": "h2",
+        "metin": "5. Üçüncü Taraf Bağlantıları"
+      },
+      {
+        "tip": "p",
+        "metin": "Web sitemiz üçüncü taraf web sitelerine bağlantılar içerebilir. Bu sitelerin içeriklerinden veya gizlilik uygulamalarından sorumlu değiliz."
+      },
+      {
+        "tip": "h2",
+        "metin": "6. İletişim"
+      },
+      {
+        "tip": "p",
+        "metin": "Bu disclaimer hakkında sorularınız için: nechhlab.global@gmail.com"
+      }
+    ]
+  },
+  "hesap-sil": {
+    "baslik": "Hesap ve Veri Silme Talebi",
+    "ozet": "Hesabınızın ve verilerinizin silinmesini nasıl talep edeceğiniz.",
+    "bloklar": [
+      {
+        "tip": "p",
+        "metin": "Bu sayfa, Nechh Robotics uygulamalarında (TONSORA, HeliaLoop, JuriLoop, Nechh Eco-Report) oluşturduğunuz hesabın ve hesabınıza bağlı verilerin silinmesini nasıl talep edeceğinizi açıklar. Talebiniz 6698 sayılı KVKK ve GDPR kapsamındaki silme hakkınız çerçevesinde işleme alınır."
+      },
+      {
+        "tip": "h2",
+        "metin": "1. Silme talebi nasıl yapılır"
+      },
+      {
+        "tip": "p",
+        "metin": "Silme talebinizi nechhlab.global@gmail.com adresine e-posta göndererek iletebilirsiniz. Talebinizin işleme alınabilmesi için e-postanızda aşağıdakileri belirtin:"
+      },
+      {
+        "tip": "li",
+        "metin": "Hesabınızın kayıtlı olduğu e-posta adresi (talebi bu adresten göndermeniz doğrulamayı hızlandırır)."
+      },
+      {
+        "tip": "li",
+        "metin": "Hangi uygulamadaki hesabınızın silinmesini istediğiniz (örneğin TONSORA)."
+      },
+      {
+        "tip": "li",
+        "metin": "Yalnızca belirli verilerin mi yoksa hesabın tamamının mı silinmesini istediğiniz."
+      },
+      {
+        "tip": "p",
+        "metin": "E-postanızın konusuna \"Hesap silme talebi\" yazmanız talebin ayırt edilmesini kolaylaştırır. Talebi ayrıca uygulama içindeki Destek bağlantısından da iletebilirsiniz."
+      },
+      {
+        "tip": "h2",
+        "metin": "2. Ne kadar sürede sonuçlanır"
+      },
+      {
+        "tip": "p",
+        "metin": "Talebiniz en geç 30 gün içinde sonuçlandırılır. Talebi aldığımızda ve işlemi tamamladığımızda size e-posta ile bilgi verilir. Kimliğinizi doğrulamak için ek bilgi istememiz gerekebilir; bu yalnızca hesabın gerçek sahibinin talep ettiğinden emin olmak içindir."
+      },
+      {
+        "tip": "h2",
+        "metin": "3. Hangi veriler silinir"
+      },
+      {
+        "tip": "p",
+        "metin": "Hesap silme talebi onaylandığında aşağıdaki veriler kalıcı olarak silinir:"
+      },
+      {
+        "tip": "li",
+        "metin": "Hesap bilgileriniz: ad, soyad, e-posta adresi, telefon numarası ve profil kaydınız."
+      },
+      {
+        "tip": "li",
+        "metin": "TONSORA için: salon kaydınız, hizmet ve personel tanımlarınız, randevu ve sıra kayıtlarınız, portfolyo görselleriniz ve salonunuza girilmiş müşteri kayıtları."
+      },
+      {
+        "tip": "li",
+        "metin": "Cihaz bildirim kaydınız (push token)."
+      },
+      {
+        "tip": "li",
+        "metin": "Uygulama içi kullanım ve etkileşim kayıtlarınız."
+      },
+      {
+        "tip": "h2",
+        "metin": "4. Hangi veriler bir süre daha saklanır"
+      },
+      {
+        "tip": "p",
+        "metin": "Bazı kayıtlar yasal yükümlülükler nedeniyle hemen silinemez:"
+      },
+      {
+        "tip": "li",
+        "metin": "Fatura ve ödeme kayıtları: vergi mevzuatı gereği yasal saklama süresi boyunca (10 yıl) tutulur. Bu kayıtlar yalnızca mali yükümlülük için kullanılır, pazarlama amacıyla kullanılmaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Güvenlik ve kötüye kullanım kayıtları: sınırlı süreyle ve yalnızca güvenlik amacıyla saklanabilir."
+      },
+      {
+        "tip": "p",
+        "metin": "Bu süreler dolduğunda ilgili kayıtlar da silinir."
+      },
+      {
+        "tip": "h2",
+        "metin": "5. Mağaza abonelikleri"
+      },
+      {
+        "tip": "p",
+        "metin": "Uygulama içi satın alma ile başlattığınız abonelikler App Store veya Google Play tarafından yönetilir. Hesabınızın silinmesi aboneliğinizi kendiliğinden iptal etmez. Aboneliği, satın aldığınız mağazanın abonelik ayarlarından ayrıca iptal etmeniz gerekir."
+      },
+      {
+        "tip": "h2",
+        "metin": "6. Salon işletmecileri için önemli not"
+      },
+      {
+        "tip": "p",
+        "metin": "TONSORA kullanan salonlarda müşteri kayıtlarının veri sorumlusu salon işletmecisidir. Salon hesabı silindiğinde o salona girilmiş müşteri kayıtları da silinir. Bir salon müşterisiyseniz ve kaydınızın silinmesini istiyorsanız önce hizmet aldığınız salona başvurmanız gerekir; salon kaydınızı uygulama içinden silebilir."
+      },
+      {
+        "tip": "h2",
+        "metin": "7. İletişim"
+      },
+      {
+        "tip": "p",
+        "metin": "Hesap ve veri silme talepleriniz ile bu sayfa hakkındaki sorularınız için: nechhlab.global@gmail.com"
+      }
+    ]
+  }
 }

@@ -14,6 +14,11 @@ export const hukukiSayfalar = [
   { slug: "gizlilik", ad: "Gizlilik Politikası" },
   { slug: "iade", ad: "İade Politikası" },
   { slug: "sorumluluk", ad: "Sorumluluk Reddi" },
+  // 23 Agu 2026 — Google Play, hesap olusturan uygulamalar icin AYRI bir
+  // hesap silme sayfasi zorunlu tutuyor. store/02_veri_guvenligi.md bunu
+  // 2026 Temmuz'da not etmis ama sayfa hic yazilmamisti; /tonsora/hesap-sil
+  // adresi vercel.json'daki catch-all yuzunden urun sayfasina dusuyordu.
+  { slug: "hesap-sil", ad: "Hesap ve Veri Silme" },
 ];
 
 /** Ardışık <li> bloklarını tek bir listede toplar. */

@@ -88,6 +88,26 @@
       "permanent": true
     },
     {
+      "source": "/tonsora/gizlilik",
+      "destination": "/gizlilik",
+      "permanent": true
+    },
+    {
+      "source": "/tonsora/kosullar",
+      "destination": "/sorumluluk",
+      "permanent": true
+    },
+    {
+      "source": "/tonsora/hesap-sil",
+      "destination": "/hesap-sil",
+      "permanent": true
+    },
+    {
+      "source": "/tonsora/dogrulandi",
+      "destination": "/iletisim",
+      "permanent": true
+    },
+    {
       "source": "/tonsora/:slug*",
       "destination": "/cozumler/tonsora",
       "permanent": true
