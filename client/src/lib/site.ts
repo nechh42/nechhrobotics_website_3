@@ -9,6 +9,11 @@ export type Product = {
   tone: "health" | "legal" | "compliance" | "operations";
   externalUrl: string;
   externalLabel: string;
+  /** Mağaza bağlantıları. 31 Ağu 2026 — HER BİRİ TEK TEK ÖLÇÜLDÜ.
+   *  Olmayan mağaza için alan BOŞ BIRAKILIR; "yakında" yazılmaz.
+   *  Sebep: helialoop.com altbilgisi Android'i "Yakında" gösteriyordu ve
+   *  uygulama aylardır yayındaydı — hekim siteye bakıp vazgeçiyordu. */
+  stores?: { play?: string; appStore?: string };
   principles: { label: string; detail: string }[];
 };
 
@@ -33,6 +38,8 @@ export const products: Product[] = [
     tone: "health",
     externalUrl: "https://helialoop.com",
     externalLabel: "HeliaLoop'u incele",
+    // Play: HTTP 200 (com.helialoop.app) · App Store: arama 0 sonuc -> yok
+    stores: { play: "https://play.google.com/store/apps/details?id=com.helialoop.app" },
     principles: [
       { label: "Koordinasyon", detail: "Yönlendirme adımlarını tek bir çalışma akışında toplama yaklaşımı." },
       { label: "Görünürlük", detail: "Süreçteki sonraki adımı ve sorumluluk bağlamını netleştirme odağı." },
@@ -52,6 +59,8 @@ export const products: Product[] = [
     tone: "legal",
     externalUrl: "https://juriloop.com",
     externalLabel: "JuriLoop'u incele",
+    // Play: HTTP 200 (com.nechh.juriloop) · App Store: arama 0 sonuc -> yok
+    stores: { play: "https://play.google.com/store/apps/details?id=com.nechh.juriloop" },
     principles: [
       { label: "Bağlam", detail: "Her görevin hangi ihtiyaç ve sorumlulukla ilişkili olduğunu koruma yaklaşımı." },
       { label: "İş birliği", detail: "Meslektaşlar arası yönlendirmeyi daha düzenli bir akışta ele alma odağı." },
@@ -88,8 +97,14 @@ export const products: Product[] = [
       "TONSORA, salonların günlük operasyonunu daha düzenli yönetebilmesi için randevu, müşteri, personel ve hizmet bilgisini aynı akışta buluşturur. Kâğıt defter ve karışan saatlere karşı sade bir operasyon yüzeyi hedefler.",
     useCase: "Randevu, müşteri ve ekip operasyonu",
     tone: "operations",
+    // ⚠️ Burasi yalnizca App Store'a gidiyordu; Android kullanicisi Apple
+    // sayfasina dusuyordu. Artik iki magaza da asagidaki rozetlerde.
     externalUrl: "https://apps.apple.com/tr/app/tonsora/id6796261153",
     externalLabel: "TONSORA'yı indir",
+    stores: {
+      play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.tonsora",
+      appStore: "https://apps.apple.com/tr/app/tonsora/id6796261153",
+    },
     principles: [
       { label: "Ritim", detail: "Günün randevu akışını kolay izlenir bir düzende tutmayı hedefler." },
       { label: "Operasyon", detail: "Müşteri, hizmet ve ekip bilgisini aynı çalışma bağlamında toplar." },

@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { PageFrame } from "@/components/SiteShell";
 import { getProduct } from "@/lib/site";
+import { MagazaRozetleri } from "@/components/MagazaRozetleri";
 
 type ProductDetailProps = { params?: { slug?: string } };
 
@@ -16,7 +17,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
     <PageFrame title={product.name} description={product.summary}>
       <section className={`product-hero tone-${product.tone}`}>
         <div className="product-hero-rail"><Link href="/cozumler"><ArrowLeft size={16} /> ÇÖZÜMLER</Link><i /></div>
-        <div className="product-hero-content"><p className="eyebrow">{product.eyebrow}</p><h1>{product.name}</h1><p className="product-hero-category">{product.category}</p><p className="product-hero-summary">{product.summary}</p><a href={product.externalUrl} target="_blank" rel="noreferrer" className="button button-primary">{product.externalLabel} <ExternalLink size={17} /></a></div>
+        <div className="product-hero-content"><p className="eyebrow">{product.eyebrow}</p><h1>{product.name}</h1><p className="product-hero-category">{product.category}</p><p className="product-hero-summary">{product.summary}</p><a href={product.externalUrl} target="_blank" rel="noreferrer" className="button button-primary">{product.externalLabel} <ExternalLink size={17} /></a><MagazaRozetleri stores={product.stores} /></div>
         <div className="product-orbit" aria-hidden="true"><span className="orbit-dot dot-a" /><span className="orbit-dot dot-b" /><span className="orbit-dot dot-c" /><b>{product.eyebrow.split(" /")[0]}</b></div>
       </section>
 
