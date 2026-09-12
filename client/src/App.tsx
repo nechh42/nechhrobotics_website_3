@@ -64,6 +64,12 @@ function Router() {
       <Route path="/en/about" component={EnglishAbout} />
       <Route path="/en/resources/:slug" component={EnglishLegacyArticlePage} />
       <Route path="/en/resources" component={EnglishArchive} />
+      {/* 12 Eyl 2026: BU ROTA YOKTU. sitemap.xml Google'a /en/blog veriyor,
+          vercel.json /en/resources -> /en/blog yonlendiriyor ve Ingilizce
+          yazilardaki "Back to blog" baglantisi da oraya gidiyor -- ucu de
+          NotFound'a dusuyordu. 12 Ingilizce yazi dogrudan adres bilinmeden
+          ulasilamaz durumdaydi. */}
+      <Route path="/en/blog" component={EnglishArchive} />
       <Route path="/en/blog/:slug" component={EnglishLegacyArticlePage} />
       <Route path="/en/store" component={EnglishStore} />
       <Route path="/en/contact" component={EnglishContact} />
