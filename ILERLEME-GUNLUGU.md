@@ -824,3 +824,12 @@ Google botunun gördüğü: ana sayfa 5.523 · SSS 4.881 · mağaza 2.253 karakt
 
 > 🔒 **Bu defter kapandı.** Yeni site ile ilgili bir iş çıkarsa buraya
 > yazılmaya devam edilir, ama günlük çalışma buradan taşındı.
+
+## 8 EYLÜL 2026 — SEO: SORUN YOK (ölçüldü)
+Hasan Search Console'da "34 sayfa dizine eklenmedi" gördü. Ölçüm yapıldı:
+sitemap'teki **90 adresin 90'ı** doğru canonical veriyor, hiçbirinde
+`noindex` yok, hepsi 200 dönüyor, hiçbiri yönlendirmiyor.
+
+34'ün tamamı tasarım gereği (21 sitemap dışı yönlendirme, 10 kasıtlı
+noindex, 2 hreflang alternatifi, 1 kopya). **Yapılacak iş yok.**
+Döküm ve kural: `KONULAR/SEO-VE-INDEKSLEME.md` → 8 Eylül başlığı.
