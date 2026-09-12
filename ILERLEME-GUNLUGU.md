@@ -1010,11 +1010,61 @@ kırmızı `#e60012`, siyah `#16161a`, açık nötr zemin. Lacivert kalıntısı
 (kontrol edildi). Böylece günlükteki "marka rengi kararı" maddesi de kapandı:
 **kırmızı asıl marka rengi**, afiş ve logo artık aynı dili konuşuyor.
 
-- [ ] **Afişler siteye eklenecek.** Tuvalden PNG indirilip
-      `client/public/medya/tanitim/` içine `nechh-yazilim-afis-tr.png` ve
-      `nechh-yazilim-afis-en.png` adıyla konur; sonra `site.ts` içindeki
-      `galeriTanitimlar` listesine iki satır eklenir.
-- [ ] **Karar bekliyor:** yazılım geliştirme kalemleri (9 kalem) hâlâ TL
-      (`₺20.000'den başlayan`). Mağaza euroya geçtiği için sitede iki para
-      birimi var. Yazılım müşterisi yurt içi KOBİ olduğu için TL bırakıldı;
-      euro olsun denirse tek adımda çevrilir.
+- [x] Afişler siteye eklendi *(aşağıya bakınız)*
+- [x] Yazılım kalemleri de euroya çevrildi *(aşağıya bakınız)*
+
+## 12 EYLÜL 2026 (4) — SİTE TEK PARA BİRİMİNE GEÇTİ + AFİŞLER GALERİDE
+
+**Hasan:** *"EUR'ya çevir hepsini, karmaşa bitsin."* Yazılım geliştirme
+kalemleri de euroya geçti; sitede **artık hiç TL rakamı yok.**
+
+Kur ₺56,33/EUR (11 Eyl, iki kaynak), yuvarlama **yukarı** — hiçbir kalem TL
+karşılığının altına düşmüyor:
+
+| İş | Önce | Şimdi |
+|---|---|---|
+| Mağazaya çıkarma | ₺20.000 | **€360** |
+| Tanıtım sitesi | ₺30.000 | **€540** |
+| Kurumsal site | ₺55.000 | **€980** |
+| Hesaplama motoru | ₺90.000 | **€1.600** |
+| Mobil, tek mağaza | ₺120.000 | **€2.150** |
+| Panelli web uygulaması | ₺150.000 | **€2.700** |
+| Mobil, iki mağaza | ₺220.000 | **€3.950** |
+| Abonelikli platform | ₺250.000 | **€4.500** |
+| Bakım / destek | ₺15.000/ay | **€270/ay** |
+
+**Beklenmeyen kazanç:** tek para birimi olunca **İngilizce sayfa da aynı fiyatı
+gösterebiliyor.** Sabah "EN sayfasında proje bazlı rakam yazılmaz, sabit kur
+uydurmak ikinci fiyat kaynağı yaratır" diye karar verilmişti — o gerekçe
+ortadan kalktı, çünkü artık çevrilecek bir şey yok. `englishRate` alanı silindi.
+`FIYATLANDIRMA.md` §7 buna göre güncellendi.
+
+İki dilde de şu cümle yazılı: *"Fiyatlar euro cinsindendir; fatura ve tahsilat,
+ödeme günündeki kur üzerinden Türk lirası olarak yapılır."*
+🔴 **Teklif verirken `FIYATLANDIRMA.md` §1–§2'nin TL rakamları kullanılır**,
+siteye bakılmaz.
+
+**Ölçüm:** tsc 0, build 0, prerender 90/0. `dist` genelinde TL fiyat taraması
+**temiz**; dokuz euro fiyatın dokuzu hem `/hizmetler` hem `/en/services`
+sayfasında basılı.
+
+### Afişler galeriye eklendi
+Hasan tuvalden PNG indirdi. Export 1x ve 2x olmak üzere dört dosya bırakmış
+(adlarında boşluk ve `.png-1` eki vardı). 2x sürümler kaynak alınıp 1080×1440'a
+ölçeklendi, JPEG q90 olarak ~158 KB'a indirildi (mevcut afişler 1,7–1,9 MB,
+bunlar 10 kat hafif). Dağınık dört dosya silindi. `galeriTanitimlar` listesinin
+**başına** eklendi — en yeni iş en önde.
+
+### ⚠️ Afişte kesilme bulundu ve düzeltildi
+İlk export'ta **alt satır kesilmişti**: "gerçeğe dönüştürün" yarıda kalmış,
+iletişim satırı hiç görünmüyordu. Sebep: logo kilidi neredeyse kare (820×750),
+430 piksel genişlikte 393 piksel yer yiyordu ve içerik 1440'ı aşıyordu.
+Ölçüler daraltıldı: logo 430→270 px, dış boşluk 42→28 px, üst iç boşluk
+84→70 px, başlık 54→48 px, kart iç boşluğu 22→18 px, kanıt başlığı 42→36 px,
+buton 34→30 px. Hesaplanan içerik yüksekliği ~1223 px, çerçeve 1440 → ~215 px
+pay bırakıldı.
+
+- [ ] **Afiş yeniden indirilecek.** Galeride şu an **kesik sürüm** duruyor.
+      Tuvalden iki afiş tekrar PNG olarak indirilip aynı adlarla
+      (`nechh-yazilim-afis-tr.jpg` / `-en.jpg`) değiştirilmeli.
+      *Not: PNG indirip JPEG'e çevirmek gerekiyor — dosya adları `.jpg`.*

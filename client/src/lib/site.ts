@@ -278,7 +278,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Mağaza künyesi, ekran görüntüleri, gizlilik formları",
       "Ret gelirse düzeltme ve yeniden gönderim",
     ],
-    fiyat: "₺20.000",
+    fiyat: "€360",
     fiyatNot: "’den başlayan · 2–4 hafta",
     sure: "2–4 hafta",
     kanit: "3 uygulama, 4 mağaza yayını",
@@ -294,7 +294,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Site haritası, canonical ve meta altyapısı",
       "İletişim formu ve e-posta yönlendirmesi",
     ],
-    fiyat: "₺30.000",
+    fiyat: "€540",
     fiyatNot: "’den başlayan · 2–3 hafta",
     sure: "2–3 hafta",
     kanit: "nechhrobotics.com",
@@ -310,7 +310,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Blog / kaynak arşivi ve arşiv içi arama",
       "Site haritası bildirimi ve indeksleme ölçümü",
     ],
-    fiyat: "₺55.000",
+    fiyat: "€980",
     fiyatNot: "’den başlayan · 3–4 hafta",
     sure: "3–4 hafta",
     kanit: "nechhrobotics.com · 90 sayfa TR/EN",
@@ -326,7 +326,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Her sonucun kaynağını gösteren denetim izi",
       "Yazdırmaya hazır PDF rapor çıktısı",
     ],
-    fiyat: "₺90.000",
+    fiyat: "€1.600",
     fiyatNot: "’den başlayan · 4–8 hafta",
     sure: "4–8 hafta",
     kanit: "Eco-Report · CBAM gömülü emisyon",
@@ -342,7 +342,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Kullanıcı girişi ve yetki katmanı",
       "Mağaza yayını ve sürüm akışı",
     ],
-    fiyat: "₺120.000",
+    fiyat: "€2.150",
     fiyatNot: "’den başlayan · 8–14 hafta",
     sure: "8–14 hafta",
     kanit: "TONSORA · Google Play",
@@ -358,7 +358,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Yönetici panosu ve kayıt izleme",
       "İş mantığının sunucu tarafında tek yerde tutulması",
     ],
-    fiyat: "₺150.000",
+    fiyat: "€2.700",
     fiyatNot: "’den başlayan · 7–11 hafta",
     sure: "7–11 hafta",
     kanit: "JuriLoop",
@@ -374,7 +374,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Mağaza içi satın alma altyapısı",
       "Çok dilli metin altyapısı",
     ],
-    fiyat: "₺220.000",
+    fiyat: "€3.950",
     fiyatNot: "’den başlayan · 11–20 hafta",
     sure: "11–20 hafta",
     kanit: "TONSORA · App Store + Google Play",
@@ -390,7 +390,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Kurum hesabı ve kullanıcı davet yönetimi",
       "Plan bazlı özellik sınırlaması",
     ],
-    fiyat: "₺250.000",
+    fiyat: "€4.500",
     fiyatNot: "’den başlayan · 11–17 hafta",
     sure: "11–17 hafta",
     kanit: "HeliaLoop",
@@ -406,7 +406,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Hata giderme ve mağaza sürüm bakımı",
       "Küçük düzenlemeler için ayrılmış süre",
     ],
-    fiyat: "₺15.000",
+    fiyat: "€270",
     fiyatNot: "/ay’dan başlayan · süresiz",
     sure: "aylık, süresiz",
     kanit: "6 ürün, sürekli bakımda",
@@ -416,6 +416,8 @@ export const yazilimIsleri: YazilimIsi[] = [
 export const englishYazilimIsleri: YazilimIsi[] = [
   {
     slug: "magazaya-cikarma",
+    fiyat: "€360",
+    fiyatNot: " and up · 2–4 weeks",
     aile: "STORE RELEASE",
     ad: "Getting your app into the stores",
     ozet:
@@ -430,6 +432,8 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "tanitim-sitesi",
+    fiyat: "€540",
+    fiyatNot: " and up · 2–3 weeks",
     aile: "WEB · SINGLE LANGUAGE",
     ad: "Marketing site",
     ozet:
@@ -444,6 +448,8 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "kurumsal-site",
+    fiyat: "€980",
+    fiyatNot: " and up · 3–4 weeks",
     aile: "WEB · BILINGUAL",
     ad: "Corporate site · bilingual, with a blog",
     ozet:
@@ -458,6 +464,8 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "hesaplama-motoru",
+    fiyat: "€1.600",
+    fiyatNot: " and up · 4–8 weeks",
     aile: "CALCULATION · REPORTING",
     ad: "Calculation engine + PDF report",
     ozet:
@@ -472,6 +480,8 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "mobil-tek-magaza",
+    fiyat: "€2.150",
+    fiyatNot: " and up · 8–14 weeks",
     aile: "MOBILE · ONE STORE",
     ad: "Mobile app · one store",
     ozet:
@@ -486,6 +496,8 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "panelli-web-uygulamasi",
+    fiyat: "€2.700",
+    fiyatNot: " and up · 7–11 weeks",
     aile: "WEB APPLICATION",
     ad: "Web application with an admin panel",
     ozet:
@@ -500,6 +512,8 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "mobil-iki-magaza",
+    fiyat: "€3.950",
+    fiyatNot: " and up · 11–20 weeks",
     aile: "MOBILE · TWO STORES",
     ad: "Mobile app · two stores, one codebase",
     ozet:
@@ -514,6 +528,8 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "abonelikli-platform",
+    fiyat: "€4.500",
+    fiyatNot: " and up · 11–17 weeks",
     aile: "SAAS · SUBSCRIPTION",
     ad: "Subscription platform · multi-user",
     ozet:
@@ -528,6 +544,8 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "bakim-destek",
+    fiyat: "€270",
+    fiyatNot: "/month and up · open-ended",
     aile: "ONGOING · MONTHLY",
     ad: "Maintenance and support",
     ozet:
@@ -571,10 +589,6 @@ export const yazilimCalismaDuzeni = {
     "New features after delivery — quoted separately",
     "More than 3 client-driven design revisions",
   ],
-  /** EN sayfasinda proje bazli rakam YAZILMAZ: FIYATLANDIRMA.md'de yurt disi
-   *  icin yalnizca saat bandi karari var (EUR 35-70/saat). Sabit kur uydurup
-   *  TL fiyatlari cevirmek eskiyen ikinci bir fiyat kaynagi yaratir. */
-  englishRate: "from €35/hour · fixed project quote after a short scoping call",
   englishSinir:
     "Timelines assume a single developer and timely feedback. Store review time belongs to Apple and Google and cannot be committed to. Every day of delay in content, logo or account access moves delivery by one day. The windows above are delivery windows, not exclusive full-time work reserved for you throughout; dedicated full-time work is quoted at the day rate.",
 };
@@ -816,6 +830,8 @@ export const galeriVideolar = [
 ];
 
 export const galeriTanitimlar = [
+  { dosya: "/medya/tanitim/nechh-yazilim-afis-tr.jpg", baslik: "Özel yazılım ve mobil uygulama geliştirme" },
+  { dosya: "/medya/tanitim/nechh-yazilim-afis-en.jpg", baslik: "Custom software and mobile app development" },
   { dosya: "/medya/tanitim/helialoop-afis.png", baslik: "HeliaLoop · hekimler arası iş birliği" },
   { dosya: "/medya/tanitim/juriloop-afis.png", baslik: "JuriLoop · hukukçular arası ağ" },
   { dosya: "/medya/tanitim/tonsora-afis.png", baslik: "TONSORA · salon randevu yönetimi" },
