@@ -833,3 +833,80 @@ sitemap'teki **90 adresin 90'ı** doğru canonical veriyor, hiçbirinde
 34'ün tamamı tasarım gereği (21 sitemap dışı yönlendirme, 10 kasıtlı
 noindex, 2 hreflang alternatifi, 1 kopya). **Yapılacak iş yok.**
 Döküm ve kural: `KONULAR/SEO-VE-INDEKSLEME.md` → 8 Eylül başlığı.
+
+## 12 EYLÜL 2026 — HİZMETLER SAYFASINA YAZILIM GELİŞTİRME EKLENDİ
+
+**Neden:** Dışarıdan bir "2026 Fiyatlandırma Kılavuzu" geldi, siteye konması
+istendi. Önce ölçüm yapıldı: `grep` ile tüm kaynak tarandı — sitede yazılım
+geliştirme hizmeti **hiç yoktu**. Hizmetler sayfasının 3 kartı da CBAM/uyum
+üzerineydi; "Özel Yazılım" ifadesi yalnızca eski blog yazılarında geçiyordu.
+Boşluk gerçekti.
+
+**Ama gelen fiyatlar kullanılmadı.** `IS-ALIMI/FIYATLANDIRMA.md` ile
+karşılaştırıldı, her kalemi o dosyanın altındaydı. En ağırı: mağazaya çıkarma
+₺8.000 önerilmişti, karar dosyasında ₺20–45 bin — 3–5 kat düşük, üstelik o dosya
+bu kalemi "en kolay satılacak hizmet" ilan ediyor. Gerekçeli ret kaydı:
+`IS-ALIMI/FIYATLANDIRMA.md` §8.
+
+**Yapılanlar:**
+1. `client/src/lib/site.ts` — `yazilimIsleri` (9 kalem, TR),
+   `englishYazilimIsleri` (9 kalem, EN) ve `yazilimCalismaDuzeni` eklendi.
+   Fiyatlar `FIYATLANDIRMA.md`'nin **alt sınırı**, "…'den başlayan" biçiminde;
+   süreler aynı dosyanın "1,4 ile çarp" kuralıyla genişletildi.
+2. `client/src/pages/Services.tsx` — TR ve EN sayfalarına üç bölüm eklendi:
+   giriş, 9 kartlık fiyat ızgarası, koyu "çalışma düzeni" şeridi
+   (ödeme aşamaları + kapsam dışı kalemler + süre sınırı).
+3. `client/src/index.css` — `.yazilim-giris`, `.yazilim-kanit`,
+   `.yazilim-duzen`, `.yazilim-sinir`. Kart ve şerit stilleri mağazadan
+   yeniden kullanıldı (`.paket-karti`, `.hizmet-serit`), yeni kart stili yazılmadı.
+
+**Kasıtlı kararlar:**
+- **Aralık değil alt sınır yayınlandı.** Müşteri aralığın hep alt ucunu okur;
+  tam aralık "fiyatı değil kapsamı küçült" kozunu elden alır.
+- **Mağazaya çıkarma en üstte** — kanıtı en güçlü kalem (3 uygulama, 4 yayın).
+- **Her kartta KANIT satırı var:** JuriLoop, HeliaLoop, TONSORA, Eco-Report,
+  nechhrobotics.com. Uydurma referans yok.
+- **"MVP" kelimesi kullanılmadı.**
+- **EN sayfasında proje bazlı euro rakamı YOK.** `FIYATLANDIRMA.md`'de yurt dışı
+  için sadece saat bandı kararı var (€35–70/saat); sabit kur uydurup TL'yi
+  çevirmek eskiyen ikinci bir fiyat kaynağı yaratırdı. EN sayfası kapsam +
+  süre + kanıt gösterir, "from €35/hour · fixed project quote" der.
+
+**Ölçüm (tahmin değil):**
+```
+tsc --noEmit          → exit 0
+npm run build         → exit 0, prerender 90 sayfa / 0 hata
+dist/hizmetler/       → 9 fiyatın 9'u basılı (₺20.000 … ₺250.000), 9 KANIT satırı,
+                        "Fiyata dahil değildir" bloğu var · 30.305 bayt
+dist/en/services/     → 9 EVIDENCE satırı, "from €35/hour" var,
+                        uydurma euro fiyatı YOK · 29.776 bayt
+```
+
+### Aynı gün bulunan 3 hata — düzeltildi
+
+1. **"KANIT: JuriLoop" yanlış anlaşılırdı.** Alıcı bunu referans müşteri sanar;
+   oysa kendi ürünümüz. Etiket **"BU İŞİ YAPTIĞIM ÜRÜN"** oldu, girişe
+   *"müşteri referansı değil, yapabildiğimizin kanıtı"* cümlesi eklendi.
+2. **Fiyatlar kendi saat tabanını kırıyordu.** ₺150.000 / 7 hafta = 210 saat =
+   **₺714/saat**, oysa `FIYATLANDIRMA.md` §1 "₺1.500/saat altına inilmez" diyor.
+   Dokuz kalemin hepsi öyleydi. Fiyat artırılmadı; süre **"teslim penceresi"**
+   olarak etiketlendi ve *"tam zamanlı özel çalışma gün ücretinden fiyatlanır"*
+   cümlesi eklendi. Kayıt: `FIYATLANDIRMA.md` §8.
+3. **"Ekibimizle konuşun"** (Hakkımızda) → **"Doğrudan bizimle konuşun".**
+   Tek kişilik operasyon; sitede tek "ekip" iddiası buydu, kalktı.
+   (`site.ts`'teki "ekip" geçişleri TONSORA'nın salon personeli, onlar doğru.)
+
+Yapıya dokunulmadı — kanıt: `git diff` 410 ekleme, **0 gerçek silme**;
+değişen 4 satır 2 import + sonuna ekleme yapılan 2 uzun JSX satırı.
+Prerender yine 90 sayfa / 0 hata.
+
+**Kalan (Hasan onayı bekliyor):**
+- [ ] Mağazadaki uyum paketlerinde sabit kurlu `$` notu var (₺5.000 · $130 →
+      ₺38,5/$). Kur eskidi, sayfa yanlış fiyat gösteriyor. Yayında satıştaki
+      ürünler olduğu için tek taraflı değiştirilmedi.
+- [ ] Tanıtım görsellerinde "Uzman Ekibimizle / Expert Team" yazıyor. Sitedeki
+      metin düzeltildi ama **görseller Hasan'da** (PNG, kodda değil).
+      Yerine: "Tek elden, doğrudan geliştiriciyle" / "Straight to the developer".
+- [ ] Görseldeki telefon uydurma bir panel gösteriyor; TONSORA/HeliaLoop'un
+      gerçek ekranları var, onlar kullanılmalı.
+- [ ] Canlıya alma: `git push` → Vercel. **Henüz yapılmadı.**

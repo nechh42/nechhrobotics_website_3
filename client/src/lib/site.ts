@@ -249,6 +249,336 @@ export const englishServices: Service[] = [
   { index: "03", eyebrow: "RESOURCES / DIGITAL PACKS", title: "Start with your own team", summary: "A resource approach with guides, checklists and editable work templates for internal preparation.", note: "Online payment is not currently active; delivery and licensing are clarified by email.", href: "/en/contact" },
 ];
 
+export type YazilimIsi = {
+  slug: string;
+  aile: string;
+  ad: string;
+  ozet: string;
+  kapsam: string[];
+  fiyat?: string;
+  fiyatNot?: string;
+  sure: string;
+  kanit: string;
+};
+
+/** Yazilim ve uygulama gelistirme hizmetleri.
+ *  Fiyat karari IS-ALIMI/FIYATLANDIRMA.md dosyasindadir; burada o dosyanin
+ *  ALT SINIRI "...'den baslayan" olarak gosterilir. Sureler ayni dosyadaki
+ *  "tahminini 1,4 ile carp" kuraliyla genisletilmistir. Rakam degisecekse
+ *  once FIYATLANDIRMA.md guncellenir, sonra burasi. */
+export const yazilimIsleri: YazilimIsi[] = [
+  {
+    slug: "magazaya-cikarma",
+    aile: "MAĞAZA YAYINI",
+    ad: "Uygulamanızı mağazaya çıkarma",
+    ozet:
+      "Kodu hazır olan uygulamayı App Store ve Google Play’e biz çıkarırız. Ret gelirse düzeltme ve yeniden gönderim bize aittir.",
+    kapsam: [
+      "İmzalama, sürüm ve derleme yapılandırması",
+      "Mağaza künyesi, ekran görüntüleri, gizlilik formları",
+      "Ret gelirse düzeltme ve yeniden gönderim",
+    ],
+    fiyat: "₺20.000",
+    fiyatNot: "’den başlayan · 2–4 hafta",
+    sure: "2–4 hafta",
+    kanit: "3 uygulama, 4 mağaza yayını",
+  },
+  {
+    slug: "tanitim-sitesi",
+    aile: "WEB · TEK DİL",
+    ad: "Tanıtım sitesi",
+    ozet:
+      "Tek dilli, mobil uyumlu, arama motoru altyapısı kurulmuş tanıtım sitesi. İletişim formu dahil.",
+    kapsam: [
+      "Mobil uyumlu sayfa düzeni",
+      "Site haritası, canonical ve meta altyapısı",
+      "İletişim formu ve e-posta yönlendirmesi",
+    ],
+    fiyat: "₺30.000",
+    fiyatNot: "’den başlayan · 2–3 hafta",
+    sure: "2–3 hafta",
+    kanit: "nechhrobotics.com",
+  },
+  {
+    slug: "kurumsal-site",
+    aile: "WEB · İKİ DİLLİ",
+    ad: "Kurumsal site · iki dilli, blog’lu",
+    ozet:
+      "İki dilli kurumsal site; blog altyapısı, arama motoru yapılandırması ve ölçülebilir indeksleme.",
+    kapsam: [
+      "İki dil ve hreflang yapılandırması",
+      "Blog / kaynak arşivi ve arşiv içi arama",
+      "Site haritası bildirimi ve indeksleme ölçümü",
+    ],
+    fiyat: "₺55.000",
+    fiyatNot: "’den başlayan · 3–4 hafta",
+    sure: "3–4 hafta",
+    kanit: "nechhrobotics.com · 90 sayfa TR/EN",
+  },
+  {
+    slug: "hesaplama-motoru",
+    aile: "HESAPLAMA · RAPOR",
+    ad: "Hesaplama motoru + PDF rapor",
+    ozet:
+      "Girdiden sonuca kadar her sayının kaynağı ve formülüyle denetlenebildiği hesaplama motoru ve PDF çıktısı.",
+    kapsam: [
+      "Formül katmanı ve katsayı tablolarının ayrılması",
+      "Her sonucun kaynağını gösteren denetim izi",
+      "Yazdırmaya hazır PDF rapor çıktısı",
+    ],
+    fiyat: "₺90.000",
+    fiyatNot: "’den başlayan · 4–8 hafta",
+    sure: "4–8 hafta",
+    kanit: "Eco-Report · CBAM gömülü emisyon",
+  },
+  {
+    slug: "mobil-tek-magaza",
+    aile: "MOBİL · TEK MAĞAZA",
+    ad: "Mobil uygulama · tek mağaza",
+    ozet:
+      "Tek mağazaya çıkan mobil uygulama; arka uç, veritabanı ve yönetim tarafı dahil.",
+    kapsam: [
+      "Uygulama, arka uç ve veritabanı",
+      "Kullanıcı girişi ve yetki katmanı",
+      "Mağaza yayını ve sürüm akışı",
+    ],
+    fiyat: "₺120.000",
+    fiyatNot: "’den başlayan · 8–14 hafta",
+    sure: "8–14 hafta",
+    kanit: "TONSORA · Google Play",
+  },
+  {
+    slug: "panelli-web-uygulamasi",
+    aile: "WEB UYGULAMASI",
+    ad: "Panelli web uygulaması",
+    ozet:
+      "Üyelik, rol ayrımı ve yönetici panosu olan web uygulaması. İş mantığı sunucuda tutulur.",
+    kapsam: [
+      "Üyelik, rol ve satır düzeyinde yetki",
+      "Yönetici panosu ve kayıt izleme",
+      "İş mantığının sunucu tarafında tek yerde tutulması",
+    ],
+    fiyat: "₺150.000",
+    fiyatNot: "’den başlayan · 7–11 hafta",
+    sure: "7–11 hafta",
+    kanit: "JuriLoop",
+  },
+  {
+    slug: "mobil-iki-magaza",
+    aile: "MOBİL · İKİ MAĞAZA",
+    ad: "Mobil uygulama · iki mağaza, tek kod tabanı",
+    ozet:
+      "iOS ve Android’e tek kod tabanından çıkan uygulama. Her iki mağazanın inceleme süreci de bize aittir.",
+    kapsam: [
+      "Tek kod tabanı, iki mağaza yayını",
+      "Mağaza içi satın alma altyapısı",
+      "Çok dilli metin altyapısı",
+    ],
+    fiyat: "₺220.000",
+    fiyatNot: "’den başlayan · 11–20 hafta",
+    sure: "11–20 hafta",
+    kanit: "TONSORA · App Store + Google Play",
+  },
+  {
+    slug: "abonelikli-platform",
+    aile: "SAAS · ABONELİK",
+    ad: "Abonelikli platform · çok kullanıcılı",
+    ozet:
+      "Abonelik, ödeme ve çok kullanıcılı kurum hesabı olan platform. Ölçeklenebilir veri mimarisi.",
+    kapsam: [
+      "Abonelik katmanı ve ödeme akışı",
+      "Kurum hesabı ve kullanıcı davet yönetimi",
+      "Plan bazlı özellik sınırlaması",
+    ],
+    fiyat: "₺250.000",
+    fiyatNot: "’den başlayan · 11–17 hafta",
+    sure: "11–17 hafta",
+    kanit: "HeliaLoop",
+  },
+  {
+    slug: "bakim-destek",
+    aile: "SÜREKLİ · AYLIK",
+    ad: "Bakım ve destek",
+    ozet:
+      "Teslimden sonra güncelleme, izleme ve destek. Aylık sabit bedel; proje bedelinin yüzdesi değildir.",
+    kapsam: [
+      "Bağımlılık ve güvenlik güncellemeleri",
+      "Hata giderme ve mağaza sürüm bakımı",
+      "Küçük düzenlemeler için ayrılmış süre",
+    ],
+    fiyat: "₺15.000",
+    fiyatNot: "/ay’dan başlayan · süresiz",
+    sure: "aylık, süresiz",
+    kanit: "6 ürün, sürekli bakımda",
+  },
+];
+
+export const englishYazilimIsleri: YazilimIsi[] = [
+  {
+    slug: "magazaya-cikarma",
+    aile: "STORE RELEASE",
+    ad: "Getting your app into the stores",
+    ozet:
+      "Your code is ready; we ship it to the App Store and Google Play. If it is rejected, the fix and resubmission are on us.",
+    kapsam: [
+      "Signing, versioning and build configuration",
+      "Store listing, screenshots and privacy forms",
+      "Rejection handling and resubmission",
+    ],
+    sure: "2–4 weeks",
+    kanit: "3 apps, 4 store releases",
+  },
+  {
+    slug: "tanitim-sitesi",
+    aile: "WEB · SINGLE LANGUAGE",
+    ad: "Marketing site",
+    ozet:
+      "A single-language, mobile-first marketing site with search infrastructure in place and a working contact route.",
+    kapsam: [
+      "Mobile-first layout",
+      "Sitemap, canonical and meta infrastructure",
+      "Contact form and email routing",
+    ],
+    sure: "2–3 weeks",
+    kanit: "nechhrobotics.com",
+  },
+  {
+    slug: "kurumsal-site",
+    aile: "WEB · BILINGUAL",
+    ad: "Corporate site · bilingual, with a blog",
+    ozet:
+      "A bilingual corporate site with a blog, search configuration and indexing you can actually measure.",
+    kapsam: [
+      "Two locales with hreflang configuration",
+      "Blog / resource archive with in-archive search",
+      "Sitemap submission and indexing measurement",
+    ],
+    sure: "3–4 weeks",
+    kanit: "nechhrobotics.com · 90 pages EN/TR",
+  },
+  {
+    slug: "hesaplama-motoru",
+    aile: "CALCULATION · REPORTING",
+    ad: "Calculation engine + PDF report",
+    ozet:
+      "A calculation engine where every number can be traced to its source and formula, with a print-ready PDF output.",
+    kapsam: [
+      "Formula layer separated from coefficient tables",
+      "Audit trail showing the source of every result",
+      "Print-ready PDF report output",
+    ],
+    sure: "4–8 weeks",
+    kanit: "Eco-Report · CBAM embedded emissions",
+  },
+  {
+    slug: "mobil-tek-magaza",
+    aile: "MOBILE · ONE STORE",
+    ad: "Mobile app · one store",
+    ozet:
+      "A mobile app shipped to a single store, including the backend, database and administration side.",
+    kapsam: [
+      "App, backend and database",
+      "Authentication and permission layer",
+      "Store release and versioning flow",
+    ],
+    sure: "8–14 weeks",
+    kanit: "TONSORA · Google Play",
+  },
+  {
+    slug: "panelli-web-uygulamasi",
+    aile: "WEB APPLICATION",
+    ad: "Web application with an admin panel",
+    ozet:
+      "A web application with membership, role separation and an admin console. Business logic stays on the server.",
+    kapsam: [
+      "Membership, roles and row-level permissions",
+      "Admin console and activity records",
+      "Business logic kept in one place, server-side",
+    ],
+    sure: "7–11 weeks",
+    kanit: "JuriLoop",
+  },
+  {
+    slug: "mobil-iki-magaza",
+    aile: "MOBILE · TWO STORES",
+    ad: "Mobile app · two stores, one codebase",
+    ozet:
+      "One codebase shipped to both iOS and Android. The review process for both stores is ours to carry.",
+    kapsam: [
+      "One codebase, two store releases",
+      "In-app purchase infrastructure",
+      "Multi-language text infrastructure",
+    ],
+    sure: "11–20 weeks",
+    kanit: "TONSORA · App Store + Google Play",
+  },
+  {
+    slug: "abonelikli-platform",
+    aile: "SAAS · SUBSCRIPTION",
+    ad: "Subscription platform · multi-user",
+    ozet:
+      "A platform with subscriptions, payments and multi-user organisation accounts on a scalable data architecture.",
+    kapsam: [
+      "Subscription layer and payment flow",
+      "Organisation accounts and user invitations",
+      "Plan-based feature gating",
+    ],
+    sure: "11–17 weeks",
+    kanit: "HeliaLoop",
+  },
+  {
+    slug: "bakim-destek",
+    aile: "ONGOING · MONTHLY",
+    ad: "Maintenance and support",
+    ozet:
+      "Updates, monitoring and support after delivery. A flat monthly fee, not a percentage of the project.",
+    kapsam: [
+      "Dependency and security updates",
+      "Bug fixes and store release upkeep",
+      "Reserved time for small adjustments",
+    ],
+    sure: "monthly, open-ended",
+    kanit: "6 products, continuously maintained",
+  },
+];
+
+/** Calisma duzeni: odeme asamalari ve kapsam disi kalemler.
+ *  Kaynak: IS-ALIMI/FIYATLANDIRMA.md bolum 4 ve 5. */
+export const yazilimCalismaDuzeni = {
+  odeme: [
+    { oran: "%40", an: "Başlangıçta", not: "Bu ödeme alınmadan geliştirme başlamaz." },
+    { oran: "%30", an: "Ara teslimde", not: "Çalışan sürüm size gösterildiğinde." },
+    { oran: "%30", an: "Teslimde", not: "Canlıya alma veya mağazaya gönderim anında." },
+  ],
+  kapsamDisi: [
+    "Logo, marka ve grafik tasarım",
+    "İçerik/metin yazımı ve çeviri",
+    "Alan adı, sunucu ve mağaza geliştirici hesabı ücretleri",
+    "Teslimden sonraki yeni özellikler — yeni teklif olarak fiyatlanır",
+    "Müşteri kaynaklı 3’ten fazla tasarım revizyonu",
+  ],
+  sinir:
+    "Süreler tek kişilik çalışma ve zamanında geri dönüş varsayımıyla verilir. Mağaza inceleme süresi Apple ve Google’a aittir, taahhüt edilemez. İçerik, logo veya hesap erişiminin geciktiği her gün teslim tarihini bir gün öteler. Yukarıdaki süreler teslim penceresidir, o süre boyunca yalnızca sizin işinize ayrılmış tam zamanlı çalışma anlamına gelmez; tam zamanlı ve size özel çalışma gerekiyorsa gün ücretinden fiyatlanır.",
+  englishOdeme: [
+    { oran: "40%", an: "Up front", not: "Development does not start before this payment." },
+    { oran: "30%", an: "At mid-delivery", not: "When a working version is shown to you." },
+    { oran: "30%", an: "On delivery", not: "At go-live or store submission." },
+  ],
+  englishKapsamDisi: [
+    "Logo, branding and graphic design",
+    "Copywriting and translation",
+    "Domain, hosting and store developer account fees",
+    "New features after delivery — quoted separately",
+    "More than 3 client-driven design revisions",
+  ],
+  /** EN sayfasinda proje bazli rakam YAZILMAZ: FIYATLANDIRMA.md'de yurt disi
+   *  icin yalnizca saat bandi karari var (EUR 35-70/saat). Sabit kur uydurup
+   *  TL fiyatlari cevirmek eskiyen ikinci bir fiyat kaynagi yaratir. */
+  englishRate: "from €35/hour · fixed project quote after a short scoping call",
+  englishSinir:
+    "Timelines assume a single developer and timely feedback. Store review time belongs to Apple and Google and cannot be committed to. Every day of delay in content, logo or account access moves delivery by one day. The windows above are delivery windows, not exclusive full-time work reserved for you throughout; dedicated full-time work is quoted at the day rate.",
+};
+
 export type ResourceHighlight = {
   slug: string;
   category: string;
