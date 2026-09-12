@@ -113,3 +113,10 @@ temp/
 client/public/__manus__/version.json
 .project-config.json
 dist-ssr/
+
+# Depo kokune birakilmis tanitim dosyalari: sitenin servis ettigi kopya
+# client/public/medya/ altinda duruyor. Koktekiler her klonda ve her
+# dagitimda bosuna tasiniyordu (video tek basina 25 MB).
+/nechhrobotics -tanıtım videosu.mp4
+/Nechh_Robotics_Tanitim_v3.pptx
+/GORSEL-VİDEO/
