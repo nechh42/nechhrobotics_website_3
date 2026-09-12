@@ -910,3 +910,56 @@ Prerender yine 90 sayfa / 0 hata.
 - [ ] Görseldeki telefon uydurma bir panel gösteriyor; TONSORA/HeliaLoop'un
       gerçek ekranları var, onlar kullanılmalı.
 - [ ] Canlıya alma: `git push` → Vercel. **Henüz yapılmadı.**
+
+## 12 EYLÜL 2026 (2) — PARA BİRİMİ EURO OLDU, DOLAR KALDIRILDI
+
+**Hasan'ın sorusu kararı değiştirdi:** *"madem AB ile ilgileniyoruz neden EUR
+kullanmıyoruz?"* Haklıydı. Ürünlerin hepsi AB mevzuatı (CBAM, GDPR, EUDR),
+müşteri AB'ye satan firma, CBAM danışmanlığı zaten €2.500 ve İngilizce hizmet
+sayfasındaki bant €35/saat. Dolar hiçbir şeye oturmuyordu.
+
+**Önce ölçüldü (tahmin değil, iki bağımsız kaynak):**
+```
+1 USD = ₺48,60   (frankfurter.dev 48,596 · 11 Eyl | open.er-api.com 48,603 · 12 Eyl)
+1 EUR = ₺56,33   (frankfurter.dev 56,3329 · 11 Eyl | open.er-api.com 56,39 · 12 Eyl)
+```
+
+**Bulunan hata:** sitedeki `$` notları **₺38,5/$** kuruna göre yazılmıştı.
+Gerçek kur ₺48,60 olduğu için yurt dışı alıcıya **%26 fazla** fiyat
+gösteriliyordu (₺5.000 = $103 iken $130 yazıyordu).
+
+**Yapılan:** dolar tamamen kaldırıldı, euro yaklaşık notu kondu. TL ana fiyat,
+euro bilgi notu; fatura TL üzerinden kesilir. **TL fiyatlara dokunulmadı.**
+
+| Paket | TL | Eski (yanlış) | Yeni |
+|---|---|---|---|
+| CBAM Girişimci Kiti | ₺5.000 | $130 | ≈ €89 |
+| KVKK Şablon Paketi | ₺2.490 | $69 | ≈ €44 |
+| İSG Şablon Paketi | ₺2.490 | $69 | ≈ €44 |
+| GDPR Başlangıç | ₺2.990 | $79 | ≈ €53 |
+| E-Fatura Geçiş | ₺1.490 | $39 | ≈ €26 |
+| YZ İş Promptu | ₺1.990 | $49 | ≈ €35 |
+| CBAM Profesyonel | ₺7.900 | — | ≈ €140 |
+
+**Kur artık tek kaynakta:** `site.ts` içinde `export const kur` — oran, ölçüm
+tarihi ve iki kaynağın adı yazılı. Kur eskiyince **tek yerden** yeniden
+hesaplanır; bir daha sessizce eskimez.
+
+**Ölçüm:** tsc 0, build 0, prerender 90/0. Mağazanın 7 paket sayfası da euro
+basıyor; `dist` genelinde dolar taraması **temiz**.
+
+### Tanıtım afişi kuruldu (GORSEL-VİDEO/)
+Dışarıdaki AI'ın ürettiği afiş bozuktu: `TR:`/`EN:` etiketleri ve tırnaklar
+görsele girmiş, her şey iki dilli olmuş, telefon panelleri uydurma. Afiş
+sıfırdan kuruldu: `GORSEL-VİDEO/Main.dc.html` (TR) + `English.dc.html` (EN),
+1080×1440, her biri **tek dil**. Renkler Hasan'ın isteğiyle koyudan **açık ve
+yumuşak** düzene çevrildi, "KONYA · TÜRKİYE" satırı çıkarıldı. Uydurma panel
+ve robot görseli yok; ortada gerçek kanıt bloğu var
+(3 uygulama · 4 mağaza yayını · TONSORA, HeliaLoop, JuriLoop, Eco-Report).
+Düzenlenebilir tuval: claude.ai/code/artifact/77eb2115-1e30-47e4-a9dd-856d514e35b4
+
+- [ ] **Afişler siteye eklenecek.** Tuvalden PNG indirilip
+      `client/public/medya/tanitim/` içine `nechh-yazilim-afis-tr.png` ve
+      `nechh-yazilim-afis-en.png` adıyla konur; sonra `site.ts` içindeki
+      `galeriTanitimlar` listesine iki satır eklenir. PNG gelmeden satır
+      eklenmez, yoksa galeri kırık resim gösterir.

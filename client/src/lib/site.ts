@@ -598,6 +598,21 @@ export const resourceHighlights: ResourceHighlight[] = [
   { slug: "embedded-reliability", category: "EMBEDDED SYSTEMS", title: "Sağlık Cihazlarında Gömülü Sistemler", excerpt: "Güvenilirlik, gerçek zamanlılık ve hata toleransına odaklanan teknik bakış.", path: "/blog/blog-embedded-systems-reliability" },
 ];
 
+/** AB mevzuati urunleri satiyoruz (CBAM, GDPR, EUDR) ve musteri AB'ye satan
+ *  firma; para birimi bu yuzden EURO. Dolar notlari 12 Eylul 2026'da kaldirildi:
+ *  eski notlar TL38,5/$ kuruna gore yazilmisti, gercek kur TL48,60/$ idi, yani
+ *  yurt disi aliciya %26 fazla fiyat gosteriliyordu.
+ *
+ *  Asagidaki euro rakamlari YAKLASIKTIR ve bu kurdan tureti(l)mistir.
+ *  Fatura her zaman TL uzerinden kesilir; TL ana fiyattir, euro bilgi notudur.
+ *  Kur eskiyince paketlerdeki "= EURxx" notlari bu kurla yeniden hesaplanir. */
+export const kur = {
+  eurTry: 56.33,
+  olcumTarihi: "11 Eylul 2026",
+  kaynak: "frankfurter.dev 56,3329 + open.er-api.com 56,39 (iki bagimsiz kaynak)",
+  not: "Euro tutarlari yaklasiktir; fatura TL uzerinden kesilir.",
+};
+
 export type Paket = {
   slug: string;
   aile: string;
@@ -625,7 +640,7 @@ export const paketler: Paket[] = [
       "Belge kontrol listesi",
     ],
     fiyat: "₺5.000",
-    fiyatNot: "tek seferlik · $130 · + KDV",
+    fiyatNot: "tek seferlik · ≈ €89 · + KDV",
     dosya: "/urunler/cbam-girisimci-kiti.zip",
     sinir: "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir.",
   },
@@ -641,7 +656,7 @@ export const paketler: Paket[] = [
       "Eylem planı",
     ],
     fiyat: "₺2.490",
-    fiyatNot: "tek seferlik · $69",
+    fiyatNot: "tek seferlik · ≈ €44",
     dosya: "/urunler/kvkk-sablon-paketi.zip",
     sinir: "Şablon paketidir; hukuki danışmanlık yerine geçmez.",
   },
@@ -657,7 +672,7 @@ export const paketler: Paket[] = [
       "8 kategorili yükümlülük kontrol listesi",
     ],
     fiyat: "₺2.490",
-    fiyatNot: "tek seferlik · $69",
+    fiyatNot: "tek seferlik · ≈ €44",
     dosya: "/urunler/isg-sablon-paketi.zip",
     sinir: "Şablon paketidir; İSG uzmanı hizmetinin yerine geçmez.",
   },
@@ -672,7 +687,7 @@ export const paketler: Paket[] = [
       "Veri aktarımı (SCC) kontrol listesi",
     ],
     fiyat: "₺2.990",
-    fiyatNot: "tek seferlik · $79",
+    fiyatNot: "tek seferlik · ≈ €53",
     dosya: "/urunler/gdpr-baslangic-paketi.zip",
     sinir: "Şablon paketidir; hukuki danışmanlık yerine geçmez.",
   },
@@ -689,7 +704,7 @@ export const paketler: Paket[] = [
       "Muhasebeciye sorulacak 10 soru",
     ],
     fiyat: "₺1.490",
-    fiyatNot: "tek seferlik · $39",
+    fiyatNot: "tek seferlik · ≈ €26",
     dosya: "/urunler/efatura-gecis-paketi.zip",
     sinir: "Rehber materyalidir; mali müşavir hizmetinin yerine geçmez.",
   },
@@ -704,7 +719,7 @@ export const paketler: Paket[] = [
       "ChatGPT, Claude ve Gemini ile çalışır",
     ],
     fiyat: "₺1.990",
-    fiyatNot: "tek seferlik · $49",
+    fiyatNot: "tek seferlik · ≈ €35",
     dosya: "/urunler/yz-is-promptu-paketi.zip",
     sinir: "Verimlilik materyalidir; sektörel danışmanlık içermez.",
   },
@@ -737,7 +752,7 @@ export const ucretliHizmetler: Hizmet[] = [
     ad: "CBAM Profesyonel Paketi",
     ozet: "Girişimci Kiti + 1 saat birebir danışmanlık.",
     fiyat: "₺7.900",
-    fiyatNot: "tek seferlik · + KDV",
+    fiyatNot: "tek seferlik · ≈ €140 · + KDV",
     sinir: "Hazırlık ve yönlendirme hizmetidir; resmî beyan yerine geçmez.",
   },
 ];
