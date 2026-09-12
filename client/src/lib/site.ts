@@ -263,9 +263,21 @@ export type YazilimIsi = {
 
 /** Yazilim ve uygulama gelistirme hizmetleri.
  *  Fiyat karari IS-ALIMI/FIYATLANDIRMA.md dosyasindadir; burada o dosyanin
- *  ALT SINIRI "...'den baslayan" olarak gosterilir. Sureler ayni dosyadaki
- *  "tahminini 1,4 ile carp" kuraliyla genisletilmistir. Rakam degisecekse
- *  once FIYATLANDIRMA.md guncellenir, sonra burasi. */
+ *  Sureler o dosyanin "tahminini 1,4 ile carp" kuraliyla genisletilmistir.
+ *
+ *  FIYAT NEREDEN GELIYOR (12 Eylul 2026 duzeltmesi):
+ *  Ilk surumde TL fiyatlar piyasa kuruyla euroya cevrilmisti. Yanlisti:
+ *  o TL rakamlari YURT ICI pazar icin belirlenmisti, euro olarak yazildiginda
+ *  uluslararasi fiyat gibi okunuyor ve "ucuz tasseron" sinyali veriyordu.
+ *
+ *  Dogru cipa FIYATLANDIRMA.md §1'de zaten vardi: yurt disi EUR35-70/saat.
+ *  Turetme, tamami o dosyanin kendi rakamlarindan:
+ *      saat yuku = §2'deki TL ust siniri / TL1.500 (§1 yurt ici saat tabani)
+ *      site fiyati = saat yuku x EUR35  (bandin TABANI, ilk isler icin)
+ *  Ornek: panelli web uygulamasi TL280.000 / 1.500 = 187 saat x 35 = EUR6.533
+ *         -> temiz rakam EUR6.600.
+ *  EUR70 ust bandi dogrudan musteri ve referans sonrasi icin saklidir.
+ *  Rakam degisecekse once FIYATLANDIRMA.md guncellenir, sonra burasi. */
 export const yazilimIsleri: YazilimIsi[] = [
   {
     slug: "magazaya-cikarma",
@@ -278,7 +290,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Mağaza künyesi, ekran görüntüleri, gizlilik formları",
       "Ret gelirse düzeltme ve yeniden gönderim",
     ],
-    fiyat: "€360",
+    fiyat: "€1.100",
     fiyatNot: "’den başlayan · 2–4 hafta",
     sure: "2–4 hafta",
     kanit: "3 uygulama, 4 mağaza yayını",
@@ -294,7 +306,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Site haritası, canonical ve meta altyapısı",
       "İletişim formu ve e-posta yönlendirmesi",
     ],
-    fiyat: "€540",
+    fiyat: "€1.300",
     fiyatNot: "’den başlayan · 2–3 hafta",
     sure: "2–3 hafta",
     kanit: "nechhrobotics.com",
@@ -310,7 +322,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Blog / kaynak arşivi ve arşiv içi arama",
       "Site haritası bildirimi ve indeksleme ölçümü",
     ],
-    fiyat: "€980",
+    fiyat: "€2.100",
     fiyatNot: "’den başlayan · 3–4 hafta",
     sure: "3–4 hafta",
     kanit: "nechhrobotics.com · 90 sayfa TR/EN",
@@ -326,7 +338,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Her sonucun kaynağını gösteren denetim izi",
       "Yazdırmaya hazır PDF rapor çıktısı",
     ],
-    fiyat: "€1.600",
+    fiyat: "€4.700",
     fiyatNot: "’den başlayan · 4–8 hafta",
     sure: "4–8 hafta",
     kanit: "Eco-Report · CBAM gömülü emisyon",
@@ -342,7 +354,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Kullanıcı girişi ve yetki katmanı",
       "Mağaza yayını ve sürüm akışı",
     ],
-    fiyat: "€2.150",
+    fiyat: "€5.900",
     fiyatNot: "’den başlayan · 8–14 hafta",
     sure: "8–14 hafta",
     kanit: "TONSORA · Google Play",
@@ -358,7 +370,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Yönetici panosu ve kayıt izleme",
       "İş mantığının sunucu tarafında tek yerde tutulması",
     ],
-    fiyat: "€2.700",
+    fiyat: "€6.600",
     fiyatNot: "’den başlayan · 7–11 hafta",
     sure: "7–11 hafta",
     kanit: "JuriLoop",
@@ -374,7 +386,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Mağaza içi satın alma altyapısı",
       "Çok dilli metin altyapısı",
     ],
-    fiyat: "€3.950",
+    fiyat: "€10.500",
     fiyatNot: "’den başlayan · 11–20 hafta",
     sure: "11–20 hafta",
     kanit: "TONSORA · App Store + Google Play",
@@ -390,7 +402,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Kurum hesabı ve kullanıcı davet yönetimi",
       "Plan bazlı özellik sınırlaması",
     ],
-    fiyat: "€4.500",
+    fiyat: "€9.400",
     fiyatNot: "’den başlayan · 11–17 hafta",
     sure: "11–17 hafta",
     kanit: "HeliaLoop",
@@ -406,7 +418,7 @@ export const yazilimIsleri: YazilimIsi[] = [
       "Hata giderme ve mağaza sürüm bakımı",
       "Küçük düzenlemeler için ayrılmış süre",
     ],
-    fiyat: "€270",
+    fiyat: "€950",
     fiyatNot: "/ay’dan başlayan · süresiz",
     sure: "aylık, süresiz",
     kanit: "6 ürün, sürekli bakımda",
@@ -416,7 +428,7 @@ export const yazilimIsleri: YazilimIsi[] = [
 export const englishYazilimIsleri: YazilimIsi[] = [
   {
     slug: "magazaya-cikarma",
-    fiyat: "€360",
+    fiyat: "€1.100",
     fiyatNot: " and up · 2–4 weeks",
     aile: "STORE RELEASE",
     ad: "Getting your app into the stores",
@@ -432,7 +444,7 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "tanitim-sitesi",
-    fiyat: "€540",
+    fiyat: "€1.300",
     fiyatNot: " and up · 2–3 weeks",
     aile: "WEB · SINGLE LANGUAGE",
     ad: "Marketing site",
@@ -448,7 +460,7 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "kurumsal-site",
-    fiyat: "€980",
+    fiyat: "€2.100",
     fiyatNot: " and up · 3–4 weeks",
     aile: "WEB · BILINGUAL",
     ad: "Corporate site · bilingual, with a blog",
@@ -464,7 +476,7 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "hesaplama-motoru",
-    fiyat: "€1.600",
+    fiyat: "€4.700",
     fiyatNot: " and up · 4–8 weeks",
     aile: "CALCULATION · REPORTING",
     ad: "Calculation engine + PDF report",
@@ -480,7 +492,7 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "mobil-tek-magaza",
-    fiyat: "€2.150",
+    fiyat: "€5.900",
     fiyatNot: " and up · 8–14 weeks",
     aile: "MOBILE · ONE STORE",
     ad: "Mobile app · one store",
@@ -496,7 +508,7 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "panelli-web-uygulamasi",
-    fiyat: "€2.700",
+    fiyat: "€6.600",
     fiyatNot: " and up · 7–11 weeks",
     aile: "WEB APPLICATION",
     ad: "Web application with an admin panel",
@@ -512,7 +524,7 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "mobil-iki-magaza",
-    fiyat: "€3.950",
+    fiyat: "€10.500",
     fiyatNot: " and up · 11–20 weeks",
     aile: "MOBILE · TWO STORES",
     ad: "Mobile app · two stores, one codebase",
@@ -528,7 +540,7 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "abonelikli-platform",
-    fiyat: "€4.500",
+    fiyat: "€9.400",
     fiyatNot: " and up · 11–17 weeks",
     aile: "SAAS · SUBSCRIPTION",
     ad: "Subscription platform · multi-user",
@@ -544,7 +556,7 @@ export const englishYazilimIsleri: YazilimIsi[] = [
   },
   {
     slug: "bakim-destek",
-    fiyat: "€270",
+    fiyat: "€950",
     fiyatNot: "/month and up · open-ended",
     aile: "ONGOING · MONTHLY",
     ad: "Maintenance and support",
@@ -758,7 +770,7 @@ export const ucretliHizmetler: Hizmet[] = [
     ozet:
       "Başvuruyu bize bırakın: belge hazırlığı, CBAM Registry (AMM) başvurusu, otoriteden gelen ek bilgi taleplerinin (RFI) yönetimi ve onaya kadar takip.",
     fiyat: "€2.500",
-    fiyatNot: "sabit fiyat · sürpriz yok · ilk 20 dk ücretsiz",
+    fiyatNot: "sabit fiyat · sürpriz yok",
     sinir: "Hazırlayan ve süreci yürüten taraftır; akredite doğrulayıcı değildir.",
   },
   {

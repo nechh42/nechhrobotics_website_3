@@ -1068,3 +1068,51 @@ pay bırakıldı.
       Tuvalden iki afiş tekrar PNG olarak indirilip aynı adlarla
       (`nechh-yazilim-afis-tr.jpg` / `-en.jpg`) değiştirilmeli.
       *Not: PNG indirip JPEG'e çevirmek gerekiyor — dosya adları `.jpg`.*
+
+## 12 EYLÜL 2026 (5) — FİYATLAR YÜKSELTİLDİ: KUR ÇEVİRİSİ YANLIŞ ÇIPAYDI
+
+**Hasan:** *"Marjinal fiyat istemiyorum, bizi öldürmesin ama rakiplerimizden de
+çok aşağı olmayalım, ucuz hissi oluşmasın. PROFESYONEL BİR İŞ YAPIYORUZ."*
+
+**Hatayı ben yaptım.** TL fiyatları piyasa kuruyla euroya çevirdim. O TL
+rakamları **yurt içi** pazar için belirlenmişti; euro olarak yazıldığında
+uluslararası fiyat gibi okunuyor ve "ucuz taşeron" sinyali veriyordu. Bir
+abonelikli platform €4.500 görünüyordu — Avrupa'da o iş €15.000+.
+
+**Doğru çıpa `FIYATLANDIRMA.md` §1'de zaten vardı:** yurt dışı €35–70/saat.
+Türetme tamamen o dosyanın kendi rakamlarından, uydurma yok:
+
+```
+saat yükü   = §2'deki TL üst sınırı / ₺1.500   (§1 yurt içi saat tabanı)
+site fiyatı = saat yükü × €35                  (bandın TABANI, ilk işler için)
+```
+
+| İş | Önceki (kur çevirisi) | Şimdi (saat bandı) |
+|---|---|---|
+| Mağazaya çıkarma | €360 | **€1.100** |
+| Tanıtım sitesi | €540 | **€1.300** |
+| Kurumsal site | €980 | **€2.100** |
+| Hesaplama motoru | €1.600 | **€4.700** |
+| Mobil, tek mağaza | €2.150 | **€5.900** |
+| Panelli web uygulaması | €2.700 | **€6.600** |
+| Abonelikli platform | €4.500 | **€9.400** |
+| Mobil, iki mağaza | €3.950 | **€10.500** |
+| Bakım / destek | €270/ay | **€950/ay** |
+
+Ortalama ~3 kat arttı. **€70 üst bandı elde duruyor** — doğrudan müşteri ve
+referans sonrası için. Sitedeki rakamlar bandın tabanı.
+
+Türetme `site.ts` içindeki yorum bloğuna da yazıldı; "bu rakam nereden geldi"
+sorusu bir daha sorulmayacak.
+
+### 🔴 YILLIK ÜCRET YASAĞI
+Hasan: *"hiçbir yerde yıllık ücret olmayacak, sadece aylık — bizim ülkemizde
+ciddi enflasyon var."* Gerekçe doğru: yıllık taahhüt enflasyonu geliştiricinin
+sırtına yıkar, 12 ay önce anlaşılan bedel bugün maliyeti karşılamaz.
+
+**Ölçüm yapıldı: site temiz.** `dist` genelinde yıllık/`per year`/`annual`
+taraması boş döndü; tek yinelenen kalem bakım ve o zaten aylık. Kural
+`FIYATLANDIRMA.md` §7'ye kalıcı olarak yazıldı.
+
+**Ölçüm:** tsc 0, build 0, prerender 90/0. Dokuz yeni fiyat hem `/hizmetler`
+hem `/en/services` sayfasında basılı; TL fiyat taraması temiz.
