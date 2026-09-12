@@ -963,3 +963,58 @@ Düzenlenebilir tuval: claude.ai/code/artifact/77eb2115-1e30-47e4-a9dd-856d514e3
       `nechh-yazilim-afis-en.png` adıyla konur; sonra `site.ts` içindeki
       `galeriTanitimlar` listesine iki satır eklenir. PNG gelmeden satır
       eklenmez, yoksa galeri kırık resim gösterir.
+
+## 12 EYLÜL 2026 (3) — EURO ANA FİYAT OLDU, TL RAKAMI SİTEDEN KALKTI
+
+**Hasan'ın kararı:** *"EUR fiyat yazılsın, ödeme yapılırken TL'ye çevrilir.
+Fiyat karmaşası biter. Zaten Türk sanayiciler EUR ile çalışıyor."*
+
+Sabahki ara çözüm (TL ana fiyat + "≈ €89" notu) **terk edildi**. Sebep: iki
+para birimi yazmak, eskiyecek bir kur tutmayı zorunlu kılıyordu — hatanın kök
+sebebi buydu. Artık sitede **tek para birimi** var.
+
+| Paket | Sabah (ara çözüm) | Şimdi |
+|---|---|---|
+| CBAM Girişimci Kiti | ₺5.000 · ≈€89 | **€89** |
+| KVKK Şablon Paketi | ₺2.490 · ≈€44 | **€44** |
+| İSG Şablon Paketi | ₺2.490 · ≈€44 | **€44** |
+| GDPR Başlangıç | ₺2.990 · ≈€53 | **€53** |
+| E-Fatura Geçiş | ₺1.490 · ≈€26 | **€26** |
+| YZ İş Promptu | ₺1.990 · ≈€35 | **€35** |
+| CBAM Profesyonel | ₺7.900 · ≈€140 | **€140** |
+| CBAM Danışmanlığı | €2.500 | €2.500 *(değişmedi)* |
+
+**`export const kur` sabiti SİLİNDİ.** Sitede artık hiçbir kur tutulmuyor;
+tutulacak bir şey yok. Euro fiyat asıl fiyattır. Türetildiği kur (₺56,33/EUR,
+11 Eyl, iki kaynak) `site.ts` içindeki yorum bloğunda tarihsel kayıt olarak
+duruyor — hesapta kullanılmıyor.
+
+**Ödeme kutusuna çevrim cümlesi eklendi** (`PaketDetay.tsx`, 8 sayfada birden):
+*"Fiyatlar euro cinsindendir. Ödeme, ödeme günündeki Merkez Bankası efektif
+satış kuru üzerinden Türk lirası olarak alınır; fatura da Türk lirası
+üzerinden düzenlenir."*
+
+**Ölçüm:** tsc 0, build 0, prerender 90/0. Sekiz paket/hizmet sayfası da tek
+para birimi basıyor, TL rakamı hiçbirinde yok, çevrim notu hepsinde var,
+`dist` genelinde dolar taraması temiz.
+
+### Afiş: orijinal logo ve marka renkleri
+Afişe önce elle çizilmiş SVG amblem, sonra `logo_modern.png` (lacivert) konmuştu.
+İkisi de yanlıştı. **Doğrusu `client/public/medya/nechh-logo.png`** — orijinal
+kilit: kırmızı-siyah amblem + NECHH ROBOTICS + INTELLIGENCE IN MOTION.
+Beyaz zemini şeffaflaştırıldı, kırpıldı, 820 piksele ölçeklendi, 160 renk
+palete indirilip 44 KB'a sıkıştırıldı → `GORSEL-VİDEO/nechh-logo-lockup.png`.
+
+Afişin renk düzeni de laciverdden **marka renklerine** çevrildi:
+kırmızı `#e60012`, siyah `#16161a`, açık nötr zemin. Lacivert kalıntısı yok
+(kontrol edildi). Böylece günlükteki "marka rengi kararı" maddesi de kapandı:
+**kırmızı asıl marka rengi**, afiş ve logo artık aynı dili konuşuyor.
+
+- [ ] **Afişler siteye eklenecek.** Tuvalden PNG indirilip
+      `client/public/medya/tanitim/` içine `nechh-yazilim-afis-tr.png` ve
+      `nechh-yazilim-afis-en.png` adıyla konur; sonra `site.ts` içindeki
+      `galeriTanitimlar` listesine iki satır eklenir.
+- [ ] **Karar bekliyor:** yazılım geliştirme kalemleri (9 kalem) hâlâ TL
+      (`₺20.000'den başlayan`). Mağaza euroya geçtiği için sitede iki para
+      birimi var. Yazılım müşterisi yurt içi KOBİ olduğu için TL bırakıldı;
+      euro olsun denirse tek adımda çevrilir.

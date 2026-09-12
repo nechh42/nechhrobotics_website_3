@@ -12,6 +12,7 @@ function OdemeKutusu({ urunAdi }: { urunAdi: string }) {
         <Building2 size={20} />
         <span>Ödeme: banka havalesi / EFT</span>
       </div>
+      <p className="odeme-para-birimi">{odeme.paraBirimiNotu}</p>
       {hazir ? (
         <dl className="odeme-bilgi">
           <div><dt>Hesap sahibi</dt><dd>{odeme.sahip}</dd></div>

@@ -517,3 +517,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .yazilim-sinir { grid-column: 1 / -1; margin: 0; padding: 17px 19px; border-left: 2px solid var(--lime); background: rgba(255,255,255,.05); color: #cdd4df; font-size: 12px; line-height: 1.7; }
 @media (max-width: 900px) { .yazilim-duzen { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .yazilim-giris { padding: 58px 20px 0; } .yazilim-grid { padding-top: 26px; } }
+
+/* Odeme kutusu: fiyat euro, tahsilat TL - bu notun gorunmesi gerekiyor. */
+.odeme-para-birimi { margin: 0 0 16px; padding: 12px 14px; border-left: 3px solid var(--blue); background: rgba(17,85,204,.05); color: var(--muted-ink); font-size: 12px; line-height: 1.62; }
