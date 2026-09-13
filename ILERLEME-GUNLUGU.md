@@ -1196,3 +1196,25 @@ karşılık buldu.
 GitHub → `nechh42/nechhrobotics_website_3` → **Settings** → **Danger Zone** →
 **Change visibility → Private**. Yapılana kadar eski ZIP'ler git geçmişinden
 indirilebilir. (Vercel gizli depoyla çalışmaya devam eder.)
+
+---
+
+## 13 EYLÜL 2026 (3) — CBAM PAKETLERİ SİPARİŞ FORMUNA BAĞLANDI
+
+Eco-Report'a havale sipariş sistemi eklendi (ayrıntı Eco-Report günlüğünde): referans
+kodu + TCMB kuruyla TL + Hasan'a e-posta + "Havale geldi" kapısı + kitin firma adıyla
+ekte gitmesi.
+
+**Sitede:** `PaketDetay.tsx` → üç CBAM paketi (`cbam-girisimci-kiti` → PRICE-002,
+`cbam-profesyonel-paket` → PRICE-006, `cbam-basvuru-danismanligi` → PRICE-005) artık
+**"Sipariş formunu açın"** butonu gösteriyor:
+`https://ecoreport.nechhrobotics.com/?view=order&paket=PRICE-…`
+
+- Bu üç sayfada **IBAN gösterilmiyor**: referans kodsuz gelen havale hangi siparişe ait
+  olduğu bilinmeden kalırdı. IBAN sipariş formunda, referansla birlikte verilir.
+- Uygulama katalogunda olmayan şablon paketleri (KVKK, İSG, GDPR, e-Fatura, YZ) eski
+  kutuyu (IBAN + dekont e-postası) kullanmaya devam ediyor.
+
+**Ölçüm:** tsc 0 · build 0 · prerender 90/0. Derlenmiş sayfalarda: üç CBAM sayfasında
+form bağlantısı var, "Hesap sahibi" 0, "Dekontu" 0; KVKK sayfasında eski kutu (1/1) yerinde.
+Push, uygulamanın canlıda yeni sürümü sunduğu ölçüldükten sonra yapıldı.

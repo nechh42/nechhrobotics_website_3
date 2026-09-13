@@ -4,6 +4,57 @@ import { Link, useRoute } from "wouter";
 import { PageFrame } from "@/components/SiteShell";
 import { odeme, paketler, ucretliHizmetler } from "@/lib/site";
 
+/** 13 Eyl 2026: bu paketler Eco-Report'taki siparis formundan alinir. Form bir
+ *  REFERANS KODU ve TCMB kuruyla TL tutari verir; Hasan'a bildirim gider, kit
+ *  odeme onaylaninca firma adiyla e-postaya eklenir. IBAN burada gosterilmez:
+ *  referanssiz gelen havale hangi siparise ait oldugu bilinmeden kalirdi. */
+const UYGULAMA_SIPARISI: Record<string, string> = {
+  "cbam-girisimci-kiti": "PRICE-002",
+  "cbam-profesyonel-paket": "PRICE-006",
+  "cbam-basvuru-danismanligi": "PRICE-005",
+};
+const SIPARIS_ADRESI = "https://ecoreport.nechhrobotics.com/";
+
+function UygulamaSiparisKutusu({ paketKodu }: { paketKodu: string }) {
+  const kitMi = paketKodu !== "PRICE-005";
+  return (
+    <div className="odeme-kutusu">
+      <div className="odeme-baslik">
+        <Building2 size={20} />
+        <span>Ödeme: banka havalesi / EFT</span>
+      </div>
+      <p className="odeme-para-birimi">{odeme.paraBirimiNotu}</p>
+      <a
+        className="button button-primary"
+        href={`${SIPARIS_ADRESI}?view=order&paket=${paketKodu}`}
+      >
+        Sipariş formunu açın <ArrowUpRight size={17} />
+      </a>
+      <ol className="odeme-adimlar">
+        <li>
+          <span>1</span>
+          <p>Formu doldurun ve onayları verin. Size bir <strong>referans kodu</strong> ve ödenecek TL tutarı verilir.</p>
+        </li>
+        <li>
+          <span>2</span>
+          <p>Tutarı gösterilen IBAN'a gönderin; açıklamaya <strong>yalnızca referans kodunu</strong> yazın.</p>
+        </li>
+        <li>
+          <span>3</span>
+          <p>
+            {kitMi
+              ? "Ödeme hesaba geçince paket, firmanız adına lisanslanmış olarak e-postanıza gelir."
+              : "Ödeme hesaba geçince çalışmayı planlamak için sizinle iletişime geçilir."}
+          </p>
+        </li>
+      </ol>
+      <p className="odeme-not">
+        Kredi kartı ile çevrimiçi ödeme alınmamaktadır.
+      </p>
+    </div>
+  );
+}
+
 function OdemeKutusu({ urunAdi }: { urunAdi: string }) {
   const hazir = Boolean(odeme.iban);
   return (
@@ -122,7 +173,11 @@ export default function PaketDetay() {
           </div>
         </div>
         <aside className="paket-yan">
-          <OdemeKutusu urunAdi={ad} />
+          {slug && UYGULAMA_SIPARISI[slug] ? (
+            <UygulamaSiparisKutusu paketKodu={UYGULAMA_SIPARISI[slug]} />
+          ) : (
+            <OdemeKutusu urunAdi={ad} />
+          )}
           <div className="paket-soru">
             <p>Emin değil misiniz?</p>
             <Link href="/iletisim" className="route-link">Önce soru sorun <ArrowUpRight size={17} /></Link>
