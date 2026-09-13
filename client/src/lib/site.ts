@@ -701,6 +701,23 @@ export const paketler: Paket[] = [
     sinir: "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir.",
   },
   {
+    slug: "dora-tedarikci-hazirlik-kiti",
+    aile: "DORA · AB Finans Sektörü",
+    ad: "DORA Tedarikçi Hazırlık Kiti",
+    ozet:
+      "AB bankalarına ve sigortacılarına yazılım veya BT hizmeti veriyorsanız: bankanın DORA gereği sözleşmede isteyeceği maddelere ve soru formlarına hazırlanın.",
+    icerik: [
+      "DORA madde 30 sözleşme kontrol listesi (resmî metinden)",
+      "Olay bildirimi ve destek prosedürü şablonu",
+      "Çıkış ve geçiş planı şablonu",
+      "Banka soru formu cevap kütüphanesi",
+      "Alt yüklenici ve veri konumu listesi",
+    ],
+    fiyat: "€499",
+    fiyatNot: "tek seferlik · + KDV",
+    sinir: "Hazırlık ve şablon setidir; hukuki danışmanlık, sözleşme incelemesi veya uyum sertifikası değildir.",
+  },
+  {
     slug: "kvkk-sablon-paketi",
     aile: "KVKK · 6698 sayılı Kanun",
     ad: "KVKK Şablon Paketi",

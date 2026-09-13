@@ -12,6 +12,7 @@ const UYGULAMA_SIPARISI: Record<string, string> = {
   "cbam-girisimci-kiti": "PRICE-002",
   "cbam-profesyonel-paket": "PRICE-006",
   "cbam-basvuru-danismanligi": "PRICE-005",
+  "dora-tedarikci-hazirlik-kiti": "PRICE-008",
 };
 const SIPARIS_ADRESI = "https://ecoreport.nechhrobotics.com/";
 

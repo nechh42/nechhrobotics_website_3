@@ -1231,3 +1231,23 @@ panelden Redeploy da işe yaramadı. Kesin sebep ölçülmedi (muhtemelen commit
 kimliği ile Vercel hesabı `nechh42-1246` eşleşmiyor). **Hasan depoyu yeniden Public yaptı**;
 Hobby plan açık depodan yayını bloklamıyor. Depoda sır yok (`.env` hiç commit edilmemiş, ölçüldü);
 eski kit ZIP'leri yalnızca git geçmişinde duruyor.
+
+---
+
+## 13 EYLÜL 2026 (4) — DORA TEDARİKÇİ HAZIRLIK KİTİ MAĞAZADA (€499)
+
+**Hasan kararı:** DORA kiti yapılsın, €499 tek seferlik. Kitin kendisi Eco-Report'ta üretiliyor
+(ayrıntı Eco-Report günlüğünde; araştırma `KONULAR/DORA-ARASTIRMASI-2026-09.md`).
+
+**Sitede:**
+- `site.ts` → `paketler` içine `dora-tedarikci-hazirlik-kiti` (aile "DORA · AB Finans Sektörü", €499,
+  sınır: hukuki danışmanlık / sözleşme incelemesi / sertifika değildir).
+- `PaketDetay.tsx` → `UYGULAMA_SIPARISI` içine PRICE-008: sayfa IBAN yerine **"Sipariş formunu açın"** gösterir.
+- `client/public/sitemap.xml` → yeni ürün adresi eklendi. 🔴 Eklenmeden önce derleme sayfayı **ön-render
+  etmiyordu** (90 sayfa, DORA yok) — ön-render listesi site haritasından okunuyor.
+
+**Ölçüm:** tsc 0 · build 0 · prerender **91**/0 · derlenmiş DORA sayfasında €499 var, `paket=PRICE-008` bağlantısı
+var, "Hesap sahibi" 0. Push, Eco-Report canlıda PRICE-008'i kabul ettikten SONRA yapıldı (19:30 ölçüldü).
+
+**Kit fiyat koruması:** Eco-Report kit testine `dora-tedarikci-hazirlik-kiti → PRICE-008` eşleşmesi eklendi;
+site ve katalog fiyatı ayrışırsa test düşer.
