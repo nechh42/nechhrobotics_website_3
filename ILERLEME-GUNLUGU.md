@@ -1116,3 +1116,48 @@ taraması boş döndü; tek yinelenen kalem bakım ve o zaten aylık. Kural
 
 **Ölçüm:** tsc 0, build 0, prerender 90/0. Dokuz yeni fiyat hem `/hizmetler`
 hem `/en/services` sayfasında basılı; TL fiyat taraması temiz.
+
+---
+
+## 13 EYLÜL 2026 — CEZA ARGÜMANI EN ÜSTE, ÖN GÖRÜŞME KALKTI, YAYINDA
+
+**Hasan:** *"Bu argümanları siteye taşı ve en üstte yayınlansın — insanlar
+sadece başlıkları okuyor."* ve *"ön görüşme hiçbir yerde olmayacak."*
+
+- Eco-Report ürün sayfasında hero'nun hemen altına **maliyet şeridi**:
+  *"Veriyi siz vermezseniz, farkını siz ödersiniz."* — 2026 €18.278 · 2027
+  €36.556 · 2028 €54.834 örnek fark, dipnotlu (`site.ts` → `cbamMaliyet`).
+- "Ön görüşme isteyin" → "İletişime geçin"; "ilk 20 dk ücretsiz" kaldırıldı.
+- Kit €299 · profesyonel €749 · danışmanlık €2.500 (uygulama katalogu ile aynı;
+  kit takımındaki fiyat koruması iki yüzeyi karşılaştırıyor).
+- Diğer oturumun afişleri (`nechh-yazilim-afis-tr/en.jpg`) ve yeniden üretilen
+  altı kit ZIP'i aynı commit'e girdi — 12 Eyl'de "commit edilmezse canlı eski
+  dosyayı servis eder" diye açık bırakılmıştı, kapandı.
+
+**Ölçüm:** tsc 0 · build 0 · prerender 90/0 · commit `fee6124` push edildi.
+Canlıda `/cozumler/eco-report`: "18.278" var, "ön görüşme" 0 (ilk denemede).
+
+### ✅ KAPANDI — SİTEDE YANLIŞ SÖZ: FATURA
+Hasan şu an şirket açamıyor; **fatura kesilemiyor.** Sitede dört yerde fatura
+sözü duruyordu. **Hasan kararı (13 Eyl): fatura sözünü kaldır.** Dördü de silindi;
+ödeme ve teslimat adımları aynı kaldı ("ileteriz" yazım hatası da düzeldi):
+
+| Yer | Yazan |
+|---|---|
+| `sss.json:28` | "kurumsal faturası birlikte gönderilir" |
+| `PaketDetay.tsx:24` | "kurumsal fatura bilgilerinizi e-posta ile iletiriz" |
+| `PaketDetay.tsx:47` | "kurumsal faturası birlikte gönderilir" |
+| `site.ts:823` | "fatura da Türk lirası üzerinden düzenlenir" |
+
+Ayrıca `hukukiMetinler.json` içinde abonelik "fatura dönemi" ifadeleri var
+(genel sözleşme dili) — ayrı bakılacak.
+
+### Bilgi — havale akışı (uygulama tarafı Eco-Report günlüğünde)
+Sitede sunucu fonksiyonu yok ve Eco-Report sunucusunda CORS yok: sitedeki bir
+form doğrudan uygulamaya veri gönderemez. Sipariş formu uygulamanın içinde
+olacak; sitedeki buton oraya yönlendirecek.
+
+**Ölçüm (fatura düzeltmesi):** aynı arama kalıbı eski sürümde (HEAD) **4** eşleşme,
+yeni sürümde **0** — boş sonucun kalıp hatası olmadığı böyle gösterildi. İngilizce
+sayfalarda "invoice" sözü yok. tsc 0 · build 0 · prerender 90/0 · derlenmiş
+sayfalarda fatura sözü yok, "Paket, firmanız adına lisanslanmış" adımı yerinde.

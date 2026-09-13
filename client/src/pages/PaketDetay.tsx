@@ -21,8 +21,7 @@ function OdemeKutusu({ urunAdi }: { urunAdi: string }) {
       ) : (
         <p className="odeme-bekliyor">
           Havale bilgileri hazırlanıyor. Bu arada aşağıdaki adresten bize
-          yazarsanız hesap bilgilerini ve kurumsal fatura bilgilerinizi
-          e-posta ile ileteriz.
+          yazarsanız hesap bilgilerini e-posta ile iletiriz.
         </p>
       )}
       <ol className="odeme-adimlar">
@@ -44,7 +43,7 @@ function OdemeKutusu({ urunAdi }: { urunAdi: string }) {
           <span>3</span>
           <p>
             Paket, firmanız adına lisanslanmış olarak <strong>aynı gün</strong>{" "}
-            e-postanıza gelir; kurumsal faturası birlikte gönderilir.
+            e-postanıza gelir.
           </p>
         </li>
       </ol>

@@ -820,8 +820,7 @@ export const odeme = {
   eposta: "nechhlab.global@gmail.com",
   paraBirimiNotu:
     "Fiyatlar euro cinsindendir. Ödeme, ödeme günündeki Merkez Bankası "
-    + "efektif satış kuru üzerinden Türk lirası olarak alınır; fatura da "
-    + "Türk lirası üzerinden düzenlenir.",
+    + "efektif satış kuru üzerinden Türk lirası olarak alınır.",
 };
 
 export type YolHaritasiKalemi = {
