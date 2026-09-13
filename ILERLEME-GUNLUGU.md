@@ -1218,3 +1218,13 @@ ekte gitmesi.
 **Ölçüm:** tsc 0 · build 0 · prerender 90/0. Derlenmiş sayfalarda: üç CBAM sayfasında
 form bağlantısı var, "Hesap sahibi" 0, "Dekontu" 0; KVKK sayfasında eski kutu (1/1) yerinde.
 Push, uygulamanın canlıda yeni sürümü sunduğu ölçüldükten sonra yapıldı.
+
+### 🔴 13 Eyl — depo gizlenince yayın BLOKLANDI
+`03a45d6` Vercel'de: *"Deployment Blocked — commit author did not have contributing access to
+the project on Vercel. The Hobby Plan does not support collaboration for private repositories."*
+Yazar Hasan'ın kendisiydi (`nechh42 <nechhlab.global@gmail.com>`); fark commit mesajındaki
+`Co-Authored-By: Claude` satırı. Push "başarılı" göründü ama site 10 dk boyunca eski kaldı —
+canlı sayfa curl ile ölçülerek fark edildi.
+
+**Kural:** bu depoya atılan commit'lere Co-Authored-By satırı EKLENMEZ. Bu kayıt o kuralla atılan
+ilk commit'tir; bloklanan değişikliği de yayına taşıması beklenir (ölçülecek).
