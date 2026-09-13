@@ -239,7 +239,7 @@ export type Service = {
 
 export const services: Service[] = [
   { index: "01", eyebrow: "CBAM / AUTHORISED DECLARANT", title: "CBAM başvuru hazırlığı", summary: "Authorised Declarant süreci için kapsam değerlendirmesi, belge hazırlığı ve süreç koordinasyonu.", note: "Hizmet; hukuki danışmanlık, akredite doğrulama veya resmî beyanın yerine geçmez.", href: "/iletisim" },
-  { index: "02", eyebrow: "UYUM / SÜREÇ TASARIMI", title: "Uyum çalışma alanı", summary: "CBAM, KVKK, GDPR, İSG ve benzeri süreçlerde veri, doküman ve kontrol akışını netleştirmeye yönelik başlangıç çalışması.", note: "Kapsam, ihtiyaç görüşmesinden sonra yazılı olarak netleştirilir.", href: "/iletisim" },
+  { index: "02", eyebrow: "UYUM / SÜREÇ TASARIMI", title: "Uyum çalışma alanı", summary: "CBAM, KVKK, GDPR, İSG ve benzeri süreçlerde veri, doküman ve kontrol akışını netleştirmeye yönelik başlangıç çalışması.", note: "Kapsam baştan yazılı olarak netleştirilir; sürpriz kalem çıkmaz.", href: "/iletisim" },
   { index: "03", eyebrow: "KAYNAK / DİJİTAL PAKET", title: "Kendi ekibinizle başlamak", summary: "Kurum içi hazırlık için rehber, kontrol listesi ve düzenlenebilir çalışma şablonlarından oluşan kaynak yaklaşımı.", note: "Çevrimiçi ödeme şu an etkin değildir; teslimat ve lisanslama e-posta üzerinden netleştirilir.", href: "/iletisim" },
 ];
 
@@ -652,6 +652,34 @@ export type Paket = {
   sinir: string;
 };
 
+/** CBAM maliyet argumani — Eco-Report'un kendi motorundan OLCULDU.
+ *
+ * Resmi beyani AB'deki ithalatci yapar; ureticiden veri alamazsa resmi
+ * VARSAYILAN degeri kullanir ve o deger bilerek cezalidir. Fark, ithalatcinin
+ * cebinden cikar ve ureticinin fiyatina yansir.
+ *
+ * 🔴 Bu sayilar TEK BIR ornege aittir (CN 7208 51 20, Turkiye, 1.000 ton).
+ * Sayfada da oyle yaziyor: baska urun ve miktarda sonuc degisir. Genel
+ * gecermis gibi sunmak yanlis beyan olurdu.
+ */
+export const cbamMaliyet = {
+  baslik: "Veriyi siz vermezseniz, farkını siz ödersiniz.",
+  altBaslik:
+    "Resmî beyanı AB'deki ithalatçı yapar. Ama sizden veri alamazsa resmî varsayılan " +
+    "değeri kullanmak zorunda — ve o değer bilerek cezalıdır.",
+  ornek: "CN 7208 51 20 · Türkiye · 1.000 tonluk tek sevkiyat",
+  yillar: [
+    { yil: "2026", ceza: "+%10", tutar: "€18.278" },
+    { yil: "2027", ceza: "+%20", tutar: "€36.556" },
+    { yil: "2028", ceza: "+%30", tutar: "€54.834" },
+  ],
+  dipnot:
+    "Sertifika fiyatı €75,28 (AB ETS, 2026 2. çeyrek) alınarak hesaplandı. " +
+    "Ceza oranları: Reg. (EU) 2025/2621. Başka ürün, ülke ve miktarda sonuç değişir; " +
+    "kendi rakamınızı uygulamada kendi CN kodunuzla görebilirsiniz.",
+  kapanis: "Satılan şey belge değil: gerçek veriyle beyan edilen ton ile varsayılan değerle beyan edilen ton arasındaki fark.",
+};
+
 /** Fiyatlar eski siteden birebir taşındı (22 Ağu 2026). Tek kaynak burasıdır. */
 export const paketler: Paket[] = [
   {
@@ -666,7 +694,7 @@ export const paketler: Paket[] = [
       "Tedarikçi veri şablonu",
       "Belge kontrol listesi",
     ],
-    fiyat: "€89",
+    fiyat: "€299",
     fiyatNot: "tek seferlik · + KDV",
     dosya: "/urunler/cbam-girisimci-kiti.zip",
     sinir: "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir.",
@@ -778,7 +806,7 @@ export const ucretliHizmetler: Hizmet[] = [
     aile: "CBAM · Karma",
     ad: "CBAM Profesyonel Paketi",
     ozet: "Girişimci Kiti + 1 saat birebir danışmanlık.",
-    fiyat: "€140",
+    fiyat: "€749",
     fiyatNot: "tek seferlik · + KDV",
     sinir: "Hazırlık ve yönlendirme hizmetidir; resmî beyan yerine geçmez.",
   },

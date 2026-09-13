@@ -2,7 +2,7 @@
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { PageFrame } from "@/components/SiteShell";
-import { getProduct } from "@/lib/site";
+import { cbamMaliyet, getProduct } from "@/lib/site";
 import { MagazaRozetleri } from "@/components/MagazaRozetleri";
 
 type ProductDetailProps = { params?: { slug?: string } };
@@ -21,6 +21,32 @@ export default function ProductDetail({ params }: ProductDetailProps) {
         <div className="product-orbit" aria-hidden="true"><span className="orbit-dot dot-a" /><span className="orbit-dot dot-b" /><span className="orbit-dot dot-c" /><b>{product.eyebrow.split(" /")[0]}</b></div>
       </section>
 
+      {/* MALIYET SERIDI — 13 Eyl 2026.
+          "Bu belge ne ise yarar, resmi degilse neden para odeyeyim" sorusu
+          sayfada hicbir yerde cevaplanmiyordu. Cevap PARA ve sayilar
+          Eco-Report'un kendi motorundan olculdu.
+          En uste konuldu: basliga bakip gecen kisi de gorsun. */}
+      {product.slug === "eco-report" && (
+        <section className="maliyet-serit">
+          <div className="maliyet-baslik">
+            <p className="eyebrow">NEDEN GEREKLİ</p>
+            <h2>{cbamMaliyet.baslik}</h2>
+            <p>{cbamMaliyet.altBaslik}</p>
+          </div>
+          <div className="maliyet-kutular">
+            {cbamMaliyet.yillar.map((y) => (
+              <article key={y.yil} className="maliyet-kutu">
+                <span className="maliyet-yil">{y.yil}</span>
+                <strong>{y.tutar}</strong>
+                <small>varsayılan değer {y.ceza} cezalı</small>
+              </article>
+            ))}
+          </div>
+          <p className="maliyet-ornek">{cbamMaliyet.ornek}</p>
+          <p className="maliyet-kapanis">{cbamMaliyet.kapanis}</p>
+          <p className="maliyet-dipnot">{cbamMaliyet.dipnot}</p>
+        </section>
+      )}
       <section className="product-context">
         <div className="context-label"><span>BAĞLAM</span><i /></div>
         <div className="context-copy"><h2>{product.useCase}</h2><p>{product.longDescription}</p></div>
