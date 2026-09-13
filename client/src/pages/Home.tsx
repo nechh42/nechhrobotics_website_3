@@ -5,7 +5,12 @@ import { PageFrame } from "@/components/SiteShell";
 import { ProductCard } from "@/components/ProductCard";
 import { SectionLead } from "@/components/SectionLead";
 import KurumsalVideo from "@/components/KurumsalVideo";
-import { assets, products, yolHaritasi } from "@/lib/site";
+import { assets, paketler, products, yolHaritasi } from "@/lib/site";
+
+/** 13 Eyl 2026 (Hasan: "DORA icin ana sayfaya bir yer ekle, taninsin").
+ *  Fiyat ELLE yazilmaz: magaza kaydindan okunur — ayni urunun iki yerde iki
+ *  fiyat gostermesi bu projede daha once yasandi. */
+const doraKiti = paketler.find((p) => p.slug === "dora-tedarikci-hazirlik-kiti");
 
 export default function Home() {
   return (
@@ -56,6 +61,32 @@ export default function Home() {
         </div>
         <Link href="/cozumler" className="route-link">Tüm çözümleri karşılaştırın <ArrowUpRight size={18} /></Link>
       </section>
+
+      {doraKiti && (
+        <section className="dora-serit" id="dora">
+          <div className="dora-serit-lead">
+            <p className="eyebrow">YENİ · DORA · AB FİNANS SEKTÖRÜ</p>
+            <h2>AB bankasına yazılım mı veriyorsunuz?<br /><em>DORA sözleşmesi size de gelir.</em></h2>
+            <p>
+              DORA 17 Ocak 2025'ten beri uygulanıyor. Yükümlü olan banka; ama madde 30 gereği
+              sözleşmede denetim hakkı, olay desteği, veri konumu ve çıkış planı <strong>sizden</strong> isteniyor.
+            </p>
+          </div>
+          <div className="dora-serit-govde">
+            <ul>
+              {doraKiti.icerik.slice(0, 4).map((satir) => (
+                <li key={satir}><CheckCircle2 size={16} /> {satir}</li>
+              ))}
+            </ul>
+            <div className="dora-serit-eylem">
+              <Link href="/magaza/dora-tedarikci-hazirlik-kiti" className="button button-primary">
+                {doraKiti.ad} · {doraKiti.fiyat} <ArrowUpRight size={17} />
+              </Link>
+              <small>{doraKiti.sinir}</small>
+            </div>
+          </div>
+        </section>
+      )}
 
       <section className="principles-section">
         <div className="principles-background">N</div>

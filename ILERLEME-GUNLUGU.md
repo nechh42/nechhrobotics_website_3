@@ -1251,3 +1251,20 @@ var, "Hesap sahibi" 0. Push, Eco-Report canlıda PRICE-008'i kabul ettikten SONR
 
 **Kit fiyat koruması:** Eco-Report kit testine `dora-tedarikci-hazirlik-kiti → PRICE-008` eşleşmesi eklendi;
 site ve katalog fiyatı ayrışırsa test düşer.
+
+---
+
+## 13 EYLÜL 2026 (5) — ANA SAYFAYA DORA ŞERİDİ
+
+**Hasan:** *"DORA için ana sayfaya bir yer ekle, tanınsın."*
+
+- `Home.tsx` → ürün portföyünün hemen altına `.dora-serit` bölümü: "AB bankasına yazılım mı veriyorsunuz?
+  DORA sözleşmesi size de gelir." + kitin ilk 4 içerik satırı + kit sayfasına buton + sınır notu.
+- 🔴 **Fiyat, ad, içerik ve sınır elle yazılmadı:** `paketler` içindeki DORA kaydından okunuyor (aynı ürünün iki
+  yerde iki fiyat göstermesi daha önce yaşandı). Kayıt silinirse bölüm hiç çizilmez.
+- `index.css` → `.dora-serit` (masaüstü iki sütun, 860px altı tek sütun).
+
+**Ölçüm:** tsc 0 · build 0 · prerender 91/0 · ön-render ana sayfada şerit, başlık, €499 ve kit bağlantısı var ·
+DORA ve CBAM paket sayfalarındaki form bağlantıları bozulmadı · **gerçek Chrome:** 1440px ve 400px'te şerit
+görünüyor, buton metni "DORA Tedarikçi Hazırlık Kiti · €499", yatay taşma yok, konsol hatası 0; iki ekran
+görüntüsüne bakıldı.
