@@ -1226,5 +1226,8 @@ Yazar Hasan'ın kendisiydi (`nechh42 <nechhlab.global@gmail.com>`); fark commit 
 `Co-Authored-By: Claude` satırı. Push "başarılı" göründü ama site 10 dk boyunca eski kaldı —
 canlı sayfa curl ile ölçülerek fark edildi.
 
-**Kural:** bu depoya atılan commit'lere Co-Authored-By satırı EKLENMEZ. Bu kayıt o kuralla atılan
-ilk commit'tir; bloklanan değişikliği de yayına taşıması beklenir (ölçülecek).
+**Düzeltme (aynı gün):** co-author tahmini ÇÜRÜDÜ — satırsız commit `7ce5e17` de bloklandı,
+panelden Redeploy da işe yaramadı. Kesin sebep ölçülmedi (muhtemelen commit yazarının GitHub
+kimliği ile Vercel hesabı `nechh42-1246` eşleşmiyor). **Hasan depoyu yeniden Public yaptı**;
+Hobby plan açık depodan yayını bloklamıyor. Depoda sır yok (`.env` hiç commit edilmemiş, ölçüldü);
+eski kit ZIP'leri yalnızca git geçmişinde duruyor.
