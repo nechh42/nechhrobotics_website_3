@@ -648,7 +648,9 @@ export type Paket = {
   icerik: string[];
   fiyat: string;
   fiyatNot: string;
-  dosya?: string;
+  // 13 Eyl 2026: `dosya` alani KALDIRILDI. Ucretli kit ZIP'leri sitenin acik
+  // klasorunden ve herkese acik GitHub deposundan odemesiz indiriliyordu.
+  // Kit artik Eco-Report tarafinda, alici firmanin adiyla uretilip e-postayla gider.
   sinir: string;
 };
 
@@ -696,7 +698,6 @@ export const paketler: Paket[] = [
     ],
     fiyat: "€299",
     fiyatNot: "tek seferlik · + KDV",
-    dosya: "/urunler/cbam-girisimci-kiti.zip",
     sinir: "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir.",
   },
   {
@@ -712,7 +713,6 @@ export const paketler: Paket[] = [
     ],
     fiyat: "€44",
     fiyatNot: "tek seferlik",
-    dosya: "/urunler/kvkk-sablon-paketi.zip",
     sinir: "Şablon paketidir; hukuki danışmanlık yerine geçmez.",
   },
   {
@@ -728,7 +728,6 @@ export const paketler: Paket[] = [
     ],
     fiyat: "€44",
     fiyatNot: "tek seferlik",
-    dosya: "/urunler/isg-sablon-paketi.zip",
     sinir: "Şablon paketidir; İSG uzmanı hizmetinin yerine geçmez.",
   },
   {
@@ -743,7 +742,6 @@ export const paketler: Paket[] = [
     ],
     fiyat: "€53",
     fiyatNot: "tek seferlik",
-    dosya: "/urunler/gdpr-baslangic-paketi.zip",
     sinir: "Şablon paketidir; hukuki danışmanlık yerine geçmez.",
   },
   {
@@ -760,7 +758,6 @@ export const paketler: Paket[] = [
     ],
     fiyat: "€26",
     fiyatNot: "tek seferlik",
-    dosya: "/urunler/efatura-gecis-paketi.zip",
     sinir: "Rehber materyalidir; mali müşavir hizmetinin yerine geçmez.",
   },
   {
@@ -775,7 +772,6 @@ export const paketler: Paket[] = [
     ],
     fiyat: "€35",
     fiyatNot: "tek seferlik",
-    dosya: "/urunler/yz-is-promptu-paketi.zip",
     sinir: "Verimlilik materyalidir; sektörel danışmanlık içermez.",
   },
 ];

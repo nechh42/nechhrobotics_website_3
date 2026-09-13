@@ -1161,3 +1161,38 @@ olacak; sitedeki buton oraya yönlendirecek.
 yeni sürümde **0** — boş sonucun kalıp hatası olmadığı böyle gösterildi. İngilizce
 sayfalarda "invoice" sözü yok. tsc 0 · build 0 · prerender 90/0 · derlenmiş
 sayfalarda fatura sözü yok, "Paket, firmanız adına lisanslanmış" adımı yerinde.
+
+---
+
+## 13 EYLÜL 2026 (2) — 🔴 ÜCRETLİ KİTLER ÖDEMESİZ İNİYORDU, SİTEDEN KALDIRILDI
+
+**Ölçüm:** `/urunler/cbam-girisimci-kiti.zip` → **HTTP 200, 223 KB**, ödeme yok
+(KVKK paketi de 200). Sayfalarda bağlantı yoktu ama **altı adresin hepsi** derlenmiş
+JavaScript'te yazılıydı (`site.ts` → `dosya:` alanları). Site haritası ve robots temiz.
+
+**Daha büyüğü:** bu depo GitHub'da **herkese açık** (`nechh42/nechhrobotics_website_3`).
+Pozitif kontrol: bilinen açık depo aynı sorguya 200, Eco-Report deposu 404. ZIP'ler
+GitHub'dan da iniyordu ve **git geçmişinde duruyor.**
+
+Güvenlik taraması: açık depoda `.env`/anahtar dosyası yok, `.env` geçmişte hiç
+commit edilmemiş (aynı sorgu bilinen `vercel.json` üzerinde sonuç verdi).
+
+**Hasan kararı:** depoyu gizle + ZIP'leri kaldır.
+
+| Yapılan | Neden |
+|---|---|
+| `client/public/urunler/*.zip` (6) silindi | Açık klasördeki her dosya herkese servis edilir |
+| `site.ts` → 6 `dosya:` alanı + tipteki alan kaldırıldı | Adresler JS paketine giriyordu |
+| `vercel.json` → `/urunler/:dosya*` → `/magaza` (geçici) | Önbellekte/elde kalan eski bağlantılar 404 yerine mağazaya |
+
+Kit artık Eco-Report tarafında, **alıcı firmanın adıyla** üretilip e-postayla gidiyor
+(ayrıntı Eco-Report günlüğünde). Sitedeki *"firmanız adına lisanslanmış"* sözü böylece
+karşılık buldu.
+
+**Ölçüm:** tsc 0 · build 0 · prerender 90/0 · derlenmiş sitede `/urunler/*.zip` **0** ·
+`dist/urunler` yok.
+
+### 🔴 AÇIK — HASAN'IN ADIMI
+GitHub → `nechh42/nechhrobotics_website_3` → **Settings** → **Danger Zone** →
+**Change visibility → Private**. Yapılana kadar eski ZIP'ler git geçmişinden
+indirilebilir. (Vercel gizli depoyla çalışmaya devam eder.)

@@ -3,6 +3,11 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/urunler/:dosya*",
+      "destination": "/magaza",
+      "permanent": false
+    },
+    {
       "source": "/privacy",
       "destination": "/gizlilik",
       "permanent": true
