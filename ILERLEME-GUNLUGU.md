@@ -1268,3 +1268,19 @@ site ve katalog fiyatı ayrışırsa test düşer.
 DORA ve CBAM paket sayfalarındaki form bağlantıları bozulmadı · **gerçek Chrome:** 1440px ve 400px'te şerit
 görünüyor, buton metni "DORA Tedarikçi Hazırlık Kiti · €499", yatay taşma yok, konsol hatası 0; iki ekran
 görüntüsüne bakıldı.
+
+---
+
+## 14 EYLÜL 2026 — BEŞ ŞABLON PAKETİ SİPARİŞ FORMUNA (YEREL, CANLIDA DEĞİL)
+
+KVKK, İSG, GDPR, E-Fatura ve YZ paketleri Eco-Report'un havale sipariş sistemine bağlandı (PRICE-009…013;
+kit üretimi ve testleri Eco-Report günlüğünde, `GUNLUKLER/GUNLUK-2026-09-14.md` §4).
+
+**Sitede:** `PaketDetay.tsx` → `UYGULAMA_SIPARISI` içine beş slug. Bu sayfalar artık IBAN + "dekontu mailleyin"
+yerine **"Sipariş formunu açın"** gösterecek. Fiyatlar değişmedi (`site.ts` tek kaynak; Eco-Report kit testi site
+fiyatını katalogla karşılaştırıyor).
+
+**Ölçüm:** tsc 0. **Yapılmadı:** build/prerender, Chrome turu, push.
+
+🔴 **Sıra kuralı (DORA'daki gibi):** bu değişiklik **Eco-Report canlıda PRICE-009…013'ü kabul ettikten SONRA**
+push edilir. Önce site giderse beş sayfanın formu canlı uygulamada "bilinmeyen paket" hatası verir.

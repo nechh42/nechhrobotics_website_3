@@ -13,6 +13,13 @@ const UYGULAMA_SIPARISI: Record<string, string> = {
   "cbam-profesyonel-paket": "PRICE-006",
   "cbam-basvuru-danismanligi": "PRICE-005",
   "dora-tedarikci-hazirlik-kiti": "PRICE-008",
+  // 14 Eyl 2026: sablon paketleri de siparis formundan (kod eslesmesi Eco-Report
+  // run_kit_checks'te site.ts ve backend'le karsilastirilir).
+  "kvkk-sablon-paketi": "PRICE-009",
+  "isg-sablon-paketi": "PRICE-010",
+  "gdpr-baslangic-paketi": "PRICE-011",
+  "efatura-gecis-paketi": "PRICE-012",
+  "yz-is-promptu-paketi": "PRICE-013",
 };
 const SIPARIS_ADRESI = "https://ecoreport.nechhrobotics.com/";
 
