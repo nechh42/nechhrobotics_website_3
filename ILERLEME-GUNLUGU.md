@@ -1271,7 +1271,12 @@ görüntüsüne bakıldı.
 
 ---
 
-## 14 EYLÜL 2026 — BEŞ ŞABLON PAKETİ SİPARİŞ FORMUNA (YEREL, CANLIDA DEĞİL)
+## 14 EYLÜL 2026 — BEŞ ŞABLON PAKETİ SİPARİŞ FORMUNA (✅ CANLIDA)
+
+**Canlıya alındı (Hasan: "push yapabilirsin"):** Eco-Report canlıda PRICE-009…013'ü kabul ettiği ölçüldükten SONRA
+`79f63b7` push edildi. Push öncesi: tsc 0 · build 0 · prerender 91/0 · derlenmiş KVKK sayfasında `paket=PRICE-009` 1, "Hesap sahibi" 0.
+**Canlı ölçüm (11:49):** kvkk → PRICE-009, isg → PRICE-010, gdpr → PRICE-011, efatura → PRICE-012, yz → PRICE-013,
+dora → PRICE-008, cbam-girisimci → PRICE-002; hepsinde "Hesap sahibi" 0.
 
 KVKK, İSG, GDPR, E-Fatura ve YZ paketleri Eco-Report'un havale sipariş sistemine bağlandı (PRICE-009…013;
 kit üretimi ve testleri Eco-Report günlüğünde, `GUNLUKLER/GUNLUK-2026-09-14.md` §4).
