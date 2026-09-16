@@ -28,7 +28,7 @@ export default function Home() {
           <div className="hero-note"><span className="signal-dot" /> Veriyi, süreçleri ve sorumlulukları aynı bağlamda ele alma yaklaşımı.</div>
         </div>
         <div className="hero-visual-wrap">
-          <div className="hero-visual-label"><span>CONTROL LOOP</span><span>01—04</span></div>
+          <div className="hero-visual-label"><span>CONTROL LOOP</span><span>01—05</span></div>
           <img src={assets.hero} alt="Dikey yapay zekâ sistemlerini temsil eden soyut denetim ağı" className="hero-visual" />
           <div className="hero-annotation annotation-one"><span /> VERİ YERELLİĞİ</div>
           <div className="hero-annotation annotation-two"><span /> İZLENEBİLİR AKIŞ</div>
@@ -56,7 +56,7 @@ export default function Home() {
       <section className="solutions-section" id="cozumler">
         <SectionLead number="03" eyebrow="ÜRÜN PORTFÖYÜ" title={<>Bir teknoloji değil,<br /><em>doğru bağlam.</em></>} copy="Her ürün, tek bir sektörün tekrar eden iş akışına odaklanır. Kapsamı genişletmek yerine, kritik süreci daha anlaşılır ve işlenebilir hale getirir." />
         <div className="portfolio-layout">
-          <div className="portfolio-image"><img src={assets.systems} alt="Sağlık, hukuk, CBAM ve salon yönetimi için birbirine bağlı soyut sistemler" /><span className="image-caption">SECTOR-SPECIFIC SYSTEMS / 04</span></div>
+          <div className="portfolio-image"><img src={assets.systems} alt="Sağlık, hukuk, CBAM, salon ve ekipman kiralama yönetimi için birbirine bağlı soyut sistemler" /><span className="image-caption">SECTOR-SPECIFIC SYSTEMS / 05</span></div>
           <div className="portfolio-grid">{products.map((product, index) => <ProductCard key={product.slug} product={product} featured={index === 0} />)}</div>
         </div>
         <Link href="/cozumler" className="route-link">Tüm çözümleri karşılaştırın <ArrowUpRight size={18} /></Link>

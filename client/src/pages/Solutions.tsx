@@ -16,7 +16,7 @@ export default function Solutions() {
       </section>
 
       <section className="solutions-index">
-        <div className="index-rule"><span>PORTFÖY / 04 ÜRÜN</span><i /></div>
+        <div className="index-rule"><span>PORTFÖY / 05 ÜRÜN</span><i /></div>
         <div className="solutions-list">
           {products.map((product) => <ProductCard key={product.slug} product={product} />)}
         </div>

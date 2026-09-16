@@ -17,7 +17,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
     <PageFrame title={product.name} description={product.summary}>
       <section className={`product-hero tone-${product.tone}`}>
         <div className="product-hero-rail"><Link href="/cozumler"><ArrowLeft size={16} /> ÇÖZÜMLER</Link><i /></div>
-        <div className="product-hero-content"><p className="eyebrow">{product.eyebrow}</p><h1>{product.name}</h1><p className="product-hero-category">{product.category}</p><p className="product-hero-summary">{product.summary}</p><a href={product.externalUrl} target="_blank" rel="noreferrer" className="button button-primary">{product.externalLabel} <ExternalLink size={17} /></a><MagazaRozetleri stores={product.stores} /></div>
+        <div className="product-hero-content"><p className="eyebrow">{product.eyebrow}</p><h1>{product.name}</h1><p className="product-hero-category">{product.category}</p><p className="product-hero-summary">{product.summary}</p>{product.externalUrl.startsWith("/") ? <Link href={product.externalUrl} className="button button-primary">{product.externalLabel} <ArrowUpRight size={17} /></Link> : <a href={product.externalUrl} target="_blank" rel="noreferrer" className="button button-primary">{product.externalLabel} <ExternalLink size={17} /></a>}<MagazaRozetleri stores={product.stores} /></div>
         <div className="product-orbit" aria-hidden="true"><span className="orbit-dot dot-a" /><span className="orbit-dot dot-b" /><span className="orbit-dot dot-c" /><b>{product.eyebrow.split(" /")[0]}</b></div>
       </section>
 
@@ -57,7 +57,11 @@ export default function ProductDetail({ params }: ProductDetailProps) {
         <div className="principle-detail-list">{product.principles.map((principle, index) => <article key={principle.label}><span>0{index + 1}</span><div><h3>{principle.label}</h3><p>{principle.detail}</p></div></article>)}</div>
       </section>
 
-      <section className="product-outbound"><div><p className="eyebrow">ÜRÜN SAYFASI</p><h2>Ürünün güncel deneyimini<br /><em>ayrı ortamında inceleyin.</em></h2></div><a href={product.externalUrl} target="_blank" rel="noreferrer" className="route-link">{product.externalLabel} <ArrowUpRight size={19} /></a></section>
+      {product.externalUrl.startsWith("/") ? (
+        <section className="product-outbound"><div><p className="eyebrow">BİLGİ</p><h2>İşletmenize uyar mı?<br /><em>Birlikte bakalım.</em></h2></div><Link href={product.externalUrl} className="route-link">{product.externalLabel} <ArrowUpRight size={19} /></Link></section>
+      ) : (
+        <section className="product-outbound"><div><p className="eyebrow">ÜRÜN SAYFASI</p><h2>Ürünün güncel deneyimini<br /><em>ayrı ortamında inceleyin.</em></h2></div><a href={product.externalUrl} target="_blank" rel="noreferrer" className="route-link">{product.externalLabel} <ArrowUpRight size={19} /></a></section>
+      )}
     </PageFrame>
   );
 }

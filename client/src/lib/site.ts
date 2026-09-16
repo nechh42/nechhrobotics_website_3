@@ -1,5 +1,5 @@
 export type Product = {
-  slug: "helialoop" | "juriloop" | "eco-report" | "tonsora";
+  slug: "helialoop" | "juriloop" | "eco-report" | "tonsora" | "paletra";
   name: string;
   eyebrow: string;
   category: string;
@@ -111,6 +111,27 @@ export const products: Product[] = [
       { label: "Sadelik", detail: "Yoğun salon temposunda kolay kavranan bir deneyim sunar." },
     ],
   },
+  {
+    // 16 Eyl 2026 — mağazaya henüz çıkmadı: `stores` BOŞ (kural yukarıda,
+    // "yakında" yazılmaz). Mağazaya girince bağlantılar ölçülüp eklenir.
+    slug: "paletra",
+    name: "PALETRA",
+    eyebrow: "05 / Kiralama",
+    category: "Ekipman kiralama yönetimi",
+    summary:
+      "İş makinesi ve ekipman kiralayan işletmeler için makine, müşteri, sözleşme, iade ve alacağı telefonda tek yerde tutan uygulama.",
+    longDescription:
+      "PALETRA, hangi makinenin kimde olduğunu, ne zaman döneceğini ve kimden ne kadar alacak kaldığını kâğıt defter ve dağınık telefon notları yerine tek ekranda gösterir. Kiralama başlarken sayaç ve fotoğraf alınır, müşteri telefonda imzalar, sözleşme PDF olarak hazırlanır. İade günü sayaç ve hasar notu girilir, tutar hesaplanır, iade tutanağı çıkar; kalan alacak WhatsApp'tan hatırlatılır. Bakım planı motor saatine veya kilometreye göre uyarır; aylık ciro ve makine başına doluluk raporlanır. Kayıtlar sunucuda değil telefonda durur, tek dosyalık yedekle yeni telefona taşınır. Türkçe, İngilizce ve Arapça kullanılır.",
+    useCase: "Kiralama sözleşmesi, iade ve tahsilat takibi",
+    tone: "operations",
+    externalUrl: "/iletisim",
+    externalLabel: "PALETRA hakkında bize yazın",
+    principles: [
+      { label: "Sahada imza", detail: "Müşteri makineyi teslim alırken telefonda imzalar; sözleşme ve iade tutanağı PDF olarak hazırlanır." },
+      { label: "Kaçan alacak yok", detail: "Geciken iade ve kalan tutar görünür; hatırlatma WhatsApp'tan tek dokunuşla gider." },
+      { label: "Veri sizde", detail: "Hesap açmak gerekmez, kayıtlar telefonda tutulur; yedek tek dosyayla alınıp geri yüklenir." },
+    ],
+  },
 ];
 
 export function getProduct(slug?: string) {
@@ -120,6 +141,7 @@ export function getProduct(slug?: string) {
     helialoop: "helialoop",
     juriloop: "juriloop",
     tonsora: "tonsora",
+    paletra: "paletra",
   };
   return products.find((product) => product.slug === aliases[slug ?? ""]);
 }
@@ -215,6 +237,25 @@ export const englishProducts: Product[] = [
       { label: "Simplicity", detail: "An experience designed to remain legible during busy salon hours." },
     ],
   },
+  {
+    slug: "paletra",
+    name: "PALETRA",
+    eyebrow: "05 / Rental",
+    category: "Equipment rental management",
+    summary:
+      "An app for construction machinery and equipment rental businesses that keeps machines, customers, contracts, returns and receivables in one place on the phone.",
+    longDescription:
+      "PALETRA shows which machine is with whom, when it is due back and how much each customer still owes — on one screen instead of a paper ledger. When a rental starts, the meter reading and photos are recorded, the customer signs on the phone and a contract PDF is prepared. On return, the meter and a damage note are entered, the amount is calculated and a return report is issued; the outstanding balance can be sent as a WhatsApp reminder. Maintenance plans alert by engine hours or kilometres, and monthly revenue and per-machine utilisation are reported. Records stay on the phone rather than a server and move to a new phone with a single backup file. Available in Turkish, English and Arabic.",
+    useCase: "Rental contracts, returns and collections",
+    tone: "operations",
+    externalUrl: "/en/contact",
+    externalLabel: "Ask us about PALETRA",
+    principles: [
+      { label: "Signed on site", detail: "The customer signs on the phone at hand-over; contract and return report are produced as PDFs." },
+      { label: "No missed receivables", detail: "Late returns and open balances stay visible; a WhatsApp reminder is one tap away." },
+      { label: "Your data", detail: "No account needed; records live on the phone and are backed up and restored with a single file." },
+    ],
+  },
 ];
 
 export function getEnglishProduct(slug?: string) {
@@ -224,6 +265,7 @@ export function getEnglishProduct(slug?: string) {
     helialoop: "helialoop",
     juriloop: "juriloop",
     tonsora: "tonsora",
+    paletra: "paletra",
   };
   return englishProducts.find((product) => product.slug === aliases[slug ?? ""]);
 }

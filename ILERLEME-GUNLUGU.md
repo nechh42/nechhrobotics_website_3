@@ -1289,3 +1289,21 @@ fiyatını katalogla karşılaştırıyor).
 
 🔴 **Sıra kuralı (DORA'daki gibi):** bu değişiklik **Eco-Report canlıda PRICE-009…013'ü kabul ettikten SONRA**
 push edilir. Önce site giderse beş sayfanın formu canlı uygulamada "bilinmeyen paket" hatası verir.
+
+---
+
+## 16 EYLÜL 2026 — PALETRA SİTEYE EKLENDİ (5. ÜRÜN)
+
+**Hasan:** *"tam olarak uygulama ne yapıyor kısaca anlat, web sitemize koy."*
+
+- `site.ts` → TR + EN `products` listesine **PALETRA** (05 / Kiralama · Ekipman kiralama yönetimi). Anlatılan her
+  özellik uygulamada var ve emülatör turunda denendi (imza, sözleşme/iade PDF, WhatsApp hatırlatma, bakım planı,
+  rapor, telefonda veri + tek dosya yedek, TR/EN/AR).
+- Mağazada **henüz yok** → `stores` boş, "yakında" yazılmadı. Buton iletişim sayfasına gidiyor
+  ("PALETRA hakkında bize yazın"); iç bağlantı olduğu için yeni sekme açmıyor, alt bölüm "İşletmenize uyar mı?".
+  Mağazaya girince bağlantılar ölçülüp `stores`'a eklenecek.
+- `ProductCard` → PALETRA'ya iş makinesi ikonu (aynı "operations" tonundaki TONSORA makası düşüyordu).
+- Sayaçlar 04 → 05 (Çözümler, ana sayfa TR/EN); `sitemap.xml` → `/cozumler/paletra`, `/en/solutions/paletra`.
+
+**Ölçüm:** tsc 0 · build 0 · prerender **93/0** · gerçek Chrome: `/cozumler` 1440px'te 5 kart, `/cozumler/paletra`
+1440px ve 400px'e bakıldı (400px sağ kesilme TONSORA sayfasında da aynı → başsız Chrome'un en dar pencere sınırı).

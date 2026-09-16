@@ -1,10 +1,12 @@
 /** Evidence Grid: portfolio cards expose category, intent and an explicit route with compact technical markers. */
-import { ArrowUpRight, Leaf, Scissors, Scale, Stethoscope } from "lucide-react";
+import { ArrowUpRight, Construction, Leaf, Scissors, Scale, Stethoscope } from "lucide-react";
 import { Link } from "wouter";
 import type { Product } from "@/lib/site";
 
-function ProductGlyph({ tone }: { tone: Product["tone"] }) {
+function ProductGlyph({ tone, slug }: { tone: Product["tone"]; slug: Product["slug"] }) {
   const props = { size: 23, strokeWidth: 1.6 };
+  // PALETRA da "operations" tonunda; makas (TONSORA) ona dusmesin.
+  if (slug === "paletra") return <Construction {...props} />;
   if (tone === "health") return <Stethoscope {...props} />;
   if (tone === "legal") return <Scale {...props} />;
   if (tone === "compliance") return <Leaf {...props} />;
@@ -18,7 +20,7 @@ export function ProductCard({ product, featured = false, locale = "tr" }: { prod
       <div className="product-card-topline"><span>{product.eyebrow}</span><span className="dossier-control"><i /><i /></span></div>
       <div className="product-card-body">
         <p className="product-category">{product.category}</p>
-        <div className="product-name-line"><h3>{product.name}</h3><ProductGlyph tone={product.tone} /></div>
+        <div className="product-name-line"><h3>{product.name}</h3><ProductGlyph tone={product.tone} slug={product.slug} /></div>
         <p>{product.summary}</p>
       </div>
       <div className="dossier-proof"><span>{isEnglish ? "WORKFLOW" : "İŞ AKIŞI"}</span><strong>{product.useCase}</strong></div>
