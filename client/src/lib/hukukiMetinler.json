@@ -183,7 +183,7 @@
       },
       {
         "tip": "p",
-        "metin": "Kapsam: Bu politika Nechh Robotics'in tüm ürünlerini kapsar: HeliaLoop, JuriLoop, Nechh Eco-Report ve TONSORA (berber & kuaför randevu uygulaması)."
+        "metin": "Kapsam: Bu politika Nechh Robotics'in tüm ürünlerini kapsar: HeliaLoop, JuriLoop, Nechh Eco-Report, TONSORA (berber & kuaför randevu uygulaması) ve PALETRA (ekipman kiralama yönetimi uygulaması)."
       },
       {
         "tip": "h2",
@@ -204,6 +204,54 @@
       {
         "tip": "li",
         "metin": "Silme: Salon, müşteri kaydını uygulama içinden silebilir. Hesabın tamamen kapatılması ve verilerin silinmesi için aşağıdaki iletişim adresinden talepte bulunulabilir; talepler 30 gün içinde sonuçlandırılır."
+      },
+      {
+        "tip": "h2",
+        "metin": "1.b PALETRA — ekipman kiralama uygulamasına özel açıklamalar"
+      },
+      {
+        "tip": "li",
+        "metin": "Sunucu ve hesap yok: PALETRA'da kayıt, giriş veya kullanıcı hesabı bulunmaz. Makine, müşteri, sözleşme, ödeme, bakım kayıtları, fotoğraflar ve imzalar yalnızca kullanıcının kendi telefonunda saklanır; Nechh Robotics'e veya herhangi bir sunucuya gönderilmez. Nechh Robotics bu verilere erişemez."
+      },
+      {
+        "tip": "li",
+        "metin": "Veri sorumlusu: Uygulamaya girilen kiracı ve kefil bilgilerinin (ad, telefon, kimlik/vergi no, adres) sorumlusu, bu bilgileri giren kiralama işletmesidir."
+      },
+      {
+        "tip": "li",
+        "metin": "Yedekleme: Yedek dosyası kullanıcı \"Yedek al\" dediğinde telefonda oluşturulur; nereye gönderileceğini (Drive, e-posta, WhatsApp vb.) kullanıcı telefonun paylaşım menüsünden kendisi seçer. Sözleşme PDF'i ve CSV raporu da aynı şekilde yalnızca kullanıcı paylaştığında telefondan çıkar."
+      },
+      {
+        "tip": "li",
+        "metin": "WhatsApp hatırlatması: \"WhatsApp ile hatırlat\" düğmesi, mesajı kullanıcının kendi WhatsApp uygulamasında açar; mesajı kullanıcı gönderir. Nechh Robotics numaraları kullanmaz ve saklamaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Bildirimler: Dönüş, bakım, belge ve yedek hatırlatmaları telefonun içinde zamanlanır. Bildirim kimliği (push token) oluşturulmaz, dışarı gönderilmez."
+      },
+      {
+        "tip": "li",
+        "metin": "Uygulama kilidi: PIN yalnızca tek yönlü özet (hash) olarak telefonda saklanır; parmak izi/yüz doğrulamasını telefonun işletim sistemi yapar, biyometrik veri uygulamaya iletilmez."
+      },
+      {
+        "tip": "li",
+        "metin": "Abonelikler: Ödemeler Google Play ve Apple App Store tarafından alınır. Kart bilgisi uygulamaya gelmez. Google Play Faturalandırma kitaplığı, satın alma işleminin çalışması için Google'a teknik tanılama bilgisi gönderebilir; bu Google'ın kendi gizlilik politikasına tabidir."
+      },
+      {
+        "tip": "li",
+        "metin": "Reklam ve analiz yok: PALETRA'da reklam, reklam kimliği, analitik veya çökme raporlama aracı bulunmaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Silme: Ödeme, fotoğraf, belge, bakım planı ve kefil kayıtları uygulama içinden tek tek silinebilir; makineler arşive alınır. \"Daha → Tüm verileri sil\" makine, müşteri ve sözleşmeler dahil tüm verileri telefondan kaldırır. Uygulamayı kaldırmak da tüm verileri siler. Kullanıcının kendisinin paylaştığı yedek dosyaları, gönderdiği yerde kalır."
+      },
+      {
+        "tip": "p",
+        "metin": "PALETRA (English): PALETRA has no server and no user accounts. Machines, customers, contracts, payments, maintenance records, photos and signatures are stored only on the user's device and are never sent to Nechh Robotics. Backups, contract PDFs and CSV reports leave the device only when the user shares them. Reminders are scheduled on the device. Subscriptions are processed by Google Play / Apple; the Google Play Billing Library may send technical diagnostics to Google. There are no ads, analytics or crash-reporting tools. \"More → Delete all data\" or uninstalling the app removes all data. Contact: nechhlab.global@gmail.com"
+      },
+      {
+        "tip": "p",
+        "metin": "PALETRA (العربية): لا يحتوي PALETRA على خادم ولا حسابات مستخدمين. تُحفظ بيانات المعدات والعملاء والعقود والمدفوعات والصيانة والصور والتوقيعات على جهاز المستخدم فقط ولا تُرسل إلى Nechh Robotics. لا تغادر النسخ الاحتياطية وملفات PDF وCSV الجهاز إلا عندما يشاركها المستخدم بنفسه. تُعالج الاشتراكات عبر Google Play / Apple. لا توجد إعلانات ولا أدوات تحليل. يؤدي «المزيد ← حذف كل البيانات» أو إزالة التطبيق إلى حذف جميع البيانات. للتواصل: nechhlab.global@gmail.com"
       },
       {
         "tip": "h2",
@@ -435,7 +483,7 @@
     "bloklar": [
       {
         "tip": "p",
-        "metin": "Bu sayfa, Nechh Robotics ve markaları (HeliaLoop, JuriLoop) tarafından sunulan hizmetlere ilişkin yasal sorumluluk sınırlarını belirler."
+        "metin": "Bu sayfa, Nechh Robotics ve markaları (HeliaLoop, JuriLoop, TONSORA, PALETRA) tarafından sunulan hizmetlere ilişkin yasal sorumluluk sınırlarını belirler."
       },
       {
         "tip": "h2",
@@ -480,6 +528,30 @@
       {
         "tip": "li",
         "metin": "Avukat-müvekkil ilişkisi doğrudan taraflar arasındadır; Nechh Robotics bu ilişkinin tarafı değildir."
+      },
+      {
+        "tip": "h2",
+        "metin": "2.b PALETRA — Ekipman Kiralama Uygulaması"
+      },
+      {
+        "tip": "p",
+        "metin": "PALETRA, ekipman kiralayan işletmelerin kendi kayıtlarını tutmasına yardımcı olan bir araçtır. Uygulama:"
+      },
+      {
+        "tip": "li",
+        "metin": "Hukuki danışmanlık vermez. Uygulamadaki hazır sözleşme şartları örnek metindir; işletme kendi şartlarını yazmalı, gerekiyorsa bir hukukçuya kontrol ettirmelidir."
+      },
+      {
+        "tip": "li",
+        "metin": "Tutar, KDV, gecikme ve bakiye hesapları kullanıcının girdiği ücret, tarih ve sayaç bilgilerine göre yapılır. Faturaya veya resmi belgeye esas almadan önce kullanıcı tarafından kontrol edilmelidir; PALETRA muhasebe veya e-fatura yazılımı değildir."
+      },
+      {
+        "tip": "li",
+        "metin": "Telefonda saklanan kayıtların yedeğini almak kullanıcının sorumluluğundadır. Nechh Robotics'in sunucusu olmadığı için telefon kaybolur, bozulur veya uygulama silinirse yedeği alınmamış veriler kurtarılamaz."
+      },
+      {
+        "tip": "li",
+        "metin": "Kiralama işletmesi ile kiracı arasındaki sözleşme ilişkisi doğrudan taraflar arasındadır; Nechh Robotics bu ilişkinin tarafı değildir."
       },
       {
         "tip": "h2",
@@ -533,7 +605,7 @@
     "bloklar": [
       {
         "tip": "p",
-        "metin": "Bu sayfa, Nechh Robotics uygulamalarında (TONSORA, HeliaLoop, JuriLoop, Nechh Eco-Report) oluşturduğunuz hesabın ve hesabınıza bağlı verilerin silinmesini nasıl talep edeceğinizi açıklar. Talebiniz 6698 sayılı KVKK ve GDPR kapsamındaki silme hakkınız çerçevesinde işleme alınır."
+        "metin": "Bu sayfa, Nechh Robotics uygulamalarında (TONSORA, HeliaLoop, JuriLoop, Nechh Eco-Report, PALETRA) oluşturduğunuz hesabın ve hesabınıza bağlı verilerin silinmesini nasıl talep edeceğinizi açıklar. Talebiniz 6698 sayılı KVKK ve GDPR kapsamındaki silme hakkınız çerçevesinde işleme alınır."
       },
       {
         "tip": "h2",
@@ -626,6 +698,38 @@
       {
         "tip": "p",
         "metin": "TONSORA kullanan salonlarda müşteri kayıtlarının veri sorumlusu salon işletmecisidir. Salon hesabı silindiğinde o salona girilmiş müşteri kayıtları da silinir. Bir salon müşterisiyseniz ve kaydınızın silinmesini istiyorsanız önce hizmet aldığınız salona başvurmanız gerekir; salon kaydınızı uygulama içinden silebilir."
+      },
+      {
+        "tip": "h2",
+        "metin": "6.b PALETRA kullanıcıları için"
+      },
+      {
+        "tip": "p",
+        "metin": "PALETRA'da hesap yoktur ve veriler Nechh Robotics'e gönderilmez; bu yüzden bizde silinecek bir PALETRA kaydı bulunmaz. Verilerinizi siz silersiniz:"
+      },
+      {
+        "tip": "li",
+        "metin": "Tek kayıt: ödeme, fotoğraf, belge, bakım planı ve kefil kayıtları kendi ekranlarından silinir; makineler arşive alınır. Tek bir müşterinin kayıtları ayrı silinemez; bunun için tüm verileri silmeniz gerekir."
+      },
+      {
+        "tip": "li",
+        "metin": "Tüm veriler: uygulamada Daha → Tüm verileri sil. Makineler, müşteriler, sözleşmeler, ödemeler, bakım kayıtları, fotoğraflar ve imzalar telefondan kalıcı olarak silinir."
+      },
+      {
+        "tip": "li",
+        "metin": "Uygulamayı telefondan kaldırmak da tüm PALETRA verilerini siler."
+      },
+      {
+        "tip": "li",
+        "metin": "Daha önce paylaştığınız yedek, PDF ve CSV dosyaları gönderdiğiniz yerde (Drive, e-posta, WhatsApp vb.) kalır; onları oradan siz silersiniz."
+      },
+      {
+        "tip": "li",
+        "metin": "Aboneliği iptal etmek için Google Play veya App Store abonelik ayarlarını kullanın; verilerin silinmesi aboneliği kendiliğinden iptal etmez."
+      },
+      {
+        "tip": "p",
+        "metin": "English: PALETRA has no accounts and stores data only on your device. Payments, photos, documents, maintenance plans and guarantors can be deleted individually; machines are archived. Use More → Delete all data to remove everything, or uninstall the app. Cancel subscriptions in Google Play / App Store settings."
       },
       {
         "tip": "h2",

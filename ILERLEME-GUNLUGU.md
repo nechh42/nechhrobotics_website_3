@@ -1307,3 +1307,19 @@ push edilir. Önce site giderse beş sayfanın formu canlı uygulamada "bilinmey
 
 **Ölçüm:** tsc 0 · build 0 · prerender **93/0** · gerçek Chrome: `/cozumler` 1440px'te 5 kart, `/cozumler/paletra`
 1440px ve 400px'e bakıldı (400px sağ kesilme TONSORA sayfasında da aynı → başsız Chrome'un en dar pencere sınırı).
+
+---
+
+## 17 EYLÜL 2026 — PALETRA HUKUKİ SAYFALARA EKLENDİ (Play gönderimi öncesi)
+
+Play Console gizlilik politikası ve hesap/veri silme bağlantısı ister; sayfalar PALETRA'yı kapsamıyordu.
+- **/gizlilik** → "1.b PALETRA" (sunucu/hesap yok, veri telefonda; yedek/PDF/CSV yalnız kullanıcı paylaşınca çıkar;
+  bildirim cihazda; PIN özet olarak; Play Billing tanılama notu; reklam/analitik yok; silme yolları) + İngilizce ve Arapça özet.
+  Kapsam cümlesine PALETRA.
+- **/sorumluluk** → "2.b PALETRA" (hukuki danışmanlık değil, hesaplar kullanıcı girdisine dayanır/e-fatura değil,
+  yedek sorumluluğu kullanıcıda, kiralama ilişkisinin tarafı değiliz).
+- **/hesap-sil** → "6.b PALETRA" (hesap yok; tek tek silinebilenler, Tüm verileri sil, kaldırma, abonelik iptali) + İngilizce.
+- 🔴 Silme cümlesi uygulama koduyla karşılaştırıldı: **müşteri tek tek silinemiyor, makine arşivleniyor** → metin buna göre
+  yazıldı (PALETRA B33 olarak açıldı).
+
+**Ölçüm:** tsc 0 · build 0 · prerender 93/0 · üç sayfanın derlenmiş HTML'inde PALETRA var.
