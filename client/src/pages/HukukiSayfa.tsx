@@ -14,6 +14,8 @@ export const hukukiSayfalar = [
   { slug: "gizlilik", ad: "Gizlilik Politikası" },
   { slug: "iade", ad: "İade Politikası" },
   { slug: "sorumluluk", ad: "Sorumluluk Reddi" },
+  // 17 Eyl 2026 — abonelikli uygulamalar için Apple 3.1.2 kullanım koşulları bağlantısı ister (PALETRA).
+  { slug: "kullanim-kosullari", ad: "Kullanım Koşulları (EULA)" },
   // 23 Agu 2026 — Google Play, hesap olusturan uygulamalar icin AYRI bir
   // hesap silme sayfasi zorunlu tutuyor. store/02_veri_guvenligi.md bunu
   // 2026 Temmuz'da not etmis ama sayfa hic yazilmamisti; /tonsora/hesap-sil

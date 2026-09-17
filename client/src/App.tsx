@@ -49,6 +49,7 @@ function Router() {
       <Route path="/iade" component={HukukiSayfa} />
       <Route path="/sorumluluk" component={HukukiSayfa} />
       <Route path="/hesap-sil" component={HukukiSayfa} />
+      <Route path="/kullanim-kosullari" component={HukukiSayfa} />
       <Route path="/en/gallery" component={Galeri} />
       <Route path="/magaza/:slug" component={PaketDetay} />
       <Route path="/magaza" component={Store} />

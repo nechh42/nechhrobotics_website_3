@@ -740,5 +740,127 @@
         "metin": "Hesap ve veri silme talepleriniz ile bu sayfa hakkındaki sorularınız için: nechhlab.global@gmail.com"
       }
     ]
+  },
+  "kullanim-kosullari": {
+    "baslik": "Kullanım Koşulları (EULA)",
+    "ozet": "Nechh Robotics mobil uygulamalarının son kullanıcı lisans sözleşmesi ve abonelik koşulları.",
+    "bloklar": [
+      {
+        "tip": "p",
+        "metin": "Bu Kullanım Koşulları (\"Sözleşme\"), Nechh Robotics (\"biz\") tarafından yayınlanan PALETRA mobil uygulamasının (\"Uygulama\") kullanımını düzenler. Uygulamayı indirerek veya kullanarak bu koşulları kabul etmiş olursunuz. Uygulama App Store'dan indirildiyse Apple'ın Standart Lisans Sözleşmesi'ndeki (Standard EULA) asgari koşullar da geçerlidir."
+      },
+      {
+        "tip": "h2",
+        "metin": "1. Lisans"
+      },
+      {
+        "tip": "p",
+        "metin": "Size, Uygulamayı sahip olduğunuz veya kontrol ettiğiniz cihazlarda, kendi işiniz için kullanmak üzere kişisel, devredilemez, münhasır olmayan ve geri alınabilir bir lisans verilir. Uygulama satılmaz, lisanslanır."
+      },
+      {
+        "tip": "li",
+        "metin": "Uygulamayı kopyalamak, tersine mühendislik yapmak, değiştirip dağıtmak veya kiralamak yasaktır."
+      },
+      {
+        "tip": "li",
+        "metin": "Uygulama hukuka aykırı amaçlarla kullanılamaz."
+      },
+      {
+        "tip": "h2",
+        "metin": "2. Veriler"
+      },
+      {
+        "tip": "p",
+        "metin": "PALETRA'da hesap ve sunucu yoktur. Girdiğiniz kayıtlar yalnızca cihazınızda saklanır; yedeklerini almak sizin sorumluluğunuzdadır. Kiracılarınıza ait kişisel verilerin hukuka uygun işlenmesinden işletmeniz sorumludur. Ayrıntılar: Gizlilik Politikası (nechhrobotics.com/gizlilik)."
+      },
+      {
+        "tip": "h2",
+        "metin": "3. Abonelikler"
+      },
+      {
+        "tip": "li",
+        "metin": "Ücretsiz paket 2 makineye kadar tüm özelliklerle kullanılabilir. Başlangıç (10 makine) ve Sınırsız paketleri aylık otomatik yenilenen aboneliklerdir."
+      },
+      {
+        "tip": "li",
+        "metin": "Ödeme, satın alma onayında Google Play veya Apple hesabınızdan alınır. Abonelik, dönem bitiminden en az 24 saat önce iptal edilmezse aynı ücretle otomatik yenilenir."
+      },
+      {
+        "tip": "li",
+        "metin": "Aboneliği Google Play veya App Store hesap ayarlarınızdan yönetebilir ve iptal edebilirsiniz. İptal, içinde bulunulan dönemin sonunda geçerli olur; kalan süre için kısmi iade yapılmaz (mağazanın kendi iade kuralları saklıdır)."
+      },
+      {
+        "tip": "li",
+        "metin": "Ücretsiz deneme sunulursa, deneme bitmeden iptal edilmediğinde abonelik ücretli döneme geçer."
+      },
+      {
+        "tip": "li",
+        "metin": "Abonelik bittiğinde verileriniz silinmez; paket sınırını aşan makinelerle yeni kiralama başlatılamaz."
+      },
+      {
+        "tip": "h2",
+        "metin": "4. Sorumluluk sınırı"
+      },
+      {
+        "tip": "p",
+        "metin": "Uygulama \"olduğu gibi\" sunulur. Hazır sözleşme şartları örnek metindir ve hukuki danışmanlık değildir; hesaplanan tutarlar girdiğiniz bilgilere dayanır. Yürürlükteki hukukun izin verdiği ölçüde Nechh Robotics, veri kaybı, gelir kaybı veya dolaylı zararlardan sorumlu değildir. Ayrıntılar: Sorumluluk Reddi (nechhrobotics.com/sorumluluk)."
+      },
+      {
+        "tip": "h2",
+        "metin": "5. Fikri mülkiyet"
+      },
+      {
+        "tip": "p",
+        "metin": "PALETRA™, Nechh Robotics şirketinin ticari markasıdır. Uygulamanın yazılımı, tasarımı ve logosu üzerindeki tüm haklar Nechh Robotics'e aittir. Her hakkı saklıdır."
+      },
+      {
+        "tip": "h2",
+        "metin": "6. Apple'a ilişkin koşullar"
+      },
+      {
+        "tip": "li",
+        "metin": "Bu Sözleşme Apple ile değil, sizinle Nechh Robotics arasındadır; Uygulamadan ve destekten Apple sorumlu değildir."
+      },
+      {
+        "tip": "li",
+        "metin": "Uygulama bir garantiye uymazsa Apple'a bildirebilirsiniz; Apple varsa satın alma bedelini iade edebilir, bunun dışında Apple'ın garanti yükümlülüğü yoktur."
+      },
+      {
+        "tip": "li",
+        "metin": "Apple ve bağlı şirketleri bu Sözleşmenin üçüncü taraf lehtarıdır ve Sözleşmeyi size karşı uygulayabilir."
+      },
+      {
+        "tip": "h2",
+        "metin": "7. Değişiklikler ve fesih"
+      },
+      {
+        "tip": "p",
+        "metin": "Bu koşullar güncellenebilir; güncel metin bu sayfada yayınlanır. Koşulları ihlal ederseniz lisans kendiliğinden sona erer. Uyuşmazlıklarda Türkiye Cumhuriyeti hukuku uygulanır, tüketici mevzuatından doğan haklarınız saklıdır."
+      },
+      {
+        "tip": "h2",
+        "metin": "8. İletişim"
+      },
+      {
+        "tip": "p",
+        "metin": "nechhlab.global@gmail.com"
+      },
+      {
+        "tip": "h2",
+        "metin": "English summary"
+      },
+      {
+        "tip": "p",
+        "metin": "PALETRA is licensed, not sold, for use on devices you own or control. Data is stored only on your device; you are responsible for backups. Paid plans (Starter, Unlimited) are auto-renewing monthly subscriptions charged to your Google Play or Apple account; they renew unless cancelled at least 24 hours before the end of the period, and can be managed or cancelled in your store account settings. When a subscription ends your data is not deleted. The app is provided \"as is\"; template contract terms are not legal advice. For App Store downloads Apple's Standard EULA minimum terms apply; Apple is not a party to this agreement but is a third-party beneficiary. PALETRA™ is a trademark of Nechh Robotics. All rights reserved. Contact: nechhlab.global@gmail.com"
+      },
+      {
+        "tip": "h2",
+        "metin": "ملخص بالعربية"
+      },
+      {
+        "tip": "p",
+        "metin": "يُرخَّص PALETRA ولا يُباع، للاستخدام على أجهزتك. تُحفظ البيانات على جهازك فقط وأنت مسؤول عن النسخ الاحتياطي. الباقات المدفوعة اشتراكات شهرية تتجدد تلقائيًا عبر Google Play أو Apple ما لم تُلغَ قبل 24 ساعة على الأقل من نهاية الفترة، ويمكن إدارتها وإلغاؤها من إعدادات حساب المتجر. لا تُحذف بياناتك عند انتهاء الاشتراك. يُقدَّم التطبيق «كما هو». PALETRA™ علامة تجارية لشركة Nechh Robotics. جميع الحقوق محفوظة. للتواصل: nechhlab.global@gmail.com"
+      }
+    ]
   }
 }
