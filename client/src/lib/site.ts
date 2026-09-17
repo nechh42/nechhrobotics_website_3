@@ -121,7 +121,7 @@ export const products: Product[] = [
     summary:
       "İş makinesi ve ekipman kiralayan işletmeler için makine, müşteri, sözleşme, iade ve alacağı telefonda tek yerde tutan uygulama.",
     longDescription:
-      "PALETRA, hangi makinenin kimde olduğunu, ne zaman döneceğini ve kimden ne kadar alacak kaldığını kâğıt defter ve dağınık telefon notları yerine tek ekranda gösterir. Kiralama başlarken sayaç ve fotoğraf alınır, müşteri telefonda imzalar, sözleşme PDF olarak hazırlanır. İade günü sayaç ve hasar notu girilir, tutar hesaplanır, iade tutanağı çıkar; kalan alacak WhatsApp'tan hatırlatılır. Bakım planı motor saatine veya kilometreye göre uyarır; aylık ciro ve makine başına doluluk raporlanır. Kayıtlar sunucuda değil telefonda durur, tek dosyalık yedekle yeni telefona taşınır. Türkçe, İngilizce ve Arapça kullanılır.",
+      "PALETRA, hangi makinenin kimde olduğunu, ne zaman döneceğini ve kimden ne kadar alacak kaldığını kâğıt defter ve dağınık telefon notları yerine tek ekranda gösterir. Kiralama başlarken sayaç ve fotoğraf alınır, müşteri telefonda imzalar, sözleşme PDF olarak hazırlanır. İade günü sayaç ve hasar notu girilir, tutar hesaplanır, iade tutanağı çıkar; kalan alacak WhatsApp'tan hatırlatılır. Bakım planı motor saatine veya kilometreye göre uyarır; aylık ciro ve makine başına doluluk raporlanır. Kayıtlar sunucuda değil telefonda durur, tek dosyalık yedekle yeni telefona taşınır. Türkçe, İngilizce ve Arapça kullanılır. PALETRA™, Nechh Robotics şirketinin ticari markasıdır.",
     useCase: "Kiralama sözleşmesi, iade ve tahsilat takibi",
     tone: "operations",
     externalUrl: "/iletisim",
@@ -245,7 +245,7 @@ export const englishProducts: Product[] = [
     summary:
       "An app for construction machinery and equipment rental businesses that keeps machines, customers, contracts, returns and receivables in one place on the phone.",
     longDescription:
-      "PALETRA shows which machine is with whom, when it is due back and how much each customer still owes — on one screen instead of a paper ledger. When a rental starts, the meter reading and photos are recorded, the customer signs on the phone and a contract PDF is prepared. On return, the meter and a damage note are entered, the amount is calculated and a return report is issued; the outstanding balance can be sent as a WhatsApp reminder. Maintenance plans alert by engine hours or kilometres, and monthly revenue and per-machine utilisation are reported. Records stay on the phone rather than a server and move to a new phone with a single backup file. Available in Turkish, English and Arabic.",
+      "PALETRA shows which machine is with whom, when it is due back and how much each customer still owes — on one screen instead of a paper ledger. When a rental starts, the meter reading and photos are recorded, the customer signs on the phone and a contract PDF is prepared. On return, the meter and a damage note are entered, the amount is calculated and a return report is issued; the outstanding balance can be sent as a WhatsApp reminder. Maintenance plans alert by engine hours or kilometres, and monthly revenue and per-machine utilisation are reported. Records stay on the phone rather than a server and move to a new phone with a single backup file. Available in Turkish, English and Arabic. PALETRA™ is a trademark of Nechh Robotics.",
     useCase: "Rental contracts, returns and collections",
     tone: "operations",
     externalUrl: "/en/contact",
