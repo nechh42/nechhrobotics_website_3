@@ -1326,7 +1326,7 @@ Play Console gizlilik politikası ve hesap/veri silme bağlantısı ister; sayfa
 
 ---
 
-## 18 EYLÜL 2026 — GALERİYE MEDYA + 9 ÜRÜN YAZISI (TR+EN) · ⏳ push bekliyor
+## 18 EYLÜL 2026 — GALERİYE MEDYA + 9 ÜRÜN YAZISI (TR+EN) · ✅ CANLIDA
 
 **Hasan:** TANITIM-MATERYALLERI ve Pictures'tan foto/video ekle; HeliaLoop, JuriLoop, Eco-Report için 3'er blog yazısı (TR/EN).
 
@@ -1342,3 +1342,5 @@ Play Console gizlilik politikası ve hesap/veri silme bağlantısı ister; sayfa
   "taşınmış arşiv" damgası yerine tarih + ürün sayfası bağlantısı gösterir. sitemap +18 URL.
 - **Ölçüm:** tsc 0 · build 0 · prerender **112/0** · derlenmiş yazı sayfasında tarih ve ürün bağlantısı var.
   **Yapılmadı:** gerçek Chrome turu, push.
+
+**Canlıya alındı (Hasan: "EVET"):** `58f7c59` push edildi. Canlı ölçüm: TR ve EN yazı sayfaları 200, yazıda ürün bağlantısı var · `/galeri` 200 ve "PALETRA, telefonda" bölümü görünüyor · video ve ekran dosyaları 200.
