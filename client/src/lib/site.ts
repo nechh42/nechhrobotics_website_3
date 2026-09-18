@@ -925,6 +925,8 @@ export const galeriVideolar = [
   { dosya: "/medya/video/helialoop-teaser.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "HeliaLoop teaser", urun: "Kısa tanıtım" },
   // 18 Eyl 2026 — TANITIM-MATERYALLERI'nden eklendi, web için sıkıştırıldı (95 MB → 13 MB).
   // Haber kurgulu iki video: üstte kalıcı "KURGUSAL REKLAM FİLMİDİR" şeridi; McCoy videosunda CNN logoları bulanıklaştırıldı (22,5–39,3 sn).
+  { dosya: "/medya/video/tonsora-guzelliginiz-icin.mp4", kapak: "/medya/video/tonsora-guzelliginiz-icin-kapak.jpg", baslik: "TONSORA · Güzelliğiniz için", urun: "Reklam filmi · kurgu" },
+  { dosya: "/medya/video/tonsora-randevu-icin-arama.mp4", kapak: "/medya/video/tonsora-randevu-icin-arama-kapak.jpg", baslik: "TONSORA · Randevu için arama", urun: "Kısa tanıtım" },
   { dosya: "/medya/video/eco-report-tanitim.mp4", kapak: "/medya/video/eco-report-tanitim-kapak.jpg", baslik: "Nechh Eco-Report · TR / EN / AR", urun: "CBAM karbon verisi hazırlığı" },
   { dosya: "/medya/video/helialoop-fragman.mp4", kapak: "/medya/video/helialoop-fragman-kapak.jpg", baslik: "HeliaLoop fragmanı", urun: "Reklam filmi · kurgu" },
   { dosya: "/medya/video/helialoop-park-hikayesi.mp4", kapak: "/medya/video/helialoop-park-hikayesi-kapak.jpg", baslik: "Parkta bir sohbet", urun: "HeliaLoop reklam filmi · kurgu" },

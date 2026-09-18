@@ -1353,3 +1353,5 @@ Play Console gizlilik politikası ve hesap/veri silme bağlantısı ister; sayfa
   (adam net, arka plan bulanık; 25–28 sn arası boyun yanındaki logo için ek yama). Tam boy karelerde logo okunmuyor — ölçüldü.
 - 🟡 TikTok'un en çok izlenen iki TONSORA videosu (30 bin · 9,4 bin) **eklenmedi**: "Randevu için arama, TONSORA'dan al" ve
   "uygulamayı indir, yüzlerce salon, randevunu al" — müşteri tarafı kapalıyken ana vaat yapılıyor (TONSORA-OZELLIKLER.md reklam kuralı). Hasan'a soruldu.
+- **Hasan: "EKLE".** İki TONSORA videosu galeriye (TikTok 30 bin + 9,4 bin): "Güzelliğiniz için" · "Randevu için arama".
+  Not: müşteri randevusu uygulamada çalışıyor (1.2.0'dan beri); salon görünürlüğü varsayılan "gizli", salon "herkes" seçerse aramada çıkar.
