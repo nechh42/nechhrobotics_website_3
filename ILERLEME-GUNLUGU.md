@@ -1344,3 +1344,12 @@ Play Console gizlilik politikası ve hesap/veri silme bağlantısı ister; sayfa
   **Yapılmadı:** gerçek Chrome turu, push.
 
 **Canlıya alındı (Hasan: "EVET"):** `58f7c59` push edildi. Canlı ölçüm: TR ve EN yazı sayfaları 200, yazıda ürün bağlantısı var · `/galeri` 200 ve "PALETRA, telefonda" bölümü görünüyor · video ve ekran dosyaları 200.
+
+### 18 Eyl (öğleden sonra) — PALETRA Play rozeti + iki kurgu haber videosu
+- **Hasan:** "mağaza rozetini ekle, zaten incelemede · CNN logosunu çıkar". PALETRA `stores.play` eklendi (TR+EN).
+  ⚠️ Bağlantı Play onayına kadar **404** (15:5x ölçüldü). App Store'a gönderilmedi → rozet yok.
+- **İki video eklendi**, ikisinin de tepesinde baştan sona "KURGUSAL REKLAM FİLMİDİR · GERÇEK HABER DEĞİLDİR" şeridi:
+  HeliaLoop "Son dakika" · Nechh "Yaptırım" (McCoy). McCoy videosunda CNN logoları 22,5–39,3 sn arası bulanıklaştırıldı
+  (adam net, arka plan bulanık; 25–28 sn arası boyun yanındaki logo için ek yama). Tam boy karelerde logo okunmuyor — ölçüldü.
+- 🟡 TikTok'un en çok izlenen iki TONSORA videosu (30 bin · 9,4 bin) **eklenmedi**: "Randevu için arama, TONSORA'dan al" ve
+  "uygulamayı indir, yüzlerce salon, randevunu al" — müşteri tarafı kapalıyken ana vaat yapılıyor (TONSORA-OZELLIKLER.md reklam kuralı). Hasan'a soruldu.

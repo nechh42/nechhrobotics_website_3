@@ -112,8 +112,8 @@ export const products: Product[] = [
     ],
   },
   {
-    // 16 Eyl 2026 — mağazaya henüz çıkmadı: `stores` BOŞ (kural yukarıda,
-    // "yakında" yazılmaz). Mağazaya girince bağlantılar ölçülüp eklenir.
+    // 18 Eyl 2026 — Hasan: Play rozeti inceleme sürerken eklensin. Bağlantı onaya kadar 404 döner
+    // (18 Eyl 15:5x ölçüldü). App Store'a gönderilmedi → appStore YOK.
     slug: "paletra",
     name: "PALETRA",
     eyebrow: "05 / Kiralama",
@@ -126,6 +126,7 @@ export const products: Product[] = [
     tone: "operations",
     externalUrl: "/iletisim",
     externalLabel: "PALETRA hakkında bize yazın",
+    stores: { play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra" },
     principles: [
       { label: "Sahada imza", detail: "Müşteri makineyi teslim alırken telefonda imzalar; sözleşme ve iade tutanağı PDF olarak hazırlanır." },
       { label: "Kaçan alacak yok", detail: "Geciken iade ve kalan tutar görünür; hatırlatma WhatsApp'tan tek dokunuşla gider." },
@@ -250,6 +251,7 @@ export const englishProducts: Product[] = [
     tone: "operations",
     externalUrl: "/en/contact",
     externalLabel: "Ask us about PALETRA",
+    stores: { play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra" },
     principles: [
       { label: "Signed on site", detail: "The customer signs on the phone at hand-over; contract and return report are produced as PDFs." },
       { label: "No missed receivables", detail: "Late returns and open balances stay visible; a WhatsApp reminder is one tap away." },
@@ -922,11 +924,13 @@ export const galeriVideolar = [
   { dosya: "/medya/video/helialoop-doktorun-gunu.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "Bir doktorun günü", urun: "HeliaLoop kullanım anlatımı" },
   { dosya: "/medya/video/helialoop-teaser.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "HeliaLoop teaser", urun: "Kısa tanıtım" },
   // 18 Eyl 2026 — TANITIM-MATERYALLERI'nden eklendi, web için sıkıştırıldı (95 MB → 13 MB).
-  // Sahte haber kurgulu iki video (CNN logolu, "Bakanlar Kurulu kararı") bilerek EKLENMEDİ.
+  // Haber kurgulu iki video: üstte kalıcı "KURGUSAL REKLAM FİLMİDİR" şeridi; McCoy videosunda CNN logoları bulanıklaştırıldı (22,5–39,3 sn).
   { dosya: "/medya/video/eco-report-tanitim.mp4", kapak: "/medya/video/eco-report-tanitim-kapak.jpg", baslik: "Nechh Eco-Report · TR / EN / AR", urun: "CBAM karbon verisi hazırlığı" },
   { dosya: "/medya/video/helialoop-fragman.mp4", kapak: "/medya/video/helialoop-fragman-kapak.jpg", baslik: "HeliaLoop fragmanı", urun: "Reklam filmi · kurgu" },
   { dosya: "/medya/video/helialoop-park-hikayesi.mp4", kapak: "/medya/video/helialoop-park-hikayesi-kapak.jpg", baslik: "Parkta bir sohbet", urun: "HeliaLoop reklam filmi · kurgu" },
   { dosya: "/medya/video/juriloop-fragman.mp4", kapak: "/medya/video/juriloop-fragman-kapak.jpg", baslik: "JuriLoop fragmanı", urun: "Reklam filmi · kurgu" },
+  { dosya: "/medya/video/helialoop-son-dakika-kurgu.mp4", kapak: "/medya/video/helialoop-son-dakika-kurgu-kapak.jpg", baslik: "HeliaLoop · \"Son dakika\"", urun: "Kurgusal reklam filmi · gerçek haber değildir" },
+  { dosya: "/medya/video/nechh-yaptirim-kurgu.mp4", kapak: "/medya/video/nechh-yaptirim-kurgu-kapak.jpg", baslik: "Nechh Robotics · \"Yaptırım\"", urun: "Kurgusal reklam filmi · gerçek haber değildir" },
   { dosya: "/medya/video/nechh-dikey-yapay-zeka.mp4", kapak: "/medya/video/nechh-dikey-yapay-zeka-kapak.jpg", baslik: "Vertical AI systems", urun: "Kurumsal · English" },
 ];
 
