@@ -1323,3 +1323,22 @@ Play Console gizlilik politikası ve hesap/veri silme bağlantısı ister; sayfa
   yazıldı (PALETRA B33 olarak açıldı).
 
 **Ölçüm:** tsc 0 · build 0 · prerender 93/0 · üç sayfanın derlenmiş HTML'inde PALETRA var.
+
+---
+
+## 18 EYLÜL 2026 — GALERİYE MEDYA + 9 ÜRÜN YAZISI (TR+EN) · ⏳ push bekliyor
+
+**Hasan:** TANITIM-MATERYALLERI ve Pictures'tan foto/video ekle; HeliaLoop, JuriLoop, Eco-Report için 3'er blog yazısı (TR/EN).
+
+- **Galeri:** 5 video eklendi, web için sıkıştırıldı (95 MB → 13 MB): Eco-Report TR/EN/AR, HeliaLoop fragmanı, HeliaLoop park hikâyesi,
+  JuriLoop fragmanı, "Vertical AI systems". Yeni "Uygulama ekranları" bölümü: PALETRA'nın 8 gerçek ekranı + 2 tanıtım görseli (TR/EN).
+- 🔴 **Bilerek EKLENMEYENLER:** CNN logolu "McCoy" videosu (marka taklidi) · HeliaLoop "Son Dakika / Bakanlar Kurulu kararı" videosu
+  (uydurma resmî karar, "kurgudur" ibaresi yok) · yasaklı iddialı TONSORA görselleri ("Türkiye'nin ilk", SMS, otomatik hatırlatma,
+  "1 hafta deneyin", müşteri pazaryeri ekranları) · HeliaLoop/JuriLoop'ta App Store rozeti olan afişler (iOS'ta yoklar) ·
+  MHRS karşılaştırmalı HeliaLoop afişi ("57 ülke", "dakikalar içinde randevu") · Eco-Report afişi ("PWA internetsiz çalışır",
+  "hiçbir şey kaçmaz", "Volo ton" yazım hatası) · eski isimli logolar (EKİPMAN360, REÇETE360, KİRANET).
+- **Blog:** `client/src/lib/urunYazilari.ts` — 9 TR + 9 EN yazı (Eco-Report: 2026/1740, varsayılan değer eki, 50 ton ·
+  HeliaLoop: WhatsApp sevk, sevk notu, hasta verisi · JuriLoop: dava yönlendirme, sır saklama, CMK/takvim). `date` taşıyan yazı
+  "taşınmış arşiv" damgası yerine tarih + ürün sayfası bağlantısı gösterir. sitemap +18 URL.
+- **Ölçüm:** tsc 0 · build 0 · prerender **112/0** · derlenmiş yazı sayfasında tarih ve ürün bağlantısı var.
+  **Yapılmadı:** gerçek Chrome turu, push.

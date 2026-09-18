@@ -409,7 +409,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .galeri-video-grid strong { font-size: 15px; }
 .galeri-video-grid small { color: var(--muted-ink); font-size: 11px; }
 
-.galeri-ekran-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.galeri-ekran-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .galeri-ekran { display: grid; gap: 10px; padding: 0; border: 0; background: none; color: inherit; cursor: zoom-in; font: inherit; text-align: left; }
 .galeri-ekran img { width: 100%; border: 1px solid rgba(255,255,255,.2); background: #fff; transition: transform .22s var(--ease-out), border-color .22s var(--ease-out); }
 .galeri-ekran:hover img { border-color: var(--lime); transform: translateY(-4px); }

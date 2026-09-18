@@ -1,7 +1,7 @@
 /** Evidence Grid: galeri yalnızca gerçek malzeme gösterir — çekilmiş ürün ekranları ve üretilmiş tanıtım videoları. */
 import { useState } from "react";
 import { PageFrame } from "@/components/SiteShell";
-import { galeriTanitimlar, galeriVideolar } from "@/lib/site";
+import { galeriEkranlar, galeriTanitimlar, galeriVideolar } from "@/lib/site";
 
 type Buyuteç = { src: string; alt: string } | null;
 
@@ -46,6 +46,27 @@ export default function Galeri() {
         </div>
       </section>
 
+
+      <section className="galeri-bolum is-koyu">
+        <div className="galeri-baslik">
+          <p className="eyebrow">UYGULAMA EKRANLARI</p>
+          <h2>PALETRA, telefonda</h2>
+          <p className="galeri-not">Emülatörde uygulamanın kendisinden alınmış ekranlar; içindeki firma ve makine adları deneme verisidir.</p>
+        </div>
+        <div className="galeri-ekran-grid">
+          {galeriEkranlar.map((ekran) => (
+            <button
+              type="button"
+              key={ekran.dosya}
+              className="galeri-ekran"
+              onClick={() => setAcik({ src: ekran.dosya, alt: ekran.baslik })}
+            >
+              <img src={ekran.dosya} alt={ekran.baslik} loading="lazy" />
+              <span>{ekran.baslik}</span>
+            </button>
+          ))}
+        </div>
+      </section>
 
       <section className="galeri-bolum">
         <div className="galeri-baslik">

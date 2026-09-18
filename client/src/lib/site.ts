@@ -921,6 +921,25 @@ export const galeriVideolar = [
   { dosya: "/medya/video/juriloop-tanitim.mp4", kapak: "/medya/tanitim/juriloop-afis.png", baslik: "JuriLoop tanıtımı", urun: "Hukukçular arası ağ" },
   { dosya: "/medya/video/helialoop-doktorun-gunu.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "Bir doktorun günü", urun: "HeliaLoop kullanım anlatımı" },
   { dosya: "/medya/video/helialoop-teaser.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "HeliaLoop teaser", urun: "Kısa tanıtım" },
+  // 18 Eyl 2026 — TANITIM-MATERYALLERI'nden eklendi, web için sıkıştırıldı (95 MB → 13 MB).
+  // Sahte haber kurgulu iki video (CNN logolu, "Bakanlar Kurulu kararı") bilerek EKLENMEDİ.
+  { dosya: "/medya/video/eco-report-tanitim.mp4", kapak: "/medya/video/eco-report-tanitim-kapak.jpg", baslik: "Nechh Eco-Report · TR / EN / AR", urun: "CBAM karbon verisi hazırlığı" },
+  { dosya: "/medya/video/helialoop-fragman.mp4", kapak: "/medya/video/helialoop-fragman-kapak.jpg", baslik: "HeliaLoop fragmanı", urun: "Reklam filmi · kurgu" },
+  { dosya: "/medya/video/helialoop-park-hikayesi.mp4", kapak: "/medya/video/helialoop-park-hikayesi-kapak.jpg", baslik: "Parkta bir sohbet", urun: "HeliaLoop reklam filmi · kurgu" },
+  { dosya: "/medya/video/juriloop-fragman.mp4", kapak: "/medya/video/juriloop-fragman-kapak.jpg", baslik: "JuriLoop fragmanı", urun: "Reklam filmi · kurgu" },
+  { dosya: "/medya/video/nechh-dikey-yapay-zeka.mp4", kapak: "/medya/video/nechh-dikey-yapay-zeka-kapak.jpg", baslik: "Vertical AI systems", urun: "Kurumsal · English" },
+];
+
+/** Uygulamalardan alınmış GERÇEK ekran görüntüleri. Temsilî/üretilmiş ekran buraya girmez. */
+export const galeriEkranlar = [
+  { dosya: "/medya/paletra/bugun.jpg", baslik: "PALETRA · Bugün ekranı" },
+  { dosya: "/medya/paletra/makineler.jpg", baslik: "PALETRA · Makineler" },
+  { dosya: "/medya/paletra/imza.jpg", baslik: "PALETRA · Müşteri imzası" },
+  { dosya: "/medya/paletra/sozlesme-pdf.jpg", baslik: "PALETRA · PDF sözleşme" },
+  { dosya: "/medya/paletra/kiralama-detay.jpg", baslik: "PALETRA · Kiralama ve alacak" },
+  { dosya: "/medya/paletra/bakim.jpg", baslik: "PALETRA · Bakım planı" },
+  { dosya: "/medya/paletra/raporlar.jpg", baslik: "PALETRA · Raporlar" },
+  { dosya: "/medya/paletra/yedekleme.jpg", baslik: "PALETRA · Yedekleme" },
 ];
 
 export const galeriTanitimlar = [
@@ -929,6 +948,8 @@ export const galeriTanitimlar = [
   { dosya: "/medya/tanitim/helialoop-afis.png", baslik: "HeliaLoop · hekimler arası iş birliği" },
   { dosya: "/medya/tanitim/juriloop-afis.png", baslik: "JuriLoop · hukukçular arası ağ" },
   { dosya: "/medya/tanitim/tonsora-afis.png", baslik: "TONSORA · salon randevu yönetimi" },
+  { dosya: "/medya/tanitim/paletra-tr.jpg", baslik: "PALETRA · ekipman kiralama, telefonda" },
+  { dosya: "/medya/tanitim/paletra-en.jpg", baslik: "PALETRA · equipment rental on your phone" },
   { dosya: "/medya/tanitim/cbam-en.jpg", baslik: "CBAM · English" },
   { dosya: "/medya/tanitim/eudr-tr.jpg", baslik: "EUDR · Türkçe" },
   { dosya: "/medya/tanitim/eudr-en.jpg", baslik: "EUDR · English" },

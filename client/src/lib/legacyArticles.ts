@@ -1,4 +1,6 @@
-/** Legacy archive: extracted from the previous public website and rendered as readable internal resource pages. */
+/** Legacy archive: extracted from the previous public website and rendered as readable internal resource pages.
+ *  18 Eyl 2026: ürün yazıları (`urunYazilari.ts`) listenin başına eklenir; `date` taşıyan yazı yeni yazıdır, taşınmış değildir. */
+import { urunYazilariEn, urunYazilariTr } from "./urunYazilari";
 
 export type LegacyArticle = {
   slug: string;
@@ -7,9 +9,14 @@ export type LegacyArticle = {
   category: string;
   excerpt: string;
   body: string[];
+  /** Yalnızca yeni yazılarda: yazılış tarihi (YYYY-MM-DD). */
+  date?: string;
+  /** Yalnızca yeni yazılarda: yazının bağlandığı ürün sayfası. */
+  product?: "helialoop" | "juriloop" | "eco-report" | "tonsora" | "paletra";
 };
 
 export const legacyArticles: LegacyArticle[] = [
+  ...urunYazilariTr,
   {
     "slug": "blog-ai-quality-control-automation",
     "path": "/blog/blog-ai-quality-control-automation",
@@ -831,6 +838,7 @@ export const legacyArticles: LegacyArticle[] = [
 ];
 
 export const legacyEnglishArticles: LegacyArticle[] = [
+  ...urunYazilariEn,
   {
     "slug": "blog-doras-critical-requirements-governance-testing-and-third-parties",
     "path": "/en/blog/blog-doras-critical-requirements-governance-testing-and-third-parties",
