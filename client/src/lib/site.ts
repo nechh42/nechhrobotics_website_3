@@ -113,7 +113,7 @@ export const products: Product[] = [
   },
   {
     // 18 Eyl 2026 — Hasan: Play rozeti inceleme sürerken eklensin. Bağlantı onaya kadar 404 döner
-    // (18 Eyl 15:5x ölçüldü). App Store'a gönderilmedi → appStore YOK.
+    // (18 Eyl 15:5x ölçüldü). 1 Eki 2026: App Store'da 1.0.1 yayında (itunes lookup ile ölçüldü) → appStore eklendi.
     slug: "paletra",
     name: "PALETRA",
     eyebrow: "05 / Kiralama",
@@ -126,7 +126,10 @@ export const products: Product[] = [
     tone: "operations",
     externalUrl: "/iletisim",
     externalLabel: "PALETRA hakkında bize yazın",
-    stores: { play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra" },
+    stores: {
+      play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra",
+      appStore: "https://apps.apple.com/tr/app/id6813489781",
+    },
     principles: [
       { label: "Sahada imza", detail: "Müşteri makineyi teslim alırken telefonda imzalar; sözleşme ve iade tutanağı PDF olarak hazırlanır." },
       { label: "Kaçan alacak yok", detail: "Geciken iade ve kalan tutar görünür; hatırlatma WhatsApp'tan tek dokunuşla gider." },
@@ -251,7 +254,10 @@ export const englishProducts: Product[] = [
     tone: "operations",
     externalUrl: "/en/contact",
     externalLabel: "Ask us about PALETRA",
-    stores: { play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra" },
+    stores: {
+      play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra",
+      appStore: "https://apps.apple.com/tr/app/id6813489781",
+    },
     principles: [
       { label: "Signed on site", detail: "The customer signs on the phone at hand-over; contract and return report are produced as PDFs." },
       { label: "No missed receivables", detail: "Late returns and open balances stay visible; a WhatsApp reminder is one tap away." },
