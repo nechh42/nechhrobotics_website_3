@@ -1,0 +1,38 @@
+{
+  "not": "Sitenin dis gercekleri: canli erisim, SEO canonical dogrulugu, sitemap ve robots.",
+  "kontroller": [
+    {
+      "kod": "WEB-CANLI-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Anasayfa ayakta",
+      "url": "https://www.nechhrobotics.com",
+      "bekle": ["<link rel=\"canonical\""]
+    },
+    {
+      "kod": "WEB-CANONICAL-ALT-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Alt sayfanin canonical'i KENDISINI gostermeli",
+      "url": "https://www.nechhrobotics.com/projeler",
+      "bekle": ["<link rel=\"canonical\" href=\"https://www.nechhrobotics.com/projeler\""],
+      "kaynak": "KONULAR/SEO-VE-INDEKSLEME.md — root layout'ta tek canonical tum siteyi dizinden duser"
+    },
+    {
+      "kod": "WEB-SITEMAP-001",
+      "tur": "url_isaret",
+      "siddet": "uyari",
+      "aciklama": "Sitemap yayinda ve alt sayfalari iceriyor",
+      "url": "https://www.nechhrobotics.com/sitemap.xml",
+      "bekle": ["<urlset", "nechhrobotics.com"]
+    },
+    {
+      "kod": "WEB-ROBOTS-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "robots.txt siteyi dizinden dusurmuyor",
+      "url": "https://www.nechhrobotics.com/robots.txt",
+      "olmasin": ["Disallow: /\n"]
+    }
+  ]
+}
