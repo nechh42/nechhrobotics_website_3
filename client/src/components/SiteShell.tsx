@@ -98,6 +98,10 @@ export function SiteFooter({ locale = "tr" }: { locale?: "tr" | "en" }) {
           <span className="footer-label">{labels.contact}</span>
           <Link href={isEnglish ? "/en/contact" : "/iletisim"}>{labels.request}</Link>
           <a href="https://www.linkedin.com/in/nechh-r-5358a737a" target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={13} /></a>
+          <a href="https://www.youtube.com/@nechhrobotics" target="_blank" rel="noreferrer">YouTube <ArrowUpRight size={13} /></a>
+          <a href="https://www.instagram.com/nechhrobotics" target="_blank" rel="noreferrer">Instagram <ArrowUpRight size={13} /></a>
+          <a href="https://www.tiktok.com/@nechhrobotics" target="_blank" rel="noreferrer">TikTok <ArrowUpRight size={13} /></a>
+          <a href="https://x.com/nechhrobotics" target="_blank" rel="noreferrer">X <ArrowUpRight size={13} /></a>
           <a href="mailto:nechhlab.global@gmail.com">E-posta <ArrowUpRight size={13} /></a>
         </div>
         <div className="footer-column">

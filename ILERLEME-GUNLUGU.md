@@ -1355,3 +1355,42 @@ Play Console gizlilik politikası ve hesap/veri silme bağlantısı ister; sayfa
   "uygulamayı indir, yüzlerce salon, randevunu al" — müşteri tarafı kapalıyken ana vaat yapılıyor (TONSORA-OZELLIKLER.md reklam kuralı). Hasan'a soruldu.
 - **Hasan: "EKLE".** İki TONSORA videosu galeriye (TikTok 30 bin + 9,4 bin): "Güzelliğiniz için" · "Randevu için arama".
   Not: müşteri randevusu uygulamada çalışıyor (1.2.0'dan beri); salon görünürlüğü varsayılan "gizli", salon "herkes" seçerse aramada çıkar.
+
+---
+
+## 3 EKİM 2026 — YOUTUBE KANALI BAŞLANGIÇ · ⬜ KURULUM BEKLİYOR
+
+**Hasan:** "nechhrobotics.com için YouTube kanalı kuracağız, yöneticisi sen olacaksın."
+
+- Rol netleştirildi: strateji/senaryo/SEO/takvim → Claude; giriş/oluşturma/yükleme → Hasan (hesaba girilmez).
+- Kanal yönü (3 soru onaylandı): **ürün vitrini + demo**, **faceless (ekran+seslendirme)**, **TR seslendirme + EN altyazı**.
+- `YOUTUBE/00-KANAL-PLANI.md`: kimlik + **uyumluluk anayasası** (web galerisi kurallarından türetildi: marka taklidi yok, uydurma haber "KURGUSAL" şeritsiz yok, yasaklı iddialar yok, iOS'ta olmayana App Store rozeti yok, TONSORA müşteri vaadi sınırlı) + içerik sütunları + ilk 5 video sırası.
+- `YOUTUBE/01-KURULUM-ADIMLARI.md`: 5 adımlık elle kurulum, kanal açıklaması TR+EN ve anahtar kelimeler yapıştırmaya hazır.
+- **Sıradaki:** kimlik onayı → Hasan kanalı oluşturur (Adım 1) → PALETRA ilk demo senaryosu.
+- **Yapılmadı:** kanal fiziksel olarak açılmadı, hiçbir video yok.
+
+### 3 Eki (devam) — Kanal açıldı + SOSYAL-MEDYA klasör düzeni
+- Hasan: "kanal açıldı". YouTube kanalı fiziksel olarak oluşturuldu.
+- Hasan isteği: aradığını bulamıyor → tüm sosyal medya tek düzene alındı.
+- Proje kökünde **`SOSYAL-MEDYA/`** kuruldu: `YOUTUBE / TIKTOK / INSTAGRAM / X / LINKEDIN / 00-ORTAK`.
+  Her platform aynı iç yapı: `PLAN.md · senaryolar/ · gorseller/ · hazir-videolar/ · yayinlandi/`.
+- YouTube dosyaları taşındı: `YOUTUBE/PLAN.md` + `YOUTUBE/KURULUM-ADIMLARI.md`.
+- Uyumluluk anayasası ortak dosyaya alındı: `00-ORTAK/UYUMLULUK-ANAYASASI.md` (tüm platformlar okur).
+- `SOSYAL-MEDYA/README.md`: "ne nerede" haritası.
+- **Sıradaki:** Hasan handle `@nechhrobotics` alır (Adım 2) → PALETRA senaryosu.
+
+### 3 Eki (devam) — Banner + site sosyal link + ilk video kararı
+- Handle `@nechhrobotics` alındı; ad/logo/açıklama girildi (Hasan ekran doğrulaması).
+- **Banner üretildi:** `SOSYAL-MEDYA/YOUTUBE/gorseller/banner-2560x1440.png` — marka kırmızısı #e60012, logo+alt başlık+ürün adları+site, YouTube güvenli alanına (1546×423) göre. Playwright ile render (ilk denemede viewport sol-üst çeyrek kapmış, resize sonrası düzeldi).
+- **Web sitesi:** footer iletişim sütununa YouTube linki eklendi (`SiteShell.tsx`, TR+EN ortak). Şu an sitede yalnız LinkedIn+YouTube gerçek. ⬜ TikTok/Instagram/X gerçek adresleri Hasan'dan beklenecek (sahte link yok).
+- **İlk video kararı (Hasan):** mevcut `nechhrobotics -tanıtım videosu.mp4` (25 MB) ilk video + sabitlenecek.
+- **Yapılmadı:** banner YouTube'a yüklenmedi, video yüklenmedi, site build/push yapılmadı.
+
+### 3 Eki (devam) — Tüm sosyal adresler siteye (gerçek hesaplar) + JSON-LD
+- Hasan gerçek hesapları verdi: TikTok @nechhrobotics, Instagram /nechhrobotics, X /nechhrobotics (+ YouTube, LinkedIn mevcut).
+- Instagram URL'inden kişisel `?stkn=...&utm_source=qr` QR takip parametreleri **temizlendi**, siteye sade adres kondu.
+- **Footer** (`SiteShell.tsx`, TR+EN ortak): 5 sosyal link (LinkedIn, YouTube, Instagram, TikTok, X) + e-posta.
+- **İletişim sayfaları**: TR `Contact.tsx` + EN `EnglishPages.tsx`'e "Sosyal medya / Social media" bloğu (04) eklendi.
+- **SEO:** `index.html`'e Organization **JSON-LD** (`sameAs` 5 profil + logo + e-posta) eklendi — önceden hiç yapısal veri yoktu.
+- **Ölçüm:** tsc 0 · build 0 · prerender **112/0** · dist/index.html'de sameAs ve 4 yeni sosyal (footer+JSON-LD, 2'şer) · dist/en/contact'ta "Social media" + tiktok.
+- **Yapılmadı:** canlıya **push edilmedi** (Hasan onayı/mağaza yükleme durumuna göre). Kanal yayında; tanıtım videosu henüz yüklenmedi.
