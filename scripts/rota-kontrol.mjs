@@ -128,6 +128,37 @@ for (const yol of olmayanlar) {
   }
 }
 
+// 4 Eki 2026: URETILEN SAYFALARDAKI TUM IC BAGLANTILAR cozumlenebilmeli. Modul kartlarina
+// magaza paketi baglantisi eklendi; yanlis bir slug OLU BAGLANTI demek. Bu kontrol yalnizca
+// modulleri degil, sitedeki her ic baglantiyi olcer.
+{
+  const sayfalar = [];
+  const gez = (dizin) => {
+    for (const ad of fs.readdirSync(dizin)) {
+      const tam = path.join(dizin, ad);
+      if (fs.statSync(tam).isDirectory()) gez(tam);
+      else if (ad.endsWith(".html")) sayfalar.push(tam);
+    }
+  };
+  gez(DIST);
+  const olu = new Map();
+  for (const sayfa of sayfalar) {
+    const icerik = fs.readFileSync(sayfa, "utf-8");
+    for (const e of icerik.matchAll(/href="(\/[^"#?]*)"/g)) {
+      const hedef = e[1].replace(/\/$/, "") || "/";
+      if (/\.(png|jpg|jpeg|svg|webp|mp4|pdf|xml|txt|ico|js|css|zip|woff2?)$/i.test(hedef)) continue;
+      if (coz(hedef).tur === "404") {
+        const nerede = path.relative(DIST, sayfa).split("\\").join("/");
+        if (!olu.has(hedef)) olu.set(hedef, nerede);
+      }
+    }
+  }
+  console.log(`  ic baglanti kontrolu: ${sayfalar.length} sayfa tarandi`);
+  for (const [hedef, nerede] of olu) {
+    hatalar.push(`OLU IC BAGLANTI: ${hedef} (ornek sayfa: ${nerede})`);
+  }
+}
+
 // 404.html bulunmali, canonical TASIMAMALI, noindex TASIMALI.
 const dosya404 = path.join(DIST, "404.html");
 if (!fs.existsSync(dosya404)) {

@@ -2,7 +2,7 @@
 import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { PageFrame } from "@/components/SiteShell";
-import { cbamMaliyet, getProduct } from "@/lib/site";
+import { cbamMaliyet, getProduct, paketler } from "@/lib/site";
 import { MagazaRozetleri } from "@/components/MagazaRozetleri";
 
 type ProductDetailProps = { params?: { slug?: string } };
@@ -60,7 +60,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
       {product.modules ? (
         <section className="product-modules">
           <div className="section-head"><p className="eyebrow">MEVZUAT MODÜLLERİ</p><h2>Ürünün içinde çalışan<br /><em>{product.modules.length} modül.</em></h2><p>Her modül kararını resmî metne dayandırır; cevaplanmayan soruyu tahmin etmez. Hazırlık taslağı üretir, hukuki görüş vermez.</p></div>
-          <div className="module-list">{product.modules.map((modul) => <article key={modul.name}><h3>{modul.name}</h3><p className="module-basis">{modul.basis}</p><p>{modul.detail}</p></article>)}</div>
+          <div className="module-list">{product.modules.map((modul) => { const paket = modul.paket ? paketler.find((p) => p.slug === modul.paket) : undefined; return <article key={modul.name}><h3>{modul.name}</h3><p className="module-basis">{modul.basis}</p><p>{modul.detail}</p>{paket ? <Link href={`/magaza/${paket.slug}`} className="module-action">{paket.ad} · {paket.fiyat} <ArrowUpRight size={14} /></Link> : modul.uygulama ? <a href={modul.uygulama} target="_blank" rel="noreferrer" className="module-action">Uygulamada aç <ExternalLink size={14} /></a> : null}</article>; })}</div>
         </section>
       ) : null}
 

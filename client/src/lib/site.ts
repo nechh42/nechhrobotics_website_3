@@ -18,7 +18,15 @@ export type Product = {
   /** 4 Eki 2026: urunun icindeki mevzuat modulleri. Site uruni OLDUGUNDAN FAZLA gostermez;
    *  her kalem modulun kendi sinir cumlesiyle uyumludur (hazirlik taslagi, hukuki gorus degil).
    *  Yeni modul canliya alindiginda BURAYA eklenir, yoksa sitede gorunmez. */
-  modules?: { name: string; basis: string; detail: string }[];
+  modules?: {
+    name: string;
+    basis: string;
+    detail: string;
+    /** Varsa: sitedeki GERCEK paketin slug'i (paketler listesinden dogrulanir). */
+    paket?: string;
+    /** Paketi olmayan modul icin uygulamadaki ekran. "Yakinda paket" YAZILMAZ. */
+    uygulama?: string;
+  }[];
 };
 
 export const assets = {
@@ -90,14 +98,14 @@ export const products: Product[] = [
       { label: "Sınırların açıklığı", detail: "Resmî doğrulama ve beyan sorumluluklarından açıkça ayrışır." },
     ],
     modules: [
-      { name: "CBAM", basis: "Tüzük (AB) 2023/956 + 2025/2621 (düz. 2026/1740)", detail: "Gömülü emisyon hesabı, 50 ton de minimis eşiği ve kesin dönem beyan hazırlığı." },
-      { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı." },
-      { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi." },
-      { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı." },
-      { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız." },
-      { name: "NIS2", basis: "Direktif (AB) 2022/2555", detail: "Temel/önemli varlık ayrımı, md. 21 önlemleri ve 24/72 saat bildirim zinciri." },
-      { name: "CRA", basis: "Tüzük (AB) 2024/2847 (EHDS 2025/327 ile)", detail: "Ürün sınıfı ve uygunluk yolu; AB'ye yazılım satan üretici doğrudan kapsamdadır." },
-      { name: "KVKK + GDPR", basis: "6698 sayılı Kanun (değ. 7499) + Tüzük (AB) 2016/679", detail: "İki rejim ayrı ayrı; yurt dışına aktarım yolu ve AB temsilcisi gerekliliği." },
+      { name: "CBAM", basis: "Tüzük (AB) 2023/956 + 2025/2621 (düz. 2026/1740)", detail: "Gömülü emisyon hesabı, 50 ton de minimis eşiği ve kesin dönem beyan hazırlığı." , paket: "cbam-girisimci-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "NIS2", basis: "Direktif (AB) 2022/2555", detail: "Temel/önemli varlık ayrımı, md. 21 önlemleri ve 24/72 saat bildirim zinciri." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "CRA", basis: "Tüzük (AB) 2024/2847 (EHDS 2025/327 ile)", detail: "Ürün sınıfı ve uygunluk yolu; AB'ye yazılım satan üretici doğrudan kapsamdadır." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "KVKK + GDPR", basis: "6698 sayılı Kanun (değ. 7499) + Tüzük (AB) 2016/679", detail: "İki rejim ayrı ayrı; yurt dışına aktarım yolu ve AB temsilcisi gerekliliği." , paket: "kvkk-sablon-paketi", uygulama: "https://ecoreport.nechhrobotics.com/" },
     ],
   },
   {
@@ -238,14 +246,14 @@ export const englishProducts: Product[] = [
       { label: "Clear boundaries", detail: "An explicit distinction from official verification and declaration responsibilities." },
     ],
     modules: [
-      { name: "CBAM", basis: "Regulation (EU) 2023/956 + 2025/2621 (corr. 2026/1740)", detail: "Embedded emissions, the 50-tonne de minimis threshold and definitive-period reporting prep." },
-      { name: "EUDR", basis: "Regulation (EU) 2023/1115 (Annex I am. 2026/2102)", detail: "Commodity/product scope, country risk class, geolocation and DDS readiness." },
-      { name: "AI Act", basis: "Regulation (EU) 2024/1689 (am. 2026/1744)", detail: "Prohibited practice, high-risk and transparency classification; Annex IV technical file list." },
-      { name: "Digital Product Passport", basis: "ESPR — Regulation (EU) 2024/1781", detail: "Claims no obligation without a delegated act; Annex III data element readiness." },
-      { name: "CSRD / ESRS", basis: "Directive (EU) 2022/2464 (Omnibus I 2026/470)", detail: "Threshold check (EUR 450m and 1,000 employees) and your value-chain disclosure limits." },
-      { name: "NIS2", basis: "Directive (EU) 2022/2555", detail: "Essential vs important entity, Article 21 measures and the 24/72-hour reporting clock." },
-      { name: "CRA", basis: "Regulation (EU) 2024/2847 (with EHDS 2025/327)", detail: "Product class and conformity route; selling software into the EU puts you in scope directly." },
-      { name: "KVKK + GDPR", basis: "Law 6698 (am. 7499) + Regulation (EU) 2016/679", detail: "The two regimes separately; transfer route abroad and the EU representative duty." },
+      { name: "CBAM", basis: "Regulation (EU) 2023/956 + 2025/2621 (corr. 2026/1740)", detail: "Embedded emissions, the 50-tonne de minimis threshold and definitive-period reporting prep." , paket: "cbam-girisimci-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "EUDR", basis: "Regulation (EU) 2023/1115 (Annex I am. 2026/2102)", detail: "Commodity/product scope, country risk class, geolocation and DDS readiness." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "AI Act", basis: "Regulation (EU) 2024/1689 (am. 2026/1744)", detail: "Prohibited practice, high-risk and transparency classification; Annex IV technical file list." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "Digital Product Passport", basis: "ESPR — Regulation (EU) 2024/1781", detail: "Claims no obligation without a delegated act; Annex III data element readiness." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "CSRD / ESRS", basis: "Directive (EU) 2022/2464 (Omnibus I 2026/470)", detail: "Threshold check (EUR 450m and 1,000 employees) and your value-chain disclosure limits." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "NIS2", basis: "Directive (EU) 2022/2555", detail: "Essential vs important entity, Article 21 measures and the 24/72-hour reporting clock." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "CRA", basis: "Regulation (EU) 2024/2847 (with EHDS 2025/327)", detail: "Product class and conformity route; selling software into the EU puts you in scope directly." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "KVKK + GDPR", basis: "Law 6698 (am. 7499) + Regulation (EU) 2016/679", detail: "The two regimes separately; transfer route abroad and the EU representative duty." , paket: "kvkk-sablon-paketi", uygulama: "https://ecoreport.nechhrobotics.com/" },
     ],
   },
   {
