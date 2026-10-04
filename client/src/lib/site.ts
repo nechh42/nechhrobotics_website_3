@@ -100,7 +100,7 @@ export const products: Product[] = [
     modules: [
       { name: "CBAM", basis: "Tüzük (AB) 2023/956 + 2025/2621 (düz. 2026/1740)", detail: "Gömülü emisyon hesabı, 50 ton de minimis eşiği ve kesin dönem beyan hazırlığı." , paket: "cbam-girisimci-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
-      { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi.", paket: "ai-act-sistem-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız." , uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "NIS2", basis: "Direktif (AB) 2022/2555", detail: "Temel/önemli varlık ayrımı, md. 21 önlemleri ve 24/72 saat bildirim zinciri.", paket: "nis2-kurulus-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
@@ -835,6 +835,24 @@ export const paketler: Paket[] = [
     fiyat: "€349",
     fiyatNot: "tek seferlik · + KDV",
     sinir: "Hazırlık ve şablon setidir; hukuki danışmanlık, denetim veya uyum beyanı değildir. NIS2 bir direktiftir: kapsam, süre ve yaptırımlar ulusal mevzuata göre değişir.",
+  },
+  {
+    slug: "ai-act-sistem-hazirlik-kiti",
+    aile: "AI Act · AB Yapay Zekâ Tüzüğü",
+    ad: "AI Act Sistem Hazırlık Kiti",
+    ozet:
+      "Yapay zekâ sisteminiz AB pazarına giriyorsa: önce yasak mı, sonra yüksek riskli mi, sonra şeffaflık. Sırayı ve iki farklı yürürlük tarihini çalışılabilir dosyalara çevirir.",
+    icerik: [
+      "Madde 5 — 10 yasaklı uygulama, her satırda kendi yürürlük tarihi",
+      "Ek III — 8 yüksek risk alanı + madde 6 sınıflandırma metni",
+      "Ek IV — 9 unsurlu teknik dosya takibi",
+      "Rol eşlemesi: sağlayıcı, uygulayıcı, GPAI, şeffaflık (md. 16/26/50/53)",
+      "Sınıflandırma kararı kayıt şablonu (gerekçeli)",
+      "Dijital Omnibus (2026/1744) ile değişen takvim",
+    ],
+    fiyat: "€349",
+    fiyatNot: "tek seferlik · + KDV",
+    sinir: "Hazırlık ve şablon setidir; hukuki danışmanlık, uygunluk değerlendirmesi veya AB uygunluk beyanı değildir. Sınıflandırma kararı sağlayıcının sorumluluğundadır.",
   },
   {
     slug: "kvkk-sablon-paketi",
