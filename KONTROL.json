@@ -157,16 +157,18 @@
       "url": "https://www.nechhrobotics.com/",
       "bekle": [
         "uyum-serit",
-        "8 MEVZUAT MODÜLÜ",
+        "AB UYUMU",
+        "MEVZUAT MODÜLÜ",
         "CBAM",
         "NIS2",
         "CRA",
         "KVKK + GDPR",
         "/cozumler/eco-report",
         "Hazırlık taslağı üretir",
-        "hukuki görüş"
+        "hukuki görüş",
+        "tahmin etmez"
       ],
-      "kaynak": "4 Eki 2026: serit listesi urun kaydindan beslenir; sinir cumlesi silinmemeli."
+      "kaynak": "4 Eki 2026: serit listesi urun kaydindan beslenir; sinir cumlesi silinmemeli. NOT: sayilar React SSR'da ayri metin dugumu olur, bitisik dize beklenmez."
     },
     {
       "kod": "WEB-ANASAYFA-SERIT-EN-001",
@@ -179,7 +181,9 @@
         "REGULATION MODULES",
         "Digital Product Passport",
         "/en/solutions/eco-report",
-        "not legal advice"
+        "legal advice",
+        "does not guess",
+        "preparation draft"
       ]
     }
   ]

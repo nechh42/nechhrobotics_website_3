@@ -1512,3 +1512,15 @@ Kontrol manifestosuna `WEB-ANASAYFA-SERIT-001` ve `WEB-ANASAYFA-SERIT-EN-001` (i
 
 **Ölçüm dersi (üçüncü kez):** kabuktan boru hattıyla Türkçe dizi araması yanlış "yok" veriyor
 (`taslak` ≠ `taslağı`, kodlama farkı). Doğrusu: yanıtı **dosyaya yazıp** oradan okumak.
+
+#### 🔴 Kontrol kalemi yazarken yapılan hata (ve kalıcı kural)
+
+İki yeni kontrol kalemi ilk koşuda **blok hata** verdi. İnceleme: **sitede kusur yok**, beklenen
+işaretler gerçek metinde yoktu.
+- TR'de `"8 MEVZUAT MODÜLÜ"` bitişik geçmiyor: React sunucu tarafında sayıyı **ayrı metin düğümü**
+  olarak yazıyor (`AB UYUMU · <!-- -->8<!-- --> MEVZUAT MODÜLÜ`).
+- EN'de cümle `"not legal advice"` değil, *"...an official declaration or legal advice."*
+
+**Kalıcı kural:** bir `bekle` işareti manifestoya yazılmadan önce **canlı yanıtta var olduğu
+ölçülür**. Bu, 2 Ekim'deki `/projeler` yanlış alarmının aynı sınıfı: ölçüm aracının kendisi de
+ölçülmeli. Düzeltmeden sonra: **14 kalem, 0 blok hata, 0 uyarı.**
