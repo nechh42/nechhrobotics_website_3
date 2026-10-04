@@ -1394,3 +1394,47 @@ Play Console gizlilik politikası ve hesap/veri silme bağlantısı ister; sayfa
 - **SEO:** `index.html`'e Organization **JSON-LD** (`sameAs` 5 profil + logo + e-posta) eklendi — önceden hiç yapısal veri yoktu.
 - **Ölçüm:** tsc 0 · build 0 · prerender **112/0** · dist/index.html'de sameAs ve 4 yeni sosyal (footer+JSON-LD, 2'şer) · dist/en/contact'ta "Social media" + tiktok.
 - **Yapılmadı:** canlıya **push edilmedi** (Hasan onayı/mağaza yükleme durumuna göre). Kanal yayında; tanıtım videosu henüz yüklenmedi.
+
+### 3 Eki (devam) — CANLIDA ✅
+- Push edildi (`ab17750..efaf1b7`), Hasan "push yapabilirsin" dedi.
+- **Canlı ölçüm:** `nechhrobotics.com` → 308 → `www.nechhrobotics.com` 200. Footer+JSON-LD'de 5 sosyal (YouTube/Instagram/TikTok/X 2'şer + LinkedIn 2 + sameAs 1).
+- Not: curl -L gerekti (kök alan www'ye 308 yönlendiriyor); -L'siz ölçüm yanıltır.
+- YouTube: tanıtım videosu yüklendi; Hasan'a öne çıkan video (Özelleştirme→Düzen→Video spotlight) + sabit yorum adımları verildi.
+
+## 🗓️ 4 EKİM 2026 — soft-404 düzeltmesi (SEO)
+
+**Sorun** (Eco-Report kontrol sisteminin ölçümünden geldi): olmayan yollar **HTTP 200** dönüyor ve
+`/index.html` servis edildiği için **anasayfa canonical'ını** basıyordu. Çöp adresler (eski
+bağlantılar, tarayıcı denemeleri, `/wp-admin` gibi taramalar) anasayfanın kopyası olarak dizine
+girebilirdi.
+
+**Düzeltme iki aşamada yapıldı ve her aşama canlıda ölçüldü:**
+
+1. `vercel.json`'daki catch-all rewrite (`/(.*) → /index.html`) **kaldırıldı**; yerine sekiz
+   **dinamik rota ailesi** yazıldı. Statik rotalar prerender ile gerçek dosya olduğundan dosya
+   sistemi onları servis ediyor; eşleşmeyen yol artık **gerçek 404** alıyor.
+   `prerender` ayrıca `dist/404.html` üretiyor: **canonical yok, robots noindex**.
+   NotFound sayfası da `noindex` (canonical siliniyor).
+2. Canlı ölçümde **kalan açık** görüldü: dinamik ailelerde (`/blog/olmayan-yazi`) 200 dönüyor ve
+   fallback `/index.html` olduğu için yine anasayfa canonical'ı basılıyordu. Dinamik aileleri
+   tamamen kaldırmak **eski makale adreslerini kırardı** (kodda sitemap'te olmayan 4 eski slug
+   var, `LegacyArticlePage`). Bu yüzden fallback **`/spa.html`** yapıldı: kök boş, **canonical yok,
+   robots noindex**. Geçerli bir eski makale açıldığında istemci kendi canonical'ını yazıyor ve
+   noindex'i kaldırıyor.
+
+**Yol boyunca bulunan iki ayrı kusur:**
+- 🔴 `/en/gallery` menüde bağlıydı ama **sitemap'te yoktu** — hem SEO kusuru hem de catch-all
+  kaldırılınca 404 riski. Sitemap'e eklendi (**113 adres**).
+- 🔴 `prerender.mjs` şablonu `dist/index.html`'den okuyup aynı dosyanın üzerine yazıyordu;
+  `npm run prerender` tek başına ikinci kez koşulunca içerik iki kez gömülüyordu. Artık şablonun
+  temiz olduğu doğrulanıyor, değilse script **duruyor**.
+
+**Yeni ölçüm aracı:** `scripts/rota-kontrol.mjs` — Vercel'in çözümleme sırasını (redirects →
+filesystem → rewrites → 404) yerelde taklit eder; **43 rota** ve **113 sitemap adresinin** bir
+sayfaya düştüğünü, olmayan yolların 404 aldığını, `404.html` ve `spa.html`'in canonical taşımadığını
+/ noindex taşıdığını ölçer.
+
+**Canlı ölçüm (son durum):** `/olmayan-sayfa` → **404** · `/projeler` → **404** · 404 sayfası
+noindex, canonical yok · `/blog/olmayan-yazi-xyz` → 200 ama **canonical yok, noindex var** ·
+gerçek sayfalar (13 örnek + `/en/gallery` + 4 dinamik sayfa) → **200 ve kendi canonical'ları**.
+Kontrol koşusu: **9 kalem, 0 blok hata, 0 uyarı.**

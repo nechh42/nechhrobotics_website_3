@@ -80,6 +80,20 @@
       "url": "https://www.nechhrobotics.com/olmayan-sayfa-kontrol-testi",
       "http": 404,
       "kaynak": "4 Eki 2026 duzeltmesi: catch-all rewrite kaldirildi, dist/404.html uretiliyor, NotFound sayfasi noindex. Canlida 404 donmeli."
+    },
+    {
+      "kod": "WEB-DINAMIK-FALLBACK-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Olmayan dinamik slug anasayfa canonical'i basmamali",
+      "url": "https://www.nechhrobotics.com/blog/olmayan-yazi-kontrol-testi",
+      "bekle": [
+        "noindex"
+      ],
+      "olmasin": [
+        "rel=\"canonical\""
+      ],
+      "kaynak": "4 Eki 2026: dinamik aileler /spa.html'e yeniden yaziliyor (canonical yok, noindex)."
     }
   ]
 }
