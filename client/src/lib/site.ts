@@ -103,7 +103,7 @@ export const products: Product[] = [
       { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi." , uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız." , uygulama: "https://ecoreport.nechhrobotics.com/" },
-      { name: "NIS2", basis: "Direktif (AB) 2022/2555", detail: "Temel/önemli varlık ayrımı, md. 21 önlemleri ve 24/72 saat bildirim zinciri." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "NIS2", basis: "Direktif (AB) 2022/2555", detail: "Temel/önemli varlık ayrımı, md. 21 önlemleri ve 24/72 saat bildirim zinciri.", paket: "nis2-kurulus-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "CRA", basis: "Tüzük (AB) 2024/2847 (EHDS 2025/327 ile)", detail: "Ürün sınıfı ve uygunluk yolu; AB'ye yazılım satan üretici doğrudan kapsamdadır.", paket: "cra-uretici-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "KVKK + GDPR", basis: "6698 sayılı Kanun (değ. 7499) + Tüzük (AB) 2016/679", detail: "İki rejim ayrı ayrı; yurt dışına aktarım yolu ve AB temsilcisi gerekliliği." , paket: "kvkk-sablon-paketi", uygulama: "https://ecoreport.nechhrobotics.com/" },
     ],
@@ -817,6 +817,24 @@ export const paketler: Paket[] = [
     fiyat: "€349",
     fiyatNot: "tek seferlik · + KDV",
     sinir: "Hazırlık ve şablon setidir; uygunluk değerlendirmesi, CE işareti, AB uygunluk beyanı veya hukuki danışmanlık değildir.",
+  },
+  {
+    slug: "nis2-kurulus-hazirlik-kiti",
+    aile: "NIS2 · AB Siber Güvenlik Direktifi",
+    ad: "NIS2 Kuruluş Hazırlık Kiti",
+    ozet:
+      "NIS2 kapsamındaysanız ya da kapsamdaki bir kuruluşa hizmet veriyorsanız: direktifin madde 21 önlemlerini, bildirim saatlerini ve yönetim sorumluluğunu çalışılabilir dosyalara çevirir.",
+    icerik: [
+      "Madde 21 — 10 risk yönetimi önlemi (resmî metin + Türkçe açıklama)",
+      "Kapsam ve büyüklük testi (Ek I 11 + Ek II 7 sektör)",
+      "Olay bildirim prosedürü şablonu (24/72 saat, bir ay)",
+      "Madde 20 yönetim onayı ve eğitim kaydı şablonu",
+      "Madde 3(4) kayıt bilgileri çalışma sayfası",
+      "Her dosyada ulusal aktarım için ayrı alan",
+    ],
+    fiyat: "€349",
+    fiyatNot: "tek seferlik · + KDV",
+    sinir: "Hazırlık ve şablon setidir; hukuki danışmanlık, denetim veya uyum beyanı değildir. NIS2 bir direktiftir: kapsam, süre ve yaptırımlar ulusal mevzuata göre değişir.",
   },
   {
     slug: "kvkk-sablon-paketi",
