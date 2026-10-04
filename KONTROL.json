@@ -128,6 +128,26 @@
         "KVKK + GDPR",
         "not legal advice"
       ]
+    },
+    {
+      "kod": "WEB-ECO-EYLEM-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Modul kartlari eylem yolu ve dogru fiyati tasiyor",
+      "url": "https://www.nechhrobotics.com/cozumler/eco-report",
+      "bekle": [
+        "module-action",
+        "/magaza/cbam-girisimci-kiti",
+        "€299",
+        "/magaza/kvkk-sablon-paketi",
+        "€44",
+        "Uygulamada aç"
+      ],
+      "olmasin": [
+        "yakında paket",
+        "Yakında"
+      ],
+      "kaynak": "Fiyat uygulamanin canli katalogu ile ayni olmali (PRICE-002 €299, PRICE-009 €44); 'yakinda' yazilmaz."
     }
   ]
 }

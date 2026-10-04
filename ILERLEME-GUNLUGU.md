@@ -1466,3 +1466,23 @@ Düzen bozuk değildi, **ölçüm yanlıştı** — kayda geçiyor.
 
 Kontrol sistemine iki kalem: `WEB-ECO-MODULLER-001` ve `WEB-ECO-MODULLER-EN-001` (ikisi de **blok**)
 — sekiz modülün ve sınır cümlesinin canlıda kalmasını zorunlu kılar.
+
+### Modül kartlarına eylem yolu (aynı gün)
+
+Ziyaretçi sekiz modülü görüyordu ama **ne yapacağı** yazmıyordu. Her kart artık bir eylem taşıyor:
+
+| Modül | Eylem |
+|---|---|
+| CBAM | **CBAM Girişimci Kiti · €299** → `/magaza/cbam-girisimci-kiti` |
+| KVKK + GDPR | **KVKK Şablon Paketi · €44** → `/magaza/kvkk-sablon-paketi` |
+| EUDR · AI Act · DPP · CSRD · NIS2 · CRA | **Uygulamada aç** → ecoreport.nechhrobotics.com |
+
+🔴 **Fiyat uydurulmadı ve "yakında paket" yazılmadı.** Yalnızca gerçekten var olan paketlere
+bağlanıldı; kiti olmayan modül ziyaretçiyi uygulamadaki **ücretsiz hazırlık ekranına** götürüyor.
+Canlı ölçüm: site fiyatları uygulamanın canlı kataloğuyla **aynı** (PRICE-002 €299, PRICE-009 €44),
+iki mağaza bağlantısı da **200**.
+
+**Kalıcı ölçüm:** `rota-kontrol.mjs` artık **üretilen tüm sayfalardaki iç bağlantıları** çözümlüyor
+(115 sayfa) ve çözümlenemeyen bağlantıda **düşüyor** — yanlış bir paket slug'ı ya da herhangi bir ölü
+iç bağlantı derleme kontrolünde yakalanır. Kontrol manifestosuna `WEB-ECO-EYLEM-001` (blok) eklendi:
+eylem bağlantıları, doğru fiyatlar ve "yakında" yazmama kuralı canlıda korunur.
