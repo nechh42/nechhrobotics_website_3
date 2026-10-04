@@ -1599,3 +1599,34 @@ tek tek bozuldu, dördünde de yakalandı; veri sha256 ile geri yüklendi.
 
 ### Açık kalan
 AI Act, DPP ve CSRD hâlâ **sıfır içerik**. Sıra onlarda.
+
+---
+
+## 4 Ekim 2026 (üçüncü iş) — sessiz dört modülün üçü kapandı: AI Act, DPP, CSRD
+
+CRA'dan sonra kalan üç modülün de içeriği yazıldı: **3 TR + 3 EN**. Böylece sekiz
+modülün hepsinin sitede en az bir yazısı var.
+
+| Modül | Yazının açısı |
+|---|---|
+| **AI Act** | Dijital Omnibus yüksek riski **2 Ara 2027**'ye erteledi — ama madde 5'e eklenen **iki yeni yasak 2 Ara 2026**'da başlıyor. "Ertelendi" haberi yarım. |
+| **DPP** | ESPR **hiçbir ürün için** pasaportu doğrudan zorunlu kılmıyor; zorunluluk ürün grubu delege tüzüğüyle geliyor. "DPP zorunlu oldu" diyen satıcıya sorulacak soru: hangi delege tüzük? |
+| **CSRD** | Omnibus I eşikleri daralttı: **450 milyon € VE 1.000 çalışan** (ikisi birden). Borsaya kote KOBİ yükümlülüğü **silindi**. Eşiğin altındaki tedarikçiye değer zinciri koruması var. |
+
+🔴 Yine hiçbir sayı elle yazılmadı; hepsi resmî veriden üretildi ve beklenen değerler
+tutmazsa üretim durur. Kullanılan değerler: AI Act genel **2026-08-02**, yeni yasak
+**2026-12-02**, Ek III **2027-12-02**, yasak **10**, alan **8**, Ek IV **9** ·
+DPP kayıt **2026-07-19**, Ek III **12** unsur, Bölüm III **7** madde ·
+CSRD **450.000.000 €**, **1.000** çalışan, değer zinciri tavanı **1.000**, ESRS **12**.
+
+Tutarlılık bekçisi (`ECO-BLOG-MEVZUAT-001`) **12 → 24 kaleme** çıkarıldı ve artık
+dört modülü birden kapsıyor. Kör kalmama kontrolü de genişledi: dört modülün dördünün
+de yazısı sitede duruyor mu diye bakıyor, biri silinmişse "sapma yok" demek yerine
+**çıkış 2** veriyor. Kırma testi **5/5**.
+
+Ölçüm: `tsc` 0 · `build` 0 · prerender **124 sayfa** (118'den +6) · `rota-kontrol.mjs`
+PASS (163 çözümleme, 126 sayfa iç bağlantı).
+
+### Sekiz modülün içerik durumu (4 Eki 2026, TR+EN birlikte)
+CBAM 16 · EUDR 6 · NIS2 6 · DORA 6 · **CRA 4** · KVKK 2 · GDPR 2 ·
+**AI Act 2 · DPP 2 · CSRD 2** — sıfır içerikli modül **kalmadı**.
