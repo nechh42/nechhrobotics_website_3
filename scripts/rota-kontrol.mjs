@@ -109,6 +109,25 @@ for (const yol of olmayanlar) {
   if (var_mi && sonuc.tur === "404") hatalar.push(`sitemap'te olan yol 404 aldi: ${yol}`);
 }
 
+// Dinamik fallback kabugu (spa.html) canonical TASIMAMALI ve noindex TASIMALI: bilinmeyen
+// slug anasayfanin kopyasi gibi gorunmemeli.
+{
+  const kabuk = path.join(DIST, "spa.html");
+  if (!fs.existsSync(kabuk)) {
+    hatalar.push("dist/spa.html yok: dinamik rota fallback'i eksik");
+  } else {
+    const icerik = fs.readFileSync(kabuk, "utf-8");
+    if (icerik.includes('rel="canonical"')) hatalar.push("spa.html canonical tasiyor (anasayfa kopyasi riski)");
+    if (!/name="robots"[^>]*noindex/.test(icerik)) hatalar.push("spa.html robots noindex tasimiyor");
+    if (!icerik.includes('<div id="root"></div>')) hatalar.push("spa.html prerender edilmis icerik tasiyor");
+  }
+  for (const r of yenidenYazmalar) {
+    if (r.destination !== "/spa.html") {
+      hatalar.push(`rewrite hedefi /spa.html degil: ${r.source} -> ${r.destination}`);
+    }
+  }
+}
+
 // 404.html bulunmali, canonical TASIMAMALI, noindex TASIMALI.
 const dosya404 = path.join(DIST, "404.html");
 if (!fs.existsSync(dosya404)) {

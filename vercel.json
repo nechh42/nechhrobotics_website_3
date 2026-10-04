@@ -171,35 +171,35 @@
   "rewrites": [
     {
       "source": "/cozumler/:slug*",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     },
     {
       "source": "/products/:slug*",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     },
     {
       "source": "/magaza/:slug*",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     },
     {
       "source": "/blog/:slug*",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     },
     {
       "source": "/kaynaklar/:slug*",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     },
     {
       "source": "/en/blog/:slug*",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     },
     {
       "source": "/en/resources/:slug*",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     },
     {
       "source": "/en/solutions/:slug*",
-      "destination": "/index.html"
+      "destination": "/spa.html"
     }
   ],
   "headers": [

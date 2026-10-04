@@ -78,6 +78,23 @@ for (const yol of yollar) {
   }
 }
 
+// 4 Eki 2026: DINAMIK rota aileleri (/blog/:slug gibi) icin fallback. Eskiden /index.html'e
+// yeniden yaziliyordu; o dosya prerender edilmis ANASAYFA oldugu icin bilinmeyen bir slug
+// anasayfanin canonical'ini basiyordu (cop adres anasayfanin kopyasi gibi gorunur). Bu kabuk
+// canonical TASIMAZ ve robots noindex tasir; gecerli bir eski makale acildiginda istemci
+// tarafi kendi canonical'ini yazar ve noindex'i kaldirir (PageFrame).
+{
+  let kabuk = sablon
+    .replace(/<title>[^<]*<\/title>/, "<title>Nechh Robotics</title>")
+    .replace("</head>", '  <meta name="robots" content="noindex,follow" />\n</head>');
+  kabuk = kabuk.replace(/\s*<link rel="canonical"[^>]*>/g, "");
+  if (kabuk.includes('rel="canonical"') || !kabuk.includes('<div id="root"></div>')) {
+    throw new Error("spa.html bozuk: canonical kalmis ya da kok bos degil");
+  }
+  fs.writeFileSync(path.join(DIST, "spa.html"), kabuk, "utf-8");
+  console.log("prerender: spa.html yazıldı (dinamik fallback; canonical yok, robots noindex)");
+}
+
 // 4 Eki 2026 soft-404 duzeltmesi: Vercel, eslesmeyen yol icin dist/404.html'i 404 statusuyle
 // servis eder. Bu dosya /404 rotasindan uretilir; canonical TASIMAZ, robots noindex tasir.
 {
