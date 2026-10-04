@@ -99,7 +99,7 @@ export const products: Product[] = [
     ],
     modules: [
       { name: "CBAM", basis: "Tüzük (AB) 2023/956 + 2025/2621 (düz. 2026/1740)", detail: "Gömülü emisyon hesabı, 50 ton de minimis eşiği ve kesin dönem beyan hazırlığı." , paket: "cbam-girisimci-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
-      { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı.", paket: "eudr-operator-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi.", paket: "ai-act-sistem-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız.", paket: "csrd-kapsam-ve-deger-zinciri-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
@@ -871,6 +871,24 @@ export const paketler: Paket[] = [
     fiyat: "€349",
     fiyatNot: "tek seferlik · + KDV",
     sinir: "Hazırlık setidir; hukuki danışmanlık, denetim, güvence (assurance) veya resmî beyan değildir. CSRD bir direktiftir; kapsam ulusal aktarıma göre değişebilir.",
+  },
+  {
+    slug: "eudr-operator-hazirlik-kiti",
+    aile: "EUDR · AB Ormansızlaşma Tüzüğü",
+    ad: "EUDR Operatör Hazırlık Kiti",
+    ozet:
+      "Standart operatörler için yükümlülük 30 Aralık 2026'da başlıyor. İşin uzun kısmı mevzuat değil, tedarikçiden geolokasyon toplamak — bu kit o yazışmayı bugün başlatmanızı sağlar.",
+    icerik: [
+      "7 emtia ve HS başlığı eşlemesi, güncel Ek I sürümüyle",
+      "Madde 9 — 9 bilgi kalemi + DDS'nin 9 alanı",
+      "Madde 10 — 10 risk ölçütü · madde 11 — 5 azaltma önlemi",
+      "Geolokasyon kaydı: 4 hektar üstü poligon, 6 ondalık",
+      "Tedarikçi bilgi talebi şablonu (en uzun süren adım)",
+      "Ülke risk sınıfı: düşük risk basitleştirir, muaf tutmaz",
+    ],
+    fiyat: "€349",
+    fiyatNot: "tek seferlik · + KDV",
+    sinir: "Hazırlık ve şablon setidir; durum tespiti beyanının (DDS) kendisi değildir. Beyan AB bilgi sisteminde operatör tarafından sunulur ve içeriğinden operatör sorumludur.",
   },
   {
     slug: "kvkk-sablon-paketi",
