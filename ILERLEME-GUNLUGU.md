@@ -1630,3 +1630,31 @@ PASS (163 çözümleme, 126 sayfa iç bağlantı).
 ### Sekiz modülün içerik durumu (4 Eki 2026, TR+EN birlikte)
 CBAM 16 · EUDR 6 · NIS2 6 · DORA 6 · **CRA 4** · KVKK 2 · GDPR 2 ·
 **AI Act 2 · DPP 2 · CSRD 2** — sıfır içerikli modül **kalmadı**.
+
+---
+
+## 4 Ekim 2026 (üçüncü iş) — mağazada sekiz kit · bir kontrol kalemi eskidi
+
+Eco-Report'un sekiz mevzuat modülünün **sekizinin de** artık ücretli bir kiti var ve
+ürün sayfasındaki sekiz modül kartının **sekizi de** bir paket sayfasına bağlanıyor.
+
+| Modül | Paket | Fiyat |
+|---|---|---|
+| CBAM | Girişimci Kiti | €299 |
+| CRA · NIS2 · AI Act · CSRD · EUDR · DPP | hazırlık kitleri | €349 |
+| KVKK + GDPR | şablon paketi | €44 |
+
+### 🔴 Kontrol yanlış alarm verdi — site kusurlu değildi
+`WEB-ECO-EYLEM-001` **blok hata** verdi: beklediği `Uygulamada aç` ifadesi sayfada yoktu.
+Sebep: o ifade, **kiti olmayan** modüllerin yedek bağlantısıydı. Sekizinin de kiti olunca
+yedek bağlantı hiç kalmadı — yani ürün **iyileştiği için** kontrol kırıldı.
+
+Düzeltme: kalem artık sekiz paket bağlantısını ve fiyatları arıyor. On işaretin onu da
+manifestoya yazılmadan **önce canlı yanıtta ölçüldü** (2 Ekim'de yazdığımız kural).
+
+*Ders: bir kontrol kalemi, ürünün bugünkü hâlini değil, yazıldığı günkü hâlini
+doğrular. Ürün ilerledikçe kalem de ilerletilir; "blok hata" her zaman kusur demek
+değildir — önce hangisinin eskidiğine bakılır.*
+
+Ölçüm: ürün sayfasında 8 modül kartı · 8 paket bağlantısı · "Uygulamada aç" **0** ·
+€349 altı kez. Kontrol sistemi: **0 blok hata, 0 uyarı**.

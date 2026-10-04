@@ -133,21 +133,25 @@
       "kod": "WEB-ECO-EYLEM-001",
       "tur": "url_isaret",
       "siddet": "blok",
-      "aciklama": "Modul kartlari eylem yolu ve dogru fiyati tasiyor",
+      "aciklama": "Sekiz modul kartinin sekizi de bir UCRETLI PAKETE baglaniyor",
       "url": "https://www.nechhrobotics.com/cozumler/eco-report",
       "bekle": [
-        "module-action",
         "/magaza/cbam-girisimci-kiti",
-        "€299",
+        "/magaza/cra-uretici-hazirlik-kiti",
+        "/magaza/nis2-kurulus-hazirlik-kiti",
+        "/magaza/ai-act-sistem-hazirlik-kiti",
+        "/magaza/csrd-kapsam-ve-deger-zinciri-kiti",
+        "/magaza/eudr-operator-hazirlik-kiti",
+        "/magaza/dpp-hazirlik-kiti",
         "/magaza/kvkk-sablon-paketi",
-        "€44",
-        "Uygulamada aç"
+        "€349",
+        "€299"
       ],
       "olmasin": [
         "yakında paket",
         "Yakında"
       ],
-      "kaynak": "Fiyat uygulamanin canli katalogu ile ayni olmali (PRICE-002 €299, PRICE-009 €44); 'yakinda' yazilmaz."
+      "kaynak": "4 Eki 2026: once 'Uygulamada ac' yedek baglantisi araniyordu; sekiz modulun sekizinin de kiti olunca o yedek hic kalmadi ve kontrol YANLIS ALARM verdi. Site kusurlu degildi, kalem eskimisti. Artik sekiz paket baglantisi aranir."
     },
     {
       "kod": "WEB-ANASAYFA-SERIT-001",
