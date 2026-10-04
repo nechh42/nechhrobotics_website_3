@@ -57,6 +57,13 @@ export default function ProductDetail({ params }: ProductDetailProps) {
         <div className="principle-detail-list">{product.principles.map((principle, index) => <article key={principle.label}><span>0{index + 1}</span><div><h3>{principle.label}</h3><p>{principle.detail}</p></div></article>)}</div>
       </section>
 
+      {product.modules ? (
+        <section className="product-modules">
+          <div className="section-head"><p className="eyebrow">MEVZUAT MODÜLLERİ</p><h2>Ürünün içinde çalışan<br /><em>{product.modules.length} modül.</em></h2><p>Her modül kararını resmî metne dayandırır; cevaplanmayan soruyu tahmin etmez. Hazırlık taslağı üretir, hukuki görüş vermez.</p></div>
+          <div className="module-list">{product.modules.map((modul) => <article key={modul.name}><h3>{modul.name}</h3><p className="module-basis">{modul.basis}</p><p>{modul.detail}</p></article>)}</div>
+        </section>
+      ) : null}
+
       {product.externalUrl.startsWith("/") ? (
         <section className="product-outbound"><div><p className="eyebrow">BİLGİ</p><h2>İşletmenize uyar mı?<br /><em>Birlikte bakalım.</em></h2></div><Link href={product.externalUrl} className="route-link">{product.externalLabel} <ArrowUpRight size={19} /></Link></section>
       ) : (

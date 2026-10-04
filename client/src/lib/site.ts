@@ -15,6 +15,10 @@ export type Product = {
    *  uygulama aylardır yayındaydı — hekim siteye bakıp vazgeçiyordu. */
   stores?: { play?: string; appStore?: string };
   principles: { label: string; detail: string }[];
+  /** 4 Eki 2026: urunun icindeki mevzuat modulleri. Site uruni OLDUGUNDAN FAZLA gostermez;
+   *  her kalem modulun kendi sinir cumlesiyle uyumludur (hazirlik taslagi, hukuki gorus degil).
+   *  Yeni modul canliya alindiginda BURAYA eklenir, yoksa sitede gorunmez. */
+  modules?: { name: string; basis: string; detail: string }[];
 };
 
 export const assets = {
@@ -73,10 +77,10 @@ export const products: Product[] = [
     eyebrow: "03 / CBAM",
     category: "Karbon uyum asistanı",
     summary:
-      "AB CBAM hazırlığında karbon verisini daha düzenli, kaynaklı ve denetlenebilir bir çalışma yapısına taşıyan asistan.",
+      "AB uyum dosyalarını kaynaklı ve denetlenebilir biçimde hazırlayan asistan: CBAM ile başlar, sekiz mevzuat modülüyle sürer.",
     longDescription:
-      "Nechh Eco-Report, ihracatçıların CBAM hazırlık sürecinde tesis ve ürün verilerini toplamasına, kontrol etmesine ve kaynaklarıyla birlikte çalışmasına yardımcı olacak şekilde tasarlanmıştır. Akredite doğrulayıcının veya resmî beyanın yerine geçmez.",
-    useCase: "CBAM karbon verisi hazırlığı ve iç kontrol",
+      "Nechh Eco-Report, ihracatçıların ve yazılım üreticilerinin AB uyum hazırlığında veriyi toplamasına, kontrol etmesine ve her kararı resmî metne dayandırmasına yardımcı olur. Mevzuat verisi AB Resmî Gazetesi ve mevzuat.gov.tr metinlerinden makineyle çekilir; değişiklikler otomatik izlenir. Hazırlık taslağı üretir: akredite doğrulayıcının, resmî beyanın ya da hukuki görüşün yerine geçmez. Bir soru cevaplanmadığında ürün tahmin etmez, 'karar verilemedi' der ve neyin eksik olduğunu yazar.",
+    useCase: "AB uyum dosyası hazırlığı ve iç kontrol (8 mevzuat modülü)",
     tone: "compliance",
     externalUrl: "https://ecoreport.nechhrobotics.com",
     externalLabel: "Eco-Report'u aç",
@@ -84,6 +88,16 @@ export const products: Product[] = [
       { label: "Kaynaklı çalışma", detail: "Hesap ve girdi kaynaklarının görünür tutulmasına odaklanır." },
       { label: "Denetlenebilirlik", detail: "Hazırlık sürecindeki veriyi ve adımları izlenebilir biçimde ele alır." },
       { label: "Sınırların açıklığı", detail: "Resmî doğrulama ve beyan sorumluluklarından açıkça ayrışır." },
+    ],
+    modules: [
+      { name: "CBAM", basis: "Tüzük (AB) 2023/956 + 2025/2621 (düz. 2026/1740)", detail: "Gömülü emisyon hesabı, 50 ton de minimis eşiği ve kesin dönem beyan hazırlığı." },
+      { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı." },
+      { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi." },
+      { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı." },
+      { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız." },
+      { name: "NIS2", basis: "Direktif (AB) 2022/2555", detail: "Temel/önemli varlık ayrımı, md. 21 önlemleri ve 24/72 saat bildirim zinciri." },
+      { name: "CRA", basis: "Tüzük (AB) 2024/2847 (EHDS 2025/327 ile)", detail: "Ürün sınıfı ve uygunluk yolu; AB'ye yazılım satan üretici doğrudan kapsamdadır." },
+      { name: "KVKK + GDPR", basis: "6698 sayılı Kanun (değ. 7499) + Tüzük (AB) 2016/679", detail: "İki rejim ayrı ayrı; yurt dışına aktarım yolu ve AB temsilcisi gerekliliği." },
     ],
   },
   {
@@ -222,6 +236,16 @@ export const englishProducts: Product[] = [
       { label: "Source-aware work", detail: "A focus on keeping calculations and their input sources visible." },
       { label: "Auditability", detail: "A way to handle preparation data and process steps in a traceable form." },
       { label: "Clear boundaries", detail: "An explicit distinction from official verification and declaration responsibilities." },
+    ],
+    modules: [
+      { name: "CBAM", basis: "Regulation (EU) 2023/956 + 2025/2621 (corr. 2026/1740)", detail: "Embedded emissions, the 50-tonne de minimis threshold and definitive-period reporting prep." },
+      { name: "EUDR", basis: "Regulation (EU) 2023/1115 (Annex I am. 2026/2102)", detail: "Commodity/product scope, country risk class, geolocation and DDS readiness." },
+      { name: "AI Act", basis: "Regulation (EU) 2024/1689 (am. 2026/1744)", detail: "Prohibited practice, high-risk and transparency classification; Annex IV technical file list." },
+      { name: "Digital Product Passport", basis: "ESPR — Regulation (EU) 2024/1781", detail: "Claims no obligation without a delegated act; Annex III data element readiness." },
+      { name: "CSRD / ESRS", basis: "Directive (EU) 2022/2464 (Omnibus I 2026/470)", detail: "Threshold check (EUR 450m and 1,000 employees) and your value-chain disclosure limits." },
+      { name: "NIS2", basis: "Directive (EU) 2022/2555", detail: "Essential vs important entity, Article 21 measures and the 24/72-hour reporting clock." },
+      { name: "CRA", basis: "Regulation (EU) 2024/2847 (with EHDS 2025/327)", detail: "Product class and conformity route; selling software into the EU puts you in scope directly." },
+      { name: "KVKK + GDPR", basis: "Law 6698 (am. 7499) + Regulation (EU) 2016/679", detail: "The two regimes separately; transfer route abroad and the EU representative duty." },
     ],
   },
   {
