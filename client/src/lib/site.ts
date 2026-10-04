@@ -101,7 +101,7 @@ export const products: Product[] = [
       { name: "CBAM", basis: "Tüzük (AB) 2023/956 + 2025/2621 (düz. 2026/1740)", detail: "Gömülü emisyon hesabı, 50 ton de minimis eşiği ve kesin dönem beyan hazırlığı." , paket: "cbam-girisimci-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı.", paket: "eudr-operator-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi.", paket: "ai-act-sistem-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
-      { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı.", paket: "dpp-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız.", paket: "csrd-kapsam-ve-deger-zinciri-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "NIS2", basis: "Direktif (AB) 2022/2555", detail: "Temel/önemli varlık ayrımı, md. 21 önlemleri ve 24/72 saat bildirim zinciri.", paket: "nis2-kurulus-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "CRA", basis: "Tüzük (AB) 2024/2847 (EHDS 2025/327 ile)", detail: "Ürün sınıfı ve uygunluk yolu; AB'ye yazılım satan üretici doğrudan kapsamdadır.", paket: "cra-uretici-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
@@ -889,6 +889,24 @@ export const paketler: Paket[] = [
     fiyat: "€349",
     fiyatNot: "tek seferlik · + KDV",
     sinir: "Hazırlık ve şablon setidir; durum tespiti beyanının (DDS) kendisi değildir. Beyan AB bilgi sisteminde operatör tarafından sunulur ve içeriğinden operatör sorumludur.",
+  },
+  {
+    slug: "dpp-hazirlik-kiti",
+    aile: "DPP · AB Dijital Ürün Pasaportu",
+    ad: "DPP Hazırlık Kiti",
+    ozet:
+      "Size “henüz gerek olmayabilir” diyebilen kit: ESPR hiçbir ürün için pasaportu doğrudan zorunlu kılmaz. Önce hangi delege tüzük sorusunu sorun, sonra veri borusunu kurun.",
+    icerik: [
+      "“DPP zorunlu oldu” iddiasını sınayan tek soru: hangi delege tüzük?",
+      "Ürün grubu bazında delege tüzük takip çizelgesi (varsayılan: bilinmiyor)",
+      "Ek III — 12 veri unsuru, kim sağlayacak eşlemesi",
+      "Bölüm III — 7 madde, resmî metinleriyle",
+      "Tedarikçi veri talebi şablonu (dürüst gerekçeli)",
+      "Kayıt sistemi ve gümrük kontrolü maddeleri",
+    ],
+    fiyat: "€349",
+    fiyatNot: "tek seferlik · + KDV",
+    sinir: "Hazırlık setidir; pasaportun kendisi değildir. Kit, ürün grubunuz için delege tüzük çıkıp çıkmadığını söylemez ve zorunluluk iddia etmez; delege tüzük yoksa yükümlülük tarihi de yoktur.",
   },
   {
     slug: "kvkk-sablon-paketi",
