@@ -102,7 +102,7 @@ export const products: Product[] = [
       { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi.", paket: "ai-act-sistem-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı." , uygulama: "https://ecoreport.nechhrobotics.com/" },
-      { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız." , uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "CSRD / ESRS", basis: "Direktif (AB) 2022/2464 (Omnibus I 2026/470)", detail: "Eşik kontrolü (450 M € ve 1.000 çalışan) ve değer zincirinde bilgi verme sınırınız.", paket: "csrd-kapsam-ve-deger-zinciri-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "NIS2", basis: "Direktif (AB) 2022/2555", detail: "Temel/önemli varlık ayrımı, md. 21 önlemleri ve 24/72 saat bildirim zinciri.", paket: "nis2-kurulus-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "CRA", basis: "Tüzük (AB) 2024/2847 (EHDS 2025/327 ile)", detail: "Ürün sınıfı ve uygunluk yolu; AB'ye yazılım satan üretici doğrudan kapsamdadır.", paket: "cra-uretici-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "KVKK + GDPR", basis: "6698 sayılı Kanun (değ. 7499) + Tüzük (AB) 2016/679", detail: "İki rejim ayrı ayrı; yurt dışına aktarım yolu ve AB temsilcisi gerekliliği." , paket: "kvkk-sablon-paketi", uygulama: "https://ecoreport.nechhrobotics.com/" },
@@ -853,6 +853,24 @@ export const paketler: Paket[] = [
     fiyat: "€349",
     fiyatNot: "tek seferlik · + KDV",
     sinir: "Hazırlık ve şablon setidir; hukuki danışmanlık, uygunluk değerlendirmesi veya AB uygunluk beyanı değildir. Sınıflandırma kararı sağlayıcının sorumluluğundadır.",
+  },
+  {
+    slug: "csrd-kapsam-ve-deger-zinciri-kiti",
+    aile: "CSRD · AB Sürdürülebilirlik Raporlaması",
+    ad: "CSRD Kapsam ve Değer Zinciri Kiti",
+    ozet:
+      "Eşiğin altındaysanız raporlamıyorsunuz — ama kapsamdaki müşteriniz veri istiyor. Güncel eşikleri ölçer ve değer zinciri talebine orantılı cevap vermenizi sağlar.",
+    icerik: [
+      "Güncel eşik testi: 450 milyon € VE 1.000 çalışan (Omnibus I)",
+      "Grup ve üçüncü ülke eşikleri, resmî metinleriyle",
+      "Değer zinciri veri talebine cevap şablonu (orantılılık sınırıyla)",
+      "Veri sahipliği matrisi: hangi bilgi kimde, ne sıklıkla",
+      "ESRS 12 standardın listesi",
+      "Üye devlet muafiyeti için ayrı alan (tahmin edilmez)",
+    ],
+    fiyat: "€349",
+    fiyatNot: "tek seferlik · + KDV",
+    sinir: "Hazırlık setidir; hukuki danışmanlık, denetim, güvence (assurance) veya resmî beyan değildir. CSRD bir direktiftir; kapsam ulusal aktarıma göre değişebilir.",
   },
   {
     slug: "kvkk-sablon-paketi",
