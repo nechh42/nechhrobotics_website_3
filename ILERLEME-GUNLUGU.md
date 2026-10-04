@@ -1438,3 +1438,31 @@ sayfaya düştüğünü, olmayan yolların 404 aldığını, `404.html` ve `spa.
 noindex, canonical yok · `/blog/olmayan-yazi-xyz` → 200 ama **canonical yok, noindex var** ·
 gerçek sayfalar (13 örnek + `/en/gallery` + 4 dinamik sayfa) → **200 ve kendi canonical'ları**.
 Kontrol koşusu: **9 kalem, 0 blok hata, 0 uyarı.**
+
+## 🗓️ 4 EKİM 2026 (ikinci iş) — Eco-Report'un sekiz modülü sitede
+
+**Sorun:** ürün canlıda **sekiz mevzuat modülü** taşıyor (CBAM, EUDR, AI Act, DPP, CSRD/ESRS,
+NIS2, CRA, KVKK+GDPR) ama site hâlâ yalnızca *"CBAM asistanı"* diyordu — yapılan iş görünmüyordu.
+
+**Eklendi:** `Product` tipine opsiyonel `modules` alanı (ad · dayanak · ne yaptığı); TR ve EN
+Eco-Report kayıtlarına sekiz modül; `ProductDetail` ve `EnglishProductDetail`'e **mevzuat modülleri
+/ regulation modules** bölümü; `index.css`'e `.product-modules` (masaüstü iki kolon, telefonda tek
+kolon). Yeni modül canlıya alınınca **bu listeye yazılmazsa sitede görünmez**.
+
+🔴 **Metin ilkesi:** site ürünü olduğundan fazla göstermez. Bölüm başlığının altında açıkça yazılı:
+*"Her modül kararını resmî metne dayandırır; cevaplanmayan soruyu tahmin etmez. Hazırlık taslağı
+üretir, hukuki görüş vermez."* **Fiyat uydurulmadı** — modüller uygulamanın içinde, ücretli kitler
+ayrı mağaza paketleri.
+
+**Ölçümler:** `tsc` 0 · `build` 0 · prerender 113 sayfa + `spa.html` + `404.html` · rota kontrolü
+PASS · gerçek Chrome (yerel `dist`): 8 kart + 8 dayanak etiketi, masaüstü **iki kolon (491,7 px)**,
+telefon **tek kolon**, iki genişlikte de yatay taşma yok, konsol temiz, EN sayfasında da 8 modül.
+**Canlı:** TR ve EN sayfalarında **8 modül kartı**, sınır cümleleri yerinde, canonical'lar doğru.
+Modüller **prerender edilmiş HTML'de** — JS çalıştırmayan tarayıcı da görüyor.
+
+**Ölçüm hatam:** ilk Chrome turunda "masaüstü iki kolon değil" çıktı; kutu konumlarını
+karşılaştırıyordum. Hesaplanan stile bakınca grid'in doğru olduğu görüldü (`491.7px 491.7px`).
+Düzen bozuk değildi, **ölçüm yanlıştı** — kayda geçiyor.
+
+Kontrol sistemine iki kalem: `WEB-ECO-MODULLER-001` ve `WEB-ECO-MODULLER-EN-001` (ikisi de **blok**)
+— sekiz modülün ve sınır cümlesinin canlıda kalmasını zorunlu kılar.

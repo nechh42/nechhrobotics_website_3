@@ -94,6 +94,40 @@
         "rel=\"canonical\""
       ],
       "kaynak": "4 Eki 2026: dinamik aileler /spa.html'e yeniden yaziliyor (canonical yok, noindex)."
+    },
+    {
+      "kod": "WEB-ECO-MODULLER-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Eco-Report sayfasi sekiz modulu ve sinir cumlesini tasiyor",
+      "url": "https://www.nechhrobotics.com/cozumler/eco-report",
+      "bekle": [
+        "MEVZUAT MODÜLLERİ",
+        "CBAM",
+        "EUDR",
+        "AI Act",
+        "CSRD",
+        "NIS2",
+        "CRA",
+        "KVKK",
+        "hukuki görüş vermez",
+        "tahmin etmez"
+      ],
+      "kaynak": "4 Eki 2026: urun sekiz modul tasiyor; site bunu gostermeli ve sinir cumlesi KALMALI."
+    },
+    {
+      "kod": "WEB-ECO-MODULLER-EN-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Ingilizce sayfa da sekiz modulu ve sinir cumlesini tasiyor",
+      "url": "https://www.nechhrobotics.com/en/solutions/eco-report",
+      "bekle": [
+        "REGULATION MODULES",
+        "CBAM",
+        "NIS2",
+        "KVKK + GDPR",
+        "not legal advice"
+      ]
     }
   ]
 }
