@@ -1486,3 +1486,29 @@ iki mağaza bağlantısı da **200**.
 (115 sayfa) ve çözümlenemeyen bağlantıda **düşüyor** — yanlış bir paket slug'ı ya da herhangi bir ölü
 iç bağlantı derleme kontrolünde yakalanır. Kontrol manifestosuna `WEB-ECO-EYLEM-001` (blok) eklendi:
 eylem bağlantıları, doğru fiyatlar ve "yakında" yazmama kuralı canlıda korunur.
+
+### Anasayfaya uyum şeridi (aynı gün)
+
+Modül bölümü yalnızca ürün detay sayfasındaydı; anasayfaya gelen ziyaretçi ürünün sekiz mevzuatı
+kapsadığını görmüyordu. Mevcut `dora-serit` deseniyle aynı dili konuşan **uyum şeridi** eklendi:
+modül adı + resmî dayanak, iki eylem (**Modülleri incele** → `/cozumler/eco-report`, **Uygulamayı aç**
+→ ecoreport.nechhrobotics.com) ve sınır cümlesi. İngilizce anasayfada da aynısı.
+
+🔴 **Tek kaynak:** şerit listesi kopyalanmadı — `products`/`englishProducts` içindeki eco-report
+kaydının `modules` alanından okunuyor. Yeni modül `site.ts`'e eklendiğinde anasayfa kendiliğinden
+güncellenir; ikinci bir liste bakımı yok.
+
+**Yol boyunca iki kusur yakalandı:**
+1. Şerit ilk yamada DORA bandının **koşullu bloğunun içine** düştü (JSX "tek ebeveyn" hatası) —
+   `tsc` yakaladı, bloktan dışarı taşındı.
+2. 🔴 **Telefonda iki kolon kalıyordu**: bu bölümün **temel** kuralları CSS'te medya
+   sorgularından **sonra** tanımlı olduğu için telefon kuralı eziliyordu. Telefon kuralları dosyanın
+   **sonuna** alındı. **Gerçek Chrome testi bunu canlıya çıkmadan yakaladı.**
+
+**Ölçümler:** `tsc` 0 · `build` 0 · rota kontrolü PASS · gerçek Chrome: TR ve EN anasayfada
+**8 modül satırı**, masaüstü iki kolon, telefon **tek kolon**, iki genişlikte taşma yok, konsol temiz.
+**Canlı:** iki dilde 8 satır, eylem bağlantıları doğru hedeflere gidiyor, sınır cümleleri yerinde.
+Kontrol manifestosuna `WEB-ANASAYFA-SERIT-001` ve `WEB-ANASAYFA-SERIT-EN-001` (ikisi de **blok**).
+
+**Ölçüm dersi (üçüncü kez):** kabuktan boru hattıyla Türkçe dizi araması yanlış "yok" veriyor
+(`taslak` ≠ `taslağı`, kodlama farkı). Doğrusu: yanıtı **dosyaya yazıp** oradan okumak.

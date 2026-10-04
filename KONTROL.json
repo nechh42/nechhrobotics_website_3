@@ -148,6 +148,39 @@
         "Yakında"
       ],
       "kaynak": "Fiyat uygulamanin canli katalogu ile ayni olmali (PRICE-002 €299, PRICE-009 €44); 'yakinda' yazilmaz."
+    },
+    {
+      "kod": "WEB-ANASAYFA-SERIT-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Anasayfa uyum seridi sekiz modulu ve sinir cumlesini tasiyor",
+      "url": "https://www.nechhrobotics.com/",
+      "bekle": [
+        "uyum-serit",
+        "8 MEVZUAT MODÜLÜ",
+        "CBAM",
+        "NIS2",
+        "CRA",
+        "KVKK + GDPR",
+        "/cozumler/eco-report",
+        "Hazırlık taslağı üretir",
+        "hukuki görüş"
+      ],
+      "kaynak": "4 Eki 2026: serit listesi urun kaydindan beslenir; sinir cumlesi silinmemeli."
+    },
+    {
+      "kod": "WEB-ANASAYFA-SERIT-EN-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Ingilizce anasayfa seridi de sekiz modulu tasiyor",
+      "url": "https://www.nechhrobotics.com/en",
+      "bekle": [
+        "uyum-serit",
+        "REGULATION MODULES",
+        "Digital Product Passport",
+        "/en/solutions/eco-report",
+        "not legal advice"
+      ]
     }
   ]
 }
