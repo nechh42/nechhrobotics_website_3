@@ -1547,3 +1547,55 @@ yazılmasa sayfa **prerender edilmez** ve yumuşak 404'e düşerdi (12 Ağu'daki
 
 Ölçüm: `tsc` 0 · `build` 0 · prerender · `rota-kontrol.mjs` PASS ·
 Eco-Report kit takımı **19 kontrol, çıkış 0**.
+
+---
+
+## 4 Ekim 2026 (ikinci iş) — arama tarafı: CRA içeriği + mevzuat tutarlılık bekçisi
+
+### Önce ölçüm: boşluk nerede?
+"Blog yazalım" demeden önce sitede ne olduğuna bakıldı. **48 yazı zaten var.**
+Modül başına sayım (TR+EN birlikte):
+
+| Modül | Yazı | Modül | Yazı |
+|---|---|---|---|
+| CBAM | 16 | NIS2 | 6 |
+| EUDR | 6 | DORA | 6 |
+| KVKK | 2 | GDPR | 2 |
+| **AI Act** | **0** | **DPP** | **0** |
+| **CSRD** | **0** | **CRA** | **0** |
+
+Yani eksik olan blog değil, **dört modülün tamamen sessiz olması**. Sıraya CRA'dan
+başlandı: tek yürürlükteki takvimi olan modül (md. 14 → 11 Eylül 2026) ve artık
+ücretli kiti olan modül (€349).
+
+### Eklenen: 2 TR + 2 EN yazı
+- *Siber Dayanıklılık Tüzüğü (CRA) Nedir? AB'ye Yazılım Satan Üretici Kapsamda mı?*
+- *CRA Madde 14: 24/72 Saatlik Bildirim Yükümlülüğü 11 Eylül 2026'dan Beri Yürürlükte*
+- İkisinin İngilizce karşılıkları.
+
+🔴 **Yazılardaki hiçbir tarih/sayı elle yazılmadı.** Metinler, modülün resmî metinden
+ayrıştırdığı veriden (`cra_2024_2847.json`) üreten bir script ile yazıldı; beklenen
+değerler tutmazsa script **durur**. Üretimde kullanılan değerler: md.14 **2026-09-11**,
+genel **2027-12-11**, **24/72 saat**, **14 gün**, destek **5 yıl**, güncelleme **10 yıl**,
+ekler **13/8/8**, sınıflar **19+4+3**.
+
+### 🔴 Asıl kalıcı iş: yazı eskirse makine söyleyecek
+Blog yazısı statik metindir. AB bir tarihi değiştirirse mevzuat bekçisi modülü
+güncelletir ama **sitedeki yazı eski sayıyla ayakta kalır ve kimse fark etmez.**
+Uyum konusunda güven satan bir şirket için yanlış tarih kabul edilemez.
+
+`Nechh-Eco-Report-App/scripts/blog_mevzuat_tutarlilik.py` yazıdaki **12 sayıyı** resmî
+veriyle karşılaştırır; sapma varsa çıkış kodu 1. Kontrol sistemine `ECO-BLOG-MEVZUAT-001`
+olarak **blok** şiddetiyle bağlandı.
+
+Kontrol kör kalmasın diye: yazı silinirse "sapma yok" demek yerine **çıkış 2** verir.
+Kırma testi **4/4**: md.14 tarihi, erken uyarı saati, destek süresi ve ek uzunluğu
+tek tek bozuldu, dördünde de yakalandı; veri sha256 ile geri yüklendi.
+
+### Ölçümler
+`tsc` 0 · `build` 0 · prerender **118 sayfa** (114'ten +4) · `rota-kontrol.mjs` PASS
+(157 çözümleme, 120 sayfa iç bağlantı) · üretilen sayfada kendi canonical'ı var,
+`noindex` yok, bütün sayılar yerinde.
+
+### Açık kalan
+AI Act, DPP ve CSRD hâlâ **sıfır içerik**. Sıra onlarda.
