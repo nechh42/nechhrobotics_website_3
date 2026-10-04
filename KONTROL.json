@@ -2,12 +2,23 @@
   "not": "Sitenin dis gercekleri: canli erisim, SEO canonical dogrulugu (gercek sayfalar uzerinde), sitemap, robots ve soft-404. 2 Eki 2026 dersi: manifestoya YAZILAN adresin var oldugu once dogrulanir; var olmayan adres ('/projeler') yanlis blok hata uretti.",
   "kontroller": [
     {
+      "kod": "WEB-ROTA-001",
+      "tur": "komut",
+      "siddet": "blok",
+      "aciklama": "Rota kontrolu: her rota bir sayfaya dusuyor, olmayan yol 404",
+      "komut": "node scripts/rota-kontrol.mjs",
+      "kaynak": "4 Eki 2026: catch-all rewrite kaldirildi; mevcut sayfalarin 404'e dusmedigi olculmeli.",
+      "zaman_asimi": 300
+    },
+    {
       "kod": "WEB-CANLI-001",
       "tur": "url_isaret",
       "siddet": "blok",
       "aciklama": "Anasayfa ayakta ve kendi canonical'ini basiyor",
       "url": "https://www.nechhrobotics.com",
-      "bekle": ["<link rel=\"canonical\" href=\"https://www.nechhrobotics.com\" />"]
+      "bekle": [
+        "<link rel=\"canonical\" href=\"https://www.nechhrobotics.com\" />"
+      ]
     },
     {
       "kod": "WEB-CANONICAL-ALT-001",
@@ -15,7 +26,9 @@
       "siddet": "blok",
       "aciklama": "Alt sayfa canonical'i KENDISINI gosteriyor (/cozumler)",
       "url": "https://www.nechhrobotics.com/cozumler",
-      "bekle": ["<link rel=\"canonical\" href=\"https://www.nechhrobotics.com/cozumler\" />"],
+      "bekle": [
+        "<link rel=\"canonical\" href=\"https://www.nechhrobotics.com/cozumler\" />"
+      ],
       "kaynak": "KONULAR/SEO-VE-INDEKSLEME.md — kokte sabit '/' canonical tum siteyi dizinden duser"
     },
     {
@@ -24,7 +37,9 @@
       "siddet": "blok",
       "aciklama": "Blog yazisi canonical'i kendisini gosteriyor (prerender calisiyor)",
       "url": "https://www.nechhrobotics.com/blog/blog-ai-quality-control-automation",
-      "bekle": ["<link rel=\"canonical\" href=\"https://www.nechhrobotics.com/blog/blog-ai-quality-control-automation\" />"]
+      "bekle": [
+        "<link rel=\"canonical\" href=\"https://www.nechhrobotics.com/blog/blog-ai-quality-control-automation\" />"
+      ]
     },
     {
       "kod": "WEB-CANONICAL-EN-001",
@@ -32,7 +47,9 @@
       "siddet": "blok",
       "aciklama": "Ingilizce sayfa canonical'i kendisini gosteriyor",
       "url": "https://www.nechhrobotics.com/en",
-      "bekle": ["<link rel=\"canonical\" href=\"https://www.nechhrobotics.com/en\" />"]
+      "bekle": [
+        "<link rel=\"canonical\" href=\"https://www.nechhrobotics.com/en\" />"
+      ]
     },
     {
       "kod": "WEB-SITEMAP-001",
@@ -40,7 +57,10 @@
       "siddet": "blok",
       "aciklama": "Sitemap yayinda ve Eco-Report sayfasini iceriyor",
       "url": "https://www.nechhrobotics.com/sitemap.xml",
-      "bekle": ["<urlset", "https://www.nechhrobotics.com/cozumler/eco-report"]
+      "bekle": [
+        "<urlset",
+        "https://www.nechhrobotics.com/cozumler/eco-report"
+      ]
     },
     {
       "kod": "WEB-ROBOTS-001",
@@ -48,16 +68,18 @@
       "siddet": "blok",
       "aciklama": "robots.txt siteyi dizinden dusurmuyor",
       "url": "https://www.nechhrobotics.com/robots.txt",
-      "olmasin": ["Disallow: /\n"]
+      "olmasin": [
+        "Disallow: /\n"
+      ]
     },
     {
       "kod": "WEB-SOFT404-001",
       "tur": "url_isaret",
-      "siddet": "uyari",
+      "siddet": "blok",
       "aciklama": "Olmayan yol 404 vermeli (simdi 200 + anasayfa canonical)",
       "url": "https://www.nechhrobotics.com/olmayan-sayfa-kontrol-testi",
       "http": 404,
-      "kaynak": "2 Eki 2026 olcumu: olmayan yollar SPA fallback ile 200 donuyor ve anasayfa canonical'i basiyor; cop adresler anasayfanin kopyasi olarak dizine girebilir."
+      "kaynak": "4 Eki 2026 duzeltmesi: catch-all rewrite kaldirildi, dist/404.html uretiliyor, NotFound sayfasi noindex. Canlida 404 donmeli."
     }
   ]
 }

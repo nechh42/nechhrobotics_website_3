@@ -10,6 +10,8 @@ type PageFrameProps = {
   title?: string;
   description?: string;
   locale?: "tr" | "en";
+  /** 4 Eki 2026: olmayan yollar icin noindex. Soft-404 duzeltmesi. */
+  noindex?: boolean;
 };
 
 function BrandLockup() {
@@ -121,7 +123,7 @@ export function SiteFooter({ locale = "tr" }: { locale?: "tr" | "en" }) {
   );
 }
 
-export function PageFrame({ children, title, description, locale = "tr" }: PageFrameProps) {
+export function PageFrame({ children, title, description, locale = "tr", noindex = false }: PageFrameProps) {
   // Prerender sırasında (window yokken) başlığı topla; tarayıcıda etkisiz.
   if (typeof window === "undefined") {
     ssrMeta.title = title ? `${title} | Nechh Robotics` : "Nechh Robotics | Dikey Yapay Zekâ";
@@ -140,17 +142,32 @@ export function PageFrame({ children, title, description, locale = "tr" }: PageF
     // 12 Ağu 2026 dersi: kökte sabit "/" canonical bırakmak tüm siteyi
     // dizinden düşürüyor — bu yüzden burada yola göre üretiliyor.
     {
-      const adres = `https://www.nechhrobotics.com${window.location.pathname}`.replace(/\/$/, "") || "https://www.nechhrobotics.com";
-      let bag = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-      if (!bag) {
-        bag = document.createElement("link");
-        bag.rel = "canonical";
-        document.head.appendChild(bag);
+      // 4 Eki 2026 soft-404 duzeltmesi: olmayan yolda canonical ANASAYFAYI gostermemeli ve
+      // sayfa dizine girmemeli. noindex ise canonical silinir, robots meta eklenir.
+      const mevcutCanonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+      let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement | null;
+      if (noindex) {
+        if (mevcutCanonical) mevcutCanonical.remove();
+        if (!robots) {
+          robots = document.createElement("meta");
+          robots.name = "robots";
+          document.head.appendChild(robots);
+        }
+        robots.content = "noindex,follow";
+      } else {
+        if (robots) robots.remove();
+        const adres = `https://www.nechhrobotics.com${window.location.pathname}`.replace(/\/$/, "") || "https://www.nechhrobotics.com";
+        let bag = mevcutCanonical;
+        if (!bag) {
+          bag = document.createElement("link");
+          bag.rel = "canonical";
+          document.head.appendChild(bag);
+        }
+        bag.href = adres;
       }
-      bag.href = adres;
       document.documentElement.lang = locale;
     }
-  }, [title, description, locale]);
+  }, [title, description, locale, noindex]);
 
   return (
     <div className="site-root">
