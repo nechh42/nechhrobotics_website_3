@@ -11,6 +11,9 @@ import { assets, paketler, products, yolHaritasi } from "@/lib/site";
  *  Fiyat ELLE yazilmaz: magaza kaydindan okunur — ayni urunun iki yerde iki
  *  fiyat gostermesi bu projede daha once yasandi. */
 const doraKiti = paketler.find((p) => p.slug === "dora-tedarikci-hazirlik-kiti");
+  // 4 Eki 2026: anasayfa serit listesi KOPYALANMAZ; urun kaydindaki modullerden okunur.
+  // Yeni modul site.ts'e eklendiginde anasayfa kendiliginden guncellenir.
+  const ecoModulleri = products.find((urun) => urun.slug === "eco-report")?.modules ?? [];
 
 export default function Home() {
   return (
@@ -86,7 +89,37 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        
       )}
+
+      <section className="uyum-serit" id="uyum">
+          <div className="uyum-serit-lead">
+            <p className="eyebrow">AB UYUMU · {ecoModulleri.length} MEVZUAT MODÜLÜ</p>
+            <h2>CBAM tek başına değil.<br /><em>Aynı araçta {ecoModulleri.length} mevzuat.</em></h2>
+            <p>
+              Eco-Report her kararı resmî metne dayandırır: mevzuat verisi AB Resmî Gazetesi ve
+              mevzuat.gov.tr metinlerinden makineyle çekilir, değişiklikler otomatik izlenir.
+              Bir soru cevaplanmadığında <strong>tahmin etmez</strong>, "karar verilemedi" der.
+            </p>
+            <small>Hazırlık taslağı üretir; akredite doğrulama, resmî beyan ya da hukuki görüş değildir.</small>
+          </div>
+          <div className="uyum-serit-govde">
+            <ul className="uyum-modul-listesi">
+              {ecoModulleri.map((modul) => (
+                <li key={modul.name}><strong>{modul.name}</strong><span>{modul.basis}</span></li>
+              ))}
+            </ul>
+            <div className="uyum-serit-eylem">
+              <Link href="/cozumler/eco-report" className="button button-primary">
+                Modülleri incele <ArrowUpRight size={17} />
+              </Link>
+              <a href="https://ecoreport.nechhrobotics.com" target="_blank" rel="noreferrer" className="button button-text">
+                Uygulamayı aç <ArrowUpRight size={16} />
+              </a>
+            </div>
+          </div>
+        </section>
 
       <section className="principles-section">
         <div className="principles-background">N</div>
