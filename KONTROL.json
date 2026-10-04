@@ -185,6 +185,33 @@
         "does not guess",
         "preparation draft"
       ]
+    },
+    {
+      "kod": "WEB-MAGAZA-CRA-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "CRA kiti paket sayfasi canlida: fiyat, takvim, icerik ve hukuki sinir duruyor",
+      "url": "https://www.nechhrobotics.com/magaza/cra-uretici-hazirlik-kiti",
+      "bekle": [
+        "CRA Üretici Hazırlık Kiti",
+        "€349",
+        "11 Eylül 2026",
+        "13 ürün gerekliliği",
+        "Ek III ürün sınıfı belirleme listesi",
+        "uygunluk değerlendirmesi, CE işareti"
+      ]
+    },
+    {
+      "kod": "WEB-MODUL-CRA-PAKET-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Urun sayfasindaki CRA modul karti ucretli pakete baglaniyor (olu baglanti/fiyat kaymasi korumasi)",
+      "url": "https://www.nechhrobotics.com/cozumler/eco-report",
+      "bekle": [
+        "/magaza/cra-uretici-hazirlik-kiti",
+        "CRA Üretici Hazırlık Kiti",
+        "€349"
+      ]
     }
   ]
 }
