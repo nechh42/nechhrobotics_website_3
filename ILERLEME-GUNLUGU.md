@@ -1524,3 +1524,26 @@ işaretler gerçek metinde yoktu.
 **Kalıcı kural:** bir `bekle` işareti manifestoya yazılmadan önce **canlı yanıtta var olduğu
 ölçülür**. Bu, 2 Ekim'deki `/projeler` yanlış alarmının aynı sınıfı: ölçüm aracının kendisi de
 ölçülmeli. Düzeltmeden sonra: **14 kalem, 0 blok hata, 0 uyarı.**
+
+---
+
+## 4 Ekim 2026 — mağazaya yedinci dijital paket: CRA Üretici Hazırlık Kiti (€349)
+
+Eco-Report'un sekiz mevzuat modülünden **CRA** artık ücretli bir kite bağlı.
+Ürün sayfasındaki CRA kartı, "Uygulamada aç" yerine **paket sayfasına** gidiyor
+(`/magaza/cra-uretici-hazirlik-kiti`), fiyatıyla birlikte.
+
+**Neden CRA'dan başlandı:** md. 14 bildirim yükümlülüğü **11 Eylül 2026'dan beri
+yürürlükte** — tahmin değil, tüzüğün kendi takvimi. Kitle de bizim ulaşabildiğimiz
+kitle: AB'ye yazılım satan üretici.
+
+🔴 **Fiyat tek kaynaktan**: müşterinin gördüğü fiyat `site.ts` içindedir; Eco-Report
+backend'i ondan sapamaz (`check_kit_fiyati_tum_yuzeylerde_ayni`, para birimi dahil).
+Mağaza bağlantısı elle değil, altı dosyayı birlikte yazan bir script ile yapıldı.
+
+🔴 **Sitemap şart**: prerender rotaları `sitemap.xml`'den okunur. Paket sitemap'e
+yazılmasa sayfa **prerender edilmez** ve yumuşak 404'e düşerdi (12 Ağu'daki
+`/en/gallery` ile aynı sınıf hata). Sitemap kaydı yamanın parçası.
+
+Ölçüm: `tsc` 0 · `build` 0 · prerender · `rota-kontrol.mjs` PASS ·
+Eco-Report kit takımı **19 kontrol, çıkış 0**.
