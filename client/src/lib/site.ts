@@ -1,12 +1,12 @@
 export type Product = {
-  slug: "helialoop" | "juriloop" | "eco-report" | "tonsora" | "paletra";
+  slug: "helialoop" | "juriloop" | "eco-report" | "tonsora" | "paletra" | "aylora";
   name: string;
   eyebrow: string;
   category: string;
   summary: string;
   longDescription: string;
   useCase: string;
-  tone: "health" | "legal" | "compliance" | "operations";
+  tone: "health" | "legal" | "compliance" | "operations" | "cosmic";
   externalUrl: string;
   externalLabel: string;
   /** Mağaza bağlantıları. 31 Ağu 2026 — HER BİRİ TEK TEK ÖLÇÜLDÜ.
@@ -158,6 +158,31 @@ export const products: Product[] = [
       { label: "Veri sizde", detail: "Hesap açmak gerekmez, kayıtlar telefonda tutulur; yedek tek dosyayla alınıp geri yüklenir." },
     ],
   },
+  {
+    // 7 Eki 2026 — Hasan: anasayfa urun izgarasinda 06 olarak gorunsun; tanitim videosu Galeri'de.
+    // Tuketici urunu (astroloji/fal), B2B modullerden farkli; tone "cosmic". Play CANLI (olculdu),
+    // App Store incelemede -> appStore BOS birakildi ("yakinda" yazilmaz, helialoop dersi).
+    slug: "aylora",
+    name: "AYLORA",
+    eyebrow: "06 / Astroloji",
+    category: "Astroloji ve fal rehberi",
+    summary:
+      "Doğum haritası, günlük gökyüzü yorumu, kahve falı ve tarot gibi içerikleri tek uygulamada toplayan kişisel astroloji rehberi.",
+    longDescription:
+      "AYLORA, astroloji ve fal içeriklerini sade ve ferah bir deneyimde buluşturan tüketici uygulamasıdır. Doğum haritası, günün gökyüzü yorumu, kahve falı, tarot, rüya yorumu ve motivasyon gibi bölümleri kişiye göre üretir; her gün yeni içerik gelir. Kayıtlar cihazda tutulur, hesap açmak gerekmez. Türkçe, İngilizce ve Arapça kullanılır. Eğlence ve kişisel içgörü amaçlıdır; profesyonel danışmanlığın yerine geçmez. AYLORA™, Nechh Robotics şirketinin ticari markasıdır.",
+    useCase: "Günlük astroloji ve fal içeriği",
+    tone: "cosmic",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.nechhrobotics.aylora",
+    externalLabel: "AYLORA'yı indir",
+    stores: {
+      play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.aylora",
+    },
+    principles: [
+      { label: "Kişiye özel", detail: "Doğum haritası ve günün gökyüzüne göre içerik kişiye göre üretilir; günlük tekrar etmez." },
+      { label: "Ferah deneyim", detail: "İç karartmayan, sade ve okunur pastel bir arayüz; üç dilde (TR/EN/AR)." },
+      { label: "Veri cihazda", detail: "Hesap gerekmez; kayıtlar telefonda tutulur, sunucuda değil." },
+    ],
+  },
 ];
 
 export function getProduct(slug?: string) {
@@ -168,6 +193,7 @@ export function getProduct(slug?: string) {
     juriloop: "juriloop",
     tonsora: "tonsora",
     paletra: "paletra",
+    aylora: "aylora",
   };
   return products.find((product) => product.slug === aliases[slug ?? ""]);
 }
@@ -294,6 +320,28 @@ export const englishProducts: Product[] = [
       { label: "Signed on site", detail: "The customer signs on the phone at hand-over; contract and return report are produced as PDFs." },
       { label: "No missed receivables", detail: "Late returns and open balances stay visible; a WhatsApp reminder is one tap away." },
       { label: "Your data", detail: "No account needed; records live on the phone and are backed up and restored with a single file." },
+    ],
+  },
+  {
+    slug: "aylora",
+    name: "AYLORA",
+    eyebrow: "06 / Astrology",
+    category: "Astrology and fortune guide",
+    summary:
+      "A personal astrology guide that brings birth chart, daily sky reading, coffee-cup reading and tarot into one app.",
+    longDescription:
+      "AYLORA brings astrology and fortune content into a calm, uncluttered consumer experience. It generates birth chart, daily sky reading, coffee-cup reading, tarot, dream interpretation and motivation sections personalised to you, with fresh content each day. Records stay on the device and no account is required. Available in Turkish, English and Arabic. It is for entertainment and personal insight and does not replace professional advice. AYLORA™ is a trademark of Nechh Robotics.",
+    useCase: "Daily astrology and fortune content",
+    tone: "cosmic",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.nechhrobotics.aylora",
+    externalLabel: "Download AYLORA",
+    stores: {
+      play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.aylora",
+    },
+    principles: [
+      { label: "Personalised", detail: "Content is generated from your birth chart and the day's sky; it does not repeat daily." },
+      { label: "Calm experience", detail: "An uncluttered, readable pastel interface in three languages (TR/EN/AR)." },
+      { label: "Your data", detail: "No account needed; records live on the phone, not on a server." },
     ],
   },
 ];
@@ -1068,6 +1116,7 @@ export const galeriVideolar = [
   { dosya: "/medya/video/tonsora-tanitim.mp4", kapak: "/medya/tanitim/tonsora-afis.png", baslik: "TONSORA tanıtımı", urun: "Salon randevu yönetimi" },
   { dosya: "/medya/video/helialoop-tanitim.mp4", kapak: "/medya/tanitim/helialoop-afis.png", baslik: "HeliaLoop tanıtımı", urun: "Hekimler arası yönlendirme ağı" },
   { dosya: "/medya/video/juriloop-tanitim.mp4", kapak: "/medya/tanitim/juriloop-afis.png", baslik: "JuriLoop tanıtımı", urun: "Hukukçular arası ağ" },
+  { dosya: "/medya/video/aylora-tanitim.mp4", kapak: "/medya/video/aylora-tanitim-kapak.jpg", baslik: "AYLORA tanıtımı", urun: "Astroloji ve fal rehberi" },
   { dosya: "/medya/video/helialoop-doktorun-gunu.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "Bir doktorun günü", urun: "HeliaLoop kullanım anlatımı" },
   { dosya: "/medya/video/helialoop-teaser.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "HeliaLoop teaser", urun: "Kısa tanıtım" },
   // 18 Eyl 2026 — TANITIM-MATERYALLERI'nden eklendi, web için sıkıştırıldı (95 MB → 13 MB).
