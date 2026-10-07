@@ -6,6 +6,15 @@
 
 ---
 
+## 7 Eki 2026 — AYLORA siteye eklendi (06. ürün + Galeri videosu)
+- Hasan kararı (ekran görüntüsüyle onayladı): AYLORA **anasayfa ürün ızgarasında 06** olarak görünsün, **tanıtım videosu Galeri'de**.
+- `site.ts`: `products` + `englishProducts` → AYLORA kaydı (slug "aylora", eyebrow "06 / Astroloji", tone **"cosmic"**). Tüketici ürünü; metin ölçülü/dürüst (eğlence amaçlı, profesyonel danışmanlık değil). Play linki CANLI (com.nechhrobotics.aylora); App Store incelemede → `appStore` BOŞ (helialoop dersi: "yakında" yazılmaz).
+- `slug` + `tone` union'larına "aylora"/"cosmic" eklendi; `getProduct`/`getEnglishProduct` alias'ları güncellendi.
+- `ProductCard.tsx`: AYLORA için **Sparkles** ikonu.
+- `galeriVideolar`: AYLORA tanıtım videosu (`/medya/video/aylora-tanitim.mp4`) + kapak (`aylora-tanitim-kapak.jpg`, pMGNy.jpg'den). Video 2.9MB.
+- Ürün sayacı `05 → 06` (Çözümler TR + EN). "01—05" ve "SYSTEMS / 05" görsel referansları korundu.
+- tsc 0 · `npm run build` → 129 sayfa, 0 hata (AYLORA detay TR+EN prerender edildi). Push: 8bf5f41. Vercel dağıtımı başladı; canlı ölçümü yapılacak.
+
 ## 🔗 GITHUB REPOSU (Hasan açtı, 22 Ağu)
 
 ```
