@@ -14,7 +14,7 @@ export default function ProductDetail({ params }: ProductDetailProps) {
   }
 
   return (
-    <PageFrame title={product.name} description={product.summary}>
+    <PageFrame title={product.seoTitle ?? product.name} description={product.summary}>
       <section className={`product-hero tone-${product.tone}`}>
         <div className="product-hero-rail"><Link href="/cozumler"><ArrowLeft size={16} /> ÇÖZÜMLER</Link><i /></div>
         <div className="product-hero-content"><p className="eyebrow">{product.eyebrow}</p><h1>{product.name}</h1><p className="product-hero-category">{product.category}</p><p className="product-hero-summary">{product.summary}</p>{product.externalUrl.startsWith("/") ? <Link href={product.externalUrl} className="button button-primary">{product.externalLabel} <ArrowUpRight size={17} /></Link> : <a href={product.externalUrl} target="_blank" rel="noreferrer" className="button button-primary">{product.externalLabel} <ExternalLink size={17} /></a>}<MagazaRozetleri stores={product.stores} /></div>

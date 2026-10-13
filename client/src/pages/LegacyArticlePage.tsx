@@ -13,6 +13,13 @@ function tarihYaz(date: string, isEnglish: boolean) {
   return new Date(Date.UTC(y, m - 1, d)).toLocaleDateString(isEnglish ? "en-GB" : "tr-TR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
 }
 
+/** 13 Eki 2026: yazılardaki **kalın** işaretleri canlıda yıldız olarak görünüyordu (ölçüldü). */
+function kalinla(metin: string) {
+  return metin.split(/(\*\*[^*]+\*\*)/g).map((parca, i) =>
+    parca.length > 4 && parca.startsWith("**") && parca.endsWith("**") ? <strong key={i}>{parca.slice(2, -2)}</strong> : parca,
+  );
+}
+
 export default function LegacyArticlePage({ params, locale = "tr" }: ArticleProps) {
   const isEnglish = locale === "en";
   const article = (isEnglish ? legacyEnglishArticles : legacyArticles).find((item) => item.slug === params?.slug);
@@ -46,7 +53,7 @@ export default function LegacyArticlePage({ params, locale = "tr" }: ArticleProp
       ? "This text was migrated from the previous public website. Verify time-sensitive regulatory details against current official sources before acting."
       : "Bu metin önceki açık web sitesinden taşınmıştır. Zaman duyarlı düzenleyici ayrıntıları uygulamaya geçmeden önce güncel resmî kaynaklardan doğrulayın.");
 
-  return <PageFrame locale={locale} title={article.title} description={article.excerpt}><section className="article-hero"><Link href={backHref} className="article-back"><ArrowLeft size={16} /> {isEnglish ? "BLOG" : "BLOG YAZILARI"}</Link>{hero}</section><article className="article-body"><aside><span>{article.date ? (isEnglish ? "ABOUT THIS ARTICLE" : "BU YAZI HAKKINDA") : (isEnglish ? "ARCHIVE NOTE" : "ARŞİV NOTU")}</span><i /><p>{note}</p></aside><div>{article.body.map((paragraph, index) => <p key={`${article.slug}-${index}`}>{paragraph}</p>)}</div></article>{product && productHref ? <section className="article-cta"><div><p className="eyebrow">{product.name}</p><h2>{product.category}<br /><em>{isEnglish ? "see how it works." : "nasıl çalıştığına bakın."}</em></h2></div><Link href={productHref} className="route-link">{isEnglish ? `Open ${product.name}` : `${product.name} sayfasına gidin`} <ArrowUpRight size={18} /></Link></section> : <section className="article-cta"><div><p className="eyebrow">{isEnglish ? "NEXT CONTEXT" : "SONRAKİ BAĞLAM"}</p><h2>{isEnglish ? <>Discuss the workflow<br /><em>behind the question.</em></> : <>Sorunun arkasındaki iş akışını<br /><em>birlikte konuşalım.</em></>}</h2></div><Link href={isEnglish ? "/en/contact" : "/iletisim"} className="route-link">{isEnglish ? "Contact Nechh" : "Nechh ile iletişime geçin"} <ArrowUpRight size={18} /></Link></section>}</PageFrame>;
+  return <PageFrame locale={locale} title={article.title} description={article.excerpt}><section className="article-hero"><Link href={backHref} className="article-back"><ArrowLeft size={16} /> {isEnglish ? "BLOG" : "BLOG YAZILARI"}</Link>{hero}</section><article className="article-body"><aside><span>{article.date ? (isEnglish ? "ABOUT THIS ARTICLE" : "BU YAZI HAKKINDA") : (isEnglish ? "ARCHIVE NOTE" : "ARŞİV NOTU")}</span><i /><p>{note}</p></aside><div>{article.body.map((paragraph, index) => <p key={`${article.slug}-${index}`}>{kalinla(paragraph)}</p>)}</div></article>{product && productHref ? <section className="article-cta"><div><p className="eyebrow">{product.name}</p><h2>{product.category}<br /><em>{isEnglish ? "see how it works." : "nasıl çalıştığına bakın."}</em></h2></div><Link href={productHref} className="route-link">{isEnglish ? `Open ${product.name}` : `${product.name} sayfasına gidin`} <ArrowUpRight size={18} /></Link></section> : <section className="article-cta"><div><p className="eyebrow">{isEnglish ? "NEXT CONTEXT" : "SONRAKİ BAĞLAM"}</p><h2>{isEnglish ? <>Discuss the workflow<br /><em>behind the question.</em></> : <>Sorunun arkasındaki iş akışını<br /><em>birlikte konuşalım.</em></>}</h2></div><Link href={isEnglish ? "/en/contact" : "/iletisim"} className="route-link">{isEnglish ? "Contact Nechh" : "Nechh ile iletişime geçin"} <ArrowUpRight size={18} /></Link></section>}</PageFrame>;
 }
 
 export function EnglishLegacyArticlePage(props: Omit<ArticleProps, "locale">) { return <LegacyArticlePage {...props} locale="en" />; }

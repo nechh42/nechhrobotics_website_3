@@ -20,10 +20,10 @@
   <url><loc>https://www.nechhrobotics.com/kullanim-kosullari</loc><lastmod>2026-09-17</lastmod><priority>0.8</priority></url>
   <url><loc>https://www.nechhrobotics.com/cozumler/helialoop</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/cozumler/juriloop</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.nechhrobotics.com/cozumler/eco-report</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.nechhrobotics.com/cozumler/eco-report</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/cozumler/tonsora</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/cozumler/paletra</loc><lastmod>2026-09-16</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.nechhrobotics.com/magaza/cbam-girisimci-kiti</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.nechhrobotics.com/magaza/cbam-girisimci-kiti</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/magaza/dora-tedarikci-hazirlik-kiti</loc><lastmod>2026-09-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/magaza/cra-uretici-hazirlik-kiti</loc><lastmod>2026-10-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/magaza/nis2-kurulus-hazirlik-kiti</loc><lastmod>2026-10-04</lastmod><priority>0.6</priority></url>
@@ -64,7 +64,7 @@
   <url><loc>https://www.nechhrobotics.com/en/blog/blog-is-the-digital-product-passport-mandatory-not-for-any-product-yet</loc><lastmod>2026-10-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-csrd-esikleri-degisti-450-milyon-euro-ve-1000-calisan</loc><lastmod>2026-10-04</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/en/blog/blog-csrd-thresholds-changed-eur-450-million-and-1000-employees</loc><lastmod>2026-10-04</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.nechhrobotics.com/blog/blog-cbam-2026-tam-rehber</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.nechhrobotics.com/blog/blog-cbam-2026-tam-rehber</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-cbam-ets-karbon-maliyet-optimizasyonu</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-cbam-gomulu-emisyon-nasil-hesaplanir</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-cbam-nedir-avrupanin-karbon-kacagina-yaniti</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
@@ -74,7 +74,7 @@
   <url><loc>https://www.nechhrobotics.com/blog/blog-custom-software-solutions</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-data-driven-control-architectures</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-doctor-referral-network</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
-  <url><loc>https://www.nechhrobotics.com/blog/blog-dora-nedir-finansal-sektorde-dijital-operasyonel-dayaniklilik</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.nechhrobotics.com/blog/blog-dora-nedir-finansal-sektorde-dijital-operasyonel-dayaniklilik</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-dora-uyum-sureci-envanterden-dayaniklilik-testine</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-doranin-kritik-gereksinimleri-yonetim-test-ve-ucuncu-taraflar</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/blog/blog-efatura-e-ar%C5%9Fiv-farklari</loc><lastmod>2026-08-22</lastmod><priority>0.6</priority></url>
@@ -129,4 +129,6 @@
   <url><loc>https://www.nechhrobotics.com/en/blog/blog-case-referrals-between-lawyers</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/en/blog/blog-digital-collaboration-and-confidentiality-in-law-firms</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
   <url><loc>https://www.nechhrobotics.com/en/blog/blog-managing-court-dates-and-duty-assignments-in-one-place</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.nechhrobotics.com/blog/blog-skdm-cbam-raporu-nasil-hazirlanir-ihracatci-icin-adim-adim</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.nechhrobotics.com/blog/blog-dora-turk-yazilim-firmasini-baglar-mi-ab-bankasina-hizmet-veren-tedarikci</loc><lastmod>2026-10-13</lastmod><priority>0.6</priority></url>
 </urlset>

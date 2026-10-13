@@ -1,6 +1,9 @@
 export type Product = {
   slug: "helialoop" | "juriloop" | "eco-report" | "tonsora" | "paletra" | "aylora";
   name: string;
+  /** 13 Eki 2026: sayfa <title> metni. Ürün adı tek başına aranan kelimeyi taşımıyorsa doldurulur
+   *  (Eco-Report başlığında ne CBAM ne SKDM vardı). Boşsa `name` kullanılır. */
+  seoTitle?: string;
   eyebrow: string;
   category: string;
   summary: string;
@@ -82,10 +85,11 @@ export const products: Product[] = [
   {
     slug: "eco-report",
     name: "Nechh Eco-Report",
-    eyebrow: "03 / CBAM",
+    seoTitle: "Nechh Eco-Report: CBAM (SKDM) Gömülü Emisyon Hesaplama ve AB Uyum Asistanı",
+    eyebrow: "03 / CBAM · SKDM",
     category: "Karbon uyum asistanı",
     summary:
-      "AB uyum dosyalarını kaynaklı ve denetlenebilir biçimde hazırlayan asistan: CBAM ile başlar, sekiz mevzuat modülüyle sürer.",
+      "AB uyum dosyalarını kaynaklı ve denetlenebilir biçimde hazırlayan asistan: CBAM (SKDM, Sınırda Karbon Düzenleme Mekanizması) gömülü emisyon hesabıyla başlar, sekiz mevzuat modülüyle sürer.",
     longDescription:
       "Nechh Eco-Report, ihracatçıların ve yazılım üreticilerinin AB uyum hazırlığında veriyi toplamasına, kontrol etmesine ve her kararı resmî metne dayandırmasına yardımcı olur. Mevzuat verisi AB Resmî Gazetesi ve mevzuat.gov.tr metinlerinden makineyle çekilir; değişiklikler otomatik izlenir. Hazırlık taslağı üretir: akredite doğrulayıcının, resmî beyanın ya da hukuki görüşün yerine geçmez. Bir soru cevaplanmadığında ürün tahmin etmez, 'karar verilemedi' der ve neyin eksik olduğunu yazar.",
     useCase: "AB uyum dosyası hazırlığı ve iç kontrol (8 mevzuat modülü)",
@@ -98,7 +102,7 @@ export const products: Product[] = [
       { label: "Sınırların açıklığı", detail: "Resmî doğrulama ve beyan sorumluluklarından açıkça ayrışır." },
     ],
     modules: [
-      { name: "CBAM", basis: "Tüzük (AB) 2023/956 + 2025/2621 (düz. 2026/1740)", detail: "Gömülü emisyon hesabı, 50 ton de minimis eşiği ve kesin dönem beyan hazırlığı." , paket: "cbam-girisimci-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
+      { name: "CBAM", basis: "Tüzük (AB) 2023/956 + 2025/2621 (düz. 2026/1740)", detail: "Sınırda Karbon Düzenleme Mekanizması (SKDM): gömülü emisyon hesabı, 50 ton de minimis eşiği ve kesin dönem beyan hazırlığı." , paket: "cbam-girisimci-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "EUDR", basis: "Tüzük (AB) 2023/1115 (Ek I değ. 2026/2102)", detail: "Emtia/ürün kapsamı, ülke risk sınıfı, geolokasyon ve DDS hazırlığı.", paket: "eudr-operator-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "AI Act", basis: "Tüzük (AB) 2024/1689 (değ. 2026/1744)", detail: "Yasak uygulama, yüksek risk ve şeffaflık sınıflandırması; Ek IV teknik dosya listesi.", paket: "ai-act-sistem-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
       { name: "Dijital Ürün Pasaportu", basis: "ESPR — Tüzük (AB) 2024/1781", detail: "Delege tüzük durumu bilinmeden zorunluluk iddia etmez; Ek III veri unsurları hazırlığı.", paket: "dpp-hazirlik-kiti", uygulama: "https://ecoreport.nechhrobotics.com/" },
@@ -744,8 +748,8 @@ export type ResourceHighlight = {
 };
 
 export const resourceHighlights: ResourceHighlight[] = [
-  { slug: "cbam-2026", category: "CBAM", title: "CBAM 2026: AB’ye İhracat Yapanlar İçin Tam Rehber", excerpt: "Kapsam, zaman çizelgesi, veri hazırlığı ve iç kontrol için temel başlangıç noktaları.", path: "/blog/blog-cbam-2026-tam-rehber" },
-  { slug: "cbam-journey", category: "CBAM", title: "CBAM Uyum Süreci: Veri Toplamadan Beyana", excerpt: "Kapsam analizi, emisyon verisi, tedarikçi yönetimi ve raporlama akışı.", path: "/blog/blog-cbam-uyum-sureci-veri-toplamadan-beyana" },
+  { slug: "cbam-2026", category: "CBAM", title: "CBAM (SKDM) 2026: AB’ye İhracat Yapanlar İçin Tam Rehber", excerpt: "Kapsam, takvim, 50 ton muafiyeti, varsayılan değer maliyeti ve ihracatçının hazırlayacağı veri.", path: "/blog/blog-cbam-2026-tam-rehber" },
+  { slug: "cbam-journey", category: "CBAM", title: "CBAM (SKDM) Uyum Süreci: Veri Toplamadan Beyana", excerpt: "Kapsam analizi, emisyon verisi, tedarikçi yönetimi ve raporlama akışı.", path: "/blog/blog-cbam-uyum-sureci-veri-toplamadan-beyana" },
   { slug: "eudr-intro", category: "EUDR", title: "EUDR Nedir? Ormansızlaşmasız Ürünler İçin Yeni Çerçeve", excerpt: "Ürün kapsamı, tedarik zinciri izlenebilirliği ve durum tespiti üzerine giriş.", path: "/blog/blog-eudr-nedir-ormansizlasmasiz-urunler-icin-yeni-cerceve" },
   { slug: "dora-intro", category: "DORA", title: "DORA Nedir? Dijital Operasyonel Dayanıklılık", excerpt: "Finansal kuruluşlarda dijital operasyonel dayanıklılığa giriş çerçevesi.", path: "/blog/blog-dora-nedir-finansal-sektorde-dijital-operasyonel-dayaniklilik" },
   { slug: "nis2-intro", category: "NIS2", title: "NIS2 Direktifi Nedir? Yeni Siber Güvenlik Çerçevesi", excerpt: "Kapsam, risk yönetimi ve olay bildirimi için temel çalışma notları.", path: "/blog/blog-nis2-direktifi-nedir-avrupanin-yeni-siber-guvenlik-cercevesi" },
@@ -774,6 +778,8 @@ export type Paket = {
   slug: string;
   aile: string;
   ad: string;
+  /** 13 Eki 2026: sayfa <title> metni; boşsa `ad` kullanılır. Görünen ad değişmez. */
+  seoBaslik?: string;
   ozet: string;
   icerik: string[];
   fiyat: string;
@@ -816,8 +822,9 @@ export const cbamMaliyet = {
 export const paketler: Paket[] = [
   {
     slug: "cbam-girisimci-kiti",
-    aile: "CBAM · AB Karbon Düzenlemesi",
+    aile: "CBAM (SKDM) · AB Sınırda Karbon Düzenlemesi",
     ad: "CBAM Girişimci Kiti",
+    seoBaslik: "CBAM (SKDM) Girişimci Kiti: Başvuru Rehberi ve Tedarikçi Veri Şablonu",
     ozet:
       "Authorised Declarant başvurusunu kendiniz yapın. Her sayı kaynağı ve formülüyle denetlenebilir; kara kutu değil.",
     icerik: [
@@ -1036,6 +1043,8 @@ export type Hizmet = {
   slug: string;
   aile: string;
   ad: string;
+  /** 13 Eki 2026: sayfa <title> metni; boşsa `ad` kullanılır. */
+  seoBaslik?: string;
   ozet: string;
   fiyat: string;
   fiyatNot: string;
@@ -1045,8 +1054,9 @@ export type Hizmet = {
 export const ucretliHizmetler: Hizmet[] = [
   {
     slug: "cbam-basvuru-danismanligi",
-    aile: "CBAM · Profesyonel Hizmet",
+    aile: "CBAM (SKDM) · Profesyonel Hizmet",
     ad: "CBAM Başvuru Danışmanlığı",
+    seoBaslik: "CBAM (SKDM) Başvuru Danışmanlığı",
     ozet:
       "Başvuruyu bize bırakın: belge hazırlığı, CBAM Registry (AMM) başvurusu, otoriteden gelen ek bilgi taleplerinin (RFI) yönetimi ve onaya kadar takip.",
     fiyat: "€2.500",
@@ -1055,8 +1065,9 @@ export const ucretliHizmetler: Hizmet[] = [
   },
   {
     slug: "cbam-profesyonel-paket",
-    aile: "CBAM · Karma",
+    aile: "CBAM (SKDM) · Karma",
     ad: "CBAM Profesyonel Paketi",
+    seoBaslik: "CBAM (SKDM) Profesyonel Paketi: Kit + Birebir Danışmanlık",
     ozet: "Girişimci Kiti + 1 saat birebir danışmanlık.",
     fiyat: "€749",
     fiyatNot: "tek seferlik · + KDV",

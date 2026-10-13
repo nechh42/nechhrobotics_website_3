@@ -139,7 +139,7 @@ export default function PaketDetay() {
   const sinir = paket?.sinir ?? hizmet!.sinir;
 
   return (
-    <PageFrame title={ad} description={ozet}>
+    <PageFrame title={paket?.seoBaslik ?? hizmet?.seoBaslik ?? ad} description={ozet}>
       <section className="paket-hero">
         <Link href="/magaza" className="article-back"><ArrowLeft size={15} /> MAĞAZA</Link>
         <p className="eyebrow">{aile}</p>

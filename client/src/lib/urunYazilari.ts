@@ -8,7 +8,7 @@ const TARIH = "2026-09-18";
 
 type Taslak = Omit<LegacyArticle, "path" | "date">;
 
-const tr = (a: Taslak): LegacyArticle => ({ ...a, path: `/blog/${a.slug}`, date: TARIH });
+const tr = (a: Taslak, tarih: string = TARIH): LegacyArticle => ({ ...a, path: `/blog/${a.slug}`, date: tarih });
 const en = (a: Taslak): LegacyArticle => ({ ...a, path: `/en/blog/${a.slug}`, date: TARIH });
 
 export const urunYazilariTr: LegacyArticle[] = [
@@ -147,10 +147,10 @@ export const urunYazilariTr: LegacyArticle[] = [
     slug: "blog-cbam-varsayilan-degerler-2026-1740-duzeltmesi",
     product: "eco-report",
     category: "CBAM",
-    title: "CBAM Varsayılan Değerleri Düzeltildi: 2026/1740 Ne Değiştirdi?",
+    title: "CBAM (SKDM) Varsayılan Değerleri Düzeltildi: 2026/1740 Ne Değiştirdi?",
     excerpt: "Komisyon, varsayılan değer tablolarını ayrı bir düzeltme tüzüğüyle güncelledi ve 1 Ocak 2026'ya geriye dönük uyguladı. Hangi satırlar etkilendi?",
     body: [
-      "AB Komisyonu, CBAM varsayılan değerlerini belirleyen 2025/2621 sayılı Uygulama Tüzüğü'nün eklerini 2026/1740 sayılı Uygulama Tüzüğü ile düzeltti. Metin 31 Temmuz 2026'da AB Resmî Gazetesi'nde yayımlandı ve 1 Ocak 2026'dan itibaren geçerli olacak şekilde uygulanıyor.",
+      "AB Komisyonu, CBAM (Türkçe adıyla SKDM, Sınırda Karbon Düzenleme Mekanizması) varsayılan değerlerini belirleyen 2025/2621 sayılı Uygulama Tüzüğü'nün eklerini 2026/1740 sayılı Uygulama Tüzüğü ile düzeltti. Metin 31 Temmuz 2026'da AB Resmî Gazetesi'nde yayımlandı ve 1 Ocak 2026'dan itibaren geçerli olacak şekilde uygulanıyor.",
       "Neden dikkat edilmeli?",
       "Düzeltme ayrı bir tüzükle geldiği için 2025/2621'in kendi sayfasına bakan biri değişikliği göremeyebilir. Varsayılan değer kullanan her hesap, hangi tablo sürümüne dayandığını kontrol etmelidir.",
       "Ne değişti?",
@@ -164,10 +164,10 @@ export const urunYazilariTr: LegacyArticle[] = [
     slug: "blog-cbam-veri-vermeyen-ihracatci-ne-oder-cezali-ek",
     product: "eco-report",
     category: "CBAM",
-    title: "Veri Vermeyen İhracatçı Ne Öder? CBAM Varsayılan Değerine Eklenen Pay",
+    title: "Veri Vermeyen İhracatçı Ne Öder? CBAM (SKDM) Varsayılan Değerine Eklenen Pay",
     excerpt: "AB'deki alıcınız gerçek emisyon verisi alamazsa varsayılan değeri, üstüne eklenen payla birlikte kullanır. Fark 2026'dan 2028'e üç katına çıkar.",
     body: [
-      "CBAM'de beyanı AB'deki ithalatçı verir; Türk ihracatçı beyan vermez, veri verir. İthalatçı üreticiden gerçek emisyon verisi alamazsa AB'nin yayımladığı varsayılan değeri kullanmak zorundadır.",
+      "CBAM'de, yani Sınırda Karbon Düzenleme Mekanizması'nda (SKDM) beyanı AB'deki ithalatçı verir; Türk ihracatçı beyan vermez, veri verir. İthalatçı üreticiden gerçek emisyon verisi alamazsa AB'nin yayımladığı varsayılan değeri kullanmak zorundadır.",
       "Varsayılan değerin üstüne eklenen pay",
       "2025/2621 sayılı Uygulama Tüzüğü'ne göre çelik, alüminyum, çimento ve hidrojende varsayılan değere 2026 için %10, 2027 için %20, 2028 ve sonrası için %30 ek uygulanır. Gübrede bu oran %1'dir.",
       "Rakamla bir örnek",
@@ -182,10 +182,10 @@ export const urunYazilariTr: LegacyArticle[] = [
     slug: "blog-cbam-50-ton-muafiyeti-kimin-tonaji-sayilir",
     product: "eco-report",
     category: "CBAM",
-    title: "CBAM'de 50 Ton Muafiyeti: Kimin Tonajı Sayılır?",
+    title: "CBAM (SKDM) 50 Ton Muafiyeti: Kimin Tonajı Sayılır?",
     excerpt: "\"Yılda 50 tondan az satıyoruz, bizi ilgilendirmez\" cümlesi çoğu zaman yanlış. Sınır sizin satışınıza değil, AB'deki ithalatçının toplamına bakar.",
     body: [
-      "2025/2083 sayılı Tüzük ile CBAM'e bir kütle eşiği eklendi: AB'deki bir ithalatçının kapsamdaki mallardan yıllık toplam net kütlesi 50 ton veya altındaysa CBAM yükümlülüğü doğmaz.",
+      "2025/2083 sayılı Tüzük ile CBAM'e (Sınırda Karbon Düzenleme Mekanizması, SKDM) bir kütle eşiği eklendi: AB'deki bir ithalatçının kapsamdaki mallardan yıllık toplam net kütlesi 50 ton veya altındaysa CBAM yükümlülüğü doğmaz.",
       "Sınır kimin tonajına bakar?",
       "Eşik, ihracatçının tek satışına değil, ithalatçının bir yıl içinde tüm tedarikçilerinden yaptığı toplam alıma bakar. Size 20 ton sipariş veren alıcı başka yerlerden 200 ton alıyorsa eşiği çoktan aşmıştır.",
       "İstisnalar",
@@ -196,6 +196,70 @@ export const urunYazilariTr: LegacyArticle[] = [
       "Eco-Report'ta tonaj girildiğinde muafiyet kontrolü anında yapılır. Muafsanız bunu açıkça söyler; muaf değilseniz gerçek veriyle hesap adımlarına geçilir.",
     ],
   }),
+
+  tr({
+    slug: "blog-skdm-cbam-raporu-nasil-hazirlanir-ihracatci-icin-adim-adim",
+    product: "eco-report",
+    category: "CBAM",
+    title: "SKDM (CBAM) Raporu Nasıl Hazırlanır? İhracatçı İçin Adım Adım",
+    excerpt: "AB'deki alıcınız sizden emisyon verisi istedi. Hangi veriyi, hangi sırayla toplarsınız; hesap nasıl yapılır; dosyada ne bulunmalı? Sekiz adımda SKDM hazırlığı.",
+    body: [
+      "Sınırda Karbon Düzenleme Mekanizması'nda (SKDM, İngilizce kısaltmasıyla CBAM) beyanı AB'deki ithalatçı verir; Türk ihracatçı beyan vermez, veri verir. Bu yazı, alıcısından veri talebi gelen bir üreticinin dosyasını hangi sırayla hazırlayacağını anlatır.",
+      "1. Ürününüzün CN kodunu kesinleştirin",
+      "Kapsamı sektör adı değil, gümrük tarife (CN) kodu belirler. Kapsamdaki sektörler çimento, demir-çelik, alüminyum, gübre, elektrik ve hidrojendir. Varsayılan değerler de CN kodu ve menşe ülkeye göre yayımlanır; yanlış kod, yanlış sayı demektir.",
+      "2. Alıcınıza iki soru sorun",
+      "Birincisi: yıllık toplam SKDM tonajınız ne kadar? İthalatçının kapsamdaki mallardan yıllık toplam net kütlesi 50 ton veya altındaysa yükümlülük doğmaz; eşik sizin tek satışınıza değil, alıcının bütün tedarikçilerinden toplam alımına bakar. İkincisi: bizden gerçek emisyon verisi isteyecek misiniz, yoksa varsayılan değeri mi kullanacaksınız?",
+      "3. Varsayılan değerle farkı görün",
+      "Gerçek veri verilmezse ithalatçı AB'nin yayımladığı varsayılan değeri kullanır ve bu değere ek uygulanır: çelik, alüminyum, çimento ve hidrojende 2026 için %10, 2027 için %20, 2028 ve sonrası için %30; gübrede %1 (2025/2621 sayılı Uygulama Tüzüğü, 2026/1740 ile düzeltilmiş haliyle). Gerçek veri toplamaya değip değmeyeceğini bu fark gösterir.",
+      "4. Üretim rotanızı ve sistem sınırınızı tanımlayın",
+      "Aynı ürün farklı üretim rotasında çok farklı emisyona sahiptir. Hangi proseslerin hesaba girdiğini ve hangi ara ürünleri dışarıdan satın aldığınızı baştan yazın; hesabın geri kalanı bu tanıma dayanır.",
+      "5. Tesis verisini toplayın",
+      "Dönem içindeki yakıt tüketimi, elektrik tüketimi ve üretim miktarı gerekir. Her rakam için bir kanıt belgesi saklayın: yakıt faturası, elektrik faturası, üretim kaydı. Doğrudan emisyon ile elektrikten gelen dolaylı emisyon ayrı tutulur; ikisi tek bir toplamda birleştirilmez.",
+      "6. Öncül malzemeleri hesaba katın",
+      "Satın aldığınız ara ürünlerin (örneğin çelik çubuk, ham çelik) gömülü emisyonu sizin ürününüze taşınır. Özgül gömülü emisyon şöyle hesaplanır: prosese atfedilen emisyon ile öncüllerin (tüketilen kütle × öncülün özgül gömülü emisyonu) toplamı, üretilen miktara bölünür. Öncül tedarikçinizden veri alamıyorsanız o kalem için varsayılan değer kullanılır.",
+      "7. Operatör emisyon raporu özetini doldurun",
+      "Kesin dönemde gerçek veri kullanan üretici, ithalatçıya operatör emisyon raporu ve özetini verir (2025/2547 sayılı Uygulama Tüzüğü, madde 10 ve Ek IV). Özet 27 alandan oluşur. Elinizde olmayan alanı boş geçmek yerine eksik olarak işaretleyin; doğrulayıcı ve alıcı neyin eksik olduğunu görmelidir.",
+      "8. Doğrulama ve takvim",
+      "Resmî geçerliliği akredite doğrulayıcının onayı verir. 2026 ithalatları için ilk yıllık beyan 30 Eylül 2027'ye kadar verilir; SKDM sertifikalarının satışı 1 Şubat 2027'de açılır (2025/2083 sayılı Tüzük). Alıcınız veriyi bu tarihlerden önce ister; hazırlığı son aya bırakmamak gerekir.",
+      "Excel ile yapılır mı?",
+      "Yapılır. Zorluk çarpma işleminde değil; öncül malzemede, elektrik payında ve kaynak göstermede çıkar. Doğrulayıcı “bu rakam nereden geldi?” diye sorar ve her rakamın girdi, faktör, formül ve sonuç zinciri izlenebilir olmalıdır.",
+      "Nechh Eco-Report'ta nasıl işliyor?",
+      "Eco-Report bu adımları sırayla sorar: tonaj girildiğinde 50 ton kontrolünü yapar, resmî varsayılan değeri ek dahil haliyle gösterir, gerçek veriyle hesabı öncül malzemelerle birlikte AB yöntemine göre çıkarır ve her rakamın yanına kaynağını yazar. Operatör emisyon raporu özetinin 27 alanına göre bir taslak Excel üretir; elinde olmayan alanları “EKSİK” diye işaretler. Bu bir hazırlık taslağıdır; akredite doğrulamanın veya resmî beyanın yerine geçmez.",
+      "Kaynak: Tüzük (AB) 2023/956; Tüzük (AB) 2025/2083; Uygulama Tüzükleri (AB) 2025/2547 ve 2025/2621, düzeltme 2026/1740 — EUR-Lex.",
+      "Yayın notu: Bu içerik genel bilgilendirme amaçlıdır; hukuki görüş veya şirkete özel uyum değerlendirmesi değildir. Nihai karar resmî metne ve gerektiğinde hukuki danışmanlığa dayanır.",
+    ],
+  }, "2026-10-13"),
+  tr({
+    slug: "blog-dora-turk-yazilim-firmasini-baglar-mi-ab-bankasina-hizmet-veren-tedarikci",
+    category: "DORA",
+    title: "DORA Türk Yazılım Firmasını Bağlar mı? AB Bankasına Hizmet Veren Tedarikçi İçin Madde 28–30",
+    excerpt: "DORA size doğrudan uygulanmaz; ama AB'deki bankanız sözleşmeye yeni maddeler koymak ve sizden belge istemek zorunda. Tüzüğün 28, 29 ve 30. maddeleri tedarikçi için ne anlama geliyor?",
+    body: [
+      "AB'deki bir bankaya, sigortacıya veya yatırım şirketine yazılım, bulut, veri merkezi, siber güvenlik ya da BT destek hizmeti veriyorsanız, müşteriniz 17 Ocak 2025'ten beri Dijital Operasyonel Dayanıklılık Yasası'na (DORA, 2022/2554 sayılı Tüzük) tabidir.",
+      "Yükümlülük kimin?",
+      "DORA'daki yükümlülüğün sahibi finans kuruluşudur: bir hizmeti dışarıdan alsa bile bütün yükümlülüklerden tamamen sorumlu kalır (madde 28(1)(a)). Bu yüzden yük Türkiye'deki tedarikçiye doğrudan tüzükten değil, sözleşmeden gelir. Banka size belirli hükümleri kabul ettirmek ve sizden belge almak zorundadır.",
+      "Sözleşmeden önce: banka sizi nasıl değerlendirir? (madde 28(4))",
+      "Banka sözleşme yapmadan önce hizmetin kritik veya önemli bir işlevi destekleyip desteklemediğini değerlendirir, denetim koşullarının sağlanıp sağlanmadığına bakar, BT konsantrasyon riski dahil bütün riskleri belirler, tedarikçi hakkında durum tespiti yapar ve çıkar çatışmalarını değerlendirir. Banka yalnızca uygun bilgi güvenliği standartlarına uyan tedarikçilerle sözleşme yapabilir (madde 28(5)). Soru formu, güvenlik belgeleri ve alt yüklenici bilgisi hazır olmayan tedarikçi bu aşamada elenir.",
+      "Denetim hakkı (madde 28(6) ve 30(3)(e))",
+      "Banka denetim sıklığını ve alanlarını risk bazlı olarak önceden belirler. Kritik veya önemli işlevlerde sözleşmede sınırsız erişim, inceleme ve denetim hakkı bulunmalıdır; bu hak başka sözleşmelerle kısıtlanamaz.",
+      "Banka sözleşmeyi hangi hallerde feshedebilmeli? (madde 28(7))",
+      "Sözleşme, bankaya en az şu hallerde fesih hakkı tanımalıdır: tedarikçinin mevzuatı veya sözleşme hükümlerini ciddi şekilde ihlal etmesi; izleme sırasında hizmetin performansını değiştirebilecek durumların ortaya çıkması; tedarikçinin genel BT risk yönetiminde, özellikle verinin erişilebilirliği, gerçekliği, bütünlüğü ve gizliliğinde kanıtlanmış zafiyetler; sözleşme koşulları nedeniyle yetkili makamın bankayı artık etkin biçimde denetleyememesi.",
+      "Çıkış planı (madde 28(8))",
+      "Kritik veya önemli işlevlerde banka bir çıkış stratejisi kurmak zorundadır: tedarikçinin başarısızlığı, hizmet kalitesinin düşmesi, kesinti veya fesih halinde işini aksatmadan çıkabilmelidir. Çıkış planları yazılı, test edilmiş ve periyodik olarak gözden geçirilmiş olmalıdır. Bankanın çıkış planı, tedarikçinin veri iadesi ve geçiş dönemi taahhütlerine dayanır (madde 30(2)(d) ve 30(3)(f)).",
+      "AB dışındaki tedarikçi (madde 29)",
+      "Tedarikçi üçüncü ülkede yerleşikse banka ayrıca iflas halinde uygulanacak hukuku ve verinin acil geri alınmasındaki kısıtları, AB veri koruma kurallarına uyumu ve uzun alt yüklenici zincirlerinin izlemeye ve denetime etkisini değerlendirir. Türkiye'de yerleşik bir tedarikçiye veri konumu, iflas halinde veri iadesi ve alt yüklenici zinciri soruları mutlaka gelir.",
+      "Sözleşmede bulunması gereken asgari hükümler (madde 30)",
+      "Bütün BT hizmetleri için madde 30(2)'nin (a)–(i) bentleri geçerlidir; kritik veya önemli işlevi destekleyen hizmetlerde bunlara ek olarak madde 30(3)'ün (a)–(f) bentleri aranır. DORA tedarikçi için sabit bir olay bildirim süresi yazmaz; süre sözleşmede belirlenir (madde 30(3)(b)). Veri veya hizmet konumu değişikliği önceden bildirilir (madde 30(2)(b)).",
+      "Kritik BT sağlayıcıları listesi sizi kapsıyor mu?",
+      "Avrupa Denetim Otoriteleri 18 Kasım 2025'te AB düzeyinde doğrudan gözetime tabi kritik BT üçüncü taraf sağlayıcılarının listesini yayımladı. Liste büyük bulut ve platform sağlayıcılarını kapsar. Listede olmayan tedarikçinin yükümlülükleri sözleşme üzerinden gelmeye devam eder.",
+      "Sırayla ne yapmalı?",
+      "Hizmetlerinizi listeleyin ve müşterinize hangisinin kritik veya önemli işlevi desteklediğini sorun. Alt yüklenicilerinizi ve veri işleme konumlarınızı eksiksiz yazın. Mevcut sözleşmenizi madde 30 listesine göre işaretleyin. Olay bildirim ve destek prosedürünüzü, çıkış ve geçiş planınızı yazılı hâle getirin. Banka soru formlarına vereceğiniz cevapları ve kanıt belgelerini toplayın. Sözleşme müzakeresinden önce hukuki görüş alın.",
+      "Nechh Robotics'te durum",
+      "Mağazadaki DORA Tedarikçi Hazırlık Kiti bu hazırlık için hazırlanmış bir şablon setidir: madde 30 sözleşme kontrol listesi, olay bildirimi ve destek prosedürü şablonu, çıkış ve geçiş planı şablonu, banka soru formu cevap kütüphanesi ve alt yüklenici ile veri konumu listesi. Hazırlık ve şablon setidir; hukuki danışmanlık, sözleşme incelemesi veya uyum sertifikası değildir.",
+      "Kaynak: Tüzük (AB) 2022/2554 (DORA), madde 28, 29 ve 30 — EUR-Lex.",
+      "Yayın notu: Bu içerik genel bilgilendirme amaçlıdır; hukuki görüş veya şirkete özel uyum değerlendirmesi değildir. Nihai karar resmî metne ve gerektiğinde hukuki danışmanlığa dayanır.",
+    ],
+  }, "2026-10-13"),
 
   // ─── HELIALOOP ───
   tr({
