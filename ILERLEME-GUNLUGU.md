@@ -1667,3 +1667,27 @@ değildir — önce hangisinin eskidiğine bakılır.*
 
 Ölçüm: ürün sayfasında 8 modül kartı · 8 paket bağlantısı · "Uygulamada aç" **0** ·
 €349 altı kez. Kontrol sistemi: **0 blok hata, 0 uyarı**.
+
+---
+
+## 13 Ekim 2026 — Search Console sahiplik doğrulaması düşmüştü, dosya geri kondu
+
+Hasan Google'da CBAM / DORA / EUDR aradı, çıkmadık; Search Console'u açınca
+`https://www.nechhrobotics.com/` için **"Sahipliği doğrulayın"** penceresi geldi,
+DOĞRULA'ya bastı → *doğrulanamadı*.
+
+**Ölçüm:** `/google2d51c4310f473ece.html` → **404**. Ana sayfada doğrulama meta
+etiketi yok, DNS'te TXT kaydı yok. Dosya depo geçmişinde de hiç yok — site bu
+depoya (`nechhrobotics_website_3`) taşınırken gelmemiş.
+
+**Yapılan:** `client/public/google2d51c4310f473ece.html` eklendi (`3664f20`),
+push sonrası canlı ölçüldü → **200**, gövde doğru.
+
+**Bilinmesi gereken:** doğrulamanın düşmesi siteyi Google dizininden ÇIKARMAZ;
+yalnızca paneldeki veriye erişimi kapatır. Sıralama sorununun sebebi bu değil
+(bkz. `KONULAR/SEO-VE-INDEKSLEME.md`, 13 Ekim bölümü).
+
+🔴 **Bu dosya silinmez.** Depo/yapı değişirse `client/public/` altında kalmalı.
+
+- [ ] Hasan DOĞRULA'ya yeniden basacak
+- [ ] Doğrulanınca: Performans → Sorgular (son 3 ay) verisi alınacak
