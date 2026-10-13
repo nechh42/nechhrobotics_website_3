@@ -1689,7 +1689,7 @@ yalnızca paneldeki veriye erişimi kapatır. Sıralama sorununun sebebi bu değ
 
 🔴 **Bu dosya silinmez.** Depo/yapı değişirse `client/public/` altında kalmalı.
 
-- [ ] Hasan DOĞRULA'ya yeniden basacak
+- [x] Hasan DOĞRULA'ya bastı, doğrulama geçti (13 Eki)
 - [ ] Doğrulanınca: Performans → Sorgular (son 3 ay) verisi alınacak
 
 ---
@@ -1734,7 +1734,7 @@ blog mevzuat tutarlılığı PASS (29 kalem) · canlıda 7 sayfa: HTTP 200, kend
 Üç yeni kontrol kalemi: `WEB-SKDM-BASLIK-001`, `WEB-SKDM-YAZI-001`, `WEB-GSC-DOGRULAMA-001`.
 
 ### Açık kalan — görülmeden "oldu" denmez
-- [ ] Hasan: Search Console → Site Haritaları → sitemap'i yeniden gönder
+- [x] Hasan: Search Console → Site Haritaları → sitemap yeniden gönderildi (13 Eki)
 - [ ] Hasan: URL denetimi → 2 yeni yazı + Eco-Report sayfası için "Dizine eklenmeyi iste"
 - [ ] **~10 Kasım 2026:** Performans → Sorgular yeniden alınacak. Bakılacak: Türkçe
       "skdm" sorguları listeye girdi mi, `dora nedir` 11,0'dan yukarı çıktı mı.
