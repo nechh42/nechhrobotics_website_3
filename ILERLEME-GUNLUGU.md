@@ -1738,8 +1738,33 @@ blog mevzuat tutarlılığı PASS (29 kalem) · canlıda 7 sayfa: HTTP 200, kend
 - [ ] Hasan: URL denetimi → 2 yeni yazı + Eco-Report sayfası için "Dizine eklenmeyi iste"
 - [ ] **~10 Kasım 2026:** Performans → Sorgular yeniden alınacak. Bakılacak: Türkçe
       "skdm" sorguları listeye girdi mi, `dora nedir` 11,0'dan yukarı çıktı mı.
-- [ ] Görülen ama dokunulmayan: `CBAM Girişimci Kiti` özeti "Authorised Declarant
+- [x] (13 Eki, aşağıda kapandı) `CBAM Girişimci Kiti` özeti "Authorised Declarant
       başvurusunu kendiniz yapın" diyor; oysa beyancı AB'deki ithalatçıdır, Türk
       ihracatçı değil (SAHA-KITAPCIGI §3). Kitin kime satıldığı Hasan kararı.
 - [ ] `blog-cbam-gomulu-emisyon-…` yazısı yöntem için hâlâ geçiş dönemi tüzüğünü
       (2023/1773) gösteriyor; kesin dönem dayanağı 2025/2547. Doğrulanıp düzeltilecek.
+
+---
+
+## 13 Ekim 2026 (üçüncü iş) — CBAM Girişimci Kiti tanıtımı kitin gerçek içeriğine hizalandı
+
+Hasan: *"Bilmediğim bir şeye karar veremem, sana bırakıyorum."*
+
+**Sorun:** mağaza sayfası *"Authorised Declarant başvurusunu kendiniz yapın"* diyor ve
+içerikte *"Gerçek Türk çelik ithalatçısı simülasyonu"* sayıyordu. Oysa yetkili beyancı
+başvurusunu **AB'deki ithalatçı** yapar; Türk ihracatçı yapamaz.
+
+**Önce kitin kendisine bakıldı** (`Nechh-Eco-Report-App/scripts/urun_kiti_uret.py`):
+kit DOĞRU. Rehberinin ilk bölümü "başvuruyu KİM yapar?" diye sorup Türk üreticinin
+başvuran taraf olmadığını söylüyor; altı adımı kapsam, sınır, veri toplama, hesap,
+varsayılan/gerçek veri ve doğrulama. Yani **ürün doğru, vitrin yanlıştı.**
+
+**Yapılan:** özet ve içerik listesi kitin ürettiği 6 dosyaya göre yeniden yazıldı.
+Fiyat (€299), ad ve adres değişmedi. Kitin kendisine dokunulmadı.
+
+Ölçüm: `tsc` 0 · `build` 0 · prerender 131/0 · `rota-kontrol` PASS · eski cümle
+derlenmiş mağaza sayfalarında 0 kez.
+
+**Açık kalan (Hasan'a soruldu):** `CBAM Başvuru Danışmanlığı` (€2.500) "CBAM Registry
+başvurusu, onaya kadar takip" vaat ediyor. Bu başvuru da yalnızca AB'deki ithalatçı
+adına yapılabilir; hizmetin kime ve nasıl verildiği netleşmeden metin değiştirilmedi.

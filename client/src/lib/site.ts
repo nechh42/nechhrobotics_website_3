@@ -824,14 +824,19 @@ export const paketler: Paket[] = [
     slug: "cbam-girisimci-kiti",
     aile: "CBAM (SKDM) · AB Sınırda Karbon Düzenlemesi",
     ad: "CBAM Girişimci Kiti",
-    seoBaslik: "CBAM (SKDM) Girişimci Kiti: Başvuru Rehberi ve Tedarikçi Veri Şablonu",
+    seoBaslik: "CBAM (SKDM) Girişimci Kiti: İhracatçı İçin Veri Hazırlık Rehberi ve Şablonlar",
+    // 13 Eki 2026: tanıtım kitin GERÇEK içeriğine hizalandı (urun_kiti_uret.py, 6 dosya).
+    // Eskisi "Authorised Declarant başvurusunu kendiniz yapın" diyordu; oysa başvuruyu
+    // AB'deki ithalatçı yapar ve kitin kendi rehberi de bunu ilk sayfada söyler.
     ozet:
-      "Authorised Declarant başvurusunu kendiniz yapın. Her sayı kaynağı ve formülüyle denetlenebilir; kara kutu değil.",
+      "AB'deki alıcınız sizden emisyon verisi istediğinde dosyayı kendiniz hazırlayın. Her sayı kaynağı ve formülüyle denetlenebilir; kara kutu değil.",
     icerik: [
-      "Adım adım başvuru rehberi",
-      "Gerçek Türk çelik ithalatçısı simülasyonu",
-      "Tedarikçi veri şablonu",
-      "Belge kontrol listesi",
+      "Toplanacak veri ve saklanacak kanıt kontrol listesi",
+      "Süreç rehberi: beyanı kim verir, ihracatçı ne hazırlar (6 adım)",
+      "Hesaplama metodolojisi ve kaynak kayıt defteri",
+      "Motorla hesaplanmış gerçek örnek hesaplama",
+      "Tedarikçi veri şablonu (Excel)",
+      "AB varsayılan değerleri: 15 öncül + 30 mamul, kaynağıyla",
     ],
     fiyat: "€299",
     fiyatNot: "tek seferlik · + KDV",
