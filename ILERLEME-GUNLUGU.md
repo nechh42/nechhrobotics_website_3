@@ -1795,3 +1795,11 @@ adres↔kod eşleşmesi değişmedi, ama "geçti" denemez.
 (`pricing_model.py`: "CBAM Başvuru Danışmanlığı", `checkout.py`: "Full Representation
 Consulting"). O depoda başka bir oturumun kaydedilmemiş değişiklikleri var
 (`db.py`, günlük); karışmasın diye dokunulmadı. Sipariş formunda müşteri eski adı görebilir.
+
+### 🔴 13 Eki 14:45 — `573a3ce` (danışmanlık metni) CANLIYA ÇIKMADI
+Push'tan ~15 dakika sonra ölçüm: canlı sayfa hâlâ eski metni veriyor
+(`Last-Modified: 11:06:52 GMT` = bir önceki yayın `86cadd0`). GitHub commit durumu
+`pending`, **0 kayıt** → Vercel bu commit için derleme BAŞLATMAMIŞ (bugünkü önceki
+7 push'un her biri 1 dakikadan kısa sürede çıkmıştı). Yerel derleme temiz
+(`tsc` 0, `build` 0, 131/0), yani sebep kod değil. Sebep ölçülemedi: Vercel paneline
+bu sohbetten erişim yok. Tahmin yürütülmedi; Hasan'dan Deployments sayfası istendi.
