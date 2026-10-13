@@ -1691,3 +1691,55 @@ yalnızca paneldeki veriye erişimi kapatır. Sıralama sorununun sebebi bu değ
 
 - [ ] Hasan DOĞRULA'ya yeniden basacak
 - [ ] Doğrulanınca: Performans → Sorgular (son 3 ay) verisi alınacak
+
+---
+
+## 13 Ekim 2026 (ikinci iş) — arama tarafı: SKDM terimi, başlıklar, DORA, 2 yeni yazı
+
+### Ölçüm neydi
+Search Console → Performans, son 3 ay: Türkçe sorgularda 2. sayfa (`dora nedir`
+**11,0** · `operasyonel dayanıklılık` **20,6**), İngilizce sorgularda 7.–9. sayfa
+(61–84). İlk 10 sorguda tek bir Türkçe CBAM sorgusu yok. Sebep arandı: sitede
+**"SKDM" kelimesi 0 kez geçiyordu** — Türkiye'de bakanlık ve basın CBAM'a SKDM diyor.
+Ürün sayfasının başlığı da anahtar kelimesizdi: `Nechh Eco-Report | Nechh Robotics`.
+
+### Yapılan (`2eb5307`)
+| Ne | Nerede |
+|---|---|
+| SKDM / Sınırda Karbon Düzenleme Mekanizması terimi | 9 Türkçe CBAM yazısı, 3 mağaza sayfası, Eco-Report sayfası |
+| Aranabilir sayfa başlığı | `Product.seoTitle`, `Paket.seoBaslik`, `Hizmet.seoBaslik` (görünen ad DEĞİŞMEDİ) |
+| Baştan yazıldı | `blog-cbam-2026-tam-rehber` (380 → 688 kelime) |
+| Derinleştirildi | `blog-dora-nedir-…` (440 → 771 kelime, md. 28–30) |
+| Yeni yazı | `blog-skdm-cbam-raporu-nasil-hazirlanir-ihracatci-icin-adim-adim` |
+| Yeni yazı | `blog-dora-turk-yazilim-firmasini-baglar-mi-ab-bankasina-hizmet-veren-tedarikci` |
+| Hata düzeltmesi | Yazılardaki `**kalın**` işaretleri canlıda **yıldız olarak** görünüyordu (ölçüldü) → `kalinla()` |
+
+🔴 **Yazılardaki hiçbir tarih/sayı ezberden yazılmadı.** CBAM olguları
+`Nechh-Eco-Report-App/SAHA-KITAPCIGI.md` §3–4'ten, DORA madde atıfları
+`scripts/dora_kiti_uret.py` içindeki resmî metin özetinden alındı. Önce
+`mevzuat_bekcisi.py` koşuldu: 20 dayanak, yeni değiştirici işlem yok.
+
+**Bilerek yapılmayan:**
+- "SKDM nedir" diye AYRI yazı açılmadı — mevcut "CBAM Nedir?" ile aynı arama niyeti,
+  ikisi birbirini yerdi. Mevcut yazının başlığı `SKDM (CBAM) Nedir? …` yapıldı.
+- Yalnızca terim eklenen 5 eski yazıya `date` KONMADI: içerikleri baştan
+  doğrulanmadı, "güncellik kontrolü gerekir" damgası yerinde kalmalı.
+- İngilizce yazılara dokunulmadı (7.–9. sayfa; yakın olan taraf Türkçe).
+
+### Ölçümler
+`tsc` 0 · `build` 0 · prerender **131 sayfa / 0 hata** (129'dan +2) · `rota-kontrol` PASS ·
+blog mevzuat tutarlılığı PASS (29 kalem) · canlıda 7 sayfa: HTTP 200, kendi canonical'ı,
+`noindex` yok, SKDM yerinde · kontrol sistemi **19/19 OK**.
+
+Üç yeni kontrol kalemi: `WEB-SKDM-BASLIK-001`, `WEB-SKDM-YAZI-001`, `WEB-GSC-DOGRULAMA-001`.
+
+### Açık kalan — görülmeden "oldu" denmez
+- [ ] Hasan: Search Console → Site Haritaları → sitemap'i yeniden gönder
+- [ ] Hasan: URL denetimi → 2 yeni yazı + Eco-Report sayfası için "Dizine eklenmeyi iste"
+- [ ] **~10 Kasım 2026:** Performans → Sorgular yeniden alınacak. Bakılacak: Türkçe
+      "skdm" sorguları listeye girdi mi, `dora nedir` 11,0'dan yukarı çıktı mı.
+- [ ] Görülen ama dokunulmayan: `CBAM Girişimci Kiti` özeti "Authorised Declarant
+      başvurusunu kendiniz yapın" diyor; oysa beyancı AB'deki ithalatçıdır, Türk
+      ihracatçı değil (SAHA-KITAPCIGI §3). Kitin kime satıldığı Hasan kararı.
+- [ ] `blog-cbam-gomulu-emisyon-…` yazısı yöntem için hâlâ geçiş dönemi tüzüğünü
+      (2023/1773) gösteriyor; kesin dönem dayanağı 2025/2547. Doğrulanıp düzeltilecek.

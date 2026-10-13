@@ -216,6 +216,41 @@
         "CRA Üretici Hazırlık Kiti",
         "€349"
       ]
+    },
+    {
+      "kod": "WEB-SKDM-BASLIK-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Eco-Report sayfa basligi CBAM ve SKDM kelimelerini tasiyor",
+      "url": "https://www.nechhrobotics.com/cozumler/eco-report",
+      "bekle": [
+        "<title>Nechh Eco-Report: CBAM (SKDM)",
+        "Sınırda Karbon Düzenleme Mekanizması"
+      ],
+      "kaynak": "13 Eki 2026: sitede 'SKDM' 0 kez geciyordu, urun basliginda anahtar kelime yoktu (Search Console olcumu). KONULAR/SEO-VE-INDEKSLEME.md"
+    },
+    {
+      "kod": "WEB-SKDM-YAZI-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "SKDM rapor rehberi canlida ve kendi canonical'ini basiyor",
+      "url": "https://www.nechhrobotics.com/blog/blog-skdm-cbam-raporu-nasil-hazirlanir-ihracatci-icin-adim-adim",
+      "bekle": [
+        "<link rel=\"canonical\" href=\"https://www.nechhrobotics.com/blog/blog-skdm-cbam-raporu-nasil-hazirlanir-ihracatci-icin-adim-adim\" />",
+        "SKDM"
+      ],
+      "kaynak": "13 Eki 2026"
+    },
+    {
+      "kod": "WEB-GSC-DOGRULAMA-001",
+      "tur": "url_isaret",
+      "siddet": "blok",
+      "aciklama": "Search Console sahiplik dogrulama dosyasi yerinde",
+      "url": "https://www.nechhrobotics.com/google2d51c4310f473ece.html",
+      "bekle": [
+        "google-site-verification: google2d51c4310f473ece.html"
+      ],
+      "kaynak": "13 Eki 2026: dosya depo tasinirken kaybolmus, dogrulama dusmustu."
     }
   ]
 }
