@@ -1768,3 +1768,30 @@ derlenmiş mağaza sayfalarında 0 kez.
 **Açık kalan (Hasan'a soruldu):** `CBAM Başvuru Danışmanlığı` (€2.500) "CBAM Registry
 başvurusu, onaya kadar takip" vaat ediyor. Bu başvuru da yalnızca AB'deki ithalatçı
 adına yapılabilir; hizmetin kime ve nasıl verildiği netleşmeden metin değiştirilmedi.
+
+---
+
+## 13 Ekim 2026 (dördüncü iş) — CBAM danışmanlık hizmetinin tarifi düzeltildi (Hasan onayı: "evet")
+
+**Sorun:** €2.500'lük hizmet *"Başvuruyu bize bırakın: CBAM Registry (AMM) başvurusu,
+RFI yönetimi, onaya kadar takip"* vaat ediyordu. Yetkili beyancı başvurusunu yalnızca
+AB'deki ithalatçı yapabilir; hizmeti alan Türk ihracatçı adına yapılacak başvuru yok.
+
+**Yapılan (yalnızca site metni):**
+- Ad: `CBAM Başvuru Danışmanlığı` → **`CBAM Danışmanlığı: Veri ve Dosya Hazırlığı`**
+- Özet ve sınır cümlesi `SAHA-KITAPCIGI.md` §4'teki tarife hizalandı ("verilerinizi
+  birlikte toplayıp dosyayı birlikte hazırlıyoruz; saha ölçümü ve denetim yapmıyoruz").
+- `/hizmetler` ve `/en/services` sayfalarındaki "Authorised Declarant" kartı da düzeltildi.
+- **Değişmeyen:** adres (`/magaza/cbam-basvuru-danismanligi`), sipariş kodu `PRICE-005`, fiyat €2.500.
+
+Ölçüm: `tsc` 0 · `build` 0 · prerender 131/0 · `rota-kontrol` PASS · derlenmiş sayfalarda
+"Authorised Declarant" / "Registry (AMM)" **0 kez**.
+
+🔴 **Yapılamayan:** `Nechh-Eco-Report-App/tests/run_kit_checks.py` bu makinede koşmadı
+(`reportlab` kurulu değil — 3.10, 3.11 ve varsayılan Python denendi). Kontrolün baktığı
+adres↔kod eşleşmesi değişmedi, ama "geçti" denemez.
+
+**Açık kalan:** Eco-Report uygulamasında PRICE-005'in adı hâlâ eski
+(`pricing_model.py`: "CBAM Başvuru Danışmanlığı", `checkout.py`: "Full Representation
+Consulting"). O depoda başka bir oturumun kaydedilmemiş değişiklikleri var
+(`db.py`, günlük); karışmasın diye dokunulmadı. Sipariş formunda müşteri eski adı görebilir.

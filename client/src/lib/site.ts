@@ -372,13 +372,13 @@ export type Service = {
 };
 
 export const services: Service[] = [
-  { index: "01", eyebrow: "CBAM / AUTHORISED DECLARANT", title: "CBAM başvuru hazırlığı", summary: "Authorised Declarant süreci için kapsam değerlendirmesi, belge hazırlığı ve süreç koordinasyonu.", note: "Hizmet; hukuki danışmanlık, akredite doğrulama veya resmî beyanın yerine geçmez.", href: "/iletisim" },
+  { index: "01", eyebrow: "CBAM / VERİ HAZIRLIĞI", title: "CBAM veri ve dosya hazırlığı", summary: "AB'deki alıcınıza vereceğiniz emisyon verisi için kapsam değerlendirmesi, veri toplama ve dosya hazırlığı.", note: "Hizmet; hukuki danışmanlık, akredite doğrulama veya resmî beyanın yerine geçmez.", href: "/iletisim" },
   { index: "02", eyebrow: "UYUM / SÜREÇ TASARIMI", title: "Uyum çalışma alanı", summary: "CBAM, KVKK, GDPR, İSG ve benzeri süreçlerde veri, doküman ve kontrol akışını netleştirmeye yönelik başlangıç çalışması.", note: "Kapsam baştan yazılı olarak netleştirilir; sürpriz kalem çıkmaz.", href: "/iletisim" },
   { index: "03", eyebrow: "KAYNAK / DİJİTAL PAKET", title: "Kendi ekibinizle başlamak", summary: "Kurum içi hazırlık için rehber, kontrol listesi ve düzenlenebilir çalışma şablonlarından oluşan kaynak yaklaşımı.", note: "Çevrimiçi ödeme şu an etkin değildir; teslimat ve lisanslama e-posta üzerinden netleştirilir.", href: "/iletisim" },
 ];
 
 export const englishServices: Service[] = [
-  { index: "01", eyebrow: "CBAM / AUTHORISED DECLARANT", title: "CBAM application preparation", summary: "Scoping, document preparation and process coordination for the Authorised Declarant journey.", note: "This service does not replace legal advice, accredited verification or an official declaration.", href: "/en/contact" },
+  { index: "01", eyebrow: "CBAM / DATA PREPARATION", title: "CBAM data and file preparation", summary: "Scoping, data collection and file preparation for the emissions data your EU buyer requests.", note: "This service does not replace legal advice, accredited verification or an official declaration.", href: "/en/contact" },
   { index: "02", eyebrow: "COMPLIANCE / PROCESS DESIGN", title: "Compliance working context", summary: "An initial working approach for structuring data, documents and controls across CBAM, data protection and similar processes.", note: "Scope is clarified in writing after an initial needs conversation.", href: "/en/contact" },
   { index: "03", eyebrow: "RESOURCES / DIGITAL PACKS", title: "Start with your own team", summary: "A resource approach with guides, checklists and editable work templates for internal preparation.", note: "Online payment is not currently active; delivery and licensing are clarified by email.", href: "/en/contact" },
 ];
@@ -1060,13 +1060,17 @@ export const ucretliHizmetler: Hizmet[] = [
   {
     slug: "cbam-basvuru-danismanligi",
     aile: "CBAM (SKDM) · Profesyonel Hizmet",
-    ad: "CBAM Başvuru Danışmanlığı",
-    seoBaslik: "CBAM (SKDM) Başvuru Danışmanlığı",
+    // 13 Eki 2026 (Hasan onayı): hizmet "başvuruyu bize bırakın, Registry başvurusu, onaya
+    // kadar takip" vaat ediyordu. Yetkili beyancı başvurusunu yalnızca AB'deki ithalatçı
+    // yapabilir; Türk ihracatçı adına yapılacak başvuru yoktur. Tarif SAHA-KITAPCIGI §4'e
+    // hizalandı. Adres (slug) ve sipariş kodu (PRICE-005) DEĞİŞMEDİ.
+    ad: "CBAM Danışmanlığı: Veri ve Dosya Hazırlığı",
+    seoBaslik: "CBAM (SKDM) Danışmanlığı: Veri Toplama ve Dosya Hazırlığı",
     ozet:
-      "Başvuruyu bize bırakın: belge hazırlığı, CBAM Registry (AMM) başvurusu, otoriteden gelen ek bilgi taleplerinin (RFI) yönetimi ve onaya kadar takip.",
+      "Verilerinizi birlikte toplayıp AB'deki alıcınıza vereceğiniz dosyayı birlikte hazırlıyoruz: kapsam teyidi, tesis verisi, gömülü emisyon hesabı ve doğrulayıcıya sunulmaya hazır dosya.",
     fiyat: "€2.500",
     fiyatNot: "sabit fiyat · sürpriz yok",
-    sinir: "Hazırlayan ve süreci yürüten taraftır; akredite doğrulayıcı değildir.",
+    sinir: "Beyanı ve yetkili beyancı başvurusunu AB'deki ithalatçı yapar; biz dosyayı hazırlayan taraftayız. Akredite doğrulayıcı değiliz; saha ölçümü ve denetim yapmıyoruz.",
   },
   {
     slug: "cbam-profesyonel-paket",
