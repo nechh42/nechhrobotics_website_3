@@ -1803,3 +1803,11 @@ Push'tan ~15 dakika sonra ölçüm: canlı sayfa hâlâ eski metni veriyor
 7 push'un her biri 1 dakikadan kısa sürede çıkmıştı). Yerel derleme temiz
 (`tsc` 0, `build` 0, 131/0), yani sebep kod değil. Sebep ölçülemedi: Vercel paneline
 bu sohbetten erişim yok. Tahmin yürütülmedi; Hasan'dan Deployments sayfası istendi.
+
+### ✅ 13 Eki 14:50 — çözüldü: bir sonraki push ikisini birden yayınladı
+`6c70d8c` push'undan 30 saniye sonra canlı ölçüm: danışmanlık sayfası yeni metni veriyor,
+"Registry (AMM)" 0 kez, fiyat €2.500 ve sipariş kodu `PRICE-005` yerinde; `/hizmetler` ve
+`/en/services` sayfalarında "AUTHORISED DECLARANT" 0 kez. GitHub'da `573a3ce` hâlâ
+`pending` (Vercel o commit'i hiç derlemedi), `6c70d8c` `success`.
+**Ders:** push "gitti" demek "yayınlandı" demek değildir; her push'tan sonra canlı
+sayfa ölçülür. Vercel bir commit'i atlarsa sonraki push onu da taşır.
