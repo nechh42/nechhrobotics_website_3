@@ -836,11 +836,15 @@ export const paketler: Paket[] = [
       "Hesaplama metodolojisi ve kaynak kayıt defteri",
       "Motorla hesaplanmış gerçek örnek hesaplama",
       "Tedarikçi veri şablonu (Excel)",
-      "AB varsayılan değerleri: 15 öncül + 30 mamul, kaynağıyla",
+      // 20 Eki 2026: kit 15 Eki'de gecis tablosu yerine 2026 Ek I Turkiye tablosuna gecti
+      // ve Eco-Report hesabi acar (1 urun + 1 donem). Eski "15 oncul + 30 mamul" yanlisti.
+      "AB varsayılan değerleri: Türkiye için resmî Ek I tablosu (2025/2621, düz. 2026/1740), 2026–2028 ekleri dahil",
+      "Eco-Report hesabı: 1 ürün + 1 dönem için gömülü emisyon hesabı ve PDF rapor",
     ],
     fiyat: "€299",
     fiyatNot: "tek seferlik · + KDV",
-    sinir: "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir.",
+    sinir:
+      "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir. Eco-Report'taki hesap ve PDF rapor şu an yalnızca demir-çelik ürünleri için verilir; çimento, alüminyum, gübre ve hidrojen için henüz verilmez.",
   },
   {
     slug: "dora-tedarikci-hazirlik-kiti",
