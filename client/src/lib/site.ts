@@ -839,12 +839,12 @@ export const paketler: Paket[] = [
       // 20 Eki 2026: kit 15 Eki'de gecis tablosu yerine 2026 Ek I Turkiye tablosuna gecti
       // ve Eco-Report hesabi acar (1 urun + 1 donem). Eski "15 oncul + 30 mamul" yanlisti.
       "AB varsayılan değerleri: Türkiye için resmî Ek I tablosu (2025/2621, düz. 2026/1740), 2026–2028 ekleri dahil",
-      "Eco-Report hesabı: 1 ürün + 1 dönem için gömülü emisyon hesabı ve PDF rapor",
+      "Eco-Report hesabı: 1 ürün + 1 dönem için gömülü emisyon hesabı ve filigranlı PDF rapor",
     ],
     fiyat: "€299",
     fiyatNot: "tek seferlik · + KDV",
     sinir:
-      "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir. Eco-Report'taki hesap ve PDF rapor şu an yalnızca demir-çelik ürünleri için verilir; çimento, alüminyum, gübre ve hidrojen için henüz verilmez.",
+      "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir. Eco-Report'taki hesap ve filigranlı PDF rapor demir-çelik, çimento, alüminyum, gübre ve hidrojen için verilir (Uyg. Tüzük (AB) 2025/2547 izleme yöntemleriyle); elektrik ithalatı kapsam dışıdır.",
   },
   {
     slug: "dora-tedarikci-hazirlik-kiti",
