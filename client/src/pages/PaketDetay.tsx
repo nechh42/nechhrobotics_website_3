@@ -10,6 +10,7 @@ import { odeme, paketler, ucretliHizmetler } from "@/lib/site";
  *  referanssiz gelen havale hangi siparise ait oldugu bilinmeden kalirdi. */
 const UYGULAMA_SIPARISI: Record<string, string> = {
   "cbam-girisimci-kiti": "PRICE-002",
+  "cbam-aylik-calisma-alani": "PRICE-004",
   "cbam-profesyonel-paket": "PRICE-006",
   "cbam-basvuru-danismanligi": "PRICE-005",
   "dora-tedarikci-hazirlik-kiti": "PRICE-008",
@@ -23,8 +24,15 @@ const UYGULAMA_SIPARISI: Record<string, string> = {
 };
 const SIPARIS_ADRESI = "https://ecoreport.nechhrobotics.com/";
 
+// 20 Eki 2026: ucuncu adim paket turune gore — aylik calisma alaninda dosya degil hesap
+// baglantisi gider; CBAM kiti dosyalarla birlikte Eco-Report hesabi da acar.
+const TESLIM_METNI: Record<string, string> = {
+  "PRICE-004": "Ödeme hesaba geçince Eco-Report hesap şifre bağlantınız e-postanıza gelir; erişim 30 gün geçerlidir.",
+  "PRICE-002": "Ödeme hesaba geçince kit dosyaları firmanız adına e-postanıza gelir; ayrıca 1 ürün ve 1 dönem için Eco-Report hesap bağlantısı gönderilir.",
+  "PRICE-005": "Ödeme hesaba geçince çalışmayı planlamak için sizinle iletişime geçilir.",
+};
+
 function UygulamaSiparisKutusu({ paketKodu }: { paketKodu: string }) {
-  const kitMi = paketKodu !== "PRICE-005";
   return (
     <div className="odeme-kutusu">
       <div className="odeme-baslik">
@@ -50,9 +58,7 @@ function UygulamaSiparisKutusu({ paketKodu }: { paketKodu: string }) {
         <li>
           <span>3</span>
           <p>
-            {kitMi
-              ? "Ödeme hesaba geçince paket, firmanız adına lisanslanmış olarak e-postanıza gelir."
-              : "Ödeme hesaba geçince çalışmayı planlamak için sizinle iletişime geçilir."}
+            {TESLIM_METNI[paketKodu] ?? "Ödeme hesaba geçince paket, firmanız adına lisanslanmış olarak e-postanıza gelir."}
           </p>
         </li>
       </ol>

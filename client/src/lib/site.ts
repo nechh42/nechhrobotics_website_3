@@ -847,6 +847,28 @@ export const paketler: Paket[] = [
       "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir. Eco-Report'taki hesap ve filigranlı PDF rapor demir-çelik, çimento, alüminyum, gübre ve hidrojen için verilir (Uyg. Tüzük (AB) 2025/2547 izleme yöntemleriyle); elektrik ithalatı kapsam dışıdır.",
   },
   {
+    // 20 Eki 2026 (Hasan onayı): Eco-Report aylık çalışma alanı mağazaya kondu. Dosya kiti
+    // değil, yazılım erişimi: ödeme onaylanınca Eco-Report hesap şifre bağlantısı gider
+    // (uygulama: PRICE-004, €149, WORKSPACE_PERIOD_DAYS = 30).
+    slug: "cbam-aylik-calisma-alani",
+    aile: "CBAM (SKDM) · Eco-Report Yazılımı",
+    ad: "CBAM Hazırlık Çalışma Alanı (aylık)",
+    seoBaslik: "CBAM (SKDM) Gömülü Emisyon Hesabı ve Rapor: Aylık Çalışma Alanı",
+    ozet:
+      "Eco-Report'ta 30 gün boyunca istediğiniz kadar ürün ve dönem için gömülü emisyon hesabı yapın, filigranlı PDF raporunuzu indirin. Hesaplar AB'nin resmî yöntemleriyle yapılır; her sayı denklemiyle izlenebilir.",
+    icerik: [
+      "Demir-çelik, çimento, alüminyum, gübre ve hidrojen için hesap (Uyg. Tüzük (AB) 2025/2547 izleme yöntemleri)",
+      "30 gün boyunca ürün ve dönem sınırı yok",
+      "Resmî varsayılan değerler: 2025/2621 Ek I (2026/1740 ile değişik) ve Ek II şebeke faktörleri",
+      "Firmanızın adıyla filigranlı PDF rapor; AB'deki alıcınız Rapor No ile doğrulayabilir",
+      "Eksik veya hatalı veride rapor verilmez; ne düzelteceğiniz Türkçe yazılır",
+    ],
+    fiyat: "€149",
+    fiyatNot: "30 gün · + KDV · yenileme yeni siparişle",
+    sinir:
+      "Hazırlık aracıdır; akredite doğrulama veya resmî beyan değildir. Verilerin doğruluğu verileri giren firmaya aittir. Elektrik ithalatı (Ek I 3.19) kapsam dışıdır. Süre bitince erişim kapanır; otomatik yenileme ve kartla çekim yoktur.",
+  },
+  {
     slug: "dora-tedarikci-hazirlik-kiti",
     aile: "DORA · AB Finans Sektörü",
     ad: "DORA Tedarikçi Hazırlık Kiti",
