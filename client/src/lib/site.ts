@@ -844,7 +844,7 @@ export const paketler: Paket[] = [
     fiyat: "€299",
     fiyatNot: "tek seferlik · + KDV",
     sinir:
-      "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir. Eco-Report'taki hesap ve filigranlı PDF rapor demir-çelik, çimento, alüminyum, gübre ve hidrojen için verilir (Uyg. Tüzük (AB) 2025/2547 izleme yöntemleriyle); elektrik ithalatı kapsam dışıdır.",
+      "Hazırlık materyalidir; akredite doğrulama veya resmî beyan değildir. Eco-Report'taki hesap ve filigranlı PDF rapor demir-çelik, çimento, alüminyum, gübre, hidrojen ve AB'ye ithal edilen elektrik için verilir (Uyg. Tüzük (AB) 2025/2547 yöntemleriyle).",
   },
   {
     // 20 Eki 2026 (Hasan onayı): Eco-Report aylık çalışma alanı mağazaya kondu. Dosya kiti
@@ -857,17 +857,17 @@ export const paketler: Paket[] = [
     ozet:
       "Eco-Report'ta 30 gün boyunca istediğiniz kadar ürün ve dönem için gömülü emisyon hesabı yapın, filigranlı PDF raporunuzu indirin. Hesaplar AB'nin resmî yöntemleriyle yapılır; her sayı denklemiyle izlenebilir.",
     icerik: [
-      "Demir-çelik, çimento, alüminyum, gübre ve hidrojen için hesap (Uyg. Tüzük (AB) 2025/2547 izleme yöntemleri)",
+      "Demir-çelik, çimento, alüminyum, gübre, hidrojen ve ithal elektrik için hesap (Uyg. Tüzük (AB) 2025/2547 yöntemleri)",
       "30 gün boyunca ürün ve dönem sınırı yok",
       "Resmî varsayılan değerler: 2025/2621 Ek I (2026/1740 ile değişik) ve Ek II şebeke faktörleri",
       "Firmanızın adıyla filigranlı PDF rapor; AB'deki alıcınız Rapor No ile doğrulayabilir",
       "Eksik veya hatalı veride rapor verilmez; ne düzelteceğiniz Türkçe yazılır",
-      "Ayrıca AI Act, NIS2, CRA, CSRD, DPP, EUDR ve KVKK/GDPR değerlendirmeleri: sonuç ve filigranlı PDF rapor",
+      "Ayrıca AI Act, NIS2, CRA, CSRD, DPP, EUDR, DORA ve KVKK/GDPR değerlendirmeleri: sonuç ve filigranlı PDF rapor",
     ],
     fiyat: "€149",
     fiyatNot: "30 gün · + KDV · yenileme yeni siparişle",
     sinir:
-      "Hazırlık aracıdır; akredite doğrulama veya resmî beyan değildir. Verilerin doğruluğu verileri giren firmaya aittir. Elektrik ithalatı (Ek I 3.19) kapsam dışıdır. Süre bitince erişim kapanır; otomatik yenileme ve kartla çekim yoktur.",
+      "Hazırlık aracıdır; akredite doğrulama veya resmî beyan değildir. Verilerin doğruluğu verileri giren firmaya aittir. Süre bitince erişim kapanır; otomatik yenileme ve kartla çekim yoktur.",
   },
   {
     slug: "dora-tedarikci-hazirlik-kiti",
@@ -881,6 +881,7 @@ export const paketler: Paket[] = [
       "Çıkış ve geçiş planı şablonu",
       "Banka soru formu cevap kütüphanesi",
       "Alt yüklenici ve veri konumu listesi",
+      "Eco-Report hesabı: DORA sözleşme hazırlığı değerlendirmesinin sonucu ve firmanız adına filigranlı, doğrulanabilir PDF rapor",
     ],
     fiyat: "€499",
     fiyatNot: "tek seferlik · + KDV",

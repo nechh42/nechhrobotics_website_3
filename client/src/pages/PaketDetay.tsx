@@ -36,6 +36,7 @@ const SIPARIS_ADRESI = "https://ecoreport.nechhrobotics.com/";
 const MODUL_KITI_TESLIM =
   "Ödeme hesaba geçince kit dosyaları firmanız adına e-postanıza gelir; ayrıca bu modülün sonucunu ve PDF raporunu alacağınız Eco-Report hesap bağlantısı gönderilir.";
 const TESLIM_METNI: Record<string, string> = {
+  "PRICE-008": MODUL_KITI_TESLIM,
   "PRICE-014": MODUL_KITI_TESLIM,
   "PRICE-015": MODUL_KITI_TESLIM,
   "PRICE-016": MODUL_KITI_TESLIM,
