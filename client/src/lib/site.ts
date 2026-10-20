@@ -1117,8 +1117,9 @@ export const odeme = {
   iban: import.meta.env.VITE_IBAN_NO ?? "",
   eposta: "nechhlab.global@gmail.com",
   paraBirimiNotu:
-    "Fiyatlar euro cinsindendir. Ödeme, ödeme günündeki Merkez Bankası "
-    + "efektif satış kuru üzerinden Türk lirası olarak alınır.",
+    "Fiyatlar euro cinsindendir ve KDV hariçtir. Ödeme, ödeme günündeki Merkez Bankası "
+    + "efektif satış kuru üzerinden Türk lirası olarak alınır; %20 KDV sipariş formunda ayrıca "
+    + "hesaplanıp gösterilir ve tutara eklenir.",
 };
 
 export type YolHaritasiKalemi = {
