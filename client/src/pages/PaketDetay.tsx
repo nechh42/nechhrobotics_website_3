@@ -14,6 +14,13 @@ const UYGULAMA_SIPARISI: Record<string, string> = {
   "cbam-profesyonel-paket": "PRICE-006",
   "cbam-basvuru-danismanligi": "PRICE-005",
   "dora-tedarikci-hazirlik-kiti": "PRICE-008",
+  // 20 Eki 2026: modul kitleri de siparis formundan (KDV + hesap: kit o modulun raporunu acar).
+  "cra-uretici-hazirlik-kiti": "PRICE-014",
+  "nis2-kurulus-hazirlik-kiti": "PRICE-015",
+  "ai-act-sistem-hazirlik-kiti": "PRICE-016",
+  "csrd-kapsam-ve-deger-zinciri-kiti": "PRICE-017",
+  "eudr-operator-hazirlik-kiti": "PRICE-018",
+  "dpp-hazirlik-kiti": "PRICE-019",
   // 14 Eyl 2026: sablon paketleri de siparis formundan (kod eslesmesi Eco-Report
   // run_kit_checks'te site.ts ve backend'le karsilastirilir).
   "kvkk-sablon-paketi": "PRICE-009",
@@ -26,8 +33,18 @@ const SIPARIS_ADRESI = "https://ecoreport.nechhrobotics.com/";
 
 // 20 Eki 2026: ucuncu adim paket turune gore — aylik calisma alaninda dosya degil hesap
 // baglantisi gider; CBAM kiti dosyalarla birlikte Eco-Report hesabi da acar.
+const MODUL_KITI_TESLIM =
+  "Ödeme hesaba geçince kit dosyaları firmanız adına e-postanıza gelir; ayrıca bu modülün sonucunu ve PDF raporunu alacağınız Eco-Report hesap bağlantısı gönderilir.";
 const TESLIM_METNI: Record<string, string> = {
-  "PRICE-004": "Ödeme hesaba geçince Eco-Report hesap şifre bağlantınız e-postanıza gelir; erişim 30 gün geçerlidir.",
+  "PRICE-014": MODUL_KITI_TESLIM,
+  "PRICE-015": MODUL_KITI_TESLIM,
+  "PRICE-016": MODUL_KITI_TESLIM,
+  "PRICE-017": MODUL_KITI_TESLIM,
+  "PRICE-018": MODUL_KITI_TESLIM,
+  "PRICE-019": MODUL_KITI_TESLIM,
+  "PRICE-009": MODUL_KITI_TESLIM,
+  "PRICE-011": MODUL_KITI_TESLIM,
+  "PRICE-004": "Ödeme hesaba geçince Eco-Report hesap şifre bağlantınız e-postanıza gelir; CBAM ve tüm modüller 30 gün açıktır.",
   "PRICE-002": "Ödeme hesaba geçince kit dosyaları firmanız adına e-postanıza gelir; ayrıca 1 ürün ve 1 dönem için Eco-Report hesap bağlantısı gönderilir.",
   "PRICE-005": "Ödeme hesaba geçince çalışmayı planlamak için sizinle iletişime geçilir.",
 };
