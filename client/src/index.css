@@ -522,6 +522,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* Odeme kutusu: fiyat euro, tahsilat TL - bu notun gorunmesi gerekiyor. */
 .odeme-para-birimi { margin: 0 0 16px; padding: 12px 14px; border-left: 3px solid var(--blue); background: rgba(17,85,204,.05); color: var(--muted-ink); font-size: 12px; line-height: 1.62; }
+.odeme-once { margin: 0 0 14px; padding: 12px 14px; border: 1px solid rgba(15,118,110,.35); background: rgba(15,118,110,.06); border-radius: 6px; font-size: 13px; line-height: 1.6; }
+.odeme-once p { margin: 0 0 6px; }
+.odeme-once a { color: #0f766e; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 3px; }
 
 /* CBAM maliyet seridi — urun sayfasinin en ustu. Once SAYI gorunur,
    aciklama altta kucuk durur: basliga bakip gecen kisi de anlasin. */

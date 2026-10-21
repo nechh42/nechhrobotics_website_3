@@ -50,13 +50,49 @@ const TESLIM_METNI: Record<string, string> = {
   "PRICE-005": "Ödeme hesaba geçince çalışmayı planlamak için sizinle iletişime geçilir.",
 };
 
+// 21 Eki 2026: odemeden once guven — paketin modulune ait ornek rapor (kurgusal veri, gecersiz
+// Rapor No) ve firma basina bir ucretsiz ilk rapor. Uygulamada raporu olmayan sablon paketlerinde yok.
+const ORNEK_RAPOR_MODULU: Record<string, string> = {
+  "PRICE-002": "cbam",
+  "PRICE-004": "cbam",
+  "PRICE-005": "cbam",
+  "PRICE-006": "cbam",
+  "PRICE-008": "dora",
+  "PRICE-014": "cra",
+  "PRICE-015": "nis2",
+  "PRICE-016": "ai-act",
+  "PRICE-017": "csrd",
+  "PRICE-018": "eudr",
+  "PRICE-019": "dpp",
+  "PRICE-009": "kvkk-gdpr",
+  "PRICE-011": "kvkk-gdpr",
+};
+
 function UygulamaSiparisKutusu({ paketKodu }: { paketKodu: string }) {
+  const ornekModul = ORNEK_RAPOR_MODULU[paketKodu];
   return (
     <div className="odeme-kutusu">
       <div className="odeme-baslik">
         <Building2 size={20} />
         <span>Ödeme: banka havalesi / EFT</span>
       </div>
+      {ornekModul ? (
+        <div className="odeme-once">
+          <p>
+            <strong>Ödemeden önce:</strong> alacağınız raporun birebir örneğine bakın (kurgusal veriyle,
+            "ÖRNEK" filigranlı). İlk raporunuz ücretsiz — firma başına bir kez, onaylı.
+          </p>
+          <p>
+            <a href={`${SIPARIS_ADRESI}api/ornek-rapor.pdf?modul=${ornekModul}`} target="_blank" rel="noopener noreferrer">
+              Örnek raporu açın <ArrowUpRight size={14} />
+            </a>
+            {" · "}
+            <a href={`${SIPARIS_ADRESI}?view=order&paket=PRICE-000`}>
+              Ücretsiz ilk raporu talep edin <ArrowUpRight size={14} />
+            </a>
+          </p>
+        </div>
+      ) : null}
       <p className="odeme-para-birimi">{odeme.paraBirimiNotu}</p>
       <a
         className="button button-primary"
