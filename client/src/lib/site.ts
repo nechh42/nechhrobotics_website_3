@@ -147,11 +147,11 @@ export const products: Product[] = [
     summary:
       "İş makinesi ve ekipman kiralayan işletmeler için makine, müşteri, sözleşme, iade ve alacağı telefonda tek yerde tutan uygulama.",
     longDescription:
-      "PALETRA, hangi makinenin kimde olduğunu, ne zaman döneceğini ve kimden ne kadar alacak kaldığını kâğıt defter ve dağınık telefon notları yerine tek ekranda gösterir. Kiralama başlarken sayaç ve fotoğraf alınır, müşteri telefonda imzalar, sözleşme PDF olarak hazırlanır. İade günü sayaç ve hasar notu girilir, tutar hesaplanır, iade tutanağı çıkar; kalan alacak WhatsApp'tan hatırlatılır. Bakım planı motor saatine veya kilometreye göre uyarır; aylık ciro ve makine başına doluluk raporlanır. Kayıtlar sunucuda değil telefonda durur, tek dosyalık yedekle yeni telefona taşınır. Türkçe, İngilizce ve Arapça kullanılır. PALETRA™, Nechh Robotics şirketinin ticari markasıdır.",
+      "PALETRA, hangi makinenin kimde olduğunu, ne zaman döneceğini ve kimden ne kadar alacak kaldığını kâğıt defter ve dağınık telefon notları yerine tek ekranda gösterir. Kiralama başlarken sayaç ve fotoğraf alınır, müşteri telefonda imzalar, sözleşme PDF olarak hazırlanır. İade günü sayaç ve hasar notu girilir, tutar hesaplanır, iade tutanağı çıkar; kalan alacak WhatsApp'tan hatırlatılır. Bakım planı motor saatine veya kilometreye göre uyarır; aylık ciro ve makine başına doluluk raporlanır. Her makinenin aylık müsaitlik takvimi hangi gün kirada, rezerve ya da boş olduğunu gösterir; 30 günden uzun süredir kiralanmayan makine Bugün ekranında uyarı olarak çıkar. İnternet gerekmeden çalışır; kayıtlar sunucuda değil telefonda veya tablette durur, tek dosyalık yedekle yeni cihaza taşınır. Android, iPhone ve iPad'de; Türkçe, İngilizce ve Arapça kullanılır. PALETRA™, Nechh Robotics şirketinin ticari markasıdır.",
     useCase: "Kiralama sözleşmesi, iade ve tahsilat takibi",
     tone: "operations",
-    externalUrl: "/iletisim",
-    externalLabel: "PALETRA hakkında bize yazın",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra",
+    externalLabel: "PALETRA'yı indir",
     stores: {
       play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra",
       appStore: "https://apps.apple.com/tr/app/id6813489781",
@@ -159,13 +159,14 @@ export const products: Product[] = [
     principles: [
       { label: "Sahada imza", detail: "Müşteri makineyi teslim alırken telefonda imzalar; sözleşme ve iade tutanağı PDF olarak hazırlanır." },
       { label: "Kaçan alacak yok", detail: "Geciken iade ve kalan tutar görünür; hatırlatma WhatsApp'tan tek dokunuşla gider." },
-      { label: "Veri sizde", detail: "Hesap açmak gerekmez, kayıtlar telefonda tutulur; yedek tek dosyayla alınıp geri yüklenir." },
+      { label: "Boş makine görünür", detail: "Müsaitlik takvimi ve 30 günü geçen boşta makine uyarısı; hangi makinenin para kazanmadığı tek bakışta." },
+      { label: "Veri sizde, internet şart değil", detail: "Hesap açmak gerekmez, şantiyede çekmese de çalışır; kayıtlar cihazda tutulur, yedek tek dosyayla alınıp geri yüklenir." },
     ],
   },
   {
     // 7 Eki 2026 — Hasan: anasayfa urun izgarasinda 06 olarak gorunsun; tanitim videosu Galeri'de.
-    // Tuketici urunu (astroloji/fal), B2B modullerden farkli; tone "cosmic". Play CANLI (olculdu),
-    // App Store incelemede -> appStore BOS birakildi ("yakinda" yazilmaz, helialoop dersi).
+    // Tuketici urunu (astroloji/fal), B2B modullerden farkli; tone "cosmic". Play CANLI (olculdu).
+    // 27 Eki 2026: Apple 4.3(b) ile reddetti, Hasan karari yalniz Android -> appStore BOS ("yakinda" yazilmaz).
     slug: "aylora",
     name: "AYLORA",
     eyebrow: "06 / Astroloji",
@@ -173,7 +174,7 @@ export const products: Product[] = [
     summary:
       "Doğum haritası, günlük gökyüzü yorumu, kahve falı ve tarot gibi içerikleri tek uygulamada toplayan kişisel astroloji rehberi.",
     longDescription:
-      "AYLORA, astroloji ve fal içeriklerini sade ve ferah bir deneyimde buluşturan tüketici uygulamasıdır. Doğum haritası, günün gökyüzü yorumu, kahve falı, tarot, rüya yorumu ve motivasyon gibi bölümleri kişiye göre üretir; her gün yeni içerik gelir. Kayıtlar cihazda tutulur, hesap açmak gerekmez. Türkçe, İngilizce ve Arapça kullanılır. Eğlence ve kişisel içgörü amaçlıdır; profesyonel danışmanlığın yerine geçmez. AYLORA™, Nechh Robotics şirketinin ticari markasıdır.",
+      "AYLORA, astroloji ve fal içeriklerini sade ve ferah bir deneyimde buluşturan tüketici uygulamasıdır. Doğum haritası, günün gökyüzü yorumu, kahve falı, tarot, rüya yorumu ve motivasyon gibi bölümleri kişiye göre üretir; her gün yeni içerik gelir. Kahve falı önceki fincanlarındaki sembolleri hatırlar; AI Kâhin soruları doğum haritanı bilerek cevaplar. Kayıtlar cihazda tutulur, hesap açmak gerekmez. Türkçe, İngilizce ve Arapça kullanılır. Eğlence ve kişisel içgörü amaçlıdır; profesyonel danışmanlığın yerine geçmez. AYLORA™, Nechh Robotics şirketinin ticari markasıdır.",
     useCase: "Günlük astroloji ve fal içeriği",
     tone: "cosmic",
     externalUrl: "https://play.google.com/store/apps/details?id=com.nechhrobotics.aylora",
@@ -311,11 +312,11 @@ export const englishProducts: Product[] = [
     summary:
       "An app for construction machinery and equipment rental businesses that keeps machines, customers, contracts, returns and receivables in one place on the phone.",
     longDescription:
-      "PALETRA shows which machine is with whom, when it is due back and how much each customer still owes — on one screen instead of a paper ledger. When a rental starts, the meter reading and photos are recorded, the customer signs on the phone and a contract PDF is prepared. On return, the meter and a damage note are entered, the amount is calculated and a return report is issued; the outstanding balance can be sent as a WhatsApp reminder. Maintenance plans alert by engine hours or kilometres, and monthly revenue and per-machine utilisation are reported. Records stay on the phone rather than a server and move to a new phone with a single backup file. Available in Turkish, English and Arabic. PALETRA™ is a trademark of Nechh Robotics.",
+      "PALETRA shows which machine is with whom, when it is due back and how much each customer still owes — on one screen instead of a paper ledger. When a rental starts, the meter reading and photos are recorded, the customer signs on the phone and a contract PDF is prepared. On return, the meter and a damage note are entered, the amount is calculated and a return report is issued; the outstanding balance can be sent as a WhatsApp reminder. Maintenance plans alert by engine hours or kilometres, and monthly revenue and per-machine utilisation are reported. A monthly availability calendar shows which days each machine is rented, reserved or free, and machines not rented for more than 30 days appear as an alert on the Today screen. It works without internet; records stay on the phone or tablet rather than a server and move to a new device with a single backup file. On Android, iPhone and iPad; available in Turkish, English and Arabic. PALETRA™ is a trademark of Nechh Robotics.",
     useCase: "Rental contracts, returns and collections",
     tone: "operations",
-    externalUrl: "/en/contact",
-    externalLabel: "Ask us about PALETRA",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra",
+    externalLabel: "Download PALETRA",
     stores: {
       play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.paletra",
       appStore: "https://apps.apple.com/tr/app/id6813489781",
@@ -323,7 +324,8 @@ export const englishProducts: Product[] = [
     principles: [
       { label: "Signed on site", detail: "The customer signs on the phone at hand-over; contract and return report are produced as PDFs." },
       { label: "No missed receivables", detail: "Late returns and open balances stay visible; a WhatsApp reminder is one tap away." },
-      { label: "Your data", detail: "No account needed; records live on the phone and are backed up and restored with a single file." },
+      { label: "Idle machines visible", detail: "Availability calendar and an alert for machines idle over 30 days — see at a glance which machine is not earning." },
+      { label: "Your data, no internet needed", detail: "No account needed and it works without signal on site; records live on the device and are backed up and restored with a single file." },
     ],
   },
   {
@@ -334,7 +336,7 @@ export const englishProducts: Product[] = [
     summary:
       "A personal astrology guide that brings birth chart, daily sky reading, coffee-cup reading and tarot into one app.",
     longDescription:
-      "AYLORA brings astrology and fortune content into a calm, uncluttered consumer experience. It generates birth chart, daily sky reading, coffee-cup reading, tarot, dream interpretation and motivation sections personalised to you, with fresh content each day. Records stay on the device and no account is required. Available in Turkish, English and Arabic. It is for entertainment and personal insight and does not replace professional advice. AYLORA™ is a trademark of Nechh Robotics.",
+      "AYLORA brings astrology and fortune content into a calm, uncluttered consumer experience. It generates birth chart, daily sky reading, coffee-cup reading, tarot, dream interpretation and motivation sections personalised to you, with fresh content each day. The coffee-cup reading remembers symbols from your previous cups, and the AI Oracle answers questions with your birth chart in mind. Records stay on the device and no account is required. Available in Turkish, English and Arabic. It is for entertainment and personal insight and does not replace professional advice. AYLORA™ is a trademark of Nechh Robotics.",
     useCase: "Daily astrology and fortune content",
     tone: "cosmic",
     externalUrl: "https://play.google.com/store/apps/details?id=com.nechhrobotics.aylora",
