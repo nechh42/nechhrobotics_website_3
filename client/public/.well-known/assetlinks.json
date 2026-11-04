@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.nechhrobotics.tonsora",
+      "sha256_cert_fingerprints": [
+        "A4:F6:63:8A:CB:D2:E1:95:19:DB:89:EF:37:E0:0F:6A:1F:9E:DB:89:C1:FE:30:D7:59:32:9C:53:B2:DE:52:63",
+        "DA:49:43:36:F7:C8:EE:5A:A3:C8:20:4A:FB:14:A1:AE:9C:23:16:03:52:16:78:C5:03:8D:F7:FA:CC:34:44:19"
+      ]
+    }
+  }
+]
