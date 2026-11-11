@@ -1,5 +1,5 @@
 /** Evidence Grid: portfolio cards expose category, intent and an explicit route with compact technical markers. */
-import { ArrowUpRight, Construction, Leaf, Scissors, Scale, Sparkles, Stethoscope } from "lucide-react";
+import { ArrowUpRight, Construction, Leaf, PawPrint, Scissors, Scale, Sparkles, Stethoscope } from "lucide-react";
 import { Link } from "wouter";
 import type { Product } from "@/lib/site";
 
@@ -8,6 +8,7 @@ function ProductGlyph({ tone, slug }: { tone: Product["tone"]; slug: Product["sl
   // PALETRA da "operations" tonunda; makas (TONSORA) ona dusmesin.
   if (slug === "paletra") return <Construction {...props} />;
   if (slug === "aylora") return <Sparkles {...props} />;
+  if (slug === "lapaglia") return <PawPrint {...props} />;
   if (tone === "health") return <Stethoscope {...props} />;
   if (tone === "legal") return <Scale {...props} />;
   if (tone === "compliance") return <Leaf {...props} />;

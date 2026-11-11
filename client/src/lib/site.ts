@@ -1,5 +1,5 @@
 export type Product = {
-  slug: "helialoop" | "juriloop" | "eco-report" | "tonsora" | "paletra" | "aylora";
+  slug: "helialoop" | "juriloop" | "eco-report" | "tonsora" | "paletra" | "aylora" | "lapaglia";
   name: string;
   /** 13 Eki 2026: sayfa <title> metni. Ürün adı tek başına aranan kelimeyi taşımıyorsa doldurulur
    *  (Eco-Report başlığında ne CBAM ne SKDM vardı). Boşsa `name` kullanılır. */
@@ -188,6 +188,31 @@ export const products: Product[] = [
       { label: "Veri cihazda", detail: "Hesap gerekmez; kayıtlar telefonda tutulur, sunucuda değil." },
     ],
   },
+  {
+    // 11 Kas 2026 — Play CANLI (5 Kas'tan beri, olculdu). App Store 1.0.0 incelemede ->
+    // appStore BOS; onay gelince https://apps.apple.com/app/id<...> eklenecek (C:\LaPaglia\ONAY-SONRASI-YAPILACAKLAR.md A-4).
+    // Metin kaynagi: C:\LaPaglia\store\MAGAZA-METINLERI.md (uygulamada olmayan sey yazilmaz).
+    slug: "lapaglia",
+    name: "LaPaglia",
+    eyebrow: "07 / Evcil hayvan",
+    category: "Evcil hayvan karnesi, kayıp ve sahiplendirme",
+    summary:
+      "Evcil hayvanın sağlık karnesi ve hatırlatmaları; ücretsiz kayıp/bulundu ve sahiplendirme ilanları tek uygulamada.",
+    longDescription:
+      "LaPaglia; evcil hayvanının sağlık karnesini tuttuğun, kaybolan bir hayvan için ilan verdiğin ve güvenli sahiplendirme yaptığın sade bir uygulamadır. Aşı, ilaç, kontrol ve kilo kayıtları belge ve fotoğrafla tutulur; aşı, ilaç ve kontrol için hatırlatma kurulur, veterinerle paylaşılacak PDF bakım raporu hazırlanır. Kedi ve köpeğin yanında kuş, tavşan, gelincik, hamster, kobay, sürüngen ve balık da desteklenir. Kayıp/bulundu ve sahiplendirme ilanları ücretsizdir; ilan ev adresini değil yalnız yaklaşık bölgeyi gösterir, telefon numarası görünmez, para isteyen ilanlar otomatik durdurulur. Abonelik bitse bile kayıtlar silinmez, kilitlenmez. Reklam ve veri satışı yoktur. Türkçe, İngilizce ve Arapça kullanılır. LaPaglia teşhis koymaz, ilaç önermez; sağlık kararları için veteriner hekime danışılmalıdır.",
+    useCase: "Evcil hayvan sağlık kaydı ve güvenli ilan",
+    tone: "health",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.nechhrobotics.lapaglia",
+    externalLabel: "LaPaglia'yı indir",
+    stores: {
+      play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.lapaglia",
+    },
+    principles: [
+      { label: "Kayıtlar senin", detail: "Abonelik bitse bile kayıtlar silinmez, kilitlenmez; görmek, düzeltmek ve dışa aktarmak her zaman ücretsiz." },
+      { label: "Ücretsiz ilan", detail: "Kayıp/bulundu ve sahiplendirme ilanı, başvuru ve sohbet ücretsiz; hayvan satışı yok." },
+      { label: "Güvenli konum", detail: "İlan ev adresini değil yaklaşık bölgeyi gösterir; telefon numarası görünmez, her ilanda Şikâyet et ve Engelle." },
+    ],
+  },
 ];
 
 export function getProduct(slug?: string) {
@@ -199,6 +224,7 @@ export function getProduct(slug?: string) {
     tonsora: "tonsora",
     paletra: "paletra",
     aylora: "aylora",
+    lapaglia: "lapaglia",
   };
   return products.find((product) => product.slug === aliases[slug ?? ""]);
 }
@@ -350,6 +376,28 @@ export const englishProducts: Product[] = [
       { label: "Your data", detail: "No account needed; records live on the phone, not on a server." },
     ],
   },
+  {
+    slug: "lapaglia",
+    name: "LaPaglia",
+    eyebrow: "07 / Pets",
+    category: "Pet health records, lost & found and adoption",
+    summary:
+      "Pet health records and reminders, plus free lost & found and adoption listings, in one app.",
+    longDescription:
+      "LaPaglia is a simple app to keep your pet's health records, post a listing when a pet goes missing, and rehome a pet safely. Vaccine, medication, check-up and weight records are kept with documents and photos; reminders can be set for vaccines, medications and check-ups, and a PDF care report can be shared with your vet. Besides cats and dogs, it supports birds, rabbits, ferrets, hamsters, guinea pigs, reptiles and fish. Lost & found and adoption listings are free; listings show only an approximate area, never a home address, phone numbers are not shown, and listings asking for money are stopped automatically. Records are never deleted or locked when a subscription ends. No ads, no data selling. Available in Turkish, English and Arabic. LaPaglia does not diagnose or recommend medication; consult a veterinarian for health decisions.",
+    useCase: "Pet health records and safe listings",
+    tone: "health",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.nechhrobotics.lapaglia",
+    externalLabel: "Download LaPaglia",
+    stores: {
+      play: "https://play.google.com/store/apps/details?id=com.nechhrobotics.lapaglia",
+    },
+    principles: [
+      { label: "Your records", detail: "Never deleted or locked when a subscription ends; viewing, editing and exporting are always free." },
+      { label: "Free listings", detail: "Lost & found and adoption listings, applications and chat are free; no animal sales." },
+      { label: "Safe location", detail: "Listings show an approximate area, not a home address; phone numbers stay hidden, with Report and Block on every listing." },
+    ],
+  },
 ];
 
 export function getEnglishProduct(slug?: string) {
@@ -360,6 +408,8 @@ export function getEnglishProduct(slug?: string) {
     juriloop: "juriloop",
     tonsora: "tonsora",
     paletra: "paletra",
+    aylora: "aylora", // 11 Kas 2026: eksikti -> /en/solutions/aylora 404 veriyordu
+    lapaglia: "lapaglia",
   };
   return englishProducts.find((product) => product.slug === aliases[slug ?? ""]);
 }
