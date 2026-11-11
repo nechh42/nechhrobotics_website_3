@@ -120,3 +120,36 @@ dist-ssr/
 /nechhrobotics -tanıtım videosu.mp4
 /Nechh_Robotics_Tanitim_v3.pptx
 /GORSEL-VİDEO/
+
+# === NECHH ortak kural (PROJE-DOSYALAMA-SABLONU, 12 Kas 2026) ===
+# Sırlar — asla commit edilmez
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p8
+*.p12
+*.mobileprovision
+key.properties
+
+# Derleme çıktıları — kaynaktan yeniden üretilir, git geçmişi şişer
+*.aab
+*.apk
+*.ipa
+
+# Büyük medya — GÖRSELLER/tanitim ve videolar git dışında
+GÖRSELLER/tanitim/
+*.mp4
+*.MP4
+*.mov
+*.MOV
+
+# İşletim sistemi / editör / yerel araç
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+*.log
+.playwright-mcp/

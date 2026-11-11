@@ -1811,3 +1811,30 @@ bu sohbetten erişim yok. Tahmin yürütülmedi; Hasan'dan Deployments sayfası 
 `pending` (Vercel o commit'i hiç derlemedi), `6c70d8c` `success`.
 **Ders:** push "gitti" demek "yayınlandı" demek değildir; her push'tan sonra canlı
 sayfa ölçülür. Vercel bir commit'i atlarsa sonraki push onu da taşır.
+
+
+## 07 KASIM 2026 ## ÖNEMLİ DEĞİŞİKLİK 
+VERCEL DE Kİ SİTE 100GB OLAN KOTANIN DOLMASI NEDENİYLE  BUGÜN DURDURLDU.SİTE BURADAN TAMAMEN SİLİNDİ VE CLOUDFLARE  ye TAŞINDI.ŞU AN AKTİF OLARAK ÇALIŞIYOR.
+
+Cloudflare API anahtarı, hesap no ve Zone ID buradan kaldırıldı (11 Kas 2026). Yeri: `Documents\UYGULAMA ERİŞİM DOSYALARI-ÇOK ÖNEMLİ\CLOUDFLARE-API-ANAHTARI.txt`.
+
+## 11 KASIM 2026 — AYLORA yasal sayfaları siteye taşındı (Claude)
+- Vercel tüm hesabı durdurduğu için AYLORA'nın gizlilik/KVKK/koşullar sayfaları kapanmıştı. `client/public/aylora/` altına kopyalandı (kaynak: `AYLORA/server/public/*.html`), commit `f310843`, Cloudflare Pages GitHub push ile yayınladı.
+- Canlı ölçüldü: `https://nechhrobotics.com/aylora/privacy`, `/aylora/kvkk`, `/aylora/terms` → 200 (Pages `.html`'i uzantısız adrese yönlendiriyor), "CİHAZ KİMLİĞİ" maddesi var.
+- Cloudflare hesabı: **hhbayrak1@gmail.com** (envantere yazıldı). Aynı hesapta Worker `aylora-api` → `aylora-api.nechhrobotics.com`.
+- ⚠️ Bu günlükte (7 Kas notu) Cloudflare API anahtarı açık yazılı; dosya bu yüzden git'e eklenmedi. Anahtar erişim klasörüne taşınmalı, sonra günlük commit edilebilir.
+- 11 Kas ~10:20 — `hukukiMetinler.json` gizlilik: "Altyapı ... (Vercel, Supabase)" → "(Cloudflare, Supabase)" (`d57ec94`). TONSORA'nın gizlilik bağlantısı bu sayfaya gidiyor. AYLORA sayfalarında da Vercel → Cloudflare (`09c6a57`).
+- 11 Kas ~10:35 — **Galeri sadeleştirildi (Hasan: "bizi batıran Vercel burası oldu")**: yalnız `nechhrobotics-tanitim.mp4` + 7 uygulama logosu (`medya/logolar/`: tonsora, aylora, paletra, emotice, lapaglia, helialoop, juriloop — Play simgeleri; HeliaLoop için kampanya logosu 512 px'e küçültüldü). Silinenler: 16 video + kapakları, `medya/paletra/`, `medya/tanitim/`, galeri görselleri (63 dosya, medya 94 MB → 29 MB). `Galeri.tsx` yeniden yazıldı (ekran görüntüleri ve büyüteç kaldırıldı). Derleme 131 sayfa 0 hata. Commit `4f67f47`. Dosyalar git geçmişinde duruyor (gerekirse geri alınabilir).
+- 11 Kas ~10:50 — Kırık bağlantılar: HeliaLoop/JuriLoop ürün sayfalarındaki "incele" düğmeleri (TR+EN) helialoop.com / juriloop.com (Vercel, 7 Ara'ya kadar kapalı) yerine Google Play sayfalarına (200 ölçüldü). Sitede başka vercel.app bağlantısı yok. Derleme 131/0. Commit sonraki satırda.
+  commit: 7a1939f HeliaLoop/JuriLoop urun baglantilari: kapali Vercel siteleri yerine Google Play
+
+## 11 KASIM 2026 akşam — LaPaglia ürün kartı + kırık alt sayfalar (Claude)
+- **LaPaglia ürün kartı** TR + EN (07 / Evcil hayvan, Play bağlantısı; metin `C:\LaPaglia\store\MAGAZA-METINLERI.md`'den). App Store bağlantısı **onay gelince** eklenecek (`site.ts` içinde not var). Commit `c91456d`.
+- Aynı commit: EN tarafında AYLORA eksikti → `/en/solutions/aylora` 404 veriyordu, düzeltildi. Site haritasına aylora + lapaglia (TR/EN) eklendi.
+- 🔴→✅ **7 Kas Cloudflare taşımasından beri tüm alt sayfalar kırıktı:** `_redirects`'teki `/cozumler/* /spa.html 200` gibi 8 kural, Cloudflare kuralları statik dosyadan ÖNCE uyguladığı için her ürün/blog/mağaza sayfasını `/spa`'ya 308 ile atıyordu (Google sayfaları göremiyordu). Kurallar kaldırıldı (`edc278e`). Canlı ölçüldü: /cozumler/lapaglia, /en/solutions/lapaglia, /en/solutions/aylora, /cozumler/paletra, /magaza, /blog, /en/blog → 200; olmayan adres → 404.
+- Ders: taşımadan sonra yalnız ana sayfa değil, her türden bir alt sayfa da ölçülür.
+
+## 12 KASIM 2026 — Klasör düzeni (PROJE-DOSYALAMA-SABLONU) (Claude; Hasan: "tüm projeleri bitir, push et")
+- Taşınanlar: bu günlük → `GÜNLÜKLER/` (+ `EKSIK-HATALAR.md`) · todo, ideas → `GELİŞTİRME/` · content-architecture, content-migration-report → `docs/` · GORSEL-VİDEO + kökteki pptx ve video → `GÖRSELLER/tanitim/` (git dışı). Kökteki video, tanitim'dekiyle birebir aynıydı (SHA256 eşit) → silinmedi, "(kok kopyasi)" adıyla taşındı.
+- README yazıldı (yoktu). Ortak `.gitignore` bloğu. 7 Kas notundaki Cloudflare anahtarının git geçmişine hiç girmediği ölçüldü (`git log -S`), günlük artık commit edilebilir.
+- Kaynak koda dokunulmadı; taşınan dosyalara derleme betiklerinden bağlantı yok (aranarak ölçüldü). Push → Cloudflare Pages yeniden yayın.
