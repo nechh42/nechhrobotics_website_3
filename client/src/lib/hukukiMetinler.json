@@ -582,6 +582,10 @@
         "metin": "Nechh Robotics, platformlarının kullanımından kaynaklanan doğrudan, dolaylı veya sonuç olarak ortaya çıkan zararlardan sorumlu tutulamaz. Hizmetlerimiz \"olduğu gibi\" sunulmakta olup, kesintisiz veya hatasız çalışma garantisi verilmemektedir."
       },
       {
+        "tip": "p",
+        "metin": "Kullanıcı sorumluluğu: Tüm ürünlerimizde (TONSORA ve PALETRA dahil) kullanıcı, uygulamaya girdiği kayıtlardan, paylaştıklarından ve uygulamadaki davranışlarından kendisi sorumludur; bunlardan doğan talep ve zararlardan Nechh Robotics sorumlu tutulamaz. Kast, ağır ihmal ve 6698 sayılı KVKK m.12 kapsamındaki veri güvenliği yükümlülüğümüz saklıdır."
+      },
+      {
         "tip": "h2",
         "metin": "5. Üçüncü Taraf Bağlantıları"
       },
