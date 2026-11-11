@@ -36,11 +36,7 @@
 /register /iletisim 301
 /kaynaklar /blog 301
 /en/resources /en/blog 301
-/cozumler/* /spa.html 200
-/products/* /spa.html 200
-/magaza/* /spa.html 200
-/blog/* /spa.html 200
-/kaynaklar/* /spa.html 200
-/en/blog/* /spa.html 200
-/en/resources/* /spa.html 200
-/en/solutions/* /spa.html 200
+# 11 Kas 2026: "/cozumler/* /spa.html 200" gibi SPA kurallari KALDIRILDI.
+# Cloudflare Pages _redirects'i statik dosyalardan ONCE uygular (Vercel tersini yapardi);
+# kurallar her urun/blog/magaza sayfasini /spa'ya 308 ile atiyordu. Tum rotalar prerender
+# ediliyor; olmayan adres icin Pages 404.html'i verir.
