@@ -1170,51 +1170,18 @@ export const kurumsalVideo = {
   kapak: "/medya/video-kapak.jpg",
 };
 
+// 11 Kas 2026 (Hasan): galeride yalnız kurumsal tanıtım videosu + her uygulamanın logosu kalır.
+// Diğer videolar ve görseller silindi (Vercel 100 GB kotasını bu dosyalar doldurmuştu).
 export const galeriVideolar = [
   { dosya: "/medya/video/nechhrobotics-tanitim.mp4", kapak: "/medya/video-kapak.jpg", baslik: "Nechh Robotics tanıtımı", urun: "Kurumsal" },
-  { dosya: "/medya/video/tonsora-tanitim.mp4", kapak: "/medya/tanitim/tonsora-afis.png", baslik: "TONSORA tanıtımı", urun: "Salon randevu yönetimi" },
-  { dosya: "/medya/video/helialoop-tanitim.mp4", kapak: "/medya/tanitim/helialoop-afis.png", baslik: "HeliaLoop tanıtımı", urun: "Hekimler arası yönlendirme ağı" },
-  { dosya: "/medya/video/juriloop-tanitim.mp4", kapak: "/medya/tanitim/juriloop-afis.png", baslik: "JuriLoop tanıtımı", urun: "Hukukçular arası ağ" },
-  { dosya: "/medya/video/aylora-tanitim.mp4", kapak: "/medya/video/aylora-tanitim-kapak.jpg", baslik: "AYLORA tanıtımı", urun: "Astroloji ve fal rehberi" },
-  { dosya: "/medya/video/helialoop-doktorun-gunu.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "Bir doktorun günü", urun: "HeliaLoop kullanım anlatımı" },
-  { dosya: "/medya/video/helialoop-teaser.mp4", kapak: "/medya/helialoop-16x9.jpg", baslik: "HeliaLoop teaser", urun: "Kısa tanıtım" },
-  // 18 Eyl 2026 — TANITIM-MATERYALLERI'nden eklendi, web için sıkıştırıldı (95 MB → 13 MB).
-  // Haber kurgulu iki video: üstte kalıcı "KURGUSAL REKLAM FİLMİDİR" şeridi; McCoy videosunda CNN logoları bulanıklaştırıldı (22,5–39,3 sn).
-  { dosya: "/medya/video/tonsora-guzelliginiz-icin.mp4", kapak: "/medya/video/tonsora-guzelliginiz-icin-kapak.jpg", baslik: "TONSORA · Güzelliğiniz için", urun: "Reklam filmi · kurgu" },
-  { dosya: "/medya/video/tonsora-randevu-icin-arama.mp4", kapak: "/medya/video/tonsora-randevu-icin-arama-kapak.jpg", baslik: "TONSORA · Randevu için arama", urun: "Kısa tanıtım" },
-  { dosya: "/medya/video/eco-report-tanitim.mp4", kapak: "/medya/video/eco-report-tanitim-kapak.jpg", baslik: "Nechh Eco-Report · TR / EN / AR", urun: "CBAM karbon verisi hazırlığı" },
-  { dosya: "/medya/video/helialoop-fragman.mp4", kapak: "/medya/video/helialoop-fragman-kapak.jpg", baslik: "HeliaLoop fragmanı", urun: "Reklam filmi · kurgu" },
-  { dosya: "/medya/video/helialoop-park-hikayesi.mp4", kapak: "/medya/video/helialoop-park-hikayesi-kapak.jpg", baslik: "Parkta bir sohbet", urun: "HeliaLoop reklam filmi · kurgu" },
-  { dosya: "/medya/video/juriloop-fragman.mp4", kapak: "/medya/video/juriloop-fragman-kapak.jpg", baslik: "JuriLoop fragmanı", urun: "Reklam filmi · kurgu" },
-  { dosya: "/medya/video/helialoop-son-dakika-kurgu.mp4", kapak: "/medya/video/helialoop-son-dakika-kurgu-kapak.jpg", baslik: "HeliaLoop · \"Son dakika\"", urun: "Kurgusal reklam filmi · gerçek haber değildir" },
-  { dosya: "/medya/video/nechh-yaptirim-kurgu.mp4", kapak: "/medya/video/nechh-yaptirim-kurgu-kapak.jpg", baslik: "Nechh Robotics · \"Yaptırım\"", urun: "Kurgusal reklam filmi · gerçek haber değildir" },
-  { dosya: "/medya/video/nechh-dikey-yapay-zeka.mp4", kapak: "/medya/video/nechh-dikey-yapay-zeka-kapak.jpg", baslik: "Vertical AI systems", urun: "Kurumsal · English" },
 ];
 
-/** Uygulamalardan alınmış GERÇEK ekran görüntüleri. Temsilî/üretilmiş ekran buraya girmez. */
-export const galeriEkranlar = [
-  { dosya: "/medya/paletra/bugun.jpg", baslik: "PALETRA · Bugün ekranı" },
-  { dosya: "/medya/paletra/makineler.jpg", baslik: "PALETRA · Makineler" },
-  { dosya: "/medya/paletra/imza.jpg", baslik: "PALETRA · Müşteri imzası" },
-  { dosya: "/medya/paletra/sozlesme-pdf.jpg", baslik: "PALETRA · PDF sözleşme" },
-  { dosya: "/medya/paletra/kiralama-detay.jpg", baslik: "PALETRA · Kiralama ve alacak" },
-  { dosya: "/medya/paletra/bakim.jpg", baslik: "PALETRA · Bakım planı" },
-  { dosya: "/medya/paletra/raporlar.jpg", baslik: "PALETRA · Raporlar" },
-  { dosya: "/medya/paletra/yedekleme.jpg", baslik: "PALETRA · Yedekleme" },
-];
-
-export const galeriTanitimlar = [
-  { dosya: "/medya/tanitim/nechh-yazilim-afis-tr.jpg", baslik: "Özel yazılım ve mobil uygulama geliştirme" },
-  { dosya: "/medya/tanitim/nechh-yazilim-afis-en.jpg", baslik: "Custom software and mobile app development" },
-  { dosya: "/medya/tanitim/helialoop-afis.png", baslik: "HeliaLoop · hekimler arası iş birliği" },
-  { dosya: "/medya/tanitim/juriloop-afis.png", baslik: "JuriLoop · hukukçular arası ağ" },
-  { dosya: "/medya/tanitim/tonsora-afis.png", baslik: "TONSORA · salon randevu yönetimi" },
-  { dosya: "/medya/tanitim/paletra-tr.jpg", baslik: "PALETRA · ekipman kiralama, telefonda" },
-  { dosya: "/medya/tanitim/paletra-en.jpg", baslik: "PALETRA · equipment rental on your phone" },
-  { dosya: "/medya/tanitim/cbam-en.jpg", baslik: "CBAM · English" },
-  { dosya: "/medya/tanitim/eudr-tr.jpg", baslik: "EUDR · Türkçe" },
-  { dosya: "/medya/tanitim/eudr-en.jpg", baslik: "EUDR · English" },
-  { dosya: "/medya/helialoop-hekimler.png", baslik: "HeliaLoop · güvenli sevk ağı" },
-  { dosya: "/medya/juriloop-hero.png", baslik: "JuriLoop · mesleki iş birliği" },
-  { dosya: "/medya/Ekran Görüntüsü (803).png", baslik: "CBAM raporu nasıl hazırlanır" },
+export const galeriLogolar = [
+  { dosya: "/medya/logolar/tonsora.png", baslik: "TONSORA · salon randevu yönetimi" },
+  { dosya: "/medya/logolar/aylora.png", baslik: "AYLORA · astroloji ve fal rehberi" },
+  { dosya: "/medya/logolar/paletra.png", baslik: "PALETRA · ekipman kiralama" },
+  { dosya: "/medya/logolar/emotice.png", baslik: "Emotice · cilt analizi ve bakım" },
+  { dosya: "/medya/logolar/lapaglia.png", baslik: "LaPaglia · evcil hayvan karnesi" },
+  { dosya: "/medya/logolar/helialoop.png", baslik: "HeliaLoop · hekimler arası ağ" },
+  { dosya: "/medya/logolar/juriloop.png", baslik: "JuriLoop · hukukçular arası ağ" },
 ];

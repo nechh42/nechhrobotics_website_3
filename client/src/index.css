@@ -573,3 +573,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .module-list article, .module-list article:nth-child(odd) { border-right: 0; padding: 22px 0 24px; }
   .module-list article:nth-child(even) { padding-left: 0; }
 }
+
+/* Galeri logoları (11 Kas 2026) */
+.galeri-logo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.galeri-logo { display: grid; gap: 10px; margin: 0; }
+.galeri-logo img { width: 100%; aspect-ratio: 1; object-fit: contain; padding: 16px; background: #fff; border: 1px solid var(--line); }
+.galeri-logo figcaption { color: var(--muted-ink); font-size: 11px; }
+@media (max-width: 900px) { .galeri-logo-grid { grid-template-columns: repeat(2, 1fr); } }
