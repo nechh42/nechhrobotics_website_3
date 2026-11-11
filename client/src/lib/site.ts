@@ -51,8 +51,8 @@ export const products: Product[] = [
       "HeliaLoop, profesyoneller arasında randevu ve hasta yönlendirme akışlarını daha düzenli yönetmek için tasarlanan bir ağ deneyimidir. Amaç, dağınık iletişim kanallarındaki operasyonel kopuklukları azaltmaktır.",
     useCase: "Klinik yönlendirme ve randevu koordinasyonu",
     tone: "health",
-    externalUrl: "https://helialoop.com",
-    externalLabel: "HeliaLoop'u incele",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.helialoop.app", // 11 Kas 2026: helialoop.com Vercel durdurdu
+    externalLabel: "HeliaLoop · Google Play",
     // Play: HTTP 200 (com.helialoop.app) · App Store: arama 0 sonuc -> yok
     stores: { play: "https://play.google.com/store/apps/details?id=com.helialoop.app" },
     principles: [
@@ -72,8 +72,8 @@ export const products: Product[] = [
       "JuriLoop, hukuk profesyonelleri arasındaki dava yönlendirme ve çalışma koordinasyonunu daha izlenebilir biçimde ele almak için tasarlanmıştır. Mesleki iş birliğinde bağlamı koruyan bir çalışma alanı sunar.",
     useCase: "Dava yönlendirme ve mesleki koordinasyon",
     tone: "legal",
-    externalUrl: "https://juriloop.com",
-    externalLabel: "JuriLoop'u incele",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.nechh.juriloop", // 11 Kas 2026: juriloop.com Vercel durdurdu
+    externalLabel: "JuriLoop · Google Play",
     // Play: HTTP 200 (com.nechh.juriloop) · App Store: arama 0 sonuc -> yok
     stores: { play: "https://play.google.com/store/apps/details?id=com.nechh.juriloop" },
     principles: [
@@ -235,8 +235,8 @@ export const englishProducts: Product[] = [
     longDescription: "HeliaLoop is designed to bring appointment and patient referral work between professionals into a more structured operating context. The aim is to reduce operational friction across fragmented communication channels.",
     useCase: "Clinical referral and appointment coordination",
     tone: "health",
-    externalUrl: "https://helialoop.com",
-    externalLabel: "Explore HeliaLoop",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.helialoop.app", // 11 Kas 2026: helialoop.com Vercel durdurdu
+    externalLabel: "HeliaLoop on Google Play",
     principles: [
       { label: "Coordination", detail: "An approach to gathering referral steps within one working flow." },
       { label: "Visibility", detail: "A focus on making the next step and responsibility context clearer." },
@@ -252,8 +252,8 @@ export const englishProducts: Product[] = [
     longDescription: "JuriLoop is designed to help legal professionals handle case referrals and working coordination in a more traceable manner, while preserving the context of professional collaboration.",
     useCase: "Case referral and professional coordination",
     tone: "legal",
-    externalUrl: "https://juriloop.com",
-    externalLabel: "Explore JuriLoop",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.nechh.juriloop", // 11 Kas 2026: juriloop.com Vercel durdurdu
+    externalLabel: "JuriLoop on Google Play",
     principles: [
       { label: "Context", detail: "An approach to preserving why a task exists and how responsibility relates to it." },
       { label: "Collaboration", detail: "A clearer working flow for professional referrals among peers." },
