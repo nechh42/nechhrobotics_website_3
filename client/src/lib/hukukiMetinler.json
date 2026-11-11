@@ -766,6 +766,10 @@
         "metin": "Uygulama hukuka aykırı amaçlarla kullanılamaz."
       },
       {
+        "tip": "li",
+        "metin": "Uygulamaya girdiğiniz kayıtlardan, paylaştıklarınızdan ve uygulamadaki davranışlarınızdan siz sorumlusunuz; bunlardan doğan talep ve zararlardan Nechh Robotics sorumlu tutulamaz (kast ve ağır ihmal hâlleri saklıdır)."
+      },
+      {
         "tip": "h2",
         "metin": "2. Veriler"
       },
@@ -851,7 +855,7 @@
       },
       {
         "tip": "p",
-        "metin": "PALETRA is licensed, not sold, for use on devices you own or control. Data is stored only on your device; you are responsible for backups. Paid plans (Starter, Unlimited) are auto-renewing monthly subscriptions charged to your Google Play or Apple account; they renew unless cancelled at least 24 hours before the end of the period, and can be managed or cancelled in your store account settings. When a subscription ends your data is not deleted. The app is provided \"as is\"; template contract terms are not legal advice. For App Store downloads Apple's Standard EULA minimum terms apply; Apple is not a party to this agreement but is a third-party beneficiary. PALETRA™ is a trademark of Nechh Robotics. All rights reserved. Contact: nechhlab.global@gmail.com"
+        "metin": "PALETRA is licensed, not sold, for use on devices you own or control. Data is stored only on your device; you are responsible for backups. Paid plans (Starter, Unlimited) are auto-renewing monthly subscriptions charged to your Google Play or Apple account; they renew unless cancelled at least 24 hours before the end of the period, and can be managed or cancelled in your store account settings. When a subscription ends your data is not deleted. The app is provided \"as is\"; template contract terms are not legal advice. For App Store downloads Apple's Standard EULA minimum terms apply; Apple is not a party to this agreement but is a third-party beneficiary. PALETRA™ is a trademark of Nechh Robotics. All rights reserved. Contact: nechhlab.global@gmail.com You are responsible for the records you enter, what you share and your conduct in the app."
       },
       {
         "tip": "h2",
@@ -859,7 +863,7 @@
       },
       {
         "tip": "p",
-        "metin": "يُرخَّص PALETRA ولا يُباع، للاستخدام على أجهزتك. تُحفظ البيانات على جهازك فقط وأنت مسؤول عن النسخ الاحتياطي. الباقات المدفوعة اشتراكات شهرية تتجدد تلقائيًا عبر Google Play أو Apple ما لم تُلغَ قبل 24 ساعة على الأقل من نهاية الفترة، ويمكن إدارتها وإلغاؤها من إعدادات حساب المتجر. لا تُحذف بياناتك عند انتهاء الاشتراك. يُقدَّم التطبيق «كما هو». PALETRA™ علامة تجارية لشركة Nechh Robotics. جميع الحقوق محفوظة. للتواصل: nechhlab.global@gmail.com"
+        "metin": "يُرخَّص PALETRA ولا يُباع، للاستخدام على أجهزتك. تُحفظ البيانات على جهازك فقط وأنت مسؤول عن النسخ الاحتياطي. الباقات المدفوعة اشتراكات شهرية تتجدد تلقائيًا عبر Google Play أو Apple ما لم تُلغَ قبل 24 ساعة على الأقل من نهاية الفترة، ويمكن إدارتها وإلغاؤها من إعدادات حساب المتجر. لا تُحذف بياناتك عند انتهاء الاشتراك. يُقدَّم التطبيق «كما هو». PALETRA™ علامة تجارية لشركة Nechh Robotics. جميع الحقوق محفوظة. للتواصل: nechhlab.global@gmail.com أنت مسؤول عن السجلات التي تدخلها وما تشاركه وسلوكك داخل التطبيق."
       }
     ]
   }
